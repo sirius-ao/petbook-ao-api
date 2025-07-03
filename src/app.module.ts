@@ -33,6 +33,6 @@ import { AffiliateReferralModule } from './affiliate-referral/affiliate-referral
   ],
   controllers: [AppController],
   providers: [AppService],
-  A,
+  exports:[]
 })
 export class AppModule {}
