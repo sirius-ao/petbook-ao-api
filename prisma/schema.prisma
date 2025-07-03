@@ -43,7 +43,7 @@ model User {
   businessId String? 
   business Business? @relation(fields: [businessId], references: [id])
   createAt DateTime @default(now())
-  updateAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 
   MedicalRecord MedicalRecord[]
 
@@ -72,7 +72,7 @@ model Business {
   sales    Sale[]
   appointments Appointment[]
   createAt DateTime @default(now())
-  updateAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 } 
 
 // Client – Dono do pet
@@ -86,7 +86,7 @@ model Client {
   business Business @relation(fields: [businessId], references: [id])
   pets Pet[]
   createAt DateTime @default(now())
-  updateAt DateTime @default(now())
+  updateAt DateTime @updatedAt
   Sale Sale[]
 }
 
@@ -103,7 +103,7 @@ model Pet{
   appointments Appointment[]
   records MedicalRecord[]
   createAt DateTime @default(now())
-  updateAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 }
 
 // Appointment – Agendamento de serviço ou consulta
@@ -201,7 +201,7 @@ model Affiliate{
   code String @unique
   earnings Float @default(0)
   createAt DateTime @default(now())
-  updateAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 
   AffiliateReferral AffiliateReferral[]
 }
@@ -215,7 +215,7 @@ model AffiliateReferral{
   value Float
   status ReferralStatus
   createAt DateTime @default(now())
-  updateAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 }
 
 enum ReferralType {
