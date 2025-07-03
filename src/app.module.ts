@@ -16,8 +16,23 @@ import { AffiliateModule } from './affiliate/affiliate.module';
 import { AffiliateReferralModule } from './affiliate-referral/affiliate-referral.module';
 
 @Module({
-  imports: [PrismaModule, UserModule, BusinessModule, ClientModule, PetModule, AppointmentModule, MedicalRecordModule, ProductModule, SaleModule, SaleItemModule, ServiceModule, AffiliateModule, AffiliateReferralModule],
+  imports: [
+    PrismaModule,
+    UserModule,
+    BusinessModule,
+    ClientModule,
+    PetModule,
+    AppointmentModule,
+    MedicalRecordModule,
+    ProductModule,
+    SaleModule,
+    SaleItemModule,
+    ServiceModule,
+    AffiliateModule,
+    AffiliateReferralModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
+  A,
 })
 export class AppModule {}
