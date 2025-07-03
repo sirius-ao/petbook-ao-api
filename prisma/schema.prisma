@@ -17,8 +17,18 @@ datasource db {
 // Define your data model here 
 
 /* Todas as model do projeto ==>
-1- user -> role
-2- 
+  - Affiliate
+  - AffiliateReferral
+  - Appointment
+  - Business
+  - Client
+  - MedicalRecord
+  - Pet
+  - Product
+  - Sale
+  - SaleItem
+  - Service
+  - User
 
 */
 
