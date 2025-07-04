@@ -92,6 +92,7 @@ model Client {
 
 model Pet{
   id String @id @default(cuid())
+  petIdNumber String @default(cuid())
   name String 
   species String
   breed String

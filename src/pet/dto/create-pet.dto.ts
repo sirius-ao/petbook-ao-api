@@ -1,13 +1,28 @@
-import { CreateAppointmentDto } from "src/appointment/dto/create-appointment.dto";
-import { CreateMedicalRecordDto } from "src/medical-record/dto/create-medical-record.dto";
+import { IsDate, IsString } from 'class-validator';
+import { Appointment, MedicalRecord } from 'generated/prisma';
 
 export class CreatePetDto {
-id:number;
-name:string;
-species:string;
-breed: string;
-birthDate?: Date;
-clienteId: string;
-appointments: CreateAppointmentDto[];
-records: CreateMedicalRecordDto[];
+  @IsString()
+  id: string;
+
+  @IsString()
+  petIdNumber: string;
+
+  @IsString()
+  name: string;
+
+  @IsString()
+  species: string;
+
+  @IsString()
+  breed: string;
+
+  @IsDate()
+  birthDate?: Date;
+
+  @IsString()
+  clienteId: string;
+
+  appointments: Appointment[];
+  records: MedicalRecord[];
 }
