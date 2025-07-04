@@ -44,9 +44,7 @@ model User {
   business Business? @relation(fields: [businessId], references: [id])
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
-
   MedicalRecord MedicalRecord[]
-
   Affiliate Affiliate[]
 }
 
