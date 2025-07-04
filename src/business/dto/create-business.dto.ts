@@ -19,6 +19,7 @@ export class CreateBusinessDto {
 
   @IsArray()
   user: User[];
+  
   product: Product[];
   service: Service[];
   client: Client[];

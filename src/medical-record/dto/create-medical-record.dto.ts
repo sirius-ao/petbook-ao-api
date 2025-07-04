@@ -1,1 +1,5 @@
-export class CreateMedicalRecordDto {}
+export class CreateMedicalRecordDto {
+
+
+    
+}
