@@ -1,0 +1,226 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Define your data model here 
+
+/**
+ * Todas as model do projeto ==>
+ * - Affiliate
+ * - AffiliateReferral
+ * - Appointment
+ * - Business
+ * - Client
+ * - MedicalRecord
+ * - Pet
+ * - Product
+ * - Sale
+ * - SaleItem
+ * - Service
+ * - User
+ */
+
+// User – Usuário do sistema (veterinários, atendentes, donos de petshop)
+
+model User {
+  id         String    @id @default(cuid())
+  name       String
+  email      String    @unique
+  password   String
+  role       Role      @default(ATTENDANT)
+  businessId String?
+  business   Business? @relation(fields: [businessId], references: [id])
+  createAt   DateTime  @default(now())
+  updateAt   DateTime  @updatedAt
+
+  MedicalRecord MedicalRecord[]
+
+  Affiliate Affiliate[]
+}
+
+enum Role {
+  ADMIN
+  VET
+  ATTENDANT
+}
+
+// Business – Petshop ou Clínica Veterinária
+
+model Business {
+  id           String        @unique @default(cuid())
+  name         String
+  address      String
+  phone        String
+  email        String
+  users        User[]
+  products     Product[]
+  services     Service[]
+  clients      Client[]
+  sales        Sale[]
+  appointments Appointment[]
+  createAt     DateTime      @default(now())
+  updateAt     DateTime      @updatedAt
+}
+
+// Client – Dono do pet
+
+model Client {
+  id         String   @id @default(cuid())
+  name       String
+  email      String?
+  phone      String?
+  businessId String
+  business   Business @relation(fields: [businessId], references: [id])
+  pets       Pet[]
+  createAt   DateTime @default(now())
+  updateAt   DateTime @updatedAt
+  Sale       Sale[]
+}
+
+//Pet – Animal de estimação
+
+model Pet {
+  id           String          @id @default(cuid())
+  name         String
+  species      String
+  breed        String
+  birthDate    DateTime?
+  clienteId    String
+  client       Client          @relation(fields: [clienteId], references: [id])
+  appointments Appointment[]
+  records      MedicalRecord[]
+  createAt     DateTime        @default(now())
+  updateAt     DateTime        @updatedAt
+}
+
+// Appointment – Agendamento de serviço ou consulta
+
+model Appointment {
+  id         String            @id @default(cuid())
+  date       DateTime
+  status     AppointmentStatus @default(SCHEDULED)
+  petId      String
+  pet        Pet               @relation(fields: [petId], references: [id])
+  serviceId  String?
+  service    Service?          @relation(fields: [serviceId], references: [id])
+  businessId String
+  business   Business          @relation(fields: [businessId], references: [id])
+  notes      String?
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+}
+
+// Service – Serviços oferecidos (banho, consulta, etc.)
+
+model Service {
+  id         String   @id @default(cuid())
+  name       String
+  price      Float
+  duration   Int // sao minutos 5 a 60 ou mais logo converter para mais 
+  businessId String
+  business   Business @relation(fields: [businessId], references: [id])
+
+  Appointment Appointment[]
+}
+
+// Product – Produtos à venda
+
+model Product {
+  id         String   @id @default(cuid())
+  name       String
+  price      Float
+  stock      Int
+  businessId String
+  business   Business @relation(fields: [businessId], references: [id])
+
+  SaleItem SaleItem[]
+}
+
+// Sale  & SaleItem – Venda de produtos ou serviços
+
+model Sale {
+  id         String     @id @default(cuid())
+  clientId   String?
+  client     Client?    @relation(fields: [clientId], references: [id])
+  businessId String
+  business   Business   @relation(fields: [businessId], references: [id])
+  items      SaleItem[]
+  total      Float
+  dateSale   DateTime   @default(now())
+}
+
+model SaleItem {
+  id        String  @id @default(cuid())
+  saleId    String
+  sale      Sale    @relation(fields: [saleId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float
+}
+
+// MedicalRecord – Prontuário do pet (histórico clínico)
+
+model MedicalRecord {
+  id          String   @id @default(cuid())
+  petId       String
+  pet         Pet      @relation(fields: [petId], references: [id])
+  vetId       String?
+  vet         User?    @relation(fields: [vetId], references: [id])
+  date        DateTime @default(now())
+  description String
+}
+
+// Estrutura básica da feature
+
+model Affiliate {
+  id       String   @id @default(cuid())
+  userId   String
+  user     User     @relation(fields: [userId], references: [id])
+  code     String   @unique
+  earnings Float    @default(0)
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+
+  AffiliateReferral AffiliateReferral[]
+}
+
+model AffiliateReferral {
+  id             String         @id @default(cuid())
+  affiliateId    String
+  affiliate      Affiliate      @relation(fields: [affiliateId], references: [id])
+  referredUserId String?
+  type           ReferralType
+  value          Float
+  status         ReferralStatus
+  createAt       DateTime       @default(now())
+  updateAt       DateTime       @updatedAt
+}
+
+enum ReferralType {
+  USER_SIGNUP
+  BUSINESS_SIGNUP
+  ORDER
+}
+
+enum ReferralStatus {
+  PENDING
+  APPROVED
+  PAID
+}
