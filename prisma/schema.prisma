@@ -44,9 +44,7 @@ model User {
   business Business? @relation(fields: [businessId], references: [id])
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
-
   MedicalRecord MedicalRecord[]
-
   Affiliate Affiliate[]
 }
 
@@ -94,6 +92,7 @@ model Client {
 
 model Pet{
   id String @id @default(cuid())
+  petIdNumber String @default(cuid())
   name String 
   species String
   breed String
@@ -165,7 +164,7 @@ model Sale{
   items SaleItem[]
   total Float
   dateSale DateTime @default(now())
-
+  UpdatedAt DateTime @updatedAt
 }
 
 model SaleItem{
@@ -176,6 +175,8 @@ model SaleItem{
   product Product @relation(fields: [productId],references: [id])
   quantity Int
   price Float
+  dateSale DateTime @default(now())
+  UpdatedAt DateTime @updatedAt
 }
 
 // MedicalRecord – Prontuário do pet (histórico clínico)
