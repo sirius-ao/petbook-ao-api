@@ -1,5 +1,5 @@
 import { IsArray, IsString } from 'class-validator';
-import { Appointment, Client, Product, Service, User } from 'generated/prisma';
+import { Appointment, Client, Product, Sale, Service, User } from 'generated/prisma';
 
 export class CreateBusinessDto {
   @IsString() 
@@ -23,6 +23,6 @@ export class CreateBusinessDto {
   product: Product[];
   service: Service[];
   client: Client[];
-  Sales: Sales[];
+  Sales: Sale[];
   appointments: Appointment[];
 }

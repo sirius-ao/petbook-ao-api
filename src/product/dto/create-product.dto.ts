@@ -9,10 +9,10 @@ export class CreateProductDto {
     @IsString()
     name: string;
 
-    @IsNumber
+    @IsNumber()
     price: number;
 
-     @IsNumber
+     @IsNumber()
     stock: number;
 
     @IsString()
