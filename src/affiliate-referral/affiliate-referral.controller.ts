@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { AffiliateReferralService } from './affiliate-referral.service';
 import { CreateAffiliateReferralDto } from './dto/create-affiliate-referral.dto';
-import { UpdateAffiliateReferralDto } from './dto/update-affiliate-referral.dto';
+import { UpdateAffiliateReferralDto } from './dto/update-affiliatereferral.dto';
 
 @Controller('affiliate-referral')
 export class AffiliateReferralController {
