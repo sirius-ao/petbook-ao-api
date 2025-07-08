@@ -49,15 +49,15 @@ export class PetService {
   async update(id: string, updatePetDto: UpdatePetDto) {
     return this.prisma.pet.update({
       where: { id },
-      data: {
+      data:{
         name: updatePetDto.name,
         species: updatePetDto.species,
-        breed: updatePetDto.breed,  
+        breed: updatePetDto.breed,
         birthDate: updatePetDto.birthDate
           ? new Date(updatePetDto.birthDate)
           : undefined,
         clienteId: updatePetDto.clienteId, // 🔁 nome corrigido aqui
-        }
+      }
     });
   }
 
@@ -67,4 +67,3 @@ export class PetService {
     });
   }
 }
-
