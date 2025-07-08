@@ -433,8 +433,8 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 6.9.0
-   * Query Engine version: 81e4af48011447c3cc503a190e86995b66d2a28e
+   * Prisma Client JS version: 6.11.1
+   * Query Engine version: f40f79ec31188888a2e33acda0ecc8fd10a853a9
    */
   export type PrismaVersion = {
     client: string
@@ -1831,13 +1831,13 @@ export namespace Prisma {
    */
 
   export type UserCountOutputType = {
-    MedicalRecord: number
     Affiliate: number
+    MedicalRecord: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    MedicalRecord?: boolean | UserCountOutputTypeCountMedicalRecordArgs
     Affiliate?: boolean | UserCountOutputTypeCountAffiliateArgs
+    MedicalRecord?: boolean | UserCountOutputTypeCountMedicalRecordArgs
   }
 
   // Custom InputTypes
@@ -1854,15 +1854,15 @@ export namespace Prisma {
   /**
    * UserCountOutputType without action
    */
-  export type UserCountOutputTypeCountMedicalRecordArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: MedicalRecordWhereInput
+  export type UserCountOutputTypeCountAffiliateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AffiliateWhereInput
   }
 
   /**
    * UserCountOutputType without action
    */
-  export type UserCountOutputTypeCountAffiliateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: AffiliateWhereInput
+  export type UserCountOutputTypeCountMedicalRecordArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MedicalRecordWhereInput
   }
 
 
@@ -1871,21 +1871,21 @@ export namespace Prisma {
    */
 
   export type BusinessCountOutputType = {
-    users: number
-    products: number
-    services: number
-    clients: number
-    sales: number
     appointments: number
+    clients: number
+    products: number
+    sales: number
+    services: number
+    users: number
   }
 
   export type BusinessCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    users?: boolean | BusinessCountOutputTypeCountUsersArgs
-    products?: boolean | BusinessCountOutputTypeCountProductsArgs
-    services?: boolean | BusinessCountOutputTypeCountServicesArgs
-    clients?: boolean | BusinessCountOutputTypeCountClientsArgs
-    sales?: boolean | BusinessCountOutputTypeCountSalesArgs
     appointments?: boolean | BusinessCountOutputTypeCountAppointmentsArgs
+    clients?: boolean | BusinessCountOutputTypeCountClientsArgs
+    products?: boolean | BusinessCountOutputTypeCountProductsArgs
+    sales?: boolean | BusinessCountOutputTypeCountSalesArgs
+    services?: boolean | BusinessCountOutputTypeCountServicesArgs
+    users?: boolean | BusinessCountOutputTypeCountUsersArgs
   }
 
   // Custom InputTypes
@@ -1902,22 +1902,8 @@ export namespace Prisma {
   /**
    * BusinessCountOutputType without action
    */
-  export type BusinessCountOutputTypeCountUsersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: UserWhereInput
-  }
-
-  /**
-   * BusinessCountOutputType without action
-   */
-  export type BusinessCountOutputTypeCountProductsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ProductWhereInput
-  }
-
-  /**
-   * BusinessCountOutputType without action
-   */
-  export type BusinessCountOutputTypeCountServicesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ServiceWhereInput
+  export type BusinessCountOutputTypeCountAppointmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AppointmentWhereInput
   }
 
   /**
@@ -1930,6 +1916,13 @@ export namespace Prisma {
   /**
    * BusinessCountOutputType without action
    */
+  export type BusinessCountOutputTypeCountProductsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ProductWhereInput
+  }
+
+  /**
+   * BusinessCountOutputType without action
+   */
   export type BusinessCountOutputTypeCountSalesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: SaleWhereInput
   }
@@ -1937,8 +1930,15 @@ export namespace Prisma {
   /**
    * BusinessCountOutputType without action
    */
-  export type BusinessCountOutputTypeCountAppointmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: AppointmentWhereInput
+  export type BusinessCountOutputTypeCountServicesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ServiceWhereInput
+  }
+
+  /**
+   * BusinessCountOutputType without action
+   */
+  export type BusinessCountOutputTypeCountUsersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserWhereInput
   }
 
 
@@ -2338,9 +2338,9 @@ export namespace Prisma {
     businessId?: boolean
     createAt?: boolean
     updateAt?: boolean
-    business?: boolean | User$businessArgs<ExtArgs>
-    MedicalRecord?: boolean | User$MedicalRecordArgs<ExtArgs>
     Affiliate?: boolean | User$AffiliateArgs<ExtArgs>
+    MedicalRecord?: boolean | User$MedicalRecordArgs<ExtArgs>
+    business?: boolean | User$businessArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -2359,18 +2359,18 @@ export namespace Prisma {
 
   export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "role" | "businessId" | "createAt" | "updateAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    business?: boolean | User$businessArgs<ExtArgs>
-    MedicalRecord?: boolean | User$MedicalRecordArgs<ExtArgs>
     Affiliate?: boolean | User$AffiliateArgs<ExtArgs>
+    MedicalRecord?: boolean | User$MedicalRecordArgs<ExtArgs>
+    business?: boolean | User$businessArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
     objects: {
-      business: Prisma.$BusinessPayload<ExtArgs> | null
-      MedicalRecord: Prisma.$MedicalRecordPayload<ExtArgs>[]
       Affiliate: Prisma.$AffiliatePayload<ExtArgs>[]
+      MedicalRecord: Prisma.$MedicalRecordPayload<ExtArgs>[]
+      business: Prisma.$BusinessPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2721,9 +2721,9 @@ export namespace Prisma {
    */
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    business<T extends User$businessArgs<ExtArgs> = {}>(args?: Subset<T, User$businessArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-    MedicalRecord<T extends User$MedicalRecordArgs<ExtArgs> = {}>(args?: Subset<T, User$MedicalRecordArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MedicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     Affiliate<T extends User$AffiliateArgs<ExtArgs> = {}>(args?: Subset<T, User$AffiliateArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AffiliatePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    MedicalRecord<T extends User$MedicalRecordArgs<ExtArgs> = {}>(args?: Subset<T, User$MedicalRecordArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MedicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    business<T extends User$businessArgs<ExtArgs> = {}>(args?: Subset<T, User$businessArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3104,22 +3104,27 @@ export namespace Prisma {
   }
 
   /**
-   * User.business
+   * User.Affiliate
    */
-  export type User$businessArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type User$AffiliateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Business
+     * Select specific fields to fetch from the Affiliate
      */
-    select?: BusinessSelect<ExtArgs> | null
+    select?: AffiliateSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Business
+     * Omit specific fields from the Affiliate
      */
-    omit?: BusinessOmit<ExtArgs> | null
+    omit?: AffiliateOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BusinessInclude<ExtArgs> | null
-    where?: BusinessWhereInput
+    include?: AffiliateInclude<ExtArgs> | null
+    where?: AffiliateWhereInput
+    orderBy?: AffiliateOrderByWithRelationInput | AffiliateOrderByWithRelationInput[]
+    cursor?: AffiliateWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: AffiliateScalarFieldEnum | AffiliateScalarFieldEnum[]
   }
 
   /**
@@ -3147,27 +3152,22 @@ export namespace Prisma {
   }
 
   /**
-   * User.Affiliate
+   * User.business
    */
-  export type User$AffiliateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type User$businessArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Affiliate
+     * Select specific fields to fetch from the Business
      */
-    select?: AffiliateSelect<ExtArgs> | null
+    select?: BusinessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Affiliate
+     * Omit specific fields from the Business
      */
-    omit?: AffiliateOmit<ExtArgs> | null
+    omit?: BusinessOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AffiliateInclude<ExtArgs> | null
-    where?: AffiliateWhereInput
-    orderBy?: AffiliateOrderByWithRelationInput | AffiliateOrderByWithRelationInput[]
-    cursor?: AffiliateWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: AffiliateScalarFieldEnum | AffiliateScalarFieldEnum[]
+    include?: BusinessInclude<ExtArgs> | null
+    where?: BusinessWhereInput
   }
 
   /**
@@ -3369,12 +3369,12 @@ export namespace Prisma {
     email?: boolean
     createAt?: boolean
     updateAt?: boolean
-    users?: boolean | Business$usersArgs<ExtArgs>
-    products?: boolean | Business$productsArgs<ExtArgs>
-    services?: boolean | Business$servicesArgs<ExtArgs>
-    clients?: boolean | Business$clientsArgs<ExtArgs>
-    sales?: boolean | Business$salesArgs<ExtArgs>
     appointments?: boolean | Business$appointmentsArgs<ExtArgs>
+    clients?: boolean | Business$clientsArgs<ExtArgs>
+    products?: boolean | Business$productsArgs<ExtArgs>
+    sales?: boolean | Business$salesArgs<ExtArgs>
+    services?: boolean | Business$servicesArgs<ExtArgs>
+    users?: boolean | Business$usersArgs<ExtArgs>
     _count?: boolean | BusinessCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["business"]>
 
@@ -3392,24 +3392,24 @@ export namespace Prisma {
 
   export type BusinessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "address" | "phone" | "email" | "createAt" | "updateAt", ExtArgs["result"]["business"]>
   export type BusinessInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    users?: boolean | Business$usersArgs<ExtArgs>
-    products?: boolean | Business$productsArgs<ExtArgs>
-    services?: boolean | Business$servicesArgs<ExtArgs>
-    clients?: boolean | Business$clientsArgs<ExtArgs>
-    sales?: boolean | Business$salesArgs<ExtArgs>
     appointments?: boolean | Business$appointmentsArgs<ExtArgs>
+    clients?: boolean | Business$clientsArgs<ExtArgs>
+    products?: boolean | Business$productsArgs<ExtArgs>
+    sales?: boolean | Business$salesArgs<ExtArgs>
+    services?: boolean | Business$servicesArgs<ExtArgs>
+    users?: boolean | Business$usersArgs<ExtArgs>
     _count?: boolean | BusinessCountOutputTypeDefaultArgs<ExtArgs>
   }
 
   export type $BusinessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Business"
     objects: {
-      users: Prisma.$UserPayload<ExtArgs>[]
-      products: Prisma.$ProductPayload<ExtArgs>[]
-      services: Prisma.$ServicePayload<ExtArgs>[]
-      clients: Prisma.$ClientPayload<ExtArgs>[]
-      sales: Prisma.$SalePayload<ExtArgs>[]
       appointments: Prisma.$AppointmentPayload<ExtArgs>[]
+      clients: Prisma.$ClientPayload<ExtArgs>[]
+      products: Prisma.$ProductPayload<ExtArgs>[]
+      sales: Prisma.$SalePayload<ExtArgs>[]
+      services: Prisma.$ServicePayload<ExtArgs>[]
+      users: Prisma.$UserPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -3759,12 +3759,12 @@ export namespace Prisma {
    */
   export interface Prisma__BusinessClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    users<T extends Business$usersArgs<ExtArgs> = {}>(args?: Subset<T, Business$usersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    products<T extends Business$productsArgs<ExtArgs> = {}>(args?: Subset<T, Business$productsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    services<T extends Business$servicesArgs<ExtArgs> = {}>(args?: Subset<T, Business$servicesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ServicePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    clients<T extends Business$clientsArgs<ExtArgs> = {}>(args?: Subset<T, Business$clientsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    sales<T extends Business$salesArgs<ExtArgs> = {}>(args?: Subset<T, Business$salesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SalePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     appointments<T extends Business$appointmentsArgs<ExtArgs> = {}>(args?: Subset<T, Business$appointmentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    clients<T extends Business$clientsArgs<ExtArgs> = {}>(args?: Subset<T, Business$clientsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    products<T extends Business$productsArgs<ExtArgs> = {}>(args?: Subset<T, Business$productsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    sales<T extends Business$salesArgs<ExtArgs> = {}>(args?: Subset<T, Business$salesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SalePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    services<T extends Business$servicesArgs<ExtArgs> = {}>(args?: Subset<T, Business$servicesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ServicePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    users<T extends Business$usersArgs<ExtArgs> = {}>(args?: Subset<T, Business$usersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4144,75 +4144,27 @@ export namespace Prisma {
   }
 
   /**
-   * Business.users
+   * Business.appointments
    */
-  export type Business$usersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Business$appointmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Appointment
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: AppointmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Appointment
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: AppointmentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
-    where?: UserWhereInput
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
-    cursor?: UserWhereUniqueInput
+    include?: AppointmentInclude<ExtArgs> | null
+    where?: AppointmentWhereInput
+    orderBy?: AppointmentOrderByWithRelationInput | AppointmentOrderByWithRelationInput[]
+    cursor?: AppointmentWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
-  }
-
-  /**
-   * Business.products
-   */
-  export type Business$productsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Product
-     */
-    select?: ProductSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Product
-     */
-    omit?: ProductOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: ProductInclude<ExtArgs> | null
-    where?: ProductWhereInput
-    orderBy?: ProductOrderByWithRelationInput | ProductOrderByWithRelationInput[]
-    cursor?: ProductWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: ProductScalarFieldEnum | ProductScalarFieldEnum[]
-  }
-
-  /**
-   * Business.services
-   */
-  export type Business$servicesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Service
-     */
-    select?: ServiceSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Service
-     */
-    omit?: ServiceOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: ServiceInclude<ExtArgs> | null
-    where?: ServiceWhereInput
-    orderBy?: ServiceOrderByWithRelationInput | ServiceOrderByWithRelationInput[]
-    cursor?: ServiceWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: ServiceScalarFieldEnum | ServiceScalarFieldEnum[]
+    distinct?: AppointmentScalarFieldEnum | AppointmentScalarFieldEnum[]
   }
 
   /**
@@ -4240,6 +4192,30 @@ export namespace Prisma {
   }
 
   /**
+   * Business.products
+   */
+  export type Business$productsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Product
+     */
+    select?: ProductSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Product
+     */
+    omit?: ProductOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProductInclude<ExtArgs> | null
+    where?: ProductWhereInput
+    orderBy?: ProductOrderByWithRelationInput | ProductOrderByWithRelationInput[]
+    cursor?: ProductWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ProductScalarFieldEnum | ProductScalarFieldEnum[]
+  }
+
+  /**
    * Business.sales
    */
   export type Business$salesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -4264,27 +4240,51 @@ export namespace Prisma {
   }
 
   /**
-   * Business.appointments
+   * Business.services
    */
-  export type Business$appointmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Business$servicesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Appointment
+     * Select specific fields to fetch from the Service
      */
-    select?: AppointmentSelect<ExtArgs> | null
+    select?: ServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Appointment
+     * Omit specific fields from the Service
      */
-    omit?: AppointmentOmit<ExtArgs> | null
+    omit?: ServiceOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AppointmentInclude<ExtArgs> | null
-    where?: AppointmentWhereInput
-    orderBy?: AppointmentOrderByWithRelationInput | AppointmentOrderByWithRelationInput[]
-    cursor?: AppointmentWhereUniqueInput
+    include?: ServiceInclude<ExtArgs> | null
+    where?: ServiceWhereInput
+    orderBy?: ServiceOrderByWithRelationInput | ServiceOrderByWithRelationInput[]
+    cursor?: ServiceWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: AppointmentScalarFieldEnum | AppointmentScalarFieldEnum[]
+    distinct?: ServiceScalarFieldEnum | ServiceScalarFieldEnum[]
+  }
+
+  /**
+   * Business.users
+   */
+  export type Business$usersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    where?: UserWhereInput
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    cursor?: UserWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
@@ -5503,9 +5503,9 @@ export namespace Prisma {
     clienteId?: boolean
     createAt?: boolean
     updateAt?: boolean
-    client?: boolean | ClientDefaultArgs<ExtArgs>
     appointments?: boolean | Pet$appointmentsArgs<ExtArgs>
     records?: boolean | Pet$recordsArgs<ExtArgs>
+    client?: boolean | ClientDefaultArgs<ExtArgs>
     _count?: boolean | PetCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["pet"]>
 
@@ -5524,18 +5524,18 @@ export namespace Prisma {
 
   export type PetOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "species" | "breed" | "birthDate" | "clienteId" | "createAt" | "updateAt", ExtArgs["result"]["pet"]>
   export type PetInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    client?: boolean | ClientDefaultArgs<ExtArgs>
     appointments?: boolean | Pet$appointmentsArgs<ExtArgs>
     records?: boolean | Pet$recordsArgs<ExtArgs>
+    client?: boolean | ClientDefaultArgs<ExtArgs>
     _count?: boolean | PetCountOutputTypeDefaultArgs<ExtArgs>
   }
 
   export type $PetPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Pet"
     objects: {
-      client: Prisma.$ClientPayload<ExtArgs>
       appointments: Prisma.$AppointmentPayload<ExtArgs>[]
       records: Prisma.$MedicalRecordPayload<ExtArgs>[]
+      client: Prisma.$ClientPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -5886,9 +5886,9 @@ export namespace Prisma {
    */
   export interface Prisma__PetClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    client<T extends ClientDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ClientDefaultArgs<ExtArgs>>): Prisma__ClientClient<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     appointments<T extends Pet$appointmentsArgs<ExtArgs> = {}>(args?: Subset<T, Pet$appointmentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     records<T extends Pet$recordsArgs<ExtArgs> = {}>(args?: Subset<T, Pet$recordsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MedicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    client<T extends ClientDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ClientDefaultArgs<ExtArgs>>): Prisma__ClientClient<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -6515,9 +6515,9 @@ export namespace Prisma {
     serviceId?: boolean
     businessId?: boolean
     notes?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
     pet?: boolean | PetDefaultArgs<ExtArgs>
     service?: boolean | Appointment$serviceArgs<ExtArgs>
-    business?: boolean | BusinessDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["appointment"]>
 
 
@@ -6534,17 +6534,17 @@ export namespace Prisma {
 
   export type AppointmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "date" | "status" | "petId" | "serviceId" | "businessId" | "notes", ExtArgs["result"]["appointment"]>
   export type AppointmentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
     pet?: boolean | PetDefaultArgs<ExtArgs>
     service?: boolean | Appointment$serviceArgs<ExtArgs>
-    business?: boolean | BusinessDefaultArgs<ExtArgs>
   }
 
   export type $AppointmentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Appointment"
     objects: {
+      business: Prisma.$BusinessPayload<ExtArgs>
       pet: Prisma.$PetPayload<ExtArgs>
       service: Prisma.$ServicePayload<ExtArgs> | null
-      business: Prisma.$BusinessPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -6894,9 +6894,9 @@ export namespace Prisma {
    */
   export interface Prisma__AppointmentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    business<T extends BusinessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, BusinessDefaultArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     pet<T extends PetDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PetDefaultArgs<ExtArgs>>): Prisma__PetClient<$Result.GetResult<Prisma.$PetPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     service<T extends Appointment$serviceArgs<ExtArgs> = {}>(args?: Subset<T, Appointment$serviceArgs<ExtArgs>>): Prisma__ServiceClient<$Result.GetResult<Prisma.$ServicePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-    business<T extends BusinessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, BusinessDefaultArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -7515,8 +7515,8 @@ export namespace Prisma {
     price?: boolean
     duration?: boolean
     businessId?: boolean
-    business?: boolean | BusinessDefaultArgs<ExtArgs>
     Appointment?: boolean | Service$AppointmentArgs<ExtArgs>
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
     _count?: boolean | ServiceCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["service"]>
 
@@ -7532,16 +7532,16 @@ export namespace Prisma {
 
   export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "price" | "duration" | "businessId", ExtArgs["result"]["service"]>
   export type ServiceInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    business?: boolean | BusinessDefaultArgs<ExtArgs>
     Appointment?: boolean | Service$AppointmentArgs<ExtArgs>
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
     _count?: boolean | ServiceCountOutputTypeDefaultArgs<ExtArgs>
   }
 
   export type $ServicePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Service"
     objects: {
-      business: Prisma.$BusinessPayload<ExtArgs>
       Appointment: Prisma.$AppointmentPayload<ExtArgs>[]
+      business: Prisma.$BusinessPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -7889,8 +7889,8 @@ export namespace Prisma {
    */
   export interface Prisma__ServiceClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    business<T extends BusinessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, BusinessDefaultArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     Appointment<T extends Service$AppointmentArgs<ExtArgs> = {}>(args?: Subset<T, Service$AppointmentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    business<T extends BusinessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, BusinessDefaultArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -9505,8 +9505,8 @@ export namespace Prisma {
     businessId?: boolean
     total?: boolean
     dateSale?: boolean
-    client?: boolean | Sale$clientArgs<ExtArgs>
     business?: boolean | BusinessDefaultArgs<ExtArgs>
+    client?: boolean | Sale$clientArgs<ExtArgs>
     items?: boolean | Sale$itemsArgs<ExtArgs>
     _count?: boolean | SaleCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["sale"]>
@@ -9523,8 +9523,8 @@ export namespace Prisma {
 
   export type SaleOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clientId" | "businessId" | "total" | "dateSale", ExtArgs["result"]["sale"]>
   export type SaleInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    client?: boolean | Sale$clientArgs<ExtArgs>
     business?: boolean | BusinessDefaultArgs<ExtArgs>
+    client?: boolean | Sale$clientArgs<ExtArgs>
     items?: boolean | Sale$itemsArgs<ExtArgs>
     _count?: boolean | SaleCountOutputTypeDefaultArgs<ExtArgs>
   }
@@ -9532,8 +9532,8 @@ export namespace Prisma {
   export type $SalePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Sale"
     objects: {
-      client: Prisma.$ClientPayload<ExtArgs> | null
       business: Prisma.$BusinessPayload<ExtArgs>
+      client: Prisma.$ClientPayload<ExtArgs> | null
       items: Prisma.$SaleItemPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
@@ -9882,8 +9882,8 @@ export namespace Prisma {
    */
   export interface Prisma__SaleClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    client<T extends Sale$clientArgs<ExtArgs> = {}>(args?: Subset<T, Sale$clientArgs<ExtArgs>>): Prisma__ClientClient<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     business<T extends BusinessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, BusinessDefaultArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    client<T extends Sale$clientArgs<ExtArgs> = {}>(args?: Subset<T, Sale$clientArgs<ExtArgs>>): Prisma__ClientClient<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     items<T extends Sale$itemsArgs<ExtArgs> = {}>(args?: Subset<T, Sale$itemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SaleItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -10525,8 +10525,8 @@ export namespace Prisma {
     productId?: boolean
     quantity?: boolean
     price?: boolean
-    sale?: boolean | SaleDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
+    sale?: boolean | SaleDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["saleItem"]>
 
 
@@ -10541,15 +10541,15 @@ export namespace Prisma {
 
   export type SaleItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "saleId" | "productId" | "quantity" | "price", ExtArgs["result"]["saleItem"]>
   export type SaleItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    sale?: boolean | SaleDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
+    sale?: boolean | SaleDefaultArgs<ExtArgs>
   }
 
   export type $SaleItemPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "SaleItem"
     objects: {
-      sale: Prisma.$SalePayload<ExtArgs>
       product: Prisma.$ProductPayload<ExtArgs>
+      sale: Prisma.$SalePayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -10897,8 +10897,8 @@ export namespace Prisma {
    */
   export interface Prisma__SaleItemClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    sale<T extends SaleDefaultArgs<ExtArgs> = {}>(args?: Subset<T, SaleDefaultArgs<ExtArgs>>): Prisma__SaleClient<$Result.GetResult<Prisma.$SalePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     product<T extends ProductDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ProductDefaultArgs<ExtArgs>>): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    sale<T extends SaleDefaultArgs<ExtArgs> = {}>(args?: Subset<T, SaleDefaultArgs<ExtArgs>>): Prisma__SaleClient<$Result.GetResult<Prisma.$SalePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -14619,9 +14619,9 @@ export namespace Prisma {
     businessId?: StringNullableFilter<"User"> | string | null
     createAt?: DateTimeFilter<"User"> | Date | string
     updateAt?: DateTimeFilter<"User"> | Date | string
-    business?: XOR<BusinessNullableScalarRelationFilter, BusinessWhereInput> | null
-    MedicalRecord?: MedicalRecordListRelationFilter
     Affiliate?: AffiliateListRelationFilter
+    MedicalRecord?: MedicalRecordListRelationFilter
+    business?: XOR<BusinessNullableScalarRelationFilter, BusinessWhereInput> | null
   }
 
   export type UserOrderByWithRelationInput = {
@@ -14633,9 +14633,9 @@ export namespace Prisma {
     businessId?: SortOrderInput | SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
-    business?: BusinessOrderByWithRelationInput
-    MedicalRecord?: MedicalRecordOrderByRelationAggregateInput
     Affiliate?: AffiliateOrderByRelationAggregateInput
+    MedicalRecord?: MedicalRecordOrderByRelationAggregateInput
+    business?: BusinessOrderByWithRelationInput
     _relevance?: UserOrderByRelevanceInput
   }
 
@@ -14651,9 +14651,9 @@ export namespace Prisma {
     businessId?: StringNullableFilter<"User"> | string | null
     createAt?: DateTimeFilter<"User"> | Date | string
     updateAt?: DateTimeFilter<"User"> | Date | string
-    business?: XOR<BusinessNullableScalarRelationFilter, BusinessWhereInput> | null
-    MedicalRecord?: MedicalRecordListRelationFilter
     Affiliate?: AffiliateListRelationFilter
+    MedicalRecord?: MedicalRecordListRelationFilter
+    business?: XOR<BusinessNullableScalarRelationFilter, BusinessWhereInput> | null
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -14695,12 +14695,12 @@ export namespace Prisma {
     email?: StringFilter<"Business"> | string
     createAt?: DateTimeFilter<"Business"> | Date | string
     updateAt?: DateTimeFilter<"Business"> | Date | string
-    users?: UserListRelationFilter
-    products?: ProductListRelationFilter
-    services?: ServiceListRelationFilter
-    clients?: ClientListRelationFilter
-    sales?: SaleListRelationFilter
     appointments?: AppointmentListRelationFilter
+    clients?: ClientListRelationFilter
+    products?: ProductListRelationFilter
+    sales?: SaleListRelationFilter
+    services?: ServiceListRelationFilter
+    users?: UserListRelationFilter
   }
 
   export type BusinessOrderByWithRelationInput = {
@@ -14711,12 +14711,12 @@ export namespace Prisma {
     email?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
-    users?: UserOrderByRelationAggregateInput
-    products?: ProductOrderByRelationAggregateInput
-    services?: ServiceOrderByRelationAggregateInput
-    clients?: ClientOrderByRelationAggregateInput
-    sales?: SaleOrderByRelationAggregateInput
     appointments?: AppointmentOrderByRelationAggregateInput
+    clients?: ClientOrderByRelationAggregateInput
+    products?: ProductOrderByRelationAggregateInput
+    sales?: SaleOrderByRelationAggregateInput
+    services?: ServiceOrderByRelationAggregateInput
+    users?: UserOrderByRelationAggregateInput
     _relevance?: BusinessOrderByRelevanceInput
   }
 
@@ -14731,12 +14731,12 @@ export namespace Prisma {
     email?: StringFilter<"Business"> | string
     createAt?: DateTimeFilter<"Business"> | Date | string
     updateAt?: DateTimeFilter<"Business"> | Date | string
-    users?: UserListRelationFilter
-    products?: ProductListRelationFilter
-    services?: ServiceListRelationFilter
-    clients?: ClientListRelationFilter
-    sales?: SaleListRelationFilter
     appointments?: AppointmentListRelationFilter
+    clients?: ClientListRelationFilter
+    products?: ProductListRelationFilter
+    sales?: SaleListRelationFilter
+    services?: ServiceListRelationFilter
+    users?: UserListRelationFilter
   }, "id">
 
   export type BusinessOrderByWithAggregationInput = {
@@ -14849,9 +14849,9 @@ export namespace Prisma {
     clienteId?: StringFilter<"Pet"> | string
     createAt?: DateTimeFilter<"Pet"> | Date | string
     updateAt?: DateTimeFilter<"Pet"> | Date | string
-    client?: XOR<ClientScalarRelationFilter, ClientWhereInput>
     appointments?: AppointmentListRelationFilter
     records?: MedicalRecordListRelationFilter
+    client?: XOR<ClientScalarRelationFilter, ClientWhereInput>
   }
 
   export type PetOrderByWithRelationInput = {
@@ -14863,9 +14863,9 @@ export namespace Prisma {
     clienteId?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
-    client?: ClientOrderByWithRelationInput
     appointments?: AppointmentOrderByRelationAggregateInput
     records?: MedicalRecordOrderByRelationAggregateInput
+    client?: ClientOrderByWithRelationInput
     _relevance?: PetOrderByRelevanceInput
   }
 
@@ -14881,9 +14881,9 @@ export namespace Prisma {
     clienteId?: StringFilter<"Pet"> | string
     createAt?: DateTimeFilter<"Pet"> | Date | string
     updateAt?: DateTimeFilter<"Pet"> | Date | string
-    client?: XOR<ClientScalarRelationFilter, ClientWhereInput>
     appointments?: AppointmentListRelationFilter
     records?: MedicalRecordListRelationFilter
+    client?: XOR<ClientScalarRelationFilter, ClientWhereInput>
   }, "id">
 
   export type PetOrderByWithAggregationInput = {
@@ -14925,9 +14925,9 @@ export namespace Prisma {
     serviceId?: StringNullableFilter<"Appointment"> | string | null
     businessId?: StringFilter<"Appointment"> | string
     notes?: StringNullableFilter<"Appointment"> | string | null
+    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     pet?: XOR<PetScalarRelationFilter, PetWhereInput>
     service?: XOR<ServiceNullableScalarRelationFilter, ServiceWhereInput> | null
-    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
   }
 
   export type AppointmentOrderByWithRelationInput = {
@@ -14938,9 +14938,9 @@ export namespace Prisma {
     serviceId?: SortOrderInput | SortOrder
     businessId?: SortOrder
     notes?: SortOrderInput | SortOrder
+    business?: BusinessOrderByWithRelationInput
     pet?: PetOrderByWithRelationInput
     service?: ServiceOrderByWithRelationInput
-    business?: BusinessOrderByWithRelationInput
     _relevance?: AppointmentOrderByRelevanceInput
   }
 
@@ -14955,9 +14955,9 @@ export namespace Prisma {
     serviceId?: StringNullableFilter<"Appointment"> | string | null
     businessId?: StringFilter<"Appointment"> | string
     notes?: StringNullableFilter<"Appointment"> | string | null
+    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     pet?: XOR<PetScalarRelationFilter, PetWhereInput>
     service?: XOR<ServiceNullableScalarRelationFilter, ServiceWhereInput> | null
-    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
   }, "id">
 
   export type AppointmentOrderByWithAggregationInput = {
@@ -14995,8 +14995,8 @@ export namespace Prisma {
     price?: FloatFilter<"Service"> | number
     duration?: IntFilter<"Service"> | number
     businessId?: StringFilter<"Service"> | string
-    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     Appointment?: AppointmentListRelationFilter
+    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
   }
 
   export type ServiceOrderByWithRelationInput = {
@@ -15005,8 +15005,8 @@ export namespace Prisma {
     price?: SortOrder
     duration?: SortOrder
     businessId?: SortOrder
-    business?: BusinessOrderByWithRelationInput
     Appointment?: AppointmentOrderByRelationAggregateInput
+    business?: BusinessOrderByWithRelationInput
     _relevance?: ServiceOrderByRelevanceInput
   }
 
@@ -15019,8 +15019,8 @@ export namespace Prisma {
     price?: FloatFilter<"Service"> | number
     duration?: IntFilter<"Service"> | number
     businessId?: StringFilter<"Service"> | string
-    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     Appointment?: AppointmentListRelationFilter
+    business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
   }, "id">
 
   export type ServiceOrderByWithAggregationInput = {
@@ -15117,8 +15117,8 @@ export namespace Prisma {
     businessId?: StringFilter<"Sale"> | string
     total?: FloatFilter<"Sale"> | number
     dateSale?: DateTimeFilter<"Sale"> | Date | string
-    client?: XOR<ClientNullableScalarRelationFilter, ClientWhereInput> | null
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
+    client?: XOR<ClientNullableScalarRelationFilter, ClientWhereInput> | null
     items?: SaleItemListRelationFilter
   }
 
@@ -15128,8 +15128,8 @@ export namespace Prisma {
     businessId?: SortOrder
     total?: SortOrder
     dateSale?: SortOrder
-    client?: ClientOrderByWithRelationInput
     business?: BusinessOrderByWithRelationInput
+    client?: ClientOrderByWithRelationInput
     items?: SaleItemOrderByRelationAggregateInput
     _relevance?: SaleOrderByRelevanceInput
   }
@@ -15143,8 +15143,8 @@ export namespace Prisma {
     businessId?: StringFilter<"Sale"> | string
     total?: FloatFilter<"Sale"> | number
     dateSale?: DateTimeFilter<"Sale"> | Date | string
-    client?: XOR<ClientNullableScalarRelationFilter, ClientWhereInput> | null
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
+    client?: XOR<ClientNullableScalarRelationFilter, ClientWhereInput> | null
     items?: SaleItemListRelationFilter
   }, "id">
 
@@ -15181,8 +15181,8 @@ export namespace Prisma {
     productId?: StringFilter<"SaleItem"> | string
     quantity?: IntFilter<"SaleItem"> | number
     price?: FloatFilter<"SaleItem"> | number
-    sale?: XOR<SaleScalarRelationFilter, SaleWhereInput>
     product?: XOR<ProductScalarRelationFilter, ProductWhereInput>
+    sale?: XOR<SaleScalarRelationFilter, SaleWhereInput>
   }
 
   export type SaleItemOrderByWithRelationInput = {
@@ -15191,8 +15191,8 @@ export namespace Prisma {
     productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
-    sale?: SaleOrderByWithRelationInput
     product?: ProductOrderByWithRelationInput
+    sale?: SaleOrderByWithRelationInput
     _relevance?: SaleItemOrderByRelevanceInput
   }
 
@@ -15205,8 +15205,8 @@ export namespace Prisma {
     productId?: StringFilter<"SaleItem"> | string
     quantity?: IntFilter<"SaleItem"> | number
     price?: FloatFilter<"SaleItem"> | number
-    sale?: XOR<SaleScalarRelationFilter, SaleWhereInput>
     product?: XOR<ProductScalarRelationFilter, ProductWhereInput>
+    sale?: XOR<SaleScalarRelationFilter, SaleWhereInput>
   }, "id">
 
   export type SaleItemOrderByWithAggregationInput = {
@@ -15439,9 +15439,9 @@ export namespace Prisma {
     role?: $Enums.Role
     createAt?: Date | string
     updateAt?: Date | string
-    business?: BusinessCreateNestedOneWithoutUsersInput
-    MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
     Affiliate?: AffiliateCreateNestedManyWithoutUserInput
+    MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
+    business?: BusinessCreateNestedOneWithoutUsersInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -15453,8 +15453,8 @@ export namespace Prisma {
     businessId?: string | null
     createAt?: Date | string
     updateAt?: Date | string
-    MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
     Affiliate?: AffiliateUncheckedCreateNestedManyWithoutUserInput
+    MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
   }
 
   export type UserUpdateInput = {
@@ -15465,9 +15465,9 @@ export namespace Prisma {
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    business?: BusinessUpdateOneWithoutUsersNestedInput
-    MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
     Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
+    MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
+    business?: BusinessUpdateOneWithoutUsersNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -15479,8 +15479,8 @@ export namespace Prisma {
     businessId?: NullableStringFieldUpdateOperationsInput | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
     Affiliate?: AffiliateUncheckedUpdateManyWithoutUserNestedInput
+    MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -15523,12 +15523,12 @@ export namespace Prisma {
     email: string
     createAt?: Date | string
     updateAt?: Date | string
-    users?: UserCreateNestedManyWithoutBusinessInput
-    products?: ProductCreateNestedManyWithoutBusinessInput
-    services?: ServiceCreateNestedManyWithoutBusinessInput
-    clients?: ClientCreateNestedManyWithoutBusinessInput
-    sales?: SaleCreateNestedManyWithoutBusinessInput
     appointments?: AppointmentCreateNestedManyWithoutBusinessInput
+    clients?: ClientCreateNestedManyWithoutBusinessInput
+    products?: ProductCreateNestedManyWithoutBusinessInput
+    sales?: SaleCreateNestedManyWithoutBusinessInput
+    services?: ServiceCreateNestedManyWithoutBusinessInput
+    users?: UserCreateNestedManyWithoutBusinessInput
   }
 
   export type BusinessUncheckedCreateInput = {
@@ -15539,12 +15539,12 @@ export namespace Prisma {
     email: string
     createAt?: Date | string
     updateAt?: Date | string
-    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
-    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
-    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
-    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
-    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
     appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
+    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
+    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
+    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
+    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
+    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
   }
 
   export type BusinessUpdateInput = {
@@ -15555,12 +15555,12 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUpdateManyWithoutBusinessNestedInput
-    products?: ProductUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUpdateManyWithoutBusinessNestedInput
     appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
+    clients?: ClientUpdateManyWithoutBusinessNestedInput
+    products?: ProductUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUpdateManyWithoutBusinessNestedInput
+    users?: UserUpdateManyWithoutBusinessNestedInput
   }
 
   export type BusinessUncheckedUpdateInput = {
@@ -15571,12 +15571,12 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
-    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
     appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
+    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
+    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
+    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
   }
 
   export type BusinessCreateManyInput = {
@@ -15694,9 +15694,9 @@ export namespace Prisma {
     birthDate?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
-    client: ClientCreateNestedOneWithoutPetsInput
     appointments?: AppointmentCreateNestedManyWithoutPetInput
     records?: MedicalRecordCreateNestedManyWithoutPetInput
+    client: ClientCreateNestedOneWithoutPetsInput
   }
 
   export type PetUncheckedCreateInput = {
@@ -15720,9 +15720,9 @@ export namespace Prisma {
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    client?: ClientUpdateOneRequiredWithoutPetsNestedInput
     appointments?: AppointmentUpdateManyWithoutPetNestedInput
     records?: MedicalRecordUpdateManyWithoutPetNestedInput
+    client?: ClientUpdateOneRequiredWithoutPetsNestedInput
   }
 
   export type PetUncheckedUpdateInput = {
@@ -15775,9 +15775,9 @@ export namespace Prisma {
     date: Date | string
     status?: $Enums.AppointmentStatus
     notes?: string | null
+    business: BusinessCreateNestedOneWithoutAppointmentsInput
     pet: PetCreateNestedOneWithoutAppointmentsInput
     service?: ServiceCreateNestedOneWithoutAppointmentInput
-    business: BusinessCreateNestedOneWithoutAppointmentsInput
   }
 
   export type AppointmentUncheckedCreateInput = {
@@ -15795,9 +15795,9 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    business?: BusinessUpdateOneRequiredWithoutAppointmentsNestedInput
     pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
     service?: ServiceUpdateOneWithoutAppointmentNestedInput
-    business?: BusinessUpdateOneRequiredWithoutAppointmentsNestedInput
   }
 
   export type AppointmentUncheckedUpdateInput = {
@@ -15842,8 +15842,8 @@ export namespace Prisma {
     name: string
     price: number
     duration: number
-    business: BusinessCreateNestedOneWithoutServicesInput
     Appointment?: AppointmentCreateNestedManyWithoutServiceInput
+    business: BusinessCreateNestedOneWithoutServicesInput
   }
 
   export type ServiceUncheckedCreateInput = {
@@ -15860,8 +15860,8 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
-    business?: BusinessUpdateOneRequiredWithoutServicesNestedInput
     Appointment?: AppointmentUpdateManyWithoutServiceNestedInput
+    business?: BusinessUpdateOneRequiredWithoutServicesNestedInput
   }
 
   export type ServiceUncheckedUpdateInput = {
@@ -15959,8 +15959,8 @@ export namespace Prisma {
     id?: string
     total: number
     dateSale?: Date | string
-    client?: ClientCreateNestedOneWithoutSaleInput
     business: BusinessCreateNestedOneWithoutSalesInput
+    client?: ClientCreateNestedOneWithoutSaleInput
     items?: SaleItemCreateNestedManyWithoutSaleInput
   }
 
@@ -15977,8 +15977,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
-    client?: ClientUpdateOneWithoutSaleNestedInput
     business?: BusinessUpdateOneRequiredWithoutSalesNestedInput
+    client?: ClientUpdateOneWithoutSaleNestedInput
     items?: SaleItemUpdateManyWithoutSaleNestedInput
   }
 
@@ -16017,8 +16017,8 @@ export namespace Prisma {
     id?: string
     quantity: number
     price: number
-    sale: SaleCreateNestedOneWithoutItemsInput
     product: ProductCreateNestedOneWithoutSaleItemInput
+    sale: SaleCreateNestedOneWithoutItemsInput
   }
 
   export type SaleItemUncheckedCreateInput = {
@@ -16033,8 +16033,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
-    sale?: SaleUpdateOneRequiredWithoutItemsNestedInput
     product?: ProductUpdateOneRequiredWithoutSaleItemNestedInput
+    sale?: SaleUpdateOneRequiredWithoutItemsNestedInput
   }
 
   export type SaleItemUncheckedUpdateInput = {
@@ -16311,9 +16311,10 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type BusinessNullableScalarRelationFilter = {
-    is?: BusinessWhereInput | null
-    isNot?: BusinessWhereInput | null
+  export type AffiliateListRelationFilter = {
+    every?: AffiliateWhereInput
+    some?: AffiliateWhereInput
+    none?: AffiliateWhereInput
   }
 
   export type MedicalRecordListRelationFilter = {
@@ -16322,10 +16323,9 @@ export namespace Prisma {
     none?: MedicalRecordWhereInput
   }
 
-  export type AffiliateListRelationFilter = {
-    every?: AffiliateWhereInput
-    some?: AffiliateWhereInput
-    none?: AffiliateWhereInput
+  export type BusinessNullableScalarRelationFilter = {
+    is?: BusinessWhereInput | null
+    isNot?: BusinessWhereInput | null
   }
 
   export type SortOrderInput = {
@@ -16333,11 +16333,11 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type MedicalRecordOrderByRelationAggregateInput = {
+  export type AffiliateOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type AffiliateOrderByRelationAggregateInput = {
+  export type MedicalRecordOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -16440,22 +16440,10 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type UserListRelationFilter = {
-    every?: UserWhereInput
-    some?: UserWhereInput
-    none?: UserWhereInput
-  }
-
-  export type ProductListRelationFilter = {
-    every?: ProductWhereInput
-    some?: ProductWhereInput
-    none?: ProductWhereInput
-  }
-
-  export type ServiceListRelationFilter = {
-    every?: ServiceWhereInput
-    some?: ServiceWhereInput
-    none?: ServiceWhereInput
+  export type AppointmentListRelationFilter = {
+    every?: AppointmentWhereInput
+    some?: AppointmentWhereInput
+    none?: AppointmentWhereInput
   }
 
   export type ClientListRelationFilter = {
@@ -16464,27 +16452,31 @@ export namespace Prisma {
     none?: ClientWhereInput
   }
 
+  export type ProductListRelationFilter = {
+    every?: ProductWhereInput
+    some?: ProductWhereInput
+    none?: ProductWhereInput
+  }
+
   export type SaleListRelationFilter = {
     every?: SaleWhereInput
     some?: SaleWhereInput
     none?: SaleWhereInput
   }
 
-  export type AppointmentListRelationFilter = {
-    every?: AppointmentWhereInput
-    some?: AppointmentWhereInput
-    none?: AppointmentWhereInput
+  export type ServiceListRelationFilter = {
+    every?: ServiceWhereInput
+    some?: ServiceWhereInput
+    none?: ServiceWhereInput
   }
 
-  export type UserOrderByRelationAggregateInput = {
-    _count?: SortOrder
+  export type UserListRelationFilter = {
+    every?: UserWhereInput
+    some?: UserWhereInput
+    none?: UserWhereInput
   }
 
-  export type ProductOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type ServiceOrderByRelationAggregateInput = {
+  export type AppointmentOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -16492,11 +16484,19 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
+  export type ProductOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
   export type SaleOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type AppointmentOrderByRelationAggregateInput = {
+  export type ServiceOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -16906,14 +16906,14 @@ export namespace Prisma {
     total?: SortOrder
   }
 
-  export type SaleScalarRelationFilter = {
-    is?: SaleWhereInput
-    isNot?: SaleWhereInput
-  }
-
   export type ProductScalarRelationFilter = {
     is?: ProductWhereInput
     isNot?: ProductWhereInput
+  }
+
+  export type SaleScalarRelationFilter = {
+    is?: SaleWhereInput
+    isNot?: SaleWhereInput
   }
 
   export type SaleItemOrderByRelevanceInput = {
@@ -17133,10 +17133,11 @@ export namespace Prisma {
     _max?: NestedEnumReferralStatusFilter<$PrismaModel>
   }
 
-  export type BusinessCreateNestedOneWithoutUsersInput = {
-    create?: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
-    connectOrCreate?: BusinessCreateOrConnectWithoutUsersInput
-    connect?: BusinessWhereUniqueInput
+  export type AffiliateCreateNestedManyWithoutUserInput = {
+    create?: XOR<AffiliateCreateWithoutUserInput, AffiliateUncheckedCreateWithoutUserInput> | AffiliateCreateWithoutUserInput[] | AffiliateUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AffiliateCreateOrConnectWithoutUserInput | AffiliateCreateOrConnectWithoutUserInput[]
+    createMany?: AffiliateCreateManyUserInputEnvelope
+    connect?: AffiliateWhereUniqueInput | AffiliateWhereUniqueInput[]
   }
 
   export type MedicalRecordCreateNestedManyWithoutVetInput = {
@@ -17146,7 +17147,13 @@ export namespace Prisma {
     connect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
   }
 
-  export type AffiliateCreateNestedManyWithoutUserInput = {
+  export type BusinessCreateNestedOneWithoutUsersInput = {
+    create?: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
+    connectOrCreate?: BusinessCreateOrConnectWithoutUsersInput
+    connect?: BusinessWhereUniqueInput
+  }
+
+  export type AffiliateUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<AffiliateCreateWithoutUserInput, AffiliateUncheckedCreateWithoutUserInput> | AffiliateCreateWithoutUserInput[] | AffiliateUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AffiliateCreateOrConnectWithoutUserInput | AffiliateCreateOrConnectWithoutUserInput[]
     createMany?: AffiliateCreateManyUserInputEnvelope
@@ -17160,13 +17167,6 @@ export namespace Prisma {
     connect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
   }
 
-  export type AffiliateUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<AffiliateCreateWithoutUserInput, AffiliateUncheckedCreateWithoutUserInput> | AffiliateCreateWithoutUserInput[] | AffiliateUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: AffiliateCreateOrConnectWithoutUserInput | AffiliateCreateOrConnectWithoutUserInput[]
-    createMany?: AffiliateCreateManyUserInputEnvelope
-    connect?: AffiliateWhereUniqueInput | AffiliateWhereUniqueInput[]
-  }
-
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
@@ -17177,30 +17177,6 @@ export namespace Prisma {
 
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
-  }
-
-  export type BusinessUpdateOneWithoutUsersNestedInput = {
-    create?: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
-    connectOrCreate?: BusinessCreateOrConnectWithoutUsersInput
-    upsert?: BusinessUpsertWithoutUsersInput
-    disconnect?: BusinessWhereInput | boolean
-    delete?: BusinessWhereInput | boolean
-    connect?: BusinessWhereUniqueInput
-    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutUsersInput, BusinessUpdateWithoutUsersInput>, BusinessUncheckedUpdateWithoutUsersInput>
-  }
-
-  export type MedicalRecordUpdateManyWithoutVetNestedInput = {
-    create?: XOR<MedicalRecordCreateWithoutVetInput, MedicalRecordUncheckedCreateWithoutVetInput> | MedicalRecordCreateWithoutVetInput[] | MedicalRecordUncheckedCreateWithoutVetInput[]
-    connectOrCreate?: MedicalRecordCreateOrConnectWithoutVetInput | MedicalRecordCreateOrConnectWithoutVetInput[]
-    upsert?: MedicalRecordUpsertWithWhereUniqueWithoutVetInput | MedicalRecordUpsertWithWhereUniqueWithoutVetInput[]
-    createMany?: MedicalRecordCreateManyVetInputEnvelope
-    set?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
-    disconnect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
-    delete?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
-    connect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
-    update?: MedicalRecordUpdateWithWhereUniqueWithoutVetInput | MedicalRecordUpdateWithWhereUniqueWithoutVetInput[]
-    updateMany?: MedicalRecordUpdateManyWithWhereWithoutVetInput | MedicalRecordUpdateManyWithWhereWithoutVetInput[]
-    deleteMany?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
   }
 
   export type AffiliateUpdateManyWithoutUserNestedInput = {
@@ -17217,11 +17193,7 @@ export namespace Prisma {
     deleteMany?: AffiliateScalarWhereInput | AffiliateScalarWhereInput[]
   }
 
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
-  }
-
-  export type MedicalRecordUncheckedUpdateManyWithoutVetNestedInput = {
+  export type MedicalRecordUpdateManyWithoutVetNestedInput = {
     create?: XOR<MedicalRecordCreateWithoutVetInput, MedicalRecordUncheckedCreateWithoutVetInput> | MedicalRecordCreateWithoutVetInput[] | MedicalRecordUncheckedCreateWithoutVetInput[]
     connectOrCreate?: MedicalRecordCreateOrConnectWithoutVetInput | MedicalRecordCreateOrConnectWithoutVetInput[]
     upsert?: MedicalRecordUpsertWithWhereUniqueWithoutVetInput | MedicalRecordUpsertWithWhereUniqueWithoutVetInput[]
@@ -17233,6 +17205,20 @@ export namespace Prisma {
     update?: MedicalRecordUpdateWithWhereUniqueWithoutVetInput | MedicalRecordUpdateWithWhereUniqueWithoutVetInput[]
     updateMany?: MedicalRecordUpdateManyWithWhereWithoutVetInput | MedicalRecordUpdateManyWithWhereWithoutVetInput[]
     deleteMany?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
+  }
+
+  export type BusinessUpdateOneWithoutUsersNestedInput = {
+    create?: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
+    connectOrCreate?: BusinessCreateOrConnectWithoutUsersInput
+    upsert?: BusinessUpsertWithoutUsersInput
+    disconnect?: BusinessWhereInput | boolean
+    delete?: BusinessWhereInput | boolean
+    connect?: BusinessWhereUniqueInput
+    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutUsersInput, BusinessUpdateWithoutUsersInput>, BusinessUncheckedUpdateWithoutUsersInput>
+  }
+
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
   }
 
   export type AffiliateUncheckedUpdateManyWithoutUserNestedInput = {
@@ -17249,39 +17235,18 @@ export namespace Prisma {
     deleteMany?: AffiliateScalarWhereInput | AffiliateScalarWhereInput[]
   }
 
-  export type UserCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
-    createMany?: UserCreateManyBusinessInputEnvelope
-    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
-  }
-
-  export type ProductCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput> | ProductCreateWithoutBusinessInput[] | ProductUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: ProductCreateOrConnectWithoutBusinessInput | ProductCreateOrConnectWithoutBusinessInput[]
-    createMany?: ProductCreateManyBusinessInputEnvelope
-    connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-  }
-
-  export type ServiceCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput> | ServiceCreateWithoutBusinessInput[] | ServiceUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: ServiceCreateOrConnectWithoutBusinessInput | ServiceCreateOrConnectWithoutBusinessInput[]
-    createMany?: ServiceCreateManyBusinessInputEnvelope
-    connect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
-  }
-
-  export type ClientCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<ClientCreateWithoutBusinessInput, ClientUncheckedCreateWithoutBusinessInput> | ClientCreateWithoutBusinessInput[] | ClientUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: ClientCreateOrConnectWithoutBusinessInput | ClientCreateOrConnectWithoutBusinessInput[]
-    createMany?: ClientCreateManyBusinessInputEnvelope
-    connect?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
-  }
-
-  export type SaleCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<SaleCreateWithoutBusinessInput, SaleUncheckedCreateWithoutBusinessInput> | SaleCreateWithoutBusinessInput[] | SaleUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: SaleCreateOrConnectWithoutBusinessInput | SaleCreateOrConnectWithoutBusinessInput[]
-    createMany?: SaleCreateManyBusinessInputEnvelope
-    connect?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
+  export type MedicalRecordUncheckedUpdateManyWithoutVetNestedInput = {
+    create?: XOR<MedicalRecordCreateWithoutVetInput, MedicalRecordUncheckedCreateWithoutVetInput> | MedicalRecordCreateWithoutVetInput[] | MedicalRecordUncheckedCreateWithoutVetInput[]
+    connectOrCreate?: MedicalRecordCreateOrConnectWithoutVetInput | MedicalRecordCreateOrConnectWithoutVetInput[]
+    upsert?: MedicalRecordUpsertWithWhereUniqueWithoutVetInput | MedicalRecordUpsertWithWhereUniqueWithoutVetInput[]
+    createMany?: MedicalRecordCreateManyVetInputEnvelope
+    set?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
+    disconnect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
+    delete?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
+    connect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
+    update?: MedicalRecordUpdateWithWhereUniqueWithoutVetInput | MedicalRecordUpdateWithWhereUniqueWithoutVetInput[]
+    updateMany?: MedicalRecordUpdateManyWithWhereWithoutVetInput | MedicalRecordUpdateManyWithWhereWithoutVetInput[]
+    deleteMany?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
   }
 
   export type AppointmentCreateNestedManyWithoutBusinessInput = {
@@ -17291,39 +17256,39 @@ export namespace Prisma {
     connect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
   }
 
-  export type UserUncheckedCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
-    createMany?: UserCreateManyBusinessInputEnvelope
-    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
-  }
-
-  export type ProductUncheckedCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput> | ProductCreateWithoutBusinessInput[] | ProductUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: ProductCreateOrConnectWithoutBusinessInput | ProductCreateOrConnectWithoutBusinessInput[]
-    createMany?: ProductCreateManyBusinessInputEnvelope
-    connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-  }
-
-  export type ServiceUncheckedCreateNestedManyWithoutBusinessInput = {
-    create?: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput> | ServiceCreateWithoutBusinessInput[] | ServiceUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: ServiceCreateOrConnectWithoutBusinessInput | ServiceCreateOrConnectWithoutBusinessInput[]
-    createMany?: ServiceCreateManyBusinessInputEnvelope
-    connect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
-  }
-
-  export type ClientUncheckedCreateNestedManyWithoutBusinessInput = {
+  export type ClientCreateNestedManyWithoutBusinessInput = {
     create?: XOR<ClientCreateWithoutBusinessInput, ClientUncheckedCreateWithoutBusinessInput> | ClientCreateWithoutBusinessInput[] | ClientUncheckedCreateWithoutBusinessInput[]
     connectOrCreate?: ClientCreateOrConnectWithoutBusinessInput | ClientCreateOrConnectWithoutBusinessInput[]
     createMany?: ClientCreateManyBusinessInputEnvelope
     connect?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
   }
 
-  export type SaleUncheckedCreateNestedManyWithoutBusinessInput = {
+  export type ProductCreateNestedManyWithoutBusinessInput = {
+    create?: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput> | ProductCreateWithoutBusinessInput[] | ProductUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: ProductCreateOrConnectWithoutBusinessInput | ProductCreateOrConnectWithoutBusinessInput[]
+    createMany?: ProductCreateManyBusinessInputEnvelope
+    connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
+  }
+
+  export type SaleCreateNestedManyWithoutBusinessInput = {
     create?: XOR<SaleCreateWithoutBusinessInput, SaleUncheckedCreateWithoutBusinessInput> | SaleCreateWithoutBusinessInput[] | SaleUncheckedCreateWithoutBusinessInput[]
     connectOrCreate?: SaleCreateOrConnectWithoutBusinessInput | SaleCreateOrConnectWithoutBusinessInput[]
     createMany?: SaleCreateManyBusinessInputEnvelope
     connect?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
+  }
+
+  export type ServiceCreateNestedManyWithoutBusinessInput = {
+    create?: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput> | ServiceCreateWithoutBusinessInput[] | ServiceUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: ServiceCreateOrConnectWithoutBusinessInput | ServiceCreateOrConnectWithoutBusinessInput[]
+    createMany?: ServiceCreateManyBusinessInputEnvelope
+    connect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
+  }
+
+  export type UserCreateNestedManyWithoutBusinessInput = {
+    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
+    createMany?: UserCreateManyBusinessInputEnvelope
+    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
   }
 
   export type AppointmentUncheckedCreateNestedManyWithoutBusinessInput = {
@@ -17333,74 +17298,39 @@ export namespace Prisma {
     connect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
   }
 
-  export type UserUpdateManyWithoutBusinessNestedInput = {
-    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
-    upsert?: UserUpsertWithWhereUniqueWithoutBusinessInput | UserUpsertWithWhereUniqueWithoutBusinessInput[]
-    createMany?: UserCreateManyBusinessInputEnvelope
-    set?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    disconnect?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    delete?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    update?: UserUpdateWithWhereUniqueWithoutBusinessInput | UserUpdateWithWhereUniqueWithoutBusinessInput[]
-    updateMany?: UserUpdateManyWithWhereWithoutBusinessInput | UserUpdateManyWithWhereWithoutBusinessInput[]
-    deleteMany?: UserScalarWhereInput | UserScalarWhereInput[]
-  }
-
-  export type ProductUpdateManyWithoutBusinessNestedInput = {
-    create?: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput> | ProductCreateWithoutBusinessInput[] | ProductUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: ProductCreateOrConnectWithoutBusinessInput | ProductCreateOrConnectWithoutBusinessInput[]
-    upsert?: ProductUpsertWithWhereUniqueWithoutBusinessInput | ProductUpsertWithWhereUniqueWithoutBusinessInput[]
-    createMany?: ProductCreateManyBusinessInputEnvelope
-    set?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-    disconnect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-    delete?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-    connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-    update?: ProductUpdateWithWhereUniqueWithoutBusinessInput | ProductUpdateWithWhereUniqueWithoutBusinessInput[]
-    updateMany?: ProductUpdateManyWithWhereWithoutBusinessInput | ProductUpdateManyWithWhereWithoutBusinessInput[]
-    deleteMany?: ProductScalarWhereInput | ProductScalarWhereInput[]
-  }
-
-  export type ServiceUpdateManyWithoutBusinessNestedInput = {
-    create?: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput> | ServiceCreateWithoutBusinessInput[] | ServiceUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: ServiceCreateOrConnectWithoutBusinessInput | ServiceCreateOrConnectWithoutBusinessInput[]
-    upsert?: ServiceUpsertWithWhereUniqueWithoutBusinessInput | ServiceUpsertWithWhereUniqueWithoutBusinessInput[]
-    createMany?: ServiceCreateManyBusinessInputEnvelope
-    set?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
-    disconnect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
-    delete?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
-    connect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
-    update?: ServiceUpdateWithWhereUniqueWithoutBusinessInput | ServiceUpdateWithWhereUniqueWithoutBusinessInput[]
-    updateMany?: ServiceUpdateManyWithWhereWithoutBusinessInput | ServiceUpdateManyWithWhereWithoutBusinessInput[]
-    deleteMany?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
-  }
-
-  export type ClientUpdateManyWithoutBusinessNestedInput = {
+  export type ClientUncheckedCreateNestedManyWithoutBusinessInput = {
     create?: XOR<ClientCreateWithoutBusinessInput, ClientUncheckedCreateWithoutBusinessInput> | ClientCreateWithoutBusinessInput[] | ClientUncheckedCreateWithoutBusinessInput[]
     connectOrCreate?: ClientCreateOrConnectWithoutBusinessInput | ClientCreateOrConnectWithoutBusinessInput[]
-    upsert?: ClientUpsertWithWhereUniqueWithoutBusinessInput | ClientUpsertWithWhereUniqueWithoutBusinessInput[]
     createMany?: ClientCreateManyBusinessInputEnvelope
-    set?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
-    disconnect?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
-    delete?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
     connect?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
-    update?: ClientUpdateWithWhereUniqueWithoutBusinessInput | ClientUpdateWithWhereUniqueWithoutBusinessInput[]
-    updateMany?: ClientUpdateManyWithWhereWithoutBusinessInput | ClientUpdateManyWithWhereWithoutBusinessInput[]
-    deleteMany?: ClientScalarWhereInput | ClientScalarWhereInput[]
   }
 
-  export type SaleUpdateManyWithoutBusinessNestedInput = {
+  export type ProductUncheckedCreateNestedManyWithoutBusinessInput = {
+    create?: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput> | ProductCreateWithoutBusinessInput[] | ProductUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: ProductCreateOrConnectWithoutBusinessInput | ProductCreateOrConnectWithoutBusinessInput[]
+    createMany?: ProductCreateManyBusinessInputEnvelope
+    connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
+  }
+
+  export type SaleUncheckedCreateNestedManyWithoutBusinessInput = {
     create?: XOR<SaleCreateWithoutBusinessInput, SaleUncheckedCreateWithoutBusinessInput> | SaleCreateWithoutBusinessInput[] | SaleUncheckedCreateWithoutBusinessInput[]
     connectOrCreate?: SaleCreateOrConnectWithoutBusinessInput | SaleCreateOrConnectWithoutBusinessInput[]
-    upsert?: SaleUpsertWithWhereUniqueWithoutBusinessInput | SaleUpsertWithWhereUniqueWithoutBusinessInput[]
     createMany?: SaleCreateManyBusinessInputEnvelope
-    set?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
-    disconnect?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
-    delete?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
     connect?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
-    update?: SaleUpdateWithWhereUniqueWithoutBusinessInput | SaleUpdateWithWhereUniqueWithoutBusinessInput[]
-    updateMany?: SaleUpdateManyWithWhereWithoutBusinessInput | SaleUpdateManyWithWhereWithoutBusinessInput[]
-    deleteMany?: SaleScalarWhereInput | SaleScalarWhereInput[]
+  }
+
+  export type ServiceUncheckedCreateNestedManyWithoutBusinessInput = {
+    create?: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput> | ServiceCreateWithoutBusinessInput[] | ServiceUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: ServiceCreateOrConnectWithoutBusinessInput | ServiceCreateOrConnectWithoutBusinessInput[]
+    createMany?: ServiceCreateManyBusinessInputEnvelope
+    connect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
+  }
+
+  export type UserUncheckedCreateNestedManyWithoutBusinessInput = {
+    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
+    createMany?: UserCreateManyBusinessInputEnvelope
+    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
   }
 
   export type AppointmentUpdateManyWithoutBusinessNestedInput = {
@@ -17417,21 +17347,21 @@ export namespace Prisma {
     deleteMany?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
   }
 
-  export type UserUncheckedUpdateManyWithoutBusinessNestedInput = {
-    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
-    upsert?: UserUpsertWithWhereUniqueWithoutBusinessInput | UserUpsertWithWhereUniqueWithoutBusinessInput[]
-    createMany?: UserCreateManyBusinessInputEnvelope
-    set?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    disconnect?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    delete?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
-    update?: UserUpdateWithWhereUniqueWithoutBusinessInput | UserUpdateWithWhereUniqueWithoutBusinessInput[]
-    updateMany?: UserUpdateManyWithWhereWithoutBusinessInput | UserUpdateManyWithWhereWithoutBusinessInput[]
-    deleteMany?: UserScalarWhereInput | UserScalarWhereInput[]
+  export type ClientUpdateManyWithoutBusinessNestedInput = {
+    create?: XOR<ClientCreateWithoutBusinessInput, ClientUncheckedCreateWithoutBusinessInput> | ClientCreateWithoutBusinessInput[] | ClientUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: ClientCreateOrConnectWithoutBusinessInput | ClientCreateOrConnectWithoutBusinessInput[]
+    upsert?: ClientUpsertWithWhereUniqueWithoutBusinessInput | ClientUpsertWithWhereUniqueWithoutBusinessInput[]
+    createMany?: ClientCreateManyBusinessInputEnvelope
+    set?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
+    disconnect?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
+    delete?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
+    connect?: ClientWhereUniqueInput | ClientWhereUniqueInput[]
+    update?: ClientUpdateWithWhereUniqueWithoutBusinessInput | ClientUpdateWithWhereUniqueWithoutBusinessInput[]
+    updateMany?: ClientUpdateManyWithWhereWithoutBusinessInput | ClientUpdateManyWithWhereWithoutBusinessInput[]
+    deleteMany?: ClientScalarWhereInput | ClientScalarWhereInput[]
   }
 
-  export type ProductUncheckedUpdateManyWithoutBusinessNestedInput = {
+  export type ProductUpdateManyWithoutBusinessNestedInput = {
     create?: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput> | ProductCreateWithoutBusinessInput[] | ProductUncheckedCreateWithoutBusinessInput[]
     connectOrCreate?: ProductCreateOrConnectWithoutBusinessInput | ProductCreateOrConnectWithoutBusinessInput[]
     upsert?: ProductUpsertWithWhereUniqueWithoutBusinessInput | ProductUpsertWithWhereUniqueWithoutBusinessInput[]
@@ -17445,7 +17375,21 @@ export namespace Prisma {
     deleteMany?: ProductScalarWhereInput | ProductScalarWhereInput[]
   }
 
-  export type ServiceUncheckedUpdateManyWithoutBusinessNestedInput = {
+  export type SaleUpdateManyWithoutBusinessNestedInput = {
+    create?: XOR<SaleCreateWithoutBusinessInput, SaleUncheckedCreateWithoutBusinessInput> | SaleCreateWithoutBusinessInput[] | SaleUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: SaleCreateOrConnectWithoutBusinessInput | SaleCreateOrConnectWithoutBusinessInput[]
+    upsert?: SaleUpsertWithWhereUniqueWithoutBusinessInput | SaleUpsertWithWhereUniqueWithoutBusinessInput[]
+    createMany?: SaleCreateManyBusinessInputEnvelope
+    set?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
+    disconnect?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
+    delete?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
+    connect?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
+    update?: SaleUpdateWithWhereUniqueWithoutBusinessInput | SaleUpdateWithWhereUniqueWithoutBusinessInput[]
+    updateMany?: SaleUpdateManyWithWhereWithoutBusinessInput | SaleUpdateManyWithWhereWithoutBusinessInput[]
+    deleteMany?: SaleScalarWhereInput | SaleScalarWhereInput[]
+  }
+
+  export type ServiceUpdateManyWithoutBusinessNestedInput = {
     create?: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput> | ServiceCreateWithoutBusinessInput[] | ServiceUncheckedCreateWithoutBusinessInput[]
     connectOrCreate?: ServiceCreateOrConnectWithoutBusinessInput | ServiceCreateOrConnectWithoutBusinessInput[]
     upsert?: ServiceUpsertWithWhereUniqueWithoutBusinessInput | ServiceUpsertWithWhereUniqueWithoutBusinessInput[]
@@ -17457,6 +17401,34 @@ export namespace Prisma {
     update?: ServiceUpdateWithWhereUniqueWithoutBusinessInput | ServiceUpdateWithWhereUniqueWithoutBusinessInput[]
     updateMany?: ServiceUpdateManyWithWhereWithoutBusinessInput | ServiceUpdateManyWithWhereWithoutBusinessInput[]
     deleteMany?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
+  }
+
+  export type UserUpdateManyWithoutBusinessNestedInput = {
+    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
+    upsert?: UserUpsertWithWhereUniqueWithoutBusinessInput | UserUpsertWithWhereUniqueWithoutBusinessInput[]
+    createMany?: UserCreateManyBusinessInputEnvelope
+    set?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    disconnect?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    delete?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    update?: UserUpdateWithWhereUniqueWithoutBusinessInput | UserUpdateWithWhereUniqueWithoutBusinessInput[]
+    updateMany?: UserUpdateManyWithWhereWithoutBusinessInput | UserUpdateManyWithWhereWithoutBusinessInput[]
+    deleteMany?: UserScalarWhereInput | UserScalarWhereInput[]
+  }
+
+  export type AppointmentUncheckedUpdateManyWithoutBusinessNestedInput = {
+    create?: XOR<AppointmentCreateWithoutBusinessInput, AppointmentUncheckedCreateWithoutBusinessInput> | AppointmentCreateWithoutBusinessInput[] | AppointmentUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: AppointmentCreateOrConnectWithoutBusinessInput | AppointmentCreateOrConnectWithoutBusinessInput[]
+    upsert?: AppointmentUpsertWithWhereUniqueWithoutBusinessInput | AppointmentUpsertWithWhereUniqueWithoutBusinessInput[]
+    createMany?: AppointmentCreateManyBusinessInputEnvelope
+    set?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
+    disconnect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
+    delete?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
+    connect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
+    update?: AppointmentUpdateWithWhereUniqueWithoutBusinessInput | AppointmentUpdateWithWhereUniqueWithoutBusinessInput[]
+    updateMany?: AppointmentUpdateManyWithWhereWithoutBusinessInput | AppointmentUpdateManyWithWhereWithoutBusinessInput[]
+    deleteMany?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
   }
 
   export type ClientUncheckedUpdateManyWithoutBusinessNestedInput = {
@@ -17473,6 +17445,20 @@ export namespace Prisma {
     deleteMany?: ClientScalarWhereInput | ClientScalarWhereInput[]
   }
 
+  export type ProductUncheckedUpdateManyWithoutBusinessNestedInput = {
+    create?: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput> | ProductCreateWithoutBusinessInput[] | ProductUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: ProductCreateOrConnectWithoutBusinessInput | ProductCreateOrConnectWithoutBusinessInput[]
+    upsert?: ProductUpsertWithWhereUniqueWithoutBusinessInput | ProductUpsertWithWhereUniqueWithoutBusinessInput[]
+    createMany?: ProductCreateManyBusinessInputEnvelope
+    set?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
+    disconnect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
+    delete?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
+    connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
+    update?: ProductUpdateWithWhereUniqueWithoutBusinessInput | ProductUpdateWithWhereUniqueWithoutBusinessInput[]
+    updateMany?: ProductUpdateManyWithWhereWithoutBusinessInput | ProductUpdateManyWithWhereWithoutBusinessInput[]
+    deleteMany?: ProductScalarWhereInput | ProductScalarWhereInput[]
+  }
+
   export type SaleUncheckedUpdateManyWithoutBusinessNestedInput = {
     create?: XOR<SaleCreateWithoutBusinessInput, SaleUncheckedCreateWithoutBusinessInput> | SaleCreateWithoutBusinessInput[] | SaleUncheckedCreateWithoutBusinessInput[]
     connectOrCreate?: SaleCreateOrConnectWithoutBusinessInput | SaleCreateOrConnectWithoutBusinessInput[]
@@ -17487,18 +17473,32 @@ export namespace Prisma {
     deleteMany?: SaleScalarWhereInput | SaleScalarWhereInput[]
   }
 
-  export type AppointmentUncheckedUpdateManyWithoutBusinessNestedInput = {
-    create?: XOR<AppointmentCreateWithoutBusinessInput, AppointmentUncheckedCreateWithoutBusinessInput> | AppointmentCreateWithoutBusinessInput[] | AppointmentUncheckedCreateWithoutBusinessInput[]
-    connectOrCreate?: AppointmentCreateOrConnectWithoutBusinessInput | AppointmentCreateOrConnectWithoutBusinessInput[]
-    upsert?: AppointmentUpsertWithWhereUniqueWithoutBusinessInput | AppointmentUpsertWithWhereUniqueWithoutBusinessInput[]
-    createMany?: AppointmentCreateManyBusinessInputEnvelope
-    set?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
-    disconnect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
-    delete?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
-    connect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
-    update?: AppointmentUpdateWithWhereUniqueWithoutBusinessInput | AppointmentUpdateWithWhereUniqueWithoutBusinessInput[]
-    updateMany?: AppointmentUpdateManyWithWhereWithoutBusinessInput | AppointmentUpdateManyWithWhereWithoutBusinessInput[]
-    deleteMany?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
+  export type ServiceUncheckedUpdateManyWithoutBusinessNestedInput = {
+    create?: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput> | ServiceCreateWithoutBusinessInput[] | ServiceUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: ServiceCreateOrConnectWithoutBusinessInput | ServiceCreateOrConnectWithoutBusinessInput[]
+    upsert?: ServiceUpsertWithWhereUniqueWithoutBusinessInput | ServiceUpsertWithWhereUniqueWithoutBusinessInput[]
+    createMany?: ServiceCreateManyBusinessInputEnvelope
+    set?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
+    disconnect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
+    delete?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
+    connect?: ServiceWhereUniqueInput | ServiceWhereUniqueInput[]
+    update?: ServiceUpdateWithWhereUniqueWithoutBusinessInput | ServiceUpdateWithWhereUniqueWithoutBusinessInput[]
+    updateMany?: ServiceUpdateManyWithWhereWithoutBusinessInput | ServiceUpdateManyWithWhereWithoutBusinessInput[]
+    deleteMany?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
+  }
+
+  export type UserUncheckedUpdateManyWithoutBusinessNestedInput = {
+    create?: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput> | UserCreateWithoutBusinessInput[] | UserUncheckedCreateWithoutBusinessInput[]
+    connectOrCreate?: UserCreateOrConnectWithoutBusinessInput | UserCreateOrConnectWithoutBusinessInput[]
+    upsert?: UserUpsertWithWhereUniqueWithoutBusinessInput | UserUpsertWithWhereUniqueWithoutBusinessInput[]
+    createMany?: UserCreateManyBusinessInputEnvelope
+    set?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    disconnect?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    delete?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
+    update?: UserUpdateWithWhereUniqueWithoutBusinessInput | UserUpdateWithWhereUniqueWithoutBusinessInput[]
+    updateMany?: UserUpdateManyWithWhereWithoutBusinessInput | UserUpdateManyWithWhereWithoutBusinessInput[]
+    deleteMany?: UserScalarWhereInput | UserScalarWhereInput[]
   }
 
   export type BusinessCreateNestedOneWithoutClientsInput = {
@@ -17599,12 +17599,6 @@ export namespace Prisma {
     deleteMany?: SaleScalarWhereInput | SaleScalarWhereInput[]
   }
 
-  export type ClientCreateNestedOneWithoutPetsInput = {
-    create?: XOR<ClientCreateWithoutPetsInput, ClientUncheckedCreateWithoutPetsInput>
-    connectOrCreate?: ClientCreateOrConnectWithoutPetsInput
-    connect?: ClientWhereUniqueInput
-  }
-
   export type AppointmentCreateNestedManyWithoutPetInput = {
     create?: XOR<AppointmentCreateWithoutPetInput, AppointmentUncheckedCreateWithoutPetInput> | AppointmentCreateWithoutPetInput[] | AppointmentUncheckedCreateWithoutPetInput[]
     connectOrCreate?: AppointmentCreateOrConnectWithoutPetInput | AppointmentCreateOrConnectWithoutPetInput[]
@@ -17617,6 +17611,12 @@ export namespace Prisma {
     connectOrCreate?: MedicalRecordCreateOrConnectWithoutPetInput | MedicalRecordCreateOrConnectWithoutPetInput[]
     createMany?: MedicalRecordCreateManyPetInputEnvelope
     connect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
+  }
+
+  export type ClientCreateNestedOneWithoutPetsInput = {
+    create?: XOR<ClientCreateWithoutPetsInput, ClientUncheckedCreateWithoutPetsInput>
+    connectOrCreate?: ClientCreateOrConnectWithoutPetsInput
+    connect?: ClientWhereUniqueInput
   }
 
   export type AppointmentUncheckedCreateNestedManyWithoutPetInput = {
@@ -17635,14 +17635,6 @@ export namespace Prisma {
 
   export type NullableDateTimeFieldUpdateOperationsInput = {
     set?: Date | string | null
-  }
-
-  export type ClientUpdateOneRequiredWithoutPetsNestedInput = {
-    create?: XOR<ClientCreateWithoutPetsInput, ClientUncheckedCreateWithoutPetsInput>
-    connectOrCreate?: ClientCreateOrConnectWithoutPetsInput
-    upsert?: ClientUpsertWithoutPetsInput
-    connect?: ClientWhereUniqueInput
-    update?: XOR<XOR<ClientUpdateToOneWithWhereWithoutPetsInput, ClientUpdateWithoutPetsInput>, ClientUncheckedUpdateWithoutPetsInput>
   }
 
   export type AppointmentUpdateManyWithoutPetNestedInput = {
@@ -17673,6 +17665,14 @@ export namespace Prisma {
     deleteMany?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
   }
 
+  export type ClientUpdateOneRequiredWithoutPetsNestedInput = {
+    create?: XOR<ClientCreateWithoutPetsInput, ClientUncheckedCreateWithoutPetsInput>
+    connectOrCreate?: ClientCreateOrConnectWithoutPetsInput
+    upsert?: ClientUpsertWithoutPetsInput
+    connect?: ClientWhereUniqueInput
+    update?: XOR<XOR<ClientUpdateToOneWithWhereWithoutPetsInput, ClientUpdateWithoutPetsInput>, ClientUncheckedUpdateWithoutPetsInput>
+  }
+
   export type AppointmentUncheckedUpdateManyWithoutPetNestedInput = {
     create?: XOR<AppointmentCreateWithoutPetInput, AppointmentUncheckedCreateWithoutPetInput> | AppointmentCreateWithoutPetInput[] | AppointmentUncheckedCreateWithoutPetInput[]
     connectOrCreate?: AppointmentCreateOrConnectWithoutPetInput | AppointmentCreateOrConnectWithoutPetInput[]
@@ -17701,6 +17701,12 @@ export namespace Prisma {
     deleteMany?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
   }
 
+  export type BusinessCreateNestedOneWithoutAppointmentsInput = {
+    create?: XOR<BusinessCreateWithoutAppointmentsInput, BusinessUncheckedCreateWithoutAppointmentsInput>
+    connectOrCreate?: BusinessCreateOrConnectWithoutAppointmentsInput
+    connect?: BusinessWhereUniqueInput
+  }
+
   export type PetCreateNestedOneWithoutAppointmentsInput = {
     create?: XOR<PetCreateWithoutAppointmentsInput, PetUncheckedCreateWithoutAppointmentsInput>
     connectOrCreate?: PetCreateOrConnectWithoutAppointmentsInput
@@ -17713,14 +17719,16 @@ export namespace Prisma {
     connect?: ServiceWhereUniqueInput
   }
 
-  export type BusinessCreateNestedOneWithoutAppointmentsInput = {
-    create?: XOR<BusinessCreateWithoutAppointmentsInput, BusinessUncheckedCreateWithoutAppointmentsInput>
-    connectOrCreate?: BusinessCreateOrConnectWithoutAppointmentsInput
-    connect?: BusinessWhereUniqueInput
-  }
-
   export type EnumAppointmentStatusFieldUpdateOperationsInput = {
     set?: $Enums.AppointmentStatus
+  }
+
+  export type BusinessUpdateOneRequiredWithoutAppointmentsNestedInput = {
+    create?: XOR<BusinessCreateWithoutAppointmentsInput, BusinessUncheckedCreateWithoutAppointmentsInput>
+    connectOrCreate?: BusinessCreateOrConnectWithoutAppointmentsInput
+    upsert?: BusinessUpsertWithoutAppointmentsInput
+    connect?: BusinessWhereUniqueInput
+    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutAppointmentsInput, BusinessUpdateWithoutAppointmentsInput>, BusinessUncheckedUpdateWithoutAppointmentsInput>
   }
 
   export type PetUpdateOneRequiredWithoutAppointmentsNestedInput = {
@@ -17741,25 +17749,17 @@ export namespace Prisma {
     update?: XOR<XOR<ServiceUpdateToOneWithWhereWithoutAppointmentInput, ServiceUpdateWithoutAppointmentInput>, ServiceUncheckedUpdateWithoutAppointmentInput>
   }
 
-  export type BusinessUpdateOneRequiredWithoutAppointmentsNestedInput = {
-    create?: XOR<BusinessCreateWithoutAppointmentsInput, BusinessUncheckedCreateWithoutAppointmentsInput>
-    connectOrCreate?: BusinessCreateOrConnectWithoutAppointmentsInput
-    upsert?: BusinessUpsertWithoutAppointmentsInput
-    connect?: BusinessWhereUniqueInput
-    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutAppointmentsInput, BusinessUpdateWithoutAppointmentsInput>, BusinessUncheckedUpdateWithoutAppointmentsInput>
+  export type AppointmentCreateNestedManyWithoutServiceInput = {
+    create?: XOR<AppointmentCreateWithoutServiceInput, AppointmentUncheckedCreateWithoutServiceInput> | AppointmentCreateWithoutServiceInput[] | AppointmentUncheckedCreateWithoutServiceInput[]
+    connectOrCreate?: AppointmentCreateOrConnectWithoutServiceInput | AppointmentCreateOrConnectWithoutServiceInput[]
+    createMany?: AppointmentCreateManyServiceInputEnvelope
+    connect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
   }
 
   export type BusinessCreateNestedOneWithoutServicesInput = {
     create?: XOR<BusinessCreateWithoutServicesInput, BusinessUncheckedCreateWithoutServicesInput>
     connectOrCreate?: BusinessCreateOrConnectWithoutServicesInput
     connect?: BusinessWhereUniqueInput
-  }
-
-  export type AppointmentCreateNestedManyWithoutServiceInput = {
-    create?: XOR<AppointmentCreateWithoutServiceInput, AppointmentUncheckedCreateWithoutServiceInput> | AppointmentCreateWithoutServiceInput[] | AppointmentUncheckedCreateWithoutServiceInput[]
-    connectOrCreate?: AppointmentCreateOrConnectWithoutServiceInput | AppointmentCreateOrConnectWithoutServiceInput[]
-    createMany?: AppointmentCreateManyServiceInputEnvelope
-    connect?: AppointmentWhereUniqueInput | AppointmentWhereUniqueInput[]
   }
 
   export type AppointmentUncheckedCreateNestedManyWithoutServiceInput = {
@@ -17785,14 +17785,6 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type BusinessUpdateOneRequiredWithoutServicesNestedInput = {
-    create?: XOR<BusinessCreateWithoutServicesInput, BusinessUncheckedCreateWithoutServicesInput>
-    connectOrCreate?: BusinessCreateOrConnectWithoutServicesInput
-    upsert?: BusinessUpsertWithoutServicesInput
-    connect?: BusinessWhereUniqueInput
-    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutServicesInput, BusinessUpdateWithoutServicesInput>, BusinessUncheckedUpdateWithoutServicesInput>
-  }
-
   export type AppointmentUpdateManyWithoutServiceNestedInput = {
     create?: XOR<AppointmentCreateWithoutServiceInput, AppointmentUncheckedCreateWithoutServiceInput> | AppointmentCreateWithoutServiceInput[] | AppointmentUncheckedCreateWithoutServiceInput[]
     connectOrCreate?: AppointmentCreateOrConnectWithoutServiceInput | AppointmentCreateOrConnectWithoutServiceInput[]
@@ -17805,6 +17797,14 @@ export namespace Prisma {
     update?: AppointmentUpdateWithWhereUniqueWithoutServiceInput | AppointmentUpdateWithWhereUniqueWithoutServiceInput[]
     updateMany?: AppointmentUpdateManyWithWhereWithoutServiceInput | AppointmentUpdateManyWithWhereWithoutServiceInput[]
     deleteMany?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
+  }
+
+  export type BusinessUpdateOneRequiredWithoutServicesNestedInput = {
+    create?: XOR<BusinessCreateWithoutServicesInput, BusinessUncheckedCreateWithoutServicesInput>
+    connectOrCreate?: BusinessCreateOrConnectWithoutServicesInput
+    upsert?: BusinessUpsertWithoutServicesInput
+    connect?: BusinessWhereUniqueInput
+    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutServicesInput, BusinessUpdateWithoutServicesInput>, BusinessUncheckedUpdateWithoutServicesInput>
   }
 
   export type AppointmentUncheckedUpdateManyWithoutServiceNestedInput = {
@@ -17877,16 +17877,16 @@ export namespace Prisma {
     deleteMany?: SaleItemScalarWhereInput | SaleItemScalarWhereInput[]
   }
 
-  export type ClientCreateNestedOneWithoutSaleInput = {
-    create?: XOR<ClientCreateWithoutSaleInput, ClientUncheckedCreateWithoutSaleInput>
-    connectOrCreate?: ClientCreateOrConnectWithoutSaleInput
-    connect?: ClientWhereUniqueInput
-  }
-
   export type BusinessCreateNestedOneWithoutSalesInput = {
     create?: XOR<BusinessCreateWithoutSalesInput, BusinessUncheckedCreateWithoutSalesInput>
     connectOrCreate?: BusinessCreateOrConnectWithoutSalesInput
     connect?: BusinessWhereUniqueInput
+  }
+
+  export type ClientCreateNestedOneWithoutSaleInput = {
+    create?: XOR<ClientCreateWithoutSaleInput, ClientUncheckedCreateWithoutSaleInput>
+    connectOrCreate?: ClientCreateOrConnectWithoutSaleInput
+    connect?: ClientWhereUniqueInput
   }
 
   export type SaleItemCreateNestedManyWithoutSaleInput = {
@@ -17903,6 +17903,14 @@ export namespace Prisma {
     connect?: SaleItemWhereUniqueInput | SaleItemWhereUniqueInput[]
   }
 
+  export type BusinessUpdateOneRequiredWithoutSalesNestedInput = {
+    create?: XOR<BusinessCreateWithoutSalesInput, BusinessUncheckedCreateWithoutSalesInput>
+    connectOrCreate?: BusinessCreateOrConnectWithoutSalesInput
+    upsert?: BusinessUpsertWithoutSalesInput
+    connect?: BusinessWhereUniqueInput
+    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutSalesInput, BusinessUpdateWithoutSalesInput>, BusinessUncheckedUpdateWithoutSalesInput>
+  }
+
   export type ClientUpdateOneWithoutSaleNestedInput = {
     create?: XOR<ClientCreateWithoutSaleInput, ClientUncheckedCreateWithoutSaleInput>
     connectOrCreate?: ClientCreateOrConnectWithoutSaleInput
@@ -17911,14 +17919,6 @@ export namespace Prisma {
     delete?: ClientWhereInput | boolean
     connect?: ClientWhereUniqueInput
     update?: XOR<XOR<ClientUpdateToOneWithWhereWithoutSaleInput, ClientUpdateWithoutSaleInput>, ClientUncheckedUpdateWithoutSaleInput>
-  }
-
-  export type BusinessUpdateOneRequiredWithoutSalesNestedInput = {
-    create?: XOR<BusinessCreateWithoutSalesInput, BusinessUncheckedCreateWithoutSalesInput>
-    connectOrCreate?: BusinessCreateOrConnectWithoutSalesInput
-    upsert?: BusinessUpsertWithoutSalesInput
-    connect?: BusinessWhereUniqueInput
-    update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutSalesInput, BusinessUpdateWithoutSalesInput>, BusinessUncheckedUpdateWithoutSalesInput>
   }
 
   export type SaleItemUpdateManyWithoutSaleNestedInput = {
@@ -17949,24 +17949,16 @@ export namespace Prisma {
     deleteMany?: SaleItemScalarWhereInput | SaleItemScalarWhereInput[]
   }
 
-  export type SaleCreateNestedOneWithoutItemsInput = {
-    create?: XOR<SaleCreateWithoutItemsInput, SaleUncheckedCreateWithoutItemsInput>
-    connectOrCreate?: SaleCreateOrConnectWithoutItemsInput
-    connect?: SaleWhereUniqueInput
-  }
-
   export type ProductCreateNestedOneWithoutSaleItemInput = {
     create?: XOR<ProductCreateWithoutSaleItemInput, ProductUncheckedCreateWithoutSaleItemInput>
     connectOrCreate?: ProductCreateOrConnectWithoutSaleItemInput
     connect?: ProductWhereUniqueInput
   }
 
-  export type SaleUpdateOneRequiredWithoutItemsNestedInput = {
+  export type SaleCreateNestedOneWithoutItemsInput = {
     create?: XOR<SaleCreateWithoutItemsInput, SaleUncheckedCreateWithoutItemsInput>
     connectOrCreate?: SaleCreateOrConnectWithoutItemsInput
-    upsert?: SaleUpsertWithoutItemsInput
     connect?: SaleWhereUniqueInput
-    update?: XOR<XOR<SaleUpdateToOneWithWhereWithoutItemsInput, SaleUpdateWithoutItemsInput>, SaleUncheckedUpdateWithoutItemsInput>
   }
 
   export type ProductUpdateOneRequiredWithoutSaleItemNestedInput = {
@@ -17975,6 +17967,14 @@ export namespace Prisma {
     upsert?: ProductUpsertWithoutSaleItemInput
     connect?: ProductWhereUniqueInput
     update?: XOR<XOR<ProductUpdateToOneWithWhereWithoutSaleItemInput, ProductUpdateWithoutSaleItemInput>, ProductUncheckedUpdateWithoutSaleItemInput>
+  }
+
+  export type SaleUpdateOneRequiredWithoutItemsNestedInput = {
+    create?: XOR<SaleCreateWithoutItemsInput, SaleUncheckedCreateWithoutItemsInput>
+    connectOrCreate?: SaleCreateOrConnectWithoutItemsInput
+    upsert?: SaleUpsertWithoutItemsInput
+    connect?: SaleWhereUniqueInput
+    update?: XOR<XOR<SaleUpdateToOneWithWhereWithoutItemsInput, SaleUpdateWithoutItemsInput>, SaleUncheckedUpdateWithoutItemsInput>
   }
 
   export type PetCreateNestedOneWithoutRecordsInput = {
@@ -18334,65 +18334,6 @@ export namespace Prisma {
     _max?: NestedEnumReferralStatusFilter<$PrismaModel>
   }
 
-  export type BusinessCreateWithoutUsersInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    products?: ProductCreateNestedManyWithoutBusinessInput
-    services?: ServiceCreateNestedManyWithoutBusinessInput
-    clients?: ClientCreateNestedManyWithoutBusinessInput
-    sales?: SaleCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessUncheckedCreateWithoutUsersInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
-    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
-    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
-    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessCreateOrConnectWithoutUsersInput = {
-    where: BusinessWhereUniqueInput
-    create: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
-  }
-
-  export type MedicalRecordCreateWithoutVetInput = {
-    id?: string
-    date?: Date | string
-    description: string
-    pet: PetCreateNestedOneWithoutRecordsInput
-  }
-
-  export type MedicalRecordUncheckedCreateWithoutVetInput = {
-    id?: string
-    petId: string
-    date?: Date | string
-    description: string
-  }
-
-  export type MedicalRecordCreateOrConnectWithoutVetInput = {
-    where: MedicalRecordWhereUniqueInput
-    create: XOR<MedicalRecordCreateWithoutVetInput, MedicalRecordUncheckedCreateWithoutVetInput>
-  }
-
-  export type MedicalRecordCreateManyVetInputEnvelope = {
-    data: MedicalRecordCreateManyVetInput | MedicalRecordCreateManyVetInput[]
-    skipDuplicates?: boolean
-  }
-
   export type AffiliateCreateWithoutUserInput = {
     id?: string
     code: string
@@ -18421,72 +18362,63 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
-  export type BusinessUpsertWithoutUsersInput = {
-    update: XOR<BusinessUpdateWithoutUsersInput, BusinessUncheckedUpdateWithoutUsersInput>
-    create: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
-    where?: BusinessWhereInput
+  export type MedicalRecordCreateWithoutVetInput = {
+    id?: string
+    date?: Date | string
+    description: string
+    pet: PetCreateNestedOneWithoutRecordsInput
   }
 
-  export type BusinessUpdateToOneWithWhereWithoutUsersInput = {
-    where?: BusinessWhereInput
-    data: XOR<BusinessUpdateWithoutUsersInput, BusinessUncheckedUpdateWithoutUsersInput>
+  export type MedicalRecordUncheckedCreateWithoutVetInput = {
+    id?: string
+    petId: string
+    date?: Date | string
+    description: string
   }
 
-  export type BusinessUpdateWithoutUsersInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    products?: ProductUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUpdateManyWithoutBusinessNestedInput
-    appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
-  }
-
-  export type BusinessUncheckedUpdateWithoutUsersInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
-    appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
-  }
-
-  export type MedicalRecordUpsertWithWhereUniqueWithoutVetInput = {
+  export type MedicalRecordCreateOrConnectWithoutVetInput = {
     where: MedicalRecordWhereUniqueInput
-    update: XOR<MedicalRecordUpdateWithoutVetInput, MedicalRecordUncheckedUpdateWithoutVetInput>
     create: XOR<MedicalRecordCreateWithoutVetInput, MedicalRecordUncheckedCreateWithoutVetInput>
   }
 
-  export type MedicalRecordUpdateWithWhereUniqueWithoutVetInput = {
-    where: MedicalRecordWhereUniqueInput
-    data: XOR<MedicalRecordUpdateWithoutVetInput, MedicalRecordUncheckedUpdateWithoutVetInput>
+  export type MedicalRecordCreateManyVetInputEnvelope = {
+    data: MedicalRecordCreateManyVetInput | MedicalRecordCreateManyVetInput[]
+    skipDuplicates?: boolean
   }
 
-  export type MedicalRecordUpdateManyWithWhereWithoutVetInput = {
-    where: MedicalRecordScalarWhereInput
-    data: XOR<MedicalRecordUpdateManyMutationInput, MedicalRecordUncheckedUpdateManyWithoutVetInput>
+  export type BusinessCreateWithoutUsersInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
+    clients?: ClientCreateNestedManyWithoutBusinessInput
+    products?: ProductCreateNestedManyWithoutBusinessInput
+    sales?: SaleCreateNestedManyWithoutBusinessInput
+    services?: ServiceCreateNestedManyWithoutBusinessInput
   }
 
-  export type MedicalRecordScalarWhereInput = {
-    AND?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
-    OR?: MedicalRecordScalarWhereInput[]
-    NOT?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
-    id?: StringFilter<"MedicalRecord"> | string
-    petId?: StringFilter<"MedicalRecord"> | string
-    vetId?: StringNullableFilter<"MedicalRecord"> | string | null
-    date?: DateTimeFilter<"MedicalRecord"> | Date | string
-    description?: StringFilter<"MedicalRecord"> | string
+  export type BusinessUncheckedCreateWithoutUsersInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
+    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
+    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
+    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
+    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
+  }
+
+  export type BusinessCreateOrConnectWithoutUsersInput = {
+    where: BusinessWhereUniqueInput
+    create: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
   }
 
   export type AffiliateUpsertWithWhereUniqueWithoutUserInput = {
@@ -18517,89 +18449,99 @@ export namespace Prisma {
     updateAt?: DateTimeFilter<"Affiliate"> | Date | string
   }
 
-  export type UserCreateWithoutBusinessInput = {
+  export type MedicalRecordUpsertWithWhereUniqueWithoutVetInput = {
+    where: MedicalRecordWhereUniqueInput
+    update: XOR<MedicalRecordUpdateWithoutVetInput, MedicalRecordUncheckedUpdateWithoutVetInput>
+    create: XOR<MedicalRecordCreateWithoutVetInput, MedicalRecordUncheckedCreateWithoutVetInput>
+  }
+
+  export type MedicalRecordUpdateWithWhereUniqueWithoutVetInput = {
+    where: MedicalRecordWhereUniqueInput
+    data: XOR<MedicalRecordUpdateWithoutVetInput, MedicalRecordUncheckedUpdateWithoutVetInput>
+  }
+
+  export type MedicalRecordUpdateManyWithWhereWithoutVetInput = {
+    where: MedicalRecordScalarWhereInput
+    data: XOR<MedicalRecordUpdateManyMutationInput, MedicalRecordUncheckedUpdateManyWithoutVetInput>
+  }
+
+  export type MedicalRecordScalarWhereInput = {
+    AND?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
+    OR?: MedicalRecordScalarWhereInput[]
+    NOT?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
+    id?: StringFilter<"MedicalRecord"> | string
+    petId?: StringFilter<"MedicalRecord"> | string
+    vetId?: StringNullableFilter<"MedicalRecord"> | string | null
+    date?: DateTimeFilter<"MedicalRecord"> | Date | string
+    description?: StringFilter<"MedicalRecord"> | string
+  }
+
+  export type BusinessUpsertWithoutUsersInput = {
+    update: XOR<BusinessUpdateWithoutUsersInput, BusinessUncheckedUpdateWithoutUsersInput>
+    create: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
+    where?: BusinessWhereInput
+  }
+
+  export type BusinessUpdateToOneWithWhereWithoutUsersInput = {
+    where?: BusinessWhereInput
+    data: XOR<BusinessUpdateWithoutUsersInput, BusinessUncheckedUpdateWithoutUsersInput>
+  }
+
+  export type BusinessUpdateWithoutUsersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
+    clients?: ClientUpdateManyWithoutBusinessNestedInput
+    products?: ProductUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUpdateManyWithoutBusinessNestedInput
+  }
+
+  export type BusinessUncheckedUpdateWithoutUsersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
+    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
+    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
+  }
+
+  export type AppointmentCreateWithoutBusinessInput = {
     id?: string
-    name: string
-    email: string
-    password: string
-    role?: $Enums.Role
-    createAt?: Date | string
-    updateAt?: Date | string
-    MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
-    Affiliate?: AffiliateCreateNestedManyWithoutUserInput
+    date: Date | string
+    status?: $Enums.AppointmentStatus
+    notes?: string | null
+    pet: PetCreateNestedOneWithoutAppointmentsInput
+    service?: ServiceCreateNestedOneWithoutAppointmentInput
   }
 
-  export type UserUncheckedCreateWithoutBusinessInput = {
+  export type AppointmentUncheckedCreateWithoutBusinessInput = {
     id?: string
-    name: string
-    email: string
-    password: string
-    role?: $Enums.Role
-    createAt?: Date | string
-    updateAt?: Date | string
-    MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
-    Affiliate?: AffiliateUncheckedCreateNestedManyWithoutUserInput
+    date: Date | string
+    status?: $Enums.AppointmentStatus
+    petId: string
+    serviceId?: string | null
+    notes?: string | null
   }
 
-  export type UserCreateOrConnectWithoutBusinessInput = {
-    where: UserWhereUniqueInput
-    create: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput>
+  export type AppointmentCreateOrConnectWithoutBusinessInput = {
+    where: AppointmentWhereUniqueInput
+    create: XOR<AppointmentCreateWithoutBusinessInput, AppointmentUncheckedCreateWithoutBusinessInput>
   }
 
-  export type UserCreateManyBusinessInputEnvelope = {
-    data: UserCreateManyBusinessInput | UserCreateManyBusinessInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type ProductCreateWithoutBusinessInput = {
-    id?: string
-    name: string
-    price: number
-    stock: number
-    SaleItem?: SaleItemCreateNestedManyWithoutProductInput
-  }
-
-  export type ProductUncheckedCreateWithoutBusinessInput = {
-    id?: string
-    name: string
-    price: number
-    stock: number
-    SaleItem?: SaleItemUncheckedCreateNestedManyWithoutProductInput
-  }
-
-  export type ProductCreateOrConnectWithoutBusinessInput = {
-    where: ProductWhereUniqueInput
-    create: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput>
-  }
-
-  export type ProductCreateManyBusinessInputEnvelope = {
-    data: ProductCreateManyBusinessInput | ProductCreateManyBusinessInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type ServiceCreateWithoutBusinessInput = {
-    id?: string
-    name: string
-    price: number
-    duration: number
-    Appointment?: AppointmentCreateNestedManyWithoutServiceInput
-  }
-
-  export type ServiceUncheckedCreateWithoutBusinessInput = {
-    id?: string
-    name: string
-    price: number
-    duration: number
-    Appointment?: AppointmentUncheckedCreateNestedManyWithoutServiceInput
-  }
-
-  export type ServiceCreateOrConnectWithoutBusinessInput = {
-    where: ServiceWhereUniqueInput
-    create: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput>
-  }
-
-  export type ServiceCreateManyBusinessInputEnvelope = {
-    data: ServiceCreateManyBusinessInput | ServiceCreateManyBusinessInput[]
+  export type AppointmentCreateManyBusinessInputEnvelope = {
+    data: AppointmentCreateManyBusinessInput | AppointmentCreateManyBusinessInput[]
     skipDuplicates?: boolean
   }
 
@@ -18635,6 +18577,32 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type ProductCreateWithoutBusinessInput = {
+    id?: string
+    name: string
+    price: number
+    stock: number
+    SaleItem?: SaleItemCreateNestedManyWithoutProductInput
+  }
+
+  export type ProductUncheckedCreateWithoutBusinessInput = {
+    id?: string
+    name: string
+    price: number
+    stock: number
+    SaleItem?: SaleItemUncheckedCreateNestedManyWithoutProductInput
+  }
+
+  export type ProductCreateOrConnectWithoutBusinessInput = {
+    where: ProductWhereUniqueInput
+    create: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput>
+  }
+
+  export type ProductCreateManyBusinessInputEnvelope = {
+    data: ProductCreateManyBusinessInput | ProductCreateManyBusinessInput[]
+    skipDuplicates?: boolean
+  }
+
   export type SaleCreateWithoutBusinessInput = {
     id?: string
     total: number
@@ -18661,32 +18629,203 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
-  export type AppointmentCreateWithoutBusinessInput = {
+  export type ServiceCreateWithoutBusinessInput = {
     id?: string
-    date: Date | string
-    status?: $Enums.AppointmentStatus
-    notes?: string | null
-    pet: PetCreateNestedOneWithoutAppointmentsInput
-    service?: ServiceCreateNestedOneWithoutAppointmentInput
+    name: string
+    price: number
+    duration: number
+    Appointment?: AppointmentCreateNestedManyWithoutServiceInput
   }
 
-  export type AppointmentUncheckedCreateWithoutBusinessInput = {
+  export type ServiceUncheckedCreateWithoutBusinessInput = {
     id?: string
-    date: Date | string
-    status?: $Enums.AppointmentStatus
-    petId: string
-    serviceId?: string | null
-    notes?: string | null
+    name: string
+    price: number
+    duration: number
+    Appointment?: AppointmentUncheckedCreateNestedManyWithoutServiceInput
   }
 
-  export type AppointmentCreateOrConnectWithoutBusinessInput = {
+  export type ServiceCreateOrConnectWithoutBusinessInput = {
+    where: ServiceWhereUniqueInput
+    create: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput>
+  }
+
+  export type ServiceCreateManyBusinessInputEnvelope = {
+    data: ServiceCreateManyBusinessInput | ServiceCreateManyBusinessInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserCreateWithoutBusinessInput = {
+    id?: string
+    name: string
+    email: string
+    password: string
+    role?: $Enums.Role
+    createAt?: Date | string
+    updateAt?: Date | string
+    Affiliate?: AffiliateCreateNestedManyWithoutUserInput
+    MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
+  }
+
+  export type UserUncheckedCreateWithoutBusinessInput = {
+    id?: string
+    name: string
+    email: string
+    password: string
+    role?: $Enums.Role
+    createAt?: Date | string
+    updateAt?: Date | string
+    Affiliate?: AffiliateUncheckedCreateNestedManyWithoutUserInput
+    MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
+  }
+
+  export type UserCreateOrConnectWithoutBusinessInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutBusinessInput, UserUncheckedCreateWithoutBusinessInput>
+  }
+
+  export type UserCreateManyBusinessInputEnvelope = {
+    data: UserCreateManyBusinessInput | UserCreateManyBusinessInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AppointmentUpsertWithWhereUniqueWithoutBusinessInput = {
     where: AppointmentWhereUniqueInput
+    update: XOR<AppointmentUpdateWithoutBusinessInput, AppointmentUncheckedUpdateWithoutBusinessInput>
     create: XOR<AppointmentCreateWithoutBusinessInput, AppointmentUncheckedCreateWithoutBusinessInput>
   }
 
-  export type AppointmentCreateManyBusinessInputEnvelope = {
-    data: AppointmentCreateManyBusinessInput | AppointmentCreateManyBusinessInput[]
-    skipDuplicates?: boolean
+  export type AppointmentUpdateWithWhereUniqueWithoutBusinessInput = {
+    where: AppointmentWhereUniqueInput
+    data: XOR<AppointmentUpdateWithoutBusinessInput, AppointmentUncheckedUpdateWithoutBusinessInput>
+  }
+
+  export type AppointmentUpdateManyWithWhereWithoutBusinessInput = {
+    where: AppointmentScalarWhereInput
+    data: XOR<AppointmentUpdateManyMutationInput, AppointmentUncheckedUpdateManyWithoutBusinessInput>
+  }
+
+  export type AppointmentScalarWhereInput = {
+    AND?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
+    OR?: AppointmentScalarWhereInput[]
+    NOT?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
+    id?: StringFilter<"Appointment"> | string
+    date?: DateTimeFilter<"Appointment"> | Date | string
+    status?: EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
+    petId?: StringFilter<"Appointment"> | string
+    serviceId?: StringNullableFilter<"Appointment"> | string | null
+    businessId?: StringFilter<"Appointment"> | string
+    notes?: StringNullableFilter<"Appointment"> | string | null
+  }
+
+  export type ClientUpsertWithWhereUniqueWithoutBusinessInput = {
+    where: ClientWhereUniqueInput
+    update: XOR<ClientUpdateWithoutBusinessInput, ClientUncheckedUpdateWithoutBusinessInput>
+    create: XOR<ClientCreateWithoutBusinessInput, ClientUncheckedCreateWithoutBusinessInput>
+  }
+
+  export type ClientUpdateWithWhereUniqueWithoutBusinessInput = {
+    where: ClientWhereUniqueInput
+    data: XOR<ClientUpdateWithoutBusinessInput, ClientUncheckedUpdateWithoutBusinessInput>
+  }
+
+  export type ClientUpdateManyWithWhereWithoutBusinessInput = {
+    where: ClientScalarWhereInput
+    data: XOR<ClientUpdateManyMutationInput, ClientUncheckedUpdateManyWithoutBusinessInput>
+  }
+
+  export type ClientScalarWhereInput = {
+    AND?: ClientScalarWhereInput | ClientScalarWhereInput[]
+    OR?: ClientScalarWhereInput[]
+    NOT?: ClientScalarWhereInput | ClientScalarWhereInput[]
+    id?: StringFilter<"Client"> | string
+    name?: StringFilter<"Client"> | string
+    email?: StringNullableFilter<"Client"> | string | null
+    phone?: StringNullableFilter<"Client"> | string | null
+    businessId?: StringFilter<"Client"> | string
+    createAt?: DateTimeFilter<"Client"> | Date | string
+    updateAt?: DateTimeFilter<"Client"> | Date | string
+  }
+
+  export type ProductUpsertWithWhereUniqueWithoutBusinessInput = {
+    where: ProductWhereUniqueInput
+    update: XOR<ProductUpdateWithoutBusinessInput, ProductUncheckedUpdateWithoutBusinessInput>
+    create: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput>
+  }
+
+  export type ProductUpdateWithWhereUniqueWithoutBusinessInput = {
+    where: ProductWhereUniqueInput
+    data: XOR<ProductUpdateWithoutBusinessInput, ProductUncheckedUpdateWithoutBusinessInput>
+  }
+
+  export type ProductUpdateManyWithWhereWithoutBusinessInput = {
+    where: ProductScalarWhereInput
+    data: XOR<ProductUpdateManyMutationInput, ProductUncheckedUpdateManyWithoutBusinessInput>
+  }
+
+  export type ProductScalarWhereInput = {
+    AND?: ProductScalarWhereInput | ProductScalarWhereInput[]
+    OR?: ProductScalarWhereInput[]
+    NOT?: ProductScalarWhereInput | ProductScalarWhereInput[]
+    id?: StringFilter<"Product"> | string
+    name?: StringFilter<"Product"> | string
+    price?: FloatFilter<"Product"> | number
+    stock?: IntFilter<"Product"> | number
+    businessId?: StringFilter<"Product"> | string
+  }
+
+  export type SaleUpsertWithWhereUniqueWithoutBusinessInput = {
+    where: SaleWhereUniqueInput
+    update: XOR<SaleUpdateWithoutBusinessInput, SaleUncheckedUpdateWithoutBusinessInput>
+    create: XOR<SaleCreateWithoutBusinessInput, SaleUncheckedCreateWithoutBusinessInput>
+  }
+
+  export type SaleUpdateWithWhereUniqueWithoutBusinessInput = {
+    where: SaleWhereUniqueInput
+    data: XOR<SaleUpdateWithoutBusinessInput, SaleUncheckedUpdateWithoutBusinessInput>
+  }
+
+  export type SaleUpdateManyWithWhereWithoutBusinessInput = {
+    where: SaleScalarWhereInput
+    data: XOR<SaleUpdateManyMutationInput, SaleUncheckedUpdateManyWithoutBusinessInput>
+  }
+
+  export type SaleScalarWhereInput = {
+    AND?: SaleScalarWhereInput | SaleScalarWhereInput[]
+    OR?: SaleScalarWhereInput[]
+    NOT?: SaleScalarWhereInput | SaleScalarWhereInput[]
+    id?: StringFilter<"Sale"> | string
+    clientId?: StringNullableFilter<"Sale"> | string | null
+    businessId?: StringFilter<"Sale"> | string
+    total?: FloatFilter<"Sale"> | number
+    dateSale?: DateTimeFilter<"Sale"> | Date | string
+  }
+
+  export type ServiceUpsertWithWhereUniqueWithoutBusinessInput = {
+    where: ServiceWhereUniqueInput
+    update: XOR<ServiceUpdateWithoutBusinessInput, ServiceUncheckedUpdateWithoutBusinessInput>
+    create: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput>
+  }
+
+  export type ServiceUpdateWithWhereUniqueWithoutBusinessInput = {
+    where: ServiceWhereUniqueInput
+    data: XOR<ServiceUpdateWithoutBusinessInput, ServiceUncheckedUpdateWithoutBusinessInput>
+  }
+
+  export type ServiceUpdateManyWithWhereWithoutBusinessInput = {
+    where: ServiceScalarWhereInput
+    data: XOR<ServiceUpdateManyMutationInput, ServiceUncheckedUpdateManyWithoutBusinessInput>
+  }
+
+  export type ServiceScalarWhereInput = {
+    AND?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
+    OR?: ServiceScalarWhereInput[]
+    NOT?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
+    id?: StringFilter<"Service"> | string
+    name?: StringFilter<"Service"> | string
+    price?: FloatFilter<"Service"> | number
+    duration?: IntFilter<"Service"> | number
+    businessId?: StringFilter<"Service"> | string
   }
 
   export type UserUpsertWithWhereUniqueWithoutBusinessInput = {
@@ -18719,145 +18858,6 @@ export namespace Prisma {
     updateAt?: DateTimeFilter<"User"> | Date | string
   }
 
-  export type ProductUpsertWithWhereUniqueWithoutBusinessInput = {
-    where: ProductWhereUniqueInput
-    update: XOR<ProductUpdateWithoutBusinessInput, ProductUncheckedUpdateWithoutBusinessInput>
-    create: XOR<ProductCreateWithoutBusinessInput, ProductUncheckedCreateWithoutBusinessInput>
-  }
-
-  export type ProductUpdateWithWhereUniqueWithoutBusinessInput = {
-    where: ProductWhereUniqueInput
-    data: XOR<ProductUpdateWithoutBusinessInput, ProductUncheckedUpdateWithoutBusinessInput>
-  }
-
-  export type ProductUpdateManyWithWhereWithoutBusinessInput = {
-    where: ProductScalarWhereInput
-    data: XOR<ProductUpdateManyMutationInput, ProductUncheckedUpdateManyWithoutBusinessInput>
-  }
-
-  export type ProductScalarWhereInput = {
-    AND?: ProductScalarWhereInput | ProductScalarWhereInput[]
-    OR?: ProductScalarWhereInput[]
-    NOT?: ProductScalarWhereInput | ProductScalarWhereInput[]
-    id?: StringFilter<"Product"> | string
-    name?: StringFilter<"Product"> | string
-    price?: FloatFilter<"Product"> | number
-    stock?: IntFilter<"Product"> | number
-    businessId?: StringFilter<"Product"> | string
-  }
-
-  export type ServiceUpsertWithWhereUniqueWithoutBusinessInput = {
-    where: ServiceWhereUniqueInput
-    update: XOR<ServiceUpdateWithoutBusinessInput, ServiceUncheckedUpdateWithoutBusinessInput>
-    create: XOR<ServiceCreateWithoutBusinessInput, ServiceUncheckedCreateWithoutBusinessInput>
-  }
-
-  export type ServiceUpdateWithWhereUniqueWithoutBusinessInput = {
-    where: ServiceWhereUniqueInput
-    data: XOR<ServiceUpdateWithoutBusinessInput, ServiceUncheckedUpdateWithoutBusinessInput>
-  }
-
-  export type ServiceUpdateManyWithWhereWithoutBusinessInput = {
-    where: ServiceScalarWhereInput
-    data: XOR<ServiceUpdateManyMutationInput, ServiceUncheckedUpdateManyWithoutBusinessInput>
-  }
-
-  export type ServiceScalarWhereInput = {
-    AND?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
-    OR?: ServiceScalarWhereInput[]
-    NOT?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
-    id?: StringFilter<"Service"> | string
-    name?: StringFilter<"Service"> | string
-    price?: FloatFilter<"Service"> | number
-    duration?: IntFilter<"Service"> | number
-    businessId?: StringFilter<"Service"> | string
-  }
-
-  export type ClientUpsertWithWhereUniqueWithoutBusinessInput = {
-    where: ClientWhereUniqueInput
-    update: XOR<ClientUpdateWithoutBusinessInput, ClientUncheckedUpdateWithoutBusinessInput>
-    create: XOR<ClientCreateWithoutBusinessInput, ClientUncheckedCreateWithoutBusinessInput>
-  }
-
-  export type ClientUpdateWithWhereUniqueWithoutBusinessInput = {
-    where: ClientWhereUniqueInput
-    data: XOR<ClientUpdateWithoutBusinessInput, ClientUncheckedUpdateWithoutBusinessInput>
-  }
-
-  export type ClientUpdateManyWithWhereWithoutBusinessInput = {
-    where: ClientScalarWhereInput
-    data: XOR<ClientUpdateManyMutationInput, ClientUncheckedUpdateManyWithoutBusinessInput>
-  }
-
-  export type ClientScalarWhereInput = {
-    AND?: ClientScalarWhereInput | ClientScalarWhereInput[]
-    OR?: ClientScalarWhereInput[]
-    NOT?: ClientScalarWhereInput | ClientScalarWhereInput[]
-    id?: StringFilter<"Client"> | string
-    name?: StringFilter<"Client"> | string
-    email?: StringNullableFilter<"Client"> | string | null
-    phone?: StringNullableFilter<"Client"> | string | null
-    businessId?: StringFilter<"Client"> | string
-    createAt?: DateTimeFilter<"Client"> | Date | string
-    updateAt?: DateTimeFilter<"Client"> | Date | string
-  }
-
-  export type SaleUpsertWithWhereUniqueWithoutBusinessInput = {
-    where: SaleWhereUniqueInput
-    update: XOR<SaleUpdateWithoutBusinessInput, SaleUncheckedUpdateWithoutBusinessInput>
-    create: XOR<SaleCreateWithoutBusinessInput, SaleUncheckedCreateWithoutBusinessInput>
-  }
-
-  export type SaleUpdateWithWhereUniqueWithoutBusinessInput = {
-    where: SaleWhereUniqueInput
-    data: XOR<SaleUpdateWithoutBusinessInput, SaleUncheckedUpdateWithoutBusinessInput>
-  }
-
-  export type SaleUpdateManyWithWhereWithoutBusinessInput = {
-    where: SaleScalarWhereInput
-    data: XOR<SaleUpdateManyMutationInput, SaleUncheckedUpdateManyWithoutBusinessInput>
-  }
-
-  export type SaleScalarWhereInput = {
-    AND?: SaleScalarWhereInput | SaleScalarWhereInput[]
-    OR?: SaleScalarWhereInput[]
-    NOT?: SaleScalarWhereInput | SaleScalarWhereInput[]
-    id?: StringFilter<"Sale"> | string
-    clientId?: StringNullableFilter<"Sale"> | string | null
-    businessId?: StringFilter<"Sale"> | string
-    total?: FloatFilter<"Sale"> | number
-    dateSale?: DateTimeFilter<"Sale"> | Date | string
-  }
-
-  export type AppointmentUpsertWithWhereUniqueWithoutBusinessInput = {
-    where: AppointmentWhereUniqueInput
-    update: XOR<AppointmentUpdateWithoutBusinessInput, AppointmentUncheckedUpdateWithoutBusinessInput>
-    create: XOR<AppointmentCreateWithoutBusinessInput, AppointmentUncheckedCreateWithoutBusinessInput>
-  }
-
-  export type AppointmentUpdateWithWhereUniqueWithoutBusinessInput = {
-    where: AppointmentWhereUniqueInput
-    data: XOR<AppointmentUpdateWithoutBusinessInput, AppointmentUncheckedUpdateWithoutBusinessInput>
-  }
-
-  export type AppointmentUpdateManyWithWhereWithoutBusinessInput = {
-    where: AppointmentScalarWhereInput
-    data: XOR<AppointmentUpdateManyMutationInput, AppointmentUncheckedUpdateManyWithoutBusinessInput>
-  }
-
-  export type AppointmentScalarWhereInput = {
-    AND?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
-    OR?: AppointmentScalarWhereInput[]
-    NOT?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
-    id?: StringFilter<"Appointment"> | string
-    date?: DateTimeFilter<"Appointment"> | Date | string
-    status?: EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
-    petId?: StringFilter<"Appointment"> | string
-    serviceId?: StringNullableFilter<"Appointment"> | string | null
-    businessId?: StringFilter<"Appointment"> | string
-    notes?: StringNullableFilter<"Appointment"> | string | null
-  }
-
   export type BusinessCreateWithoutClientsInput = {
     id?: string
     name: string
@@ -18866,11 +18866,11 @@ export namespace Prisma {
     email: string
     createAt?: Date | string
     updateAt?: Date | string
-    users?: UserCreateNestedManyWithoutBusinessInput
-    products?: ProductCreateNestedManyWithoutBusinessInput
-    services?: ServiceCreateNestedManyWithoutBusinessInput
-    sales?: SaleCreateNestedManyWithoutBusinessInput
     appointments?: AppointmentCreateNestedManyWithoutBusinessInput
+    products?: ProductCreateNestedManyWithoutBusinessInput
+    sales?: SaleCreateNestedManyWithoutBusinessInput
+    services?: ServiceCreateNestedManyWithoutBusinessInput
+    users?: UserCreateNestedManyWithoutBusinessInput
   }
 
   export type BusinessUncheckedCreateWithoutClientsInput = {
@@ -18881,11 +18881,11 @@ export namespace Prisma {
     email: string
     createAt?: Date | string
     updateAt?: Date | string
-    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
-    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
-    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
-    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
     appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
+    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
+    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
+    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
+    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
   }
 
   export type BusinessCreateOrConnectWithoutClientsInput = {
@@ -18972,11 +18972,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUpdateManyWithoutBusinessNestedInput
-    products?: ProductUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUpdateManyWithoutBusinessNestedInput
     appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
+    products?: ProductUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUpdateManyWithoutBusinessNestedInput
+    users?: UserUpdateManyWithoutBusinessNestedInput
   }
 
   export type BusinessUncheckedUpdateWithoutClientsInput = {
@@ -18987,11 +18987,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
-    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
     appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
+    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
+    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
   }
 
   export type PetUpsertWithWhereUniqueWithoutClientInput = {
@@ -19040,40 +19040,13 @@ export namespace Prisma {
     data: XOR<SaleUpdateManyMutationInput, SaleUncheckedUpdateManyWithoutClientInput>
   }
 
-  export type ClientCreateWithoutPetsInput = {
-    id?: string
-    name: string
-    email?: string | null
-    phone?: string | null
-    createAt?: Date | string
-    updateAt?: Date | string
-    business: BusinessCreateNestedOneWithoutClientsInput
-    Sale?: SaleCreateNestedManyWithoutClientInput
-  }
-
-  export type ClientUncheckedCreateWithoutPetsInput = {
-    id?: string
-    name: string
-    email?: string | null
-    phone?: string | null
-    businessId: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    Sale?: SaleUncheckedCreateNestedManyWithoutClientInput
-  }
-
-  export type ClientCreateOrConnectWithoutPetsInput = {
-    where: ClientWhereUniqueInput
-    create: XOR<ClientCreateWithoutPetsInput, ClientUncheckedCreateWithoutPetsInput>
-  }
-
   export type AppointmentCreateWithoutPetInput = {
     id?: string
     date: Date | string
     status?: $Enums.AppointmentStatus
     notes?: string | null
-    service?: ServiceCreateNestedOneWithoutAppointmentInput
     business: BusinessCreateNestedOneWithoutAppointmentsInput
+    service?: ServiceCreateNestedOneWithoutAppointmentInput
   }
 
   export type AppointmentUncheckedCreateWithoutPetInput = {
@@ -19119,37 +19092,31 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
-  export type ClientUpsertWithoutPetsInput = {
-    update: XOR<ClientUpdateWithoutPetsInput, ClientUncheckedUpdateWithoutPetsInput>
+  export type ClientCreateWithoutPetsInput = {
+    id?: string
+    name: string
+    email?: string | null
+    phone?: string | null
+    createAt?: Date | string
+    updateAt?: Date | string
+    business: BusinessCreateNestedOneWithoutClientsInput
+    Sale?: SaleCreateNestedManyWithoutClientInput
+  }
+
+  export type ClientUncheckedCreateWithoutPetsInput = {
+    id?: string
+    name: string
+    email?: string | null
+    phone?: string | null
+    businessId: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    Sale?: SaleUncheckedCreateNestedManyWithoutClientInput
+  }
+
+  export type ClientCreateOrConnectWithoutPetsInput = {
+    where: ClientWhereUniqueInput
     create: XOR<ClientCreateWithoutPetsInput, ClientUncheckedCreateWithoutPetsInput>
-    where?: ClientWhereInput
-  }
-
-  export type ClientUpdateToOneWithWhereWithoutPetsInput = {
-    where?: ClientWhereInput
-    data: XOR<ClientUpdateWithoutPetsInput, ClientUncheckedUpdateWithoutPetsInput>
-  }
-
-  export type ClientUpdateWithoutPetsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    phone?: NullableStringFieldUpdateOperationsInput | string | null
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    business?: BusinessUpdateOneRequiredWithoutClientsNestedInput
-    Sale?: SaleUpdateManyWithoutClientNestedInput
-  }
-
-  export type ClientUncheckedUpdateWithoutPetsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    phone?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Sale?: SaleUncheckedUpdateManyWithoutClientNestedInput
   }
 
   export type AppointmentUpsertWithWhereUniqueWithoutPetInput = {
@@ -19184,6 +19151,74 @@ export namespace Prisma {
     data: XOR<MedicalRecordUpdateManyMutationInput, MedicalRecordUncheckedUpdateManyWithoutPetInput>
   }
 
+  export type ClientUpsertWithoutPetsInput = {
+    update: XOR<ClientUpdateWithoutPetsInput, ClientUncheckedUpdateWithoutPetsInput>
+    create: XOR<ClientCreateWithoutPetsInput, ClientUncheckedCreateWithoutPetsInput>
+    where?: ClientWhereInput
+  }
+
+  export type ClientUpdateToOneWithWhereWithoutPetsInput = {
+    where?: ClientWhereInput
+    data: XOR<ClientUpdateWithoutPetsInput, ClientUncheckedUpdateWithoutPetsInput>
+  }
+
+  export type ClientUpdateWithoutPetsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    business?: BusinessUpdateOneRequiredWithoutClientsNestedInput
+    Sale?: SaleUpdateManyWithoutClientNestedInput
+  }
+
+  export type ClientUncheckedUpdateWithoutPetsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    businessId?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    Sale?: SaleUncheckedUpdateManyWithoutClientNestedInput
+  }
+
+  export type BusinessCreateWithoutAppointmentsInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    clients?: ClientCreateNestedManyWithoutBusinessInput
+    products?: ProductCreateNestedManyWithoutBusinessInput
+    sales?: SaleCreateNestedManyWithoutBusinessInput
+    services?: ServiceCreateNestedManyWithoutBusinessInput
+    users?: UserCreateNestedManyWithoutBusinessInput
+  }
+
+  export type BusinessUncheckedCreateWithoutAppointmentsInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
+    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
+    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
+    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
+    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
+  }
+
+  export type BusinessCreateOrConnectWithoutAppointmentsInput = {
+    where: BusinessWhereUniqueInput
+    create: XOR<BusinessCreateWithoutAppointmentsInput, BusinessUncheckedCreateWithoutAppointmentsInput>
+  }
+
   export type PetCreateWithoutAppointmentsInput = {
     id?: string
     name: string
@@ -19192,8 +19227,8 @@ export namespace Prisma {
     birthDate?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
-    client: ClientCreateNestedOneWithoutPetsInput
     records?: MedicalRecordCreateNestedManyWithoutPetInput
+    client: ClientCreateNestedOneWithoutPetsInput
   }
 
   export type PetUncheckedCreateWithoutAppointmentsInput = {
@@ -19234,39 +19269,45 @@ export namespace Prisma {
     create: XOR<ServiceCreateWithoutAppointmentInput, ServiceUncheckedCreateWithoutAppointmentInput>
   }
 
-  export type BusinessCreateWithoutAppointmentsInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    users?: UserCreateNestedManyWithoutBusinessInput
-    products?: ProductCreateNestedManyWithoutBusinessInput
-    services?: ServiceCreateNestedManyWithoutBusinessInput
-    clients?: ClientCreateNestedManyWithoutBusinessInput
-    sales?: SaleCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessUncheckedCreateWithoutAppointmentsInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
-    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
-    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
-    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
-    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessCreateOrConnectWithoutAppointmentsInput = {
-    where: BusinessWhereUniqueInput
+  export type BusinessUpsertWithoutAppointmentsInput = {
+    update: XOR<BusinessUpdateWithoutAppointmentsInput, BusinessUncheckedUpdateWithoutAppointmentsInput>
     create: XOR<BusinessCreateWithoutAppointmentsInput, BusinessUncheckedCreateWithoutAppointmentsInput>
+    where?: BusinessWhereInput
+  }
+
+  export type BusinessUpdateToOneWithWhereWithoutAppointmentsInput = {
+    where?: BusinessWhereInput
+    data: XOR<BusinessUpdateWithoutAppointmentsInput, BusinessUncheckedUpdateWithoutAppointmentsInput>
+  }
+
+  export type BusinessUpdateWithoutAppointmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    clients?: ClientUpdateManyWithoutBusinessNestedInput
+    products?: ProductUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUpdateManyWithoutBusinessNestedInput
+    users?: UserUpdateManyWithoutBusinessNestedInput
+  }
+
+  export type BusinessUncheckedUpdateWithoutAppointmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
+    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
+    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
   }
 
   export type PetUpsertWithoutAppointmentsInput = {
@@ -19288,8 +19329,8 @@ export namespace Prisma {
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    client?: ClientUpdateOneRequiredWithoutPetsNestedInput
     records?: MedicalRecordUpdateManyWithoutPetNestedInput
+    client?: ClientUpdateOneRequiredWithoutPetsNestedInput
   }
 
   export type PetUncheckedUpdateWithoutAppointmentsInput = {
@@ -19331,89 +19372,13 @@ export namespace Prisma {
     businessId?: StringFieldUpdateOperationsInput | string
   }
 
-  export type BusinessUpsertWithoutAppointmentsInput = {
-    update: XOR<BusinessUpdateWithoutAppointmentsInput, BusinessUncheckedUpdateWithoutAppointmentsInput>
-    create: XOR<BusinessCreateWithoutAppointmentsInput, BusinessUncheckedCreateWithoutAppointmentsInput>
-    where?: BusinessWhereInput
-  }
-
-  export type BusinessUpdateToOneWithWhereWithoutAppointmentsInput = {
-    where?: BusinessWhereInput
-    data: XOR<BusinessUpdateWithoutAppointmentsInput, BusinessUncheckedUpdateWithoutAppointmentsInput>
-  }
-
-  export type BusinessUpdateWithoutAppointmentsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUpdateManyWithoutBusinessNestedInput
-    products?: ProductUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUpdateManyWithoutBusinessNestedInput
-  }
-
-  export type BusinessUncheckedUpdateWithoutAppointmentsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
-    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
-  }
-
-  export type BusinessCreateWithoutServicesInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    users?: UserCreateNestedManyWithoutBusinessInput
-    products?: ProductCreateNestedManyWithoutBusinessInput
-    clients?: ClientCreateNestedManyWithoutBusinessInput
-    sales?: SaleCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessUncheckedCreateWithoutServicesInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
-    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
-    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
-    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessCreateOrConnectWithoutServicesInput = {
-    where: BusinessWhereUniqueInput
-    create: XOR<BusinessCreateWithoutServicesInput, BusinessUncheckedCreateWithoutServicesInput>
-  }
-
   export type AppointmentCreateWithoutServiceInput = {
     id?: string
     date: Date | string
     status?: $Enums.AppointmentStatus
     notes?: string | null
-    pet: PetCreateNestedOneWithoutAppointmentsInput
     business: BusinessCreateNestedOneWithoutAppointmentsInput
+    pet: PetCreateNestedOneWithoutAppointmentsInput
   }
 
   export type AppointmentUncheckedCreateWithoutServiceInput = {
@@ -19435,6 +19400,57 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type BusinessCreateWithoutServicesInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
+    clients?: ClientCreateNestedManyWithoutBusinessInput
+    products?: ProductCreateNestedManyWithoutBusinessInput
+    sales?: SaleCreateNestedManyWithoutBusinessInput
+    users?: UserCreateNestedManyWithoutBusinessInput
+  }
+
+  export type BusinessUncheckedCreateWithoutServicesInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
+    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
+    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
+    sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
+    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
+  }
+
+  export type BusinessCreateOrConnectWithoutServicesInput = {
+    where: BusinessWhereUniqueInput
+    create: XOR<BusinessCreateWithoutServicesInput, BusinessUncheckedCreateWithoutServicesInput>
+  }
+
+  export type AppointmentUpsertWithWhereUniqueWithoutServiceInput = {
+    where: AppointmentWhereUniqueInput
+    update: XOR<AppointmentUpdateWithoutServiceInput, AppointmentUncheckedUpdateWithoutServiceInput>
+    create: XOR<AppointmentCreateWithoutServiceInput, AppointmentUncheckedCreateWithoutServiceInput>
+  }
+
+  export type AppointmentUpdateWithWhereUniqueWithoutServiceInput = {
+    where: AppointmentWhereUniqueInput
+    data: XOR<AppointmentUpdateWithoutServiceInput, AppointmentUncheckedUpdateWithoutServiceInput>
+  }
+
+  export type AppointmentUpdateManyWithWhereWithoutServiceInput = {
+    where: AppointmentScalarWhereInput
+    data: XOR<AppointmentUpdateManyMutationInput, AppointmentUncheckedUpdateManyWithoutServiceInput>
+  }
+
   export type BusinessUpsertWithoutServicesInput = {
     update: XOR<BusinessUpdateWithoutServicesInput, BusinessUncheckedUpdateWithoutServicesInput>
     create: XOR<BusinessCreateWithoutServicesInput, BusinessUncheckedCreateWithoutServicesInput>
@@ -19454,11 +19470,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUpdateManyWithoutBusinessNestedInput
-    products?: ProductUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUpdateManyWithoutBusinessNestedInput
     appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
+    clients?: ClientUpdateManyWithoutBusinessNestedInput
+    products?: ProductUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUpdateManyWithoutBusinessNestedInput
+    users?: UserUpdateManyWithoutBusinessNestedInput
   }
 
   export type BusinessUncheckedUpdateWithoutServicesInput = {
@@ -19469,27 +19485,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
-    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
-    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
     appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
-  }
-
-  export type AppointmentUpsertWithWhereUniqueWithoutServiceInput = {
-    where: AppointmentWhereUniqueInput
-    update: XOR<AppointmentUpdateWithoutServiceInput, AppointmentUncheckedUpdateWithoutServiceInput>
-    create: XOR<AppointmentCreateWithoutServiceInput, AppointmentUncheckedCreateWithoutServiceInput>
-  }
-
-  export type AppointmentUpdateWithWhereUniqueWithoutServiceInput = {
-    where: AppointmentWhereUniqueInput
-    data: XOR<AppointmentUpdateWithoutServiceInput, AppointmentUncheckedUpdateWithoutServiceInput>
-  }
-
-  export type AppointmentUpdateManyWithWhereWithoutServiceInput = {
-    where: AppointmentScalarWhereInput
-    data: XOR<AppointmentUpdateManyMutationInput, AppointmentUncheckedUpdateManyWithoutServiceInput>
+    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
+    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
+    sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
+    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
   }
 
   export type BusinessCreateWithoutProductsInput = {
@@ -19500,11 +19500,11 @@ export namespace Prisma {
     email: string
     createAt?: Date | string
     updateAt?: Date | string
-    users?: UserCreateNestedManyWithoutBusinessInput
-    services?: ServiceCreateNestedManyWithoutBusinessInput
+    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
     clients?: ClientCreateNestedManyWithoutBusinessInput
     sales?: SaleCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
+    services?: ServiceCreateNestedManyWithoutBusinessInput
+    users?: UserCreateNestedManyWithoutBusinessInput
   }
 
   export type BusinessUncheckedCreateWithoutProductsInput = {
@@ -19515,11 +19515,11 @@ export namespace Prisma {
     email: string
     createAt?: Date | string
     updateAt?: Date | string
-    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
-    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
+    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
     clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
     sales?: SaleUncheckedCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
+    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
+    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
   }
 
   export type BusinessCreateOrConnectWithoutProductsInput = {
@@ -19570,11 +19570,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUpdateManyWithoutBusinessNestedInput
+    appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
     clients?: ClientUpdateManyWithoutBusinessNestedInput
     sales?: SaleUpdateManyWithoutBusinessNestedInput
-    appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUpdateManyWithoutBusinessNestedInput
+    users?: UserUpdateManyWithoutBusinessNestedInput
   }
 
   export type BusinessUncheckedUpdateWithoutProductsInput = {
@@ -19585,11 +19585,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
+    appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
     clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
     sales?: SaleUncheckedUpdateManyWithoutBusinessNestedInput
-    appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
+    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
   }
 
   export type SaleItemUpsertWithWhereUniqueWithoutProductInput = {
@@ -19619,6 +19619,41 @@ export namespace Prisma {
     price?: FloatFilter<"SaleItem"> | number
   }
 
+  export type BusinessCreateWithoutSalesInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
+    clients?: ClientCreateNestedManyWithoutBusinessInput
+    products?: ProductCreateNestedManyWithoutBusinessInput
+    services?: ServiceCreateNestedManyWithoutBusinessInput
+    users?: UserCreateNestedManyWithoutBusinessInput
+  }
+
+  export type BusinessUncheckedCreateWithoutSalesInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    email: string
+    createAt?: Date | string
+    updateAt?: Date | string
+    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
+    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
+    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
+    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
+    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
+  }
+
+  export type BusinessCreateOrConnectWithoutSalesInput = {
+    where: BusinessWhereUniqueInput
+    create: XOR<BusinessCreateWithoutSalesInput, BusinessUncheckedCreateWithoutSalesInput>
+  }
+
   export type ClientCreateWithoutSaleInput = {
     id?: string
     name: string
@@ -19646,41 +19681,6 @@ export namespace Prisma {
     create: XOR<ClientCreateWithoutSaleInput, ClientUncheckedCreateWithoutSaleInput>
   }
 
-  export type BusinessCreateWithoutSalesInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    users?: UserCreateNestedManyWithoutBusinessInput
-    products?: ProductCreateNestedManyWithoutBusinessInput
-    services?: ServiceCreateNestedManyWithoutBusinessInput
-    clients?: ClientCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessUncheckedCreateWithoutSalesInput = {
-    id?: string
-    name: string
-    address: string
-    phone: string
-    email: string
-    createAt?: Date | string
-    updateAt?: Date | string
-    users?: UserUncheckedCreateNestedManyWithoutBusinessInput
-    products?: ProductUncheckedCreateNestedManyWithoutBusinessInput
-    services?: ServiceUncheckedCreateNestedManyWithoutBusinessInput
-    clients?: ClientUncheckedCreateNestedManyWithoutBusinessInput
-    appointments?: AppointmentUncheckedCreateNestedManyWithoutBusinessInput
-  }
-
-  export type BusinessCreateOrConnectWithoutSalesInput = {
-    where: BusinessWhereUniqueInput
-    create: XOR<BusinessCreateWithoutSalesInput, BusinessUncheckedCreateWithoutSalesInput>
-  }
-
   export type SaleItemCreateWithoutSaleInput = {
     id?: string
     quantity: number
@@ -19703,6 +19703,47 @@ export namespace Prisma {
   export type SaleItemCreateManySaleInputEnvelope = {
     data: SaleItemCreateManySaleInput | SaleItemCreateManySaleInput[]
     skipDuplicates?: boolean
+  }
+
+  export type BusinessUpsertWithoutSalesInput = {
+    update: XOR<BusinessUpdateWithoutSalesInput, BusinessUncheckedUpdateWithoutSalesInput>
+    create: XOR<BusinessCreateWithoutSalesInput, BusinessUncheckedCreateWithoutSalesInput>
+    where?: BusinessWhereInput
+  }
+
+  export type BusinessUpdateToOneWithWhereWithoutSalesInput = {
+    where?: BusinessWhereInput
+    data: XOR<BusinessUpdateWithoutSalesInput, BusinessUncheckedUpdateWithoutSalesInput>
+  }
+
+  export type BusinessUpdateWithoutSalesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
+    clients?: ClientUpdateManyWithoutBusinessNestedInput
+    products?: ProductUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUpdateManyWithoutBusinessNestedInput
+    users?: UserUpdateManyWithoutBusinessNestedInput
+  }
+
+  export type BusinessUncheckedUpdateWithoutSalesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
+    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
+    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
+    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
+    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
   }
 
   export type ClientUpsertWithoutSaleInput = {
@@ -19738,47 +19779,6 @@ export namespace Prisma {
     pets?: PetUncheckedUpdateManyWithoutClientNestedInput
   }
 
-  export type BusinessUpsertWithoutSalesInput = {
-    update: XOR<BusinessUpdateWithoutSalesInput, BusinessUncheckedUpdateWithoutSalesInput>
-    create: XOR<BusinessCreateWithoutSalesInput, BusinessUncheckedCreateWithoutSalesInput>
-    where?: BusinessWhereInput
-  }
-
-  export type BusinessUpdateToOneWithWhereWithoutSalesInput = {
-    where?: BusinessWhereInput
-    data: XOR<BusinessUpdateWithoutSalesInput, BusinessUncheckedUpdateWithoutSalesInput>
-  }
-
-  export type BusinessUpdateWithoutSalesInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUpdateManyWithoutBusinessNestedInput
-    products?: ProductUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUpdateManyWithoutBusinessNestedInput
-    appointments?: AppointmentUpdateManyWithoutBusinessNestedInput
-  }
-
-  export type BusinessUncheckedUpdateWithoutSalesInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    users?: UserUncheckedUpdateManyWithoutBusinessNestedInput
-    products?: ProductUncheckedUpdateManyWithoutBusinessNestedInput
-    services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
-    clients?: ClientUncheckedUpdateManyWithoutBusinessNestedInput
-    appointments?: AppointmentUncheckedUpdateManyWithoutBusinessNestedInput
-  }
-
   export type SaleItemUpsertWithWhereUniqueWithoutSaleInput = {
     where: SaleItemWhereUniqueInput
     update: XOR<SaleItemUpdateWithoutSaleInput, SaleItemUncheckedUpdateWithoutSaleInput>
@@ -19793,27 +19793,6 @@ export namespace Prisma {
   export type SaleItemUpdateManyWithWhereWithoutSaleInput = {
     where: SaleItemScalarWhereInput
     data: XOR<SaleItemUpdateManyMutationInput, SaleItemUncheckedUpdateManyWithoutSaleInput>
-  }
-
-  export type SaleCreateWithoutItemsInput = {
-    id?: string
-    total: number
-    dateSale?: Date | string
-    client?: ClientCreateNestedOneWithoutSaleInput
-    business: BusinessCreateNestedOneWithoutSalesInput
-  }
-
-  export type SaleUncheckedCreateWithoutItemsInput = {
-    id?: string
-    clientId?: string | null
-    businessId: string
-    total: number
-    dateSale?: Date | string
-  }
-
-  export type SaleCreateOrConnectWithoutItemsInput = {
-    where: SaleWhereUniqueInput
-    create: XOR<SaleCreateWithoutItemsInput, SaleUncheckedCreateWithoutItemsInput>
   }
 
   export type ProductCreateWithoutSaleItemInput = {
@@ -19837,31 +19816,25 @@ export namespace Prisma {
     create: XOR<ProductCreateWithoutSaleItemInput, ProductUncheckedCreateWithoutSaleItemInput>
   }
 
-  export type SaleUpsertWithoutItemsInput = {
-    update: XOR<SaleUpdateWithoutItemsInput, SaleUncheckedUpdateWithoutItemsInput>
+  export type SaleCreateWithoutItemsInput = {
+    id?: string
+    total: number
+    dateSale?: Date | string
+    business: BusinessCreateNestedOneWithoutSalesInput
+    client?: ClientCreateNestedOneWithoutSaleInput
+  }
+
+  export type SaleUncheckedCreateWithoutItemsInput = {
+    id?: string
+    clientId?: string | null
+    businessId: string
+    total: number
+    dateSale?: Date | string
+  }
+
+  export type SaleCreateOrConnectWithoutItemsInput = {
+    where: SaleWhereUniqueInput
     create: XOR<SaleCreateWithoutItemsInput, SaleUncheckedCreateWithoutItemsInput>
-    where?: SaleWhereInput
-  }
-
-  export type SaleUpdateToOneWithWhereWithoutItemsInput = {
-    where?: SaleWhereInput
-    data: XOR<SaleUpdateWithoutItemsInput, SaleUncheckedUpdateWithoutItemsInput>
-  }
-
-  export type SaleUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    total?: FloatFieldUpdateOperationsInput | number
-    dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
-    client?: ClientUpdateOneWithoutSaleNestedInput
-    business?: BusinessUpdateOneRequiredWithoutSalesNestedInput
-  }
-
-  export type SaleUncheckedUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    clientId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
-    total?: FloatFieldUpdateOperationsInput | number
-    dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ProductUpsertWithoutSaleItemInput = {
@@ -19891,6 +19864,33 @@ export namespace Prisma {
     businessId?: StringFieldUpdateOperationsInput | string
   }
 
+  export type SaleUpsertWithoutItemsInput = {
+    update: XOR<SaleUpdateWithoutItemsInput, SaleUncheckedUpdateWithoutItemsInput>
+    create: XOR<SaleCreateWithoutItemsInput, SaleUncheckedCreateWithoutItemsInput>
+    where?: SaleWhereInput
+  }
+
+  export type SaleUpdateToOneWithWhereWithoutItemsInput = {
+    where?: SaleWhereInput
+    data: XOR<SaleUpdateWithoutItemsInput, SaleUncheckedUpdateWithoutItemsInput>
+  }
+
+  export type SaleUpdateWithoutItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    total?: FloatFieldUpdateOperationsInput | number
+    dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    business?: BusinessUpdateOneRequiredWithoutSalesNestedInput
+    client?: ClientUpdateOneWithoutSaleNestedInput
+  }
+
+  export type SaleUncheckedUpdateWithoutItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    clientId?: NullableStringFieldUpdateOperationsInput | string | null
+    businessId?: StringFieldUpdateOperationsInput | string
+    total?: FloatFieldUpdateOperationsInput | number
+    dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type PetCreateWithoutRecordsInput = {
     id?: string
     name: string
@@ -19899,8 +19899,8 @@ export namespace Prisma {
     birthDate?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
-    client: ClientCreateNestedOneWithoutPetsInput
     appointments?: AppointmentCreateNestedManyWithoutPetInput
+    client: ClientCreateNestedOneWithoutPetsInput
   }
 
   export type PetUncheckedCreateWithoutRecordsInput = {
@@ -19928,8 +19928,8 @@ export namespace Prisma {
     role?: $Enums.Role
     createAt?: Date | string
     updateAt?: Date | string
-    business?: BusinessCreateNestedOneWithoutUsersInput
     Affiliate?: AffiliateCreateNestedManyWithoutUserInput
+    business?: BusinessCreateNestedOneWithoutUsersInput
   }
 
   export type UserUncheckedCreateWithoutMedicalRecordInput = {
@@ -19968,8 +19968,8 @@ export namespace Prisma {
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    client?: ClientUpdateOneRequiredWithoutPetsNestedInput
     appointments?: AppointmentUpdateManyWithoutPetNestedInput
+    client?: ClientUpdateOneRequiredWithoutPetsNestedInput
   }
 
   export type PetUncheckedUpdateWithoutRecordsInput = {
@@ -20003,8 +20003,8 @@ export namespace Prisma {
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    business?: BusinessUpdateOneWithoutUsersNestedInput
     Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
+    business?: BusinessUpdateOneWithoutUsersNestedInput
   }
 
   export type UserUncheckedUpdateWithoutMedicalRecordInput = {
@@ -20027,8 +20027,8 @@ export namespace Prisma {
     role?: $Enums.Role
     createAt?: Date | string
     updateAt?: Date | string
-    business?: BusinessCreateNestedOneWithoutUsersInput
     MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
+    business?: BusinessCreateNestedOneWithoutUsersInput
   }
 
   export type UserUncheckedCreateWithoutAffiliateInput = {
@@ -20097,8 +20097,8 @@ export namespace Prisma {
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    business?: BusinessUpdateOneWithoutUsersNestedInput
     MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
+    business?: BusinessUpdateOneWithoutUsersNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAffiliateInput = {
@@ -20195,13 +20195,6 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type MedicalRecordCreateManyVetInput = {
-    id?: string
-    petId: string
-    date?: Date | string
-    description: string
-  }
-
   export type AffiliateCreateManyUserInput = {
     id?: string
     code: string
@@ -20210,25 +20203,11 @@ export namespace Prisma {
     updateAt?: Date | string
   }
 
-  export type MedicalRecordUpdateWithoutVetInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    date?: DateTimeFieldUpdateOperationsInput | Date | string
-    description?: StringFieldUpdateOperationsInput | string
-    pet?: PetUpdateOneRequiredWithoutRecordsNestedInput
-  }
-
-  export type MedicalRecordUncheckedUpdateWithoutVetInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    petId?: StringFieldUpdateOperationsInput | string
-    date?: DateTimeFieldUpdateOperationsInput | Date | string
-    description?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type MedicalRecordUncheckedUpdateManyWithoutVetInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    petId?: StringFieldUpdateOperationsInput | string
-    date?: DateTimeFieldUpdateOperationsInput | Date | string
-    description?: StringFieldUpdateOperationsInput | string
+  export type MedicalRecordCreateManyVetInput = {
+    id?: string
+    petId: string
+    date?: Date | string
+    description: string
   }
 
   export type AffiliateUpdateWithoutUserInput = {
@@ -20257,44 +20236,25 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type UserCreateManyBusinessInput = {
-    id?: string
-    name: string
-    email: string
-    password: string
-    role?: $Enums.Role
-    createAt?: Date | string
-    updateAt?: Date | string
+  export type MedicalRecordUpdateWithoutVetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    pet?: PetUpdateOneRequiredWithoutRecordsNestedInput
   }
 
-  export type ProductCreateManyBusinessInput = {
-    id?: string
-    name: string
-    price: number
-    stock: number
+  export type MedicalRecordUncheckedUpdateWithoutVetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
   }
 
-  export type ServiceCreateManyBusinessInput = {
-    id?: string
-    name: string
-    price: number
-    duration: number
-  }
-
-  export type ClientCreateManyBusinessInput = {
-    id?: string
-    name: string
-    email?: string | null
-    phone?: string | null
-    createAt?: Date | string
-    updateAt?: Date | string
-  }
-
-  export type SaleCreateManyBusinessInput = {
-    id?: string
-    clientId?: string | null
-    total: number
-    dateSale?: Date | string
+  export type MedicalRecordUncheckedUpdateManyWithoutVetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
   }
 
   export type AppointmentCreateManyBusinessInput = {
@@ -20306,84 +20266,71 @@ export namespace Prisma {
     notes?: string | null
   }
 
-  export type UserUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
-    Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
+  export type ClientCreateManyBusinessInput = {
+    id?: string
+    name: string
+    email?: string | null
+    phone?: string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
-  export type UserUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
-    Affiliate?: AffiliateUncheckedUpdateManyWithoutUserNestedInput
+  export type ProductCreateManyBusinessInput = {
+    id?: string
+    name: string
+    price: number
+    stock: number
   }
 
-  export type UserUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  export type SaleCreateManyBusinessInput = {
+    id?: string
+    clientId?: string | null
+    total: number
+    dateSale?: Date | string
   }
 
-  export type ProductUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    price?: FloatFieldUpdateOperationsInput | number
-    stock?: IntFieldUpdateOperationsInput | number
-    SaleItem?: SaleItemUpdateManyWithoutProductNestedInput
+  export type ServiceCreateManyBusinessInput = {
+    id?: string
+    name: string
+    price: number
+    duration: number
   }
 
-  export type ProductUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    price?: FloatFieldUpdateOperationsInput | number
-    stock?: IntFieldUpdateOperationsInput | number
-    SaleItem?: SaleItemUncheckedUpdateManyWithoutProductNestedInput
+  export type UserCreateManyBusinessInput = {
+    id?: string
+    name: string
+    email: string
+    password: string
+    role?: $Enums.Role
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
-  export type ProductUncheckedUpdateManyWithoutBusinessInput = {
+  export type AppointmentUpdateWithoutBusinessInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    price?: FloatFieldUpdateOperationsInput | number
-    stock?: IntFieldUpdateOperationsInput | number
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
+    service?: ServiceUpdateOneWithoutAppointmentNestedInput
   }
 
-  export type ServiceUpdateWithoutBusinessInput = {
+  export type AppointmentUncheckedUpdateWithoutBusinessInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    price?: FloatFieldUpdateOperationsInput | number
-    duration?: IntFieldUpdateOperationsInput | number
-    Appointment?: AppointmentUpdateManyWithoutServiceNestedInput
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+    petId?: StringFieldUpdateOperationsInput | string
+    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type ServiceUncheckedUpdateWithoutBusinessInput = {
+  export type AppointmentUncheckedUpdateManyWithoutBusinessInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    price?: FloatFieldUpdateOperationsInput | number
-    duration?: IntFieldUpdateOperationsInput | number
-    Appointment?: AppointmentUncheckedUpdateManyWithoutServiceNestedInput
-  }
-
-  export type ServiceUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    price?: FloatFieldUpdateOperationsInput | number
-    duration?: IntFieldUpdateOperationsInput | number
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+    petId?: StringFieldUpdateOperationsInput | string
+    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ClientUpdateWithoutBusinessInput = {
@@ -20417,6 +20364,29 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type ProductUpdateWithoutBusinessInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    stock?: IntFieldUpdateOperationsInput | number
+    SaleItem?: SaleItemUpdateManyWithoutProductNestedInput
+  }
+
+  export type ProductUncheckedUpdateWithoutBusinessInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    stock?: IntFieldUpdateOperationsInput | number
+    SaleItem?: SaleItemUncheckedUpdateManyWithoutProductNestedInput
+  }
+
+  export type ProductUncheckedUpdateManyWithoutBusinessInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    stock?: IntFieldUpdateOperationsInput | number
+  }
+
   export type SaleUpdateWithoutBusinessInput = {
     id?: StringFieldUpdateOperationsInput | string
     total?: FloatFieldUpdateOperationsInput | number
@@ -20440,31 +20410,61 @@ export namespace Prisma {
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AppointmentUpdateWithoutBusinessInput = {
+  export type ServiceUpdateWithoutBusinessInput = {
     id?: StringFieldUpdateOperationsInput | string
-    date?: DateTimeFieldUpdateOperationsInput | Date | string
-    status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    notes?: NullableStringFieldUpdateOperationsInput | string | null
-    pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
-    service?: ServiceUpdateOneWithoutAppointmentNestedInput
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    duration?: IntFieldUpdateOperationsInput | number
+    Appointment?: AppointmentUpdateManyWithoutServiceNestedInput
   }
 
-  export type AppointmentUncheckedUpdateWithoutBusinessInput = {
+  export type ServiceUncheckedUpdateWithoutBusinessInput = {
     id?: StringFieldUpdateOperationsInput | string
-    date?: DateTimeFieldUpdateOperationsInput | Date | string
-    status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
-    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    duration?: IntFieldUpdateOperationsInput | number
+    Appointment?: AppointmentUncheckedUpdateManyWithoutServiceNestedInput
   }
 
-  export type AppointmentUncheckedUpdateManyWithoutBusinessInput = {
+  export type ServiceUncheckedUpdateManyWithoutBusinessInput = {
     id?: StringFieldUpdateOperationsInput | string
-    date?: DateTimeFieldUpdateOperationsInput | Date | string
-    status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
-    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    duration?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type UserUpdateWithoutBusinessInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
+    MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutBusinessInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    Affiliate?: AffiliateUncheckedUpdateManyWithoutUserNestedInput
+    MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
+  }
+
+  export type UserUncheckedUpdateManyWithoutBusinessInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PetCreateManyClientInput = {
@@ -20562,8 +20562,8 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    service?: ServiceUpdateOneWithoutAppointmentNestedInput
     business?: BusinessUpdateOneRequiredWithoutAppointmentsNestedInput
+    service?: ServiceUpdateOneWithoutAppointmentNestedInput
   }
 
   export type AppointmentUncheckedUpdateWithoutPetInput = {
@@ -20619,8 +20619,8 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
     business?: BusinessUpdateOneRequiredWithoutAppointmentsNestedInput
+    pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
   }
 
   export type AppointmentUncheckedUpdateWithoutServiceInput = {
