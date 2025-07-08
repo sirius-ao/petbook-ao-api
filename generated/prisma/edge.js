@@ -345,7 +345,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/denilson/Documentos/pet/petbook-ao-api/generated/prisma",
+      "value": "D:\\Workspace\\petbook-ao-api\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -354,12 +354,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "debian-openssl-3.0.x",
+        "value": "windows",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/denilson/Documentos/pet/petbook-ao-api/prisma/schema.prisma",
+    "sourceFilePath": "D:\\Workspace\\petbook-ao-api\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
