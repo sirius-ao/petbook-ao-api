@@ -1,26 +1,31 @@
-import { IsDate, IsEnum, IsOptional, IsString } from 'class-validator';
-import { AppointmentStatus } from 'generated/prisma';
+import { IsDateString, IsEnum, IsOptional, IsString } from 'class-validator';
+
+export enum AppointmentStatus {
+  SCHEDULED = 'SCHEDULED',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED',
+}
+
 
 export class CreateAppointmentDto {
-  @IsString()
-  id: string;
-  
-  @IsDate()
-  date: Date;
+  @IsDateString()
+  date: string;
 
   @IsEnum(AppointmentStatus)
-  status: AppointmentStatus;
+  @IsOptional()
+  status?: AppointmentStatus;
 
   @IsString()
-  petID: string;
-  
+  petId: string;
+
   @IsString()
-  serviceId: string;
-  
+  @IsOptional()
+  serviceId?: string;
+
   @IsString()
   businessId: string;
 
   @IsString()
   @IsOptional()
-  note?: string;
+  notes?: string;
 }

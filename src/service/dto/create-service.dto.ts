@@ -11,8 +11,8 @@ export class CreateServiceDto {
     @IsNumber()
     price: number;
 
-    @IsString()
-    duration: string;
+    @IsNumber()
+    duration: number;
 
     @IsString()
     businessId: string;

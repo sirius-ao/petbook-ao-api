@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CreateAffiliateReferralDto } from './dto/create-affiliate-referral.dto';
-import { UpdateAffiliateReferralDto } from './dto/update-affiliate-referral.dto';
+import { UpdateAffiliateReferralDto } from './dto/update-affiliatereferral.dto';
 
 @Injectable()
 export class AffiliateReferralService {
