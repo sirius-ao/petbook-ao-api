@@ -15,8 +15,10 @@ export class CreateProductDto {
      @IsNumber()
     stock: number;
 
+    
+
     @IsString()
-    businessId: String;
+  businessId: string; // Assuming businessId is part of the DTO
     
     salemItem: SaleItem[];
 
