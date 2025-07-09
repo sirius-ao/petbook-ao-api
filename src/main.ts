@@ -6,8 +6,12 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function main() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  app.enableCors();
+  //habilitando cors para o front - no futuro mudar para api gateway
+  app.enableCors({
+    origin:[process.env.CORS_URL]
+  });
 
+// documentacao base do swagguer api
     const config = new DocumentBuilder()
     .setTitle('API example')
     .setDescription('The  API description')
