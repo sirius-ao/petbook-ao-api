@@ -2,7 +2,9 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { AffiliateReferralService } from './affiliate-referral.service';
 import { CreateAffiliateReferralDto } from './dto/create-affiliate-referral.dto';
 import { UpdateAffiliateReferralDto } from './dto/update-affiliatereferral.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('affiliate-referral')
 @Controller('affiliate-referral')
 export class AffiliateReferralController {
   constructor(private readonly affiliateReferralService: AffiliateReferralService) {}
