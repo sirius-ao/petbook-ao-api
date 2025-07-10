@@ -1,22 +1,29 @@
+import { ApiProperty } from '@nestjs/swagger';
 import { IsArray, IsString } from 'class-validator';
 import { Appointment, Client, Product, Sale, Service, User } from 'generated/prisma';
 
 export class CreateBusinessDto {
+  @ApiProperty({example:'01010e0w'})
   @IsString() 
   id: string;
   
+  @ApiProperty({example:'01010e0w'})
   @IsString()
   name: string;
 
-@IsString()
+ @ApiProperty({example:'01010e0w'})
+ @IsString()
   adress: string;
 
+  @ApiProperty({example:'01010e0w'})
   @IsString()  
   phone: string;
 
+  @ApiProperty({example:'01010e0w'})
   @IsString()
   email: string;
 
+  @ApiProperty({example:'01010e0w'})
   @IsArray()
   user: User[];
   
