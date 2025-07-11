@@ -33,6 +33,7 @@ function apiDoc(app) {
     .addTag('affiliate-referral', 'Indicações e conversões')
     .addTag('service', 'Serviços oferecidos pela empresa (ex: consulta, banho, tosa)')
     .addTag('sale-item', 'Item de Venda: cada produto vendido em uma venda.')
+    .addTag('auth','Gestao de autenticacoes de usuarios')
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup(urlApiDoc, app, documentFactory);
