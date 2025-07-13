@@ -15,6 +15,7 @@ import { ServiceModule } from './service/service.module';
 import { AffiliateModule } from './affiliate/affiliate.module';
 import { AffiliateReferralModule } from './affiliate-referral/affiliate-referral.module';
 import { CustomModule } from './custom/custom.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { CustomModule } from './custom/custom.module';
     AffiliateModule,
     AffiliateReferralModule,
     CustomModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],
