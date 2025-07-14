@@ -1,8 +1,11 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { PrismaService } from '../prisma/prisma.service';
 import { Product } from './entities/product.entity';
+import * as ExcelJS from 'exceljs';
+import { ProductImport  } from './dto/interface-product.dto';
+import { count } from 'console';
 
 @Injectable()
 export class ProductService {
@@ -55,4 +58,73 @@ export class ProductService {
       where: { id },
     });
   }
+
+// Serviço para processar arquivo Excel com muitos produtos / multi-cadastro
+// A ordem das colunas seja: nome, preço, estoque, categoria, descrição
+
+async importFromExcel(filePath: string){
+  try {
+    const workbook = new ExcelJS.Workbook();
+    await workbook.xlsx.readFile(filePath);
+
+    const worksheet = workbook.worksheets[0];
+    const products: ProductImport [] = []; 
+
+    const rowPromises: Promise<void>[] = [];
+
+   worksheet.eachRow({includeEmpty: false},(row, rowNumber)=>{
+      if( rowNumber === 1 ) return; // pula cabeçalho
+
+      const processRow = async ()=>{
+
+          const getCellValue = (cellNumber: number) => {
+            const cell = row.getCell(cellNumber);
+            return cell.value ? cell.value.toString() : '';
+          };
+
+          const getNumericValue = (cellNumber: number) => {
+          const value = row.getCell(cellNumber).value;
+            return typeof value === 'number' ? value : 0;
+          };
+
+            const product: ProductImport = {
+            name: getCellValue(1),
+            price: getNumericValue(2),
+            stock: getNumericValue(3),
+            category: row.getCell(4)?.text ,
+            description: row.getCell(5)?.text,
+            businessId: row.getCell(6)?.text,
+          };
+
+      if(product.name && !isNaN(product.price) && !isNaN(product.stock)){
+        products.push(product);
+      } 
+    };
+
+      rowPromises.push(processRow());
+    });
+
+    if(products.length ===0) {
+          throw new BadRequestException('Nenhum produto válido encontrado no arquivo');
+    }
+      const result = await this.prisma.product.createMany({
+      data: products,
+      skipDuplicates: true,
+      });
+
+      return {
+        message: 'Importação realizada com sucesso',
+        count: result.count,
+        invalidRows: worksheet.rowCount - products.length - 1
+      };
+
+
+  } catch (error) {
+    throw new BadRequestException(
+      error.message || 'Erro ao Processar o arquivo Excel'
+    )
+  }
+}
+
+
 }
