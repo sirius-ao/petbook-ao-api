@@ -6,6 +6,9 @@ import {
   Patch,
   Param,
   Delete,
+  UploadedFile,
+  BadRequestException,
+  UseInterceptors,
 } from '@nestjs/common';
 import { ProductService } from './product.service';
 import { CreateProductDto } from './dto/create-product.dto';
@@ -18,6 +21,9 @@ import {
   ApiBadRequestResponse,
   ApiNotFoundResponse,
 } from '@nestjs/swagger';
+import { FileInterceptor } from '@nestjs/platform-express';
+import {diskStorage} from 'multer';
+
 
 @ApiTags('product')
 @Controller('product')
@@ -79,4 +85,21 @@ export class ProductController {
 
   // deve ter uma feature no produto que permite o cadastro massivo de produto,
   // tipo carregar um excell com um formato ja definio de  produtos att nao tem iamgem dos produtos
+  // /products/import
+
+@Post('import')
+@UseInterceptors(FileInterceptor('file',{
+  storage: diskStorage({
+      destinations: './uploads',
+      filename: (req, file, cb) => cb(null, `${Date.now()}-${file.originalname}`)
+  }),
+}))
+async importProducts(@UploadedFile() file: Express.Multer.File){
+     if (!file) {
+      throw new BadRequestException('Nenhum arquivo enviado');
+    }
+    return this.productService.importFromExcel(file.path);
+}
+
+  
 }
