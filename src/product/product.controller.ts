@@ -84,6 +84,10 @@ export class ProductController {
 
   // cadastro massivo de produto, carregar um excel com produtos
 
+  @ApiOperation({ summary: 'Adicionar Multi-produto' })
+  @ApiResponse({ status: 201, description: 'Adicionar Multi-produto' })
+  @ApiBadRequestResponse({ description: 'Bad Payload send' })
+  @ApiResponse({ status: 403, description: 'Forbiden' })
   @Post('import')
   @UseInterceptors(
     FileInterceptor('file', {
