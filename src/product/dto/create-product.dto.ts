@@ -20,6 +20,7 @@ export class CreateProductDto {
     @IsNumber()
     stock: number;
 
+    @ApiProperty({example:'EU3U3892'})
     @IsString()
     businessId: string; // Assuming businessId is part of the DTO
     
