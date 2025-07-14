@@ -113,3 +113,39 @@ async importFromExcel(filePath: string){
     }
     return this.productService.importFromExcel(file.path);
   }
+
+
+$ git tag -a v1.0.0 -m "v1.0.0 (primeira versão estável)"
+
+adilson.futa@AO01LD1FPW0285 MINGW64 /d/Workspace/petbook-ao-api (main)
+$ git push 
+Everything up-to-date
+
+adilson.futa@AO01LD1FPW0285 MINGW64 /d/Workspace/petbook-ao-api (main)
+$ git push origin  v1.0.0
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 190 bytes | 190.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Petbook-ao/petbook-ao-api.git
+ * [new tag]         v1.0.0 -> v1.0.0
+
+
+
+
+ Dicas Importantes
+Use Semantic Versioning para suas tags:
+
+v1.0.0 (primeira versão estável)
+
+v1.0.1 (pequenas correções)
+
+v1.1.0 (novas funcionalidades compatíveis)
+
+v2.0.0 (mudanças incompatíveis)
+
+Mantenha um arquivo CHANGELOG.md atualizado no seu repositório
+
+Para projetos Node.js, mantenha a versão no package.json sincronizada com as tags
+
+Pronto! Agora você tem uma release profissional no GitHub para seu projeto petbook.ao.
