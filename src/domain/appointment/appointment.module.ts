@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppointmentService } from './appointment.service';
 import { AppointmentController } from './appointment.controller';
-import { PrismaModule } from '../prisma/prisma.module';
+import { DatabaseModule } from 'src/database/database.module';
+
 
 @Module({
-  imports: [PrismaModule],
+  imports: [DatabaseModule],
   controllers: [AppointmentController],
   providers: [AppointmentService],
 })

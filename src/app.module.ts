@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PrismaModule } from './prisma/prisma.module';
+//import { PrismaModule } from './database/prisma/prisma.module';
 import { CustomModule } from './custom/custom.module';
 import { AuthModule } from './auth/auth.module';
 import { CommonModule } from './common/common.module';
@@ -11,7 +11,7 @@ import { DomainModule } from './domain/domain.module';
 
 @Module({
   imports: [
-    PrismaModule,
+   // PrismaModule,
     CustomModule,
     AuthModule,
     CommonModule,

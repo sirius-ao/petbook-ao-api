@@ -11,9 +11,11 @@ import { SaleItemModule } from './sale-item/sale-item.module';
 import { ServiceModule } from './service/service.module';
 import { AffiliateModule } from './affiliate/affiliate.module';
 import { AffiliateReferralModule } from './affiliate-referral/affiliate-referral.module';
+import { DatabaseModule } from 'src/database/database.module';
 
 @Module({
-    imports:[    
+    imports:[ 
+       // DatabaseModule,
         UserModule,
         BusinessModule,
         ClientModule,
