@@ -15,7 +15,6 @@ import { DatabaseModule } from 'src/database/database.module';
 
 @Module({
     imports:[ 
-       // DatabaseModule,
         UserModule,
         BusinessModule,
         ClientModule,
