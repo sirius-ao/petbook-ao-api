@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
+  // documentacao base do swagguer api
 function apiDoc(app) {
   const urlApiDoc = 'api';
   const titleApi = 'PetBook API - OpenAPI 3.0';
@@ -39,6 +40,7 @@ function apiDoc(app) {
   SwaggerModule.setup(urlApiDoc, app, documentFactory);
 }
 
+ //habilitando cors para o front - no futuro mudar para api gateway
 function GestaoCors(app) {
   app.enableCors({
     origin: [process.env.CORS_URL],
@@ -48,10 +50,9 @@ function GestaoCors(app) {
 async function main() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  //habilitando cors para o front - no futuro mudar para api gateway
+ 
   GestaoCors(app);
 
-  // documentacao base do swagguer api
   apiDoc(app);
 
   await app.listen(process.env.PORT ?? 3000);
