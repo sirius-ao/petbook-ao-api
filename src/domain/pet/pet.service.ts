@@ -1,7 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+// import { PrismaService } from '../prisma/prisma.service';
+import { PrismaService } from 'src/database/prisma/prisma.service';
+
 import { CreatePetDto } from './dto/create-pet.dto';
 import { UpdatePetDto } from './dto/update-pet.dto';
-import { PrismaService } from 'src/database/prisma/prisma.service';
 
 @Injectable()
 export class PetService {
@@ -30,6 +32,27 @@ export class PetService {
       },
     });
   }
+
+async findPetsByClientId(clienteId: string) {
+  return this.prisma.pet.findMany({
+    where: { clienteId },          // ou clientId, conforme seu schema
+    select: {
+      client: {                    // ⬅️ relação “client”
+        select: {
+          id: true,                // ID do cliente
+          name: true,              // apenas o nome do cliente
+          email:true,
+
+        
+        },
+      },
+      id: true,
+      name: true,
+      species: true,
+      breed: true,
+    },
+  });
+}
 
   async findOne(id: string) {
     const pet = await this.prisma.pet.findUnique({

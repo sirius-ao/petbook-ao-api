@@ -22,6 +22,7 @@ import {
 @ApiTags('appointment')
 @Controller('appointment')
 export class AppointmentController {
+  prisma: any;
   constructor(private readonly appointmentService: AppointmentService) {}
 
   @ApiOperation({ summary: 'Criar novo agendamento' })
@@ -80,7 +81,43 @@ export class AppointmentController {
     return this.appointmentService.remove(+id);
   }
 
+
+
   // GET	/pets/:id/appointments	Listar agendamentos por pet
 
   // GET	/business/:id/agenda	Agenda do dia
+
+    /** Agendamentos de um pet */
+  listByPetId(petId: string) {
+    return this.prisma.appointment.findMany({
+      where: { petId },
+      orderBy: { date: 'asc' },
+      include: {
+        service: { select: { name: true } },
+        business: { select: { name: true } },
+      },
+    });
+  }
+
+  /** Agenda do dia de um negócio (clínica) */
+  dailyAgendaByBusiness(businessId: string, day = new Date()) {
+    // delimita o intervalo 00:00–23:59 do dia informado
+    const start = new Date(day);
+    start.setHours(0, 0, 0, 0);
+    const end = new Date(start);
+    end.setHours(23, 59, 59, 999);
+
+    return this.prisma.appointment.findMany({
+      where: {
+        businessId,
+        date: { gte: start, lte: end },
+      },
+      orderBy: { date: 'asc' },
+      include: {
+        pet:  { select: { name: true } },
+        client:{ select: { name: true } },
+      },
+    });
+  }
+
 }

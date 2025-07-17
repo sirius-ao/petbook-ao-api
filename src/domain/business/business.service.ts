@@ -3,7 +3,6 @@ import { CreateBusinessDto } from './dto/create-business.dto';
 import { UpdateBusinessDto } from './dto/update-business.dto';
 import { PrismaService } from 'src/database/prisma/prisma.service';
 
-
 @Injectable()
 export class BusinessService {
   constructor(private readonly prisma: PrismaService) {}
