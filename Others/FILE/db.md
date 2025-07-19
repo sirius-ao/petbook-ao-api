@@ -1,0 +1,200 @@
+
+```js
+
+model User {
+  id            String          @id @default(cuid())
+  name          String
+  email         String          @unique
+  password      String
+  role          Role            @default(ATTENDANT)
+  businessId    String?
+  createAt      DateTime        @default(now())
+  updateAt      DateTime        @default(now()) @updatedAt
+  Affiliate     Affiliate[]
+  MedicalRecord MedicalRecord[]
+  business      Business?       @relation(fields: [businessId], references: [id])
+
+  @@index([businessId], map: "User_businessId_fkey")
+}
+
+model Business {
+  id           String        @unique @default(cuid())
+  name         String
+  address      String
+  phone        String
+  email        String
+  createAt     DateTime      @default(now())
+  updateAt     DateTime      @default(now()) @updatedAt
+  appointments Appointment[]
+  clients      Client[]
+  products     Product[]
+  sales        Sale[]
+  services     Service[]
+  users        User[]
+}
+
+model Client {
+  id         String   @id @default(cuid())
+  name       String
+  email      String?
+  phone      String?
+  businessId String
+  createAt   DateTime @default(now())
+  updateAt   DateTime @default(now()) @updatedAt
+  business   Business @relation(fields: [businessId], references: [id])
+  pets       Pet[]
+  Sale       Sale[]
+
+  @@index([businessId], map: "Client_businessId_fkey")
+}
+
+model Pet {
+  id           String          @id @default(cuid())
+  name         String
+  species      String
+  breed        String
+  birthDate    DateTime?
+  clienteId    String
+  createAt     DateTime        @default(now())
+  updateAt     DateTime        @default(now()) @updatedAt
+  appointments Appointment[]
+  records      MedicalRecord[]
+  client       Client          @relation(fields: [clienteId], references: [id])
+
+  @@index([clienteId], map: "Pet_clienteId_fkey")
+}
+
+model Appointment {
+  id         String            @id @default(cuid())
+  date       DateTime
+  status     AppointmentStatus @default(SCHEDULED)
+  petId      String
+  serviceId  String?
+  businessId String
+  notes      String?
+  business   Business          @relation(fields: [businessId], references: [id])
+  pet        Pet               @relation(fields: [petId], references: [id])
+  service    Service?          @relation(fields: [serviceId], references: [id])
+
+  @@index([businessId], map: "Appointment_businessId_fkey")
+  @@index([petId], map: "Appointment_petId_fkey")
+  @@index([serviceId], map: "Appointment_serviceId_fkey")
+}
+
+model Service {
+  id          String        @id @default(cuid())
+  name        String
+  price       Float
+  duration    Int
+  businessId  String
+  Appointment Appointment[]
+  business    Business      @relation(fields: [businessId], references: [id])
+
+  @@index([businessId], map: "Service_businessId_fkey")
+}
+
+model Product {
+  id         String     @id @default(cuid())
+  name       String
+  price      Float
+  stock      Int
+  businessId String
+  business   Business   @relation(fields: [businessId], references: [id])
+  SaleItem   SaleItem[]
+
+  @@index([businessId], map: "Product_businessId_fkey")
+}
+
+model Sale {
+  id         String     @id @default(cuid())
+  clientId   String?
+  businessId String
+  total      Float
+  dateSale   DateTime   @default(now())
+  business   Business   @relation(fields: [businessId], references: [id])
+  client     Client?    @relation(fields: [clientId], references: [id])
+  items      SaleItem[]
+
+  @@index([businessId], map: "Sale_businessId_fkey")
+  @@index([clientId], map: "Sale_clientId_fkey")
+}
+
+model SaleItem {
+  id        String  @id @default(cuid())
+  saleId    String
+  productId String
+  quantity  Int
+  price     Float
+  product   Product @relation(fields: [productId], references: [id])
+  sale      Sale    @relation(fields: [saleId], references: [id])
+
+  @@index([productId], map: "SaleItem_productId_fkey")
+  @@index([saleId], map: "SaleItem_saleId_fkey")
+}
+
+model MedicalRecord {
+  id          String   @id @default(cuid())
+  petId       String
+  vetId       String?
+  date        DateTime @default(now())
+  description String
+  pet         Pet      @relation(fields: [petId], references: [id])
+  vet         User?    @relation(fields: [vetId], references: [id])
+
+  @@index([petId], map: "MedicalRecord_petId_fkey")
+  @@index([vetId], map: "MedicalRecord_vetId_fkey")
+}
+
+model Affiliate {
+  id                String              @id @default(cuid())
+  userId            String
+  code              String              @unique
+  earnings          Float               @default(0)
+  createAt          DateTime            @default(now())
+  updateAt          DateTime            @default(now()) @updatedAt
+  user              User                @relation(fields: [userId], references: [id])
+  AffiliateReferral AffiliateReferral[]
+
+  @@index([userId], map: "Affiliate_userId_fkey")
+}
+
+model AffiliateReferral {
+  id             String         @id @default(cuid())
+  affiliateId    String
+  referredUserId String?
+  type           ReferralType
+  value          Float
+  status         ReferralStatus
+  createAt       DateTime       @default(now())
+  updateAt       DateTime       @default(now()) @updatedAt
+  affiliate      Affiliate      @relation(fields: [affiliateId], references: [id])
+
+  @@index([affiliateId], map: "AffiliateReferral_affiliateId_fkey")
+}
+
+enum Role {
+  ADMIN
+  VET
+  ATTENDANT
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+}
+
+enum ReferralType {
+  USER_SIGNUP
+  BUSINESS_SIGNUP
+  ORDER
+}
+
+enum ReferralStatus {
+  PENDING
+  APPROVED
+  PAID
+}
+
+
+```
