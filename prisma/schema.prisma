@@ -19,7 +19,7 @@ model User {
   updateAt      DateTime        @default(now()) @updatedAt
   Affiliate     Affiliate[]
   MedicalRecord MedicalRecord[]
-  business      Business?       @relation(fields: [businessId], references: [id])
+  business      Business?       @relation(fields: [businessId], references: [id], onDelete: Cascade)
 
   @@index([businessId], map: "User_businessId_fkey")
 }
@@ -66,7 +66,7 @@ model Pet {
   updateAt     DateTime        @default(now()) @updatedAt
   appointments Appointment[]
   records      MedicalRecord[]
-  client       Client          @relation(fields: [clienteId], references: [id])
+  client       Client          @relation(fields: [clienteId], references: [id], onDelete: Cascade)
 
   @@index([clienteId], map: "Pet_clienteId_fkey")
 }
@@ -80,7 +80,7 @@ model Appointment {
   businessId String
   notes      String?
   business   Business          @relation(fields: [businessId], references: [id])
-  pet        Pet               @relation(fields: [petId], references: [id])
+  pet        Pet               @relation(fields: [petId], references: [id], onDelete: Cascade)
   service    Service?          @relation(fields: [serviceId], references: [id])
 
   @@index([businessId], map: "Appointment_businessId_fkey")
@@ -119,7 +119,7 @@ model Sale {
   total      Float
   dateSale   DateTime   @default(now())
   business   Business   @relation(fields: [businessId], references: [id])
-  client     Client?    @relation(fields: [clientId], references: [id])
+  client     Client?    @relation(fields: [clientId], references: [id], onDelete: Cascade)
   items      SaleItem[]
 
   @@index([businessId], map: "Sale_businessId_fkey")
@@ -132,8 +132,9 @@ model SaleItem {
   productId String
   quantity  Int
   price     Float
-  product   Product @relation(fields: [productId], references: [id])
-  sale      Sale    @relation(fields: [saleId], references: [id])
+  //product   Product @relation(fields: [productId], references: [id], onDelete: SetNull)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sale      Sale    @relation(fields: [saleId], references: [id], onDelete: Cascade)
 
   @@index([productId], map: "SaleItem_productId_fkey")
   @@index([saleId], map: "SaleItem_saleId_fkey")
@@ -145,8 +146,8 @@ model MedicalRecord {
   vetId       String?
   date        DateTime @default(now())
   description String
-  pet         Pet      @relation(fields: [petId], references: [id])
-  vet         User?    @relation(fields: [vetId], references: [id])
+  pet         Pet      @relation(fields: [petId], references: [id], onDelete: Cascade)
+  vet         User?    @relation(fields: [vetId], references: [id], onDelete: SetNull)
 
   @@index([petId], map: "MedicalRecord_petId_fkey")
   @@index([vetId], map: "MedicalRecord_vetId_fkey")
@@ -174,7 +175,7 @@ model AffiliateReferral {
   status         ReferralStatus
   createAt       DateTime       @default(now())
   updateAt       DateTime       @default(now()) @updatedAt
-  affiliate      Affiliate      @relation(fields: [affiliateId], references: [id])
+  affiliate      Affiliate      @relation(fields: [affiliateId], references: [id], onDelete: Cascade)
 
   @@index([affiliateId], map: "AffiliateReferral_affiliateId_fkey")
 }
