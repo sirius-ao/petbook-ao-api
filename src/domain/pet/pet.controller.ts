@@ -60,4 +60,13 @@ export class PetController {
 
   // GET	/clients/:id/pets	Listar pets de um dono específico
   // falta criar esse request
+
+ @Get('client/:id')
+  findByClientId(@Param('id') clienteId: string) {
+    return this.petService.findPetsByClientId(clienteId);
+  }
+  // falta criar esse request 
+
+
+  
 }
