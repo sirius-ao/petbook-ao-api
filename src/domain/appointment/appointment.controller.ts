@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { AppointmentService } from './appointment.service';
 import { CreateAppointmentDto } from './dto/create-appointment.dto';
@@ -22,7 +23,6 @@ import {
 @ApiTags('appointment')
 @Controller('appointment')
 export class AppointmentController {
-  prisma: any;
   constructor(private readonly appointmentService: AppointmentService) {}
 
   @ApiOperation({ summary: 'Criar novo agendamento' })
@@ -35,10 +35,7 @@ export class AppointmentController {
   }
 
   @ApiOperation({ summary: 'Ver todos os agendamentos' })
-  @ApiOkResponse({
-    description: 'Ver todos os agendamentos',
-    type: CreateAppointmentDto,
-  })
+  @ApiOkResponse({ description: 'Ver todos os agendamentos' })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get()
   findAll() {
@@ -46,21 +43,15 @@ export class AppointmentController {
   }
 
   @ApiOperation({ summary: 'Detalhes agendamentos' })
-  @ApiOkResponse({
-    description: 'Detalhes agendamentos',
-    type: CreateAppointmentDto,
-  })
+  @ApiOkResponse({ description: 'Detalhes agendamentos' })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.appointmentService.findOne(id);
   }
 
-  @ApiOperation({ summary: '	Atualizar agendamentos(ex: status)' })
-  @ApiOkResponse({
-    description: '	Atualizar agendamentos(ex: status)',
-    type: CreateAppointmentDto,
-  })
+  @ApiOperation({ summary: 'Atualizar agendamentos (ex: status)' })
+  @ApiOkResponse({ description: 'Atualizar agendamentos' })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
   update(
@@ -71,53 +62,32 @@ export class AppointmentController {
   }
 
   @ApiOperation({ summary: 'Cancelar agendamentos' })
-  @ApiOkResponse({
-    description: 'Cancelar agendamentos',
-    type: CreateAppointmentDto,
-  })
+  @ApiOkResponse({ description: 'Cancelar agendamentos' })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.appointmentService.remove(+id);
+    return this.appointmentService.remove(id);
   }
 
-
-
-  // GET	/pets/:id/appointments	Listar agendamentos por pet
-
-  // GET	/business/:id/agenda	Agenda do dia
-
-    /** Agendamentos de um pet */
-  listByPetId(petId: string) {
-    return this.prisma.appointment.findMany({
-      where: { petId },
-      orderBy: { date: 'asc' },
-      include: {
-        service: { select: { name: true } },
-        business: { select: { name: true } },
-      },
-    });
+  // 👉 EXTRA: listar agendamentos de um pet
+  @ApiOperation({ summary: 'Listar agendamentos por Pet' })
+  @ApiOkResponse({ description: 'Lista de agendamentos do Pet' })
+  @ApiNotFoundResponse({ description: 'Pet não encontrado ou sem agendamentos' })
+  @Get('/pet/:petId')
+  listByPet(@Param('petId') petId: string) {
+    return this.appointmentService.listByPetId(petId);
   }
 
-  /** Agenda do dia de um negócio (clínica) */
-  dailyAgendaByBusiness(businessId: string, day = new Date()) {
-    // delimita o intervalo 00:00–23:59 do dia informado
-    const start = new Date(day);
-    start.setHours(0, 0, 0, 0);
-    const end = new Date(start);
-    end.setHours(23, 59, 59, 999);
-
-    return this.prisma.appointment.findMany({
-      where: {
-        businessId,
-        date: { gte: start, lte: end },
-      },
-      orderBy: { date: 'asc' },
-      include: {
-        pet:  { select: { name: true } },
-        client:{ select: { name: true } },
-      },
-    });
+  // 👉 EXTRA: listar agenda do dia de um negócio (clínica)
+  @ApiOperation({ summary: 'Agenda do dia por Business' })
+  @ApiOkResponse({ description: 'Agenda do dia da clínica' })
+  @ApiNotFoundResponse({ description: 'Nenhum agendamento encontrado' })
+  @Get('/business/:businessId/agenda')
+  dailyAgenda(
+    @Param('businessId') businessId: string,
+    @Query('day') day?: string, // opcionalmente pode receber data via query
+  ) {
+    const date = day ? new Date(day) : new Date();
+    return this.appointmentService.dailyAgendaByBusiness(businessId, date);
   }
-
 }
