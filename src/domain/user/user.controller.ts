@@ -32,7 +32,7 @@ export class UserController {
   @ApiNotFoundResponse({description:'Not Found'})
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
+    return this.userService.findOne(id);
   }
 
   @ApiOperation({summary: '	Atualizar dados'})
@@ -40,7 +40,7 @@ export class UserController {
   @ApiNotFoundResponse({description:'Not Found'})
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.userService.update(+id, updateUserDto);
+    return this.userService.update(id, updateUserDto);
   }
 
   @ApiOperation({summary: 'Remover usuário'})
@@ -48,6 +48,6 @@ export class UserController {
   @ApiNotFoundResponse({description:'Not Found'})
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
+    return this.userService.remove(id);
   }
 }

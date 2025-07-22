@@ -1,6 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
-import { ReferralStatus, ReferralType } from "generated/prisma";
+// import { } from "generated/prisma";
+import { ReferralStatus, ReferralType } from '@prisma/client';
 
 export class CreateAffiliateReferralDto {
 
