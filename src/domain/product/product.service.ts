@@ -5,7 +5,7 @@ import { Product } from './entities/product.entity';
 import * as ExcelJS from 'exceljs';
 import { ProductImport  } from './dto/interface-product.dto';
 import { count } from 'console';
-import { PrismaService } from 'src/database/prisma/prisma.service';
+import { PrismaService } from '../../database/prisma/prisma.service';
 
 @Injectable()
 export class ProductService {

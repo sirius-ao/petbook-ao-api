@@ -54,7 +54,7 @@ export class AffiliateReferralController {
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.affiliateReferralService.findOne(+id);
+    return this.affiliateReferralService.findOne(id);
   }
 
   @ApiOperation({ summary: 'Atualizar status/valor Indicacao ' })
@@ -69,7 +69,7 @@ export class AffiliateReferralController {
     @Body() updateAffiliateReferralDto: UpdateAffiliateReferralDto,
   ) {
     return this.affiliateReferralService.update(
-      +id,
+      id,
       updateAffiliateReferralDto,
     );
   }
@@ -82,7 +82,7 @@ export class AffiliateReferralController {
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.affiliateReferralService.remove(+id);
+    return this.affiliateReferralService.remove(id);
   }
 
   // GET	/affiliates/:id/referrals	Ver por afiliado específico

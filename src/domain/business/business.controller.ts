@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { BusinessService } from './business.service';
 import { CreateBusinessDto } from './dto/create-business.dto';
@@ -15,6 +16,7 @@ import { ApiOkResponse, ApiNotFoundResponse, ApiBadRequestResponse, ApiOperation
 @ApiTags('business')
 @Controller('business')
 export class BusinessController {
+  appointmentService: any;
   constructor(private readonly businessService: BusinessService) {}
 
   @ApiOperation({summary: 'Cadastro e gestão de clínicas/petshops'})
@@ -53,6 +55,19 @@ export class BusinessController {
   ) {
     return this.businessService.update(id, updateBusinessDto);
   }
+  
+
+  @ApiOperation({ summary: 'Agenda diária da clínica' })
+  @ApiOkResponse({ description: 'Agenda do dia' })
+  @Get(':id/agenda')
+  dailyAgenda(
+    @Param('id') businessId: string,
+    @Query('date') date?: string,
+  ) {
+    const ref = date ? new Date(date) : new Date(); // default: hoje
+    return this.appointmentService.dailyAgendaByBusiness(businessId, ref);
+  }
+
 
    @ApiOperation({summary: 'Deletar negócios'})
     @ApiOkResponse({description:'Deletar negócios ', type: CreateBusinessDto})

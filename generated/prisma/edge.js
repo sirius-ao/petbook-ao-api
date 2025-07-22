@@ -345,7 +345,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "D:\\Workspace\\petbook-ao-api\\generated\\prisma",
+      "value": "/home/denilson/Documentos/pet/petbook-ao-api/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -354,12 +354,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "debian-openssl-3.0.x",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\Workspace\\petbook-ao-api\\prisma\\schema.prisma",
+    "sourceFilePath": "/home/denilson/Documentos/pet/petbook-ao-api/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -373,7 +373,7 @@ const config = {
     "db"
   ],
   "activeProvider": "mysql",
-  "postinstall": false,
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {

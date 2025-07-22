@@ -1,54 +1,62 @@
 import { Injectable } from '@nestjs/common';
+import { PrismaService } from '../../database/prisma/prisma.service';
+
 import { CreateAppointmentDto } from './dto/create-appointment.dto';
 import { UpdateAppointmentDto } from './dto/update-appointment.dto';
-import { PrismaService } from 'src/database/prisma/prisma.service';
-
 
 @Injectable()
 export class AppointmentService {
-  [x: string]: any;
-    constructor(private prisma: PrismaService) {}
-  
-  create(createAppointmentDto: CreateAppointmentDto) {
-    return this.appointment.create({
-      data: createAppointmentDto,
-    });
+  constructor(private prisma: PrismaService) {}
+
+  create(dto: CreateAppointmentDto) {
+    return this.prisma.appointment.create({ data: dto });
   }
 
   findAll() {
-    return this.prisma.appointment.findMany({
-      // include: {
-      //   patient: true,
-      //   doctor: true,
-      // },
-    });
+    return this.prisma.appointment.findMany();
   }
 
   findOne(id: string) {
-    return this.prisma.appointment.findUnique({
-      where: { id },
-      // include: {
-      //   patient: true,
-      //   doctor: true,
-      // },
+    return this.prisma.appointment.findUnique({ where: { id } });
+  }
+
+  update(id: string, dto: UpdateAppointmentDto) {
+    return this.prisma.appointment.update({ where: { id }, data: dto });
+  }
+
+  remove(id: string) {
+    return this.prisma.appointment.delete({ where: { id } });
+  }
+
+  // 👇 NOVO: agendamentos de um pet
+  listByPetId(petId: string) {
+    return this.prisma.appointment.findMany({
+      where: { petId },
+      orderBy: { date: 'asc' },
+      include: {
+        service: { select: { name: true } },
+        business: { select: { name: true } },
+      },
     });
   }
 
-  update(id: string, updateAppointmentDto: UpdateAppointmentDto) {
-    return this.prisma.appointment.update({
-      where: { id },
-      data: {
-        date: updateAppointmentDto.date ? new Date(updateAppointmentDto.date) : undefined,
-        status: updateAppointmentDto.status,
-        petId: updateAppointmentDto.petId,
-        serviceId: updateAppointmentDto.serviceId,
-        businessId: updateAppointmentDto.businessId,
-        notes: updateAppointmentDto.notes,
-      } , 
-    });
-  }
+  // 👇 NOVO: agenda do dia
+  dailyAgendaByBusiness(businessId: string, day = new Date()) {
+    const start = new Date(day);
+    start.setHours(0, 0, 0, 0);
+    const end = new Date(start);
+    end.setHours(23, 59, 59, 999);
 
-  remove(id: number) {
-    return `This action removes a #${id} appointment`;
+    return this.prisma.appointment.findMany({
+      where: {
+        businessId,
+        date: { gte: start, lte: end },
+      },
+      orderBy: { date: 'asc' },
+      include: {
+        pet: { select: { name: true } },
+        // client: { select: { name: true } },
+      },
+    });
   }
 }
