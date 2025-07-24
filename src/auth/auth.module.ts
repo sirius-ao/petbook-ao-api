@@ -7,8 +7,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { PassportModule } from '@nestjs/passport';
 import { JwtAuthGuard } from './ jwt-auth.guard';
 import { RolesGuard } from './ roles.guard';
-import { DatabaseModule } from 'src/database/database.module';
-import { UserModule } from 'src/domain/user/user.module';
+import { DatabaseModule } from '../database/database.module';
+import { UserModule } from '../domain/user/user.module';
 
 //import { UserModule } from '../user/user.module';
 //import { PrismaModule } from '../database/prisma/prisma.module';
