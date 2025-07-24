@@ -1,12 +1,5 @@
-generator client {
-  provider = "prisma-client-js"
-  // output   = "../generated/prisma"
-}
 
-datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-}
+```js
 
 model User {
   id            String          @id @default(cuid())
@@ -203,3 +196,6 @@ enum ReferralStatus {
   APPROVED
   PAID
 }
+
+
+```
