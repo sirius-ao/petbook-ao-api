@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
-  // documentacao base do swagguer api
+// documentacao base do swagguer api
 function apiDoc(app) {
   const urlApiDoc = 'api';
   const titleApi = 'PetBook API - OpenAPI 3.0';
@@ -17,11 +17,12 @@ function apiDoc(app) {
     .setTitle(titleApi)
     .setDescription(descriptionApi)
     .setVersion('1.0.0')
-    .addBearerAuth( // Add Bearer token authentication
+    .addBearerAuth(
+      // Add Bearer token authentication
       { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
-      'access-token' // Name of the security scheme
+      'access-token', // Name of the security scheme
     )
-    .addGlobalResponse({status: 500, description:" Internal Server Error"})
+    .addGlobalResponse({ status: 500, description: ' Internal Server Error' })
     .addTag('user', 'Gestão de usuários internos do sistema')
     .addTag('business', 'Cadastro e gestão de clínicas/petshops')
     .addTag('client', 'Donos de pets')
@@ -32,15 +33,18 @@ function apiDoc(app) {
     .addTag('sale', 'Vendas e faturações')
     .addTag('affiliate', 'Gestão de afiliados')
     .addTag('affiliate-referral', 'Indicações e conversões')
-    .addTag('service', 'Serviços oferecidos pela empresa (ex: consulta, banho, tosa)')
+    .addTag(
+      'service',
+      'Serviços oferecidos pela empresa (ex: consulta, banho, tosa)',
+    )
     .addTag('sale-item', 'Item de Venda: cada produto vendido em uma venda.')
-    .addTag('auth','Gestao de autenticacoes de usuarios')
+    .addTag('auth', 'Gestao de autenticacoes de usuarios')
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup(urlApiDoc, app, documentFactory);
 }
 
- //habilitando cors para o front - no futuro mudar para api gateway
+//habilitando cors para o front - no futuro mudar para api gateway
 function GestaoCors(app) {
   app.enableCors({
     origin: [process.env.CORS_URL],
@@ -50,11 +54,9 @@ function GestaoCors(app) {
 async function main() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
- 
   GestaoCors(app);
-
   apiDoc(app);
-
   await app.listen(process.env.PORT ?? 3000);
+  console.log('✅ conectado com sucesso!');
 }
 main();
