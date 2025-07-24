@@ -133,7 +133,6 @@ model SaleItem {
   productId String
   quantity  Int
   price     Float
-  //product   Product @relation(fields: [productId], references: [id], onDelete: SetNull)
   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   sale      Sale    @relation(fields: [saleId], references: [id], onDelete: Cascade)
   createAt     DateTime        @default(now())
@@ -180,6 +179,8 @@ model AffiliateReferral {
   updateAt     DateTime         @updatedAt
   @@index([affiliateId], map: "AffiliateReferral_affiliateId_fkey")
 }
+
+// sequencia de enum do MER
 
 enum Role {
   ADMIN
