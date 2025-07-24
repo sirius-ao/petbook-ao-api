@@ -57,5 +57,6 @@ async function main() {
   GestaoCors(app);
   apiDoc(app);
   await app.listen(process.env.PORT ?? 3000);
+  console.log('✅ conectado com sucesso!');
 }
 main();
