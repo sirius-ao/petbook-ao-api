@@ -4,9 +4,9 @@ import { Pet, Sale } from "generated/prisma";
 
 export class CreateClientDto {
 
-@ApiProperty({example:'01010e0w'})
-@IsString()
-id: string;
+// @ApiProperty({example:'01010e0w'})
+// @IsString()
+// id: string;
 
 @ApiProperty({example:'01010e0w'})
 @IsString()
