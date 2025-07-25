@@ -5,9 +5,9 @@ import { ReferralStatus, ReferralType } from '@prisma/client';
 
 export class CreateAffiliateReferralDto {
 
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
     
     @ApiProperty({example:'01010e0w'})
     @IsString()

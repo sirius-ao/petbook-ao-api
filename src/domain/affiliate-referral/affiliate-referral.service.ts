@@ -1,37 +1,63 @@
-
-import { Body, Delete, Get, Injectable, Param, Patch, Post } from '@nestjs/common';
-import { CreateAffiliateReferralDto } from './dto/create-affiliate-referral.dto';
-import { UpdateAffiliateReferralDto } from './dto/update-affiliatereferral.dto';
-import { PrismaService } from '../../database/prisma/prisma.service';
+import { Injectable, NotFoundException } from '@nestjs/common'
+import { PrismaService } from '../../database/prisma/prisma.service'
+import { CreateAffiliateReferralDto } from './dto/create-affiliate-referral.dto'
+import { UpdateAffiliateReferralDto } from './dto/update-affiliatereferral.dto'
 
 @Injectable()
 export class AffiliateReferralService {
-  affiliateReferralService: any;
-  constructor(private readonly prisma: PrismaService){
-    
-  }
-  @Post()
-  create(@Body() createAffiliateReferralDto: CreateAffiliateReferralDto) {
-    return this.affiliateReferralService.create(createAffiliateReferralDto);
+  constructor(private readonly prisma: PrismaService) {}
+
+  async create(dto: CreateAffiliateReferralDto) {
+    return this.prisma.affiliateReferral.create({
+      data: {
+        affiliateId: dto.affiliated,
+        referredUserId: dto.referredUserId,
+        type: dto.type,
+        value: dto.value,
+        status: dto.status,
+      },
+    })
   }
 
-  @Get()
-  findAll() {
-    return this.affiliateReferralService.findAll();
+  async findAll() {
+    return this.prisma.affiliateReferral.findMany({
+      include: {
+        affiliate: true, // para trazer informações do afiliado
+      },
+    })
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.affiliateReferralService.findOne(+id);
+  async findOne(id: string) {
+    const referral = await this.prisma.affiliateReferral.findUnique({
+      where: { id },
+      include: {
+        affiliate: true,
+      },
+    })
+    if (!referral) {
+      throw new NotFoundException(`Referral com id ${id} não encontrado`)
+    }
+    return referral
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAffiliateReferralDto: UpdateAffiliateReferralDto) {
-    return this.affiliateReferralService.update(+id, updateAffiliateReferralDto);
+  async update(id: string, dto: UpdateAffiliateReferralDto) {
+    // garante que existe
+    await this.findOne(id)
+    return this.prisma.affiliateReferral.update({
+      where: { id },
+      data: {
+        affiliateId: dto.affiliated,
+        referredUserId: dto.referredUserId,
+        type: dto.type,
+        value: dto.value,
+        status: dto.status,
+      },
+    })
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.affiliateReferralService.remove(+id);
+  async remove(id: string) {
+    // garante que existe
+    await this.findOne(id)
+    return this.prisma.affiliateReferral.delete({ where: { id } })
   }
 }

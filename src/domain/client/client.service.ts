@@ -12,6 +12,8 @@ export class ClientService {
     return this.prisma.client.create({
       data: {
         name: createClientDto.name,
+        email: createClientDto.email,
+        phone: createClientDto.phone,
         businessId: createClientDto.businessId,
       },
     });

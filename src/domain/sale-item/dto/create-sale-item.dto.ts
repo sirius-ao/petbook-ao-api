@@ -3,9 +3,9 @@ import { IsNumber, IsString } from "class-validator";
 
 export class CreateSaleItemDto {
 
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
 
     @ApiProperty({example:'01010e0w'})
     @IsString()
