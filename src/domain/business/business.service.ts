@@ -14,6 +14,11 @@ export class BusinessService {
         address: createBusinessDto.adress, // Corrigido para 'address'
         phone: createBusinessDto.phone,
         email: createBusinessDto.email,
+      },
+      include:{
+        products: true,
+        services: true,
+        clients: true
       }
     });
   }
