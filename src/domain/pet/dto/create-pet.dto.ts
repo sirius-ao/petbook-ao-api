@@ -5,13 +5,13 @@ import { Appointment, MedicalRecord } from 'generated/prisma';
 
 export class CreatePetDto {
 
-  @ApiProperty({example:'01010e0w'})
-  @IsString()
-  id: string;
+  // @ApiProperty({example:'01010e0w'})
+  // @IsString()
+  // id: string;
 
-  @ApiProperty({example:'01010e0w'})
-  @IsString()
-  petIdNumber: string;
+  // @ApiProperty({example:'01010e0w'})
+  // @IsString()
+  // petIdNumber: string;
 
   @ApiProperty({example:'01010e0w'})
   @IsString()

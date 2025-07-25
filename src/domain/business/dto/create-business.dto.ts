@@ -3,9 +3,9 @@ import { IsArray, IsString } from 'class-validator';
 import { Appointment, Client, Product, Sale, Service, User } from 'generated/prisma';
 
 export class CreateBusinessDto {
-  @ApiProperty({example:'01010e0w'})
-  @IsString() 
-  id: string;
+  // @ApiProperty({example:'01010e0w'})
+  // @IsString() 
+  // id: string;
   
   @ApiProperty({example:'01010e0w'})
   @IsString()
@@ -13,7 +13,7 @@ export class CreateBusinessDto {
 
  @ApiProperty({example:'01010e0w'})
  @IsString()
-  adress: string;
+  address: string;
 
   @ApiProperty({example:'01010e0w'})
   @IsString()  

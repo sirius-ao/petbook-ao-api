@@ -1,26 +1,63 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { PrismaService } from '../../database/prisma/prisma.service';
 import { CreateAffiliateDto } from './dto/create-affiliate.dto';
 import { UpdateAffiliateDto } from './dto/update-affiliate.dto';
 
 @Injectable()
 export class AffiliateService {
-  create(createAffiliateDto: CreateAffiliateDto) {
-    return 'This action adds a new affiliate';
+  constructor(private readonly prisma: PrismaService) {}
+
+  async create(dto: CreateAffiliateDto) {
+    return this.prisma.affiliate.create({
+      data: {
+        userId: dto.userId,
+        code: dto.code,
+        earnings: dto.earning ?? 0,
+      },
+    });
   }
 
-  findAll() {
-    return `This action returns all affiliate`;
+  async findAll() {
+    return this.prisma.affiliate.findMany({
+      include: {
+        user: true, // traz informações do usuário vinculado
+        AffiliateReferral: true, // traz referrals relacionados
+      },
+    });
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} affiliate`;
+  async findOne(id: string) {
+    const affiliate = await this.prisma.affiliate.findUnique({
+      where: { id },
+      include: {
+        user: true,
+        AffiliateReferral: true,
+      },
+    });
+
+    if (!affiliate) {
+      throw new NotFoundException(`Affiliate com id ${id} não encontrado`);
+    }
+
+    return affiliate;
   }
 
-  update(id: number, updateAffiliateDto: UpdateAffiliateDto) {
-    return `This action updates a #${id} affiliate`;
+  async update(id: string, dto: UpdateAffiliateDto) {
+    // garante que existe
+    await this.findOne(id);
+    return this.prisma.affiliate.update({
+      where: { id },
+      data: {
+        userId: dto.userId,
+        code: dto.code,
+        earnings: dto.earning,
+      },
+    });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} affiliate`;
+  async remove(id: string) {
+    // garante que existe
+    await this.findOne(id);
+    return this.prisma.affiliate.delete({ where: { id } });
   }
 }
