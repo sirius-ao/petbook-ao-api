@@ -13,12 +13,7 @@ export class BusinessService {
         name: createBusinessDto.name,
         address: createBusinessDto.adress, // Corrigido para 'address'
         phone: createBusinessDto.phone,
-        email: createBusinessDto.email,
-      },
-      include:{
-        products: true,
-        services: true,
-        clients: true
+        email: createBusinessDto.email, 
       }
     });
   }

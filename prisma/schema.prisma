@@ -29,6 +29,7 @@ model Business {
   address      String
   phone        String
   email        String
+  
   appointments Appointment[]
   clients      Client[]
   products     Product[]
