@@ -4,9 +4,9 @@ import { SaleItem } from "generated/prisma";
 
 export class CreateProductDto {
 
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
 
     @ApiProperty({example:'01010e0w'})
     @IsString()

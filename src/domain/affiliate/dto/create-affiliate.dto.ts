@@ -4,9 +4,9 @@ import { AffiliateReferral } from "generated/prisma";
 
 export class CreateAffiliateDto {
 
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
 
     @ApiProperty({example:'01010e0w'})
     @IsString()
