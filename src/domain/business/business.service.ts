@@ -11,7 +11,7 @@ export class BusinessService {
     return this.prisma.business.create({
       data: {
         name: createBusinessDto.name,
-        address: createBusinessDto.adress, // Corrigido para 'address'
+        address: createBusinessDto.address, // Corrigido para 'address'
         phone: createBusinessDto.phone,
         email: createBusinessDto.email, 
       }
@@ -54,9 +54,10 @@ export class BusinessService {
         // ...updateBusinessDto,
         // Se você quiser atualizar apenas alguns campos específicos, pode fazer assim:
          name: updateBusinessDto.name,
-        // address: updateBusinessDto.address,
+        address: updateBusinessDto. address,
        phone: updateBusinessDto.phone,
         email: updateBusinessDto.email,
+        
       }
     });
   }

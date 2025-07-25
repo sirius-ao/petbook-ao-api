@@ -11,7 +11,6 @@ export class SaleService {
     return this.prisma.sale.create({
       data: {
         clientId: createSaleDto.clienteId,
-
         businessId: createSaleDto.businessId, // Assuming businessId is part of the DTO
         total: createSaleDto.total, // Total amount of the sale
       },
