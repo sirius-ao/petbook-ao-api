@@ -21,7 +21,10 @@ export class BusinessService {
   async findAll() {
     return this.prisma.business.findMany({
       include: {
-        users: true, // nome correto da relação
+        users: true,
+        clients: true,
+        products: true,
+        services: true,
       },
     });
   }
