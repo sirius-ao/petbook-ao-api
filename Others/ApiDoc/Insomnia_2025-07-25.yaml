@@ -1,0 +1,2211 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1753363333787
+  modified: 1753363333787
+  description: ""
+collection:
+  - name: PetBook
+    meta:
+      id: fld_5d916820d28f40e18f775f191c9b32c7
+      created: 1753378962137
+      modified: 1753445194091
+      sortKey: -1753364133955.25
+      description: ""
+    children:
+      - name: pet
+        meta:
+          id: fld_24ffeeaa3de34f598849067d47047e56
+          created: 1753364133974
+          modified: 1753379032925
+          sortKey: -1753379027204
+          description: ""
+        children:
+          - url: http://localhost:3000/pet/
+            name: get_pet
+            meta:
+              id: req_cf8292c38755487bbe418b0bac4ae891
+              created: 1753364139954
+              modified: 1753364510983
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/
+            name: post_pet
+            meta:
+              id: req_b5b8e6d01ed04eb3ac635ef76f589995
+              created: 1753365497166
+              modified: 1753365636718
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmcxcxwtu0003kft1sunmzmqh
+            name: getId_pet
+            meta:
+              id: req_fc93d009038842049642e0090847ce01
+              created: 1753365797154
+              modified: 1753365905253
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/client/cmd3ahu3n0000kfdzru9g5pc2
+            name: getIdClient_pet
+            meta:
+              id: req_30c1f45a9d8a403b9fcbdff5b913d1e3
+              created: 1753365957986
+              modified: 1753366019788
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139804
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmcxcxwtu0003kft1sunmzmqh
+            name: patch_pet
+            meta:
+              id: req_465f439baf5c4506beabed7b01bf4635
+              created: 1753366123885
+              modified: 1753464467085
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "big an",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmdhgzbz70003cz4a4rmp0khf
+            name: delete_pet
+            meta:
+              id: req_ba050b1b17514b3fa3bcd2a1f49f79eb
+              created: 1753366252032
+              modified: 1753366273015
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: client
+        meta:
+          id: fld_6a4065de4b1b4d558a84c6043da5427e
+          created: 1753366303818
+          modified: 1753379038997
+          sortKey: -1753379027404
+          description: ""
+        children:
+          - url: http://localhost:3000/client
+            name: get_client
+            meta:
+              id: req_13fa63fa347e41efb80714ae85bb1856
+              created: 1753366303835
+              modified: 1753366857953
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/client/
+            name: post_client
+            meta:
+              id: req_be1f6514646a4bc48dfd790273b294bc
+              created: 1753366303837
+              modified: 1753367090155
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                	
+                		"name": "derny",
+                		"email": "btoto3r@gmail.com",
+                		"phone": "1234565",
+                		"businessId": "cmcxcux150001kft1mo2kejhk"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/client/cmcxcwr8h0002kft1rltrq9lk
+            name: getId_client
+            meta:
+              id: req_716e44290b174177bd76ca5ab63824fe
+              created: 1753366303843
+              modified: 1753367464659
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/client/cmcxcwr8h0002kft1rltrq9lk
+            name: getIdPet_client
+            meta:
+              id: req_c28941fc5ee54413ab314a40f53cfd0a
+              created: 1753366303845
+              modified: 1753367478954
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139804
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/client/cmdhhk8eu0005cz8i9dw6fzff
+            name: patch_client
+            meta:
+              id: req_9a0670eb01be4b548e3f80994c944436
+              created: 1753366303847
+              modified: 1753367594723
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                	
+                		"name": "derny",
+                		"email": "btoto3rrr@gmail.com",
+                		"phone": "12345655",
+                		"businessId": "cmcxcux150001kft1mo2kejhk"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/client/cmcxcux150001kft1mo2kejhk
+            name: delete_client
+            meta:
+              id: req_4d070ba43f744995a7c5a6f424be611f
+              created: 1753366303852
+              modified: 1753367663491
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |+
+                	{
+                	
+                		"name": "derny",
+                		"email": "btoto3r@gmail.com",
+                		"phone": "1234565",
+                		"businessId": "cmcxcux150001kft1mo2kejhk"
+                		}
+
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: service
+        meta:
+          id: fld_42825a55dce24ef1ab2fae85bb8129d9
+          created: 1753366461880
+          modified: 1753379041134
+          sortKey: -1753379027504
+          description: ""
+        children:
+          - url: http://localhost:3000/service/
+            name: get_service
+            meta:
+              id: req_96f2d938436c4a29a3887d2ce0e080f1
+              created: 1753366461881
+              modified: 1753367901927
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/service/
+            name: post_service
+            meta:
+              id: req_eedfe45713f847719b5bb43c4fa0cbf8
+              created: 1753366461882
+              modified: 1753367965139
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"name": "buquila",
+                		"price": 10,
+                		"duration": 2,
+                		"businessId": "cmcxcux150001kft1mo2kejhk"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/service/cmdhi1ott000lczq0kvia41ub
+            name: getId_service
+            meta:
+              id: req_f95dee4e863748f1b3c9485d0a56c150
+              created: 1753366461883
+              modified: 1753368054028
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/service/cmdhi1ott000lczq0kvia41ub
+            name: patch_service
+            meta:
+              id: req_776a132408c445208b427a030dfa5c29
+              created: 1753366461884
+              modified: 1753368155005
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"name": "buquila",
+                		"price": 10,
+                		"duration": 2,
+                		"businessId": "cmcxcux150001kft1mo2kejhk"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/service/cmcxd12nc0006kft12po4pqmi
+            name: delete_service
+            meta:
+              id: req_b94e48437982468ea34cf919f6ec29bb
+              created: 1753366461885
+              modified: 1753368197960
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"name": "buquila",
+                		"price": 10,
+                		"duration": 2,
+                		"businessId": "cmcxcux150001kft1mo2kejhk"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: sale-item
+        meta:
+          id: fld_db0f8818a6254232b6dd03cd25853492
+          created: 1753366491013
+          modified: 1753379043272
+          sortKey: -1753379027604
+          description: ""
+        children:
+          - url: http://localhost:3000/sale-item/
+            name: get_sale-item
+            meta:
+              id: req_39aa36c472fb4e3cb04567d3c72ac7b5
+              created: 1753366491014
+              modified: 1753368324972
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale-item/
+            name: post_sale-item
+            meta:
+              id: req_a529eab4f1d04f789fd6c013dd5e420d
+              created: 1753366491015
+              modified: 1753368689487
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                	
+                		"saleId": "cmcxd05hu0005kft1q5rvecer",
+                		"productId": "cmcxkgufr0001kf16ug2knpgr",
+                		"quantity": 1000,
+                		"price": 2000
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale-item/cmdhicfkh0000cz6wwhbe0ll7
+            name: getId_sale-item
+            meta:
+              id: req_654d00ef27db4399b311d900f404d6ec
+              created: 1753366491017
+              modified: 1753368987060
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale-item/cmdhicfkh0000cz6wwhbe0ll7
+            name: patch_sale-item
+            meta:
+              id: req_c481f81690314c78a5518a58be969b6e
+              created: 1753366491017
+              modified: 1753369026828
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                	
+                		"saleId": "cmcxd05hu0005kft1q5rvecer",
+                		"productId": "cmcxkgufr0001kf16ug2knpgr",
+                		"quantity": 1000,
+                		"price": 2000
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale-item/cmdhicfkh0000cz6wwhbe0ll7
+            name: delete_sale-item
+            meta:
+              id: req_a5ffc90829c7499c9eda08f74cf1d2d6
+              created: 1753366491019
+              modified: 1753369047720
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: sale
+        meta:
+          id: fld_1bcf6c1ad82e4d7596eae78d65abd366
+          created: 1753366518989
+          modified: 1753379045165
+          sortKey: -1753379027704
+          description: ""
+        children:
+          - url: http://localhost:3000/sale/
+            name: post_sale
+            meta:
+              id: req_426c466cc7b040a1a956814bac0e3687
+              created: 1753366518991
+              modified: 1753370462099
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "clienteId": "cmcxcwr8h0002kft1rltrq9lk", 
+                  "businessId": "cmcxcux150001kft1mo2kejhk",
+                  "total": 10
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale/
+            name: get_sale
+            meta:
+              id: req_83f4f7173af7483a95a00c51a21e1856
+              created: 1753366518991
+              modified: 1753369232658
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale/cmdhjnl320001czrqkf71rn51
+            name: getId_sale
+            meta:
+              id: req_81605d8e708c4cf3a1a6fd5f32a53ccb
+              created: 1753366518993
+              modified: 1753370842228
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": "cmdhjnl320001czrqkf71rn51",
+                	"clienteId": "cmcxcwr8h0002kft1rltrq9lk",
+                	"businessId": "cmcxcux150001kft1mo2kejhk",
+                	"total": 10,
+                	"dateSale": "2025-07-24T15:25:18.590Z"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale/cmdhjnl320001czrqkf71rn51
+            name: patch_sale
+            meta:
+              id: req_a6e6b364168a49ef9040f6e1d5567e59
+              created: 1753366518993
+              modified: 1753371099354
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+
+                	"clienteId": "cmcxcwr8h0002kft1rltrq9lk",
+                	"businessId": "cmcxcux150001kft1mo2kejhk",
+                	"total": 10,
+                	"dateSale": "2025-07-24T15:25:18.590Z"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/sale/cmdj3o2od0001cz7m17s56w5j
+            name: delete_sale
+            meta:
+              id: req_11f9483af60343f59b1060cf50899400
+              created: 1753366518994
+              modified: 1753464842018
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |+
+                {
+                  "clienteId": "cmcxcwr8h0002kft1rltrq9lk", 
+                  "businessId": "cmcxcux150001kft1mo2kejhk",
+                  "total": 10
+                }
+
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: product
+        meta:
+          id: fld_9bbc976412c545a3b190d0c3b679c0a9
+          created: 1753366541444
+          modified: 1753379052478
+          sortKey: -1753379027804
+          description: ""
+        children:
+          - url: http://localhost:3000/product/
+            name: post_product
+            meta:
+              id: req_c3e089eca93f4e71af4a1624f1c7375f
+              created: 1753366541445
+              modified: 1753466486218
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: "\t{
+
+                \t
+
+                \t\t\"name\": \"gg\",
+
+                \t\t\"price\": 200,
+
+                \t\t\"stock\": 200,
+
+                \t\t\"businessId\": \"cmcxcux150001kft1mo2kejhk\"
+
+                \t}
+
+                \t"
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/product/
+            name: get_product
+            meta:
+              id: req_48f47dfe43d54e629c188111ba846996
+              created: 1753366541446
+              modified: 1753371305865
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/product/cmdhk51vz000rczdcj0sqv8x7
+            name: getId_product
+            meta:
+              id: req_d8f96cea77f24b6ab42141efe09febdb
+              created: 1753366541447
+              modified: 1753371643852
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	
+                	"name": "gg",
+                	"price": 200,
+                	"stock": 200,
+                	"businessId": "cmcxcux150001kft1mo2kejhk"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/product/cmdhk51vz000rczdcj0sqv8x7
+            name: patch_product
+            meta:
+              id: req_098e6eb311af410da91c8a76fff60188
+              created: 1753366541448
+              modified: 1753371630056
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "gg",
+                	"price": 200,
+                	"stock": 200,
+                	"businessId": "cmcxcux150001kft1mo2kejhk"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/product/cmdhk51vz000rczdcj0sqv8x7
+            name: delete_product
+            meta:
+              id: req_f63abcab5245482c8fe9122b30b90275
+              created: 1753366541449
+              modified: 1753371652728
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |
+                {
+
+                	"name": "gg",
+                	"price": 200,
+                	"stock": 200,
+                	"businessId": "cmcxcux150001kft1mo2kejhk"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: medical-record
+        meta:
+          id: fld_31a5d892ee35409e82391b83bf499e1c
+          created: 1753366581748
+          modified: 1753379055102
+          sortKey: -1753379027904
+          description: ""
+        children:
+          - url: http://localhost:3000/medical-record/
+            name: post_medical-record
+            meta:
+              id: req_406adf79a31741d6bb33a0bed37eb5ac
+              created: 1753366581752
+              modified: 1753372048809
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/medical-record/
+            name: get_medical-record
+            meta:
+              id: req_0aa2b961f6aa43b5bbe175a3cb2bd79b
+              created: 1753366581757
+              modified: 1753372030003
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmcxcxwtu0003kft1sunmzmqh
+            name: getId_medical-record
+            meta:
+              id: req_36c9f7a060564466b2db1cca7c998ad8
+              created: 1753366581760
+              modified: 1753371999387
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/medical-record/
+            name: patch_medical-record
+            meta:
+              id: req_4e56e0df319949198a45d3e6ecec99f1
+              created: 1753366581761
+              modified: 1753372072521
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "big pan",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/medical-record/
+            name: delete_medical-record
+            meta:
+              id: req_2ae9688b83a24a0a9715bbf65742e674
+              created: 1753366581762
+              modified: 1753372061756
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: business
+        meta:
+          id: fld_658a8dda6ea146f9bcef164c1b9af886
+          created: 1753366605601
+          modified: 1753379057345
+          sortKey: -1753379028004
+          description: ""
+        children:
+          - url: http://localhost:3000/business/
+            name: post_business
+            meta:
+              id: req_a7b37c8186b546808a76f30d7b696935
+              created: 1753366605605
+              modified: 1753373721032
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "name": "denye",
+                  "address": "12iiw00",
+                  "phone": "765432",
+                  "email": "de6@gmail.com",
+                  "user": ["idDoUsuario1"]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/business/
+            name: get_business
+            meta:
+              id: req_61cd1b273cf34a0e8e36f224b95454db
+              created: 1753366605607
+              modified: 1753372235276
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/business/cmcxcux150001kft1mo2kejhk
+            name: getId_business
+            meta:
+              id: req_bfecca8706074afeaea28c08e73dc5c1
+              created: 1753366605613
+              modified: 1753466098886
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/business/cmdhlggbd0001czipo7udo4zw
+            name: patch_business
+            meta:
+              id: req_b3f17602619e44ebbbfae6930ea8a531
+              created: 1753366605616
+              modified: 1753373952308
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "name": "denye",
+                  "address": "12iiw00",
+                  "phone": "765432",
+                  "email": "de6@gmail.com",
+                  "user": ["idDoUsuario1"]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/business/cmdhlggbd0001czipo7udo4zw
+            name: delete_business
+            meta:
+              id: req_3b6e50a75b2e40b9afbdf3315077620f
+              created: 1753366605620
+              modified: 1753373967683
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: appointment
+        meta:
+          id: fld_8079f4a4ca3241e881e7e9637b611743
+          created: 1753366632107
+          modified: 1753379060938
+          sortKey: -1753379028104
+          description: ""
+        children:
+          - url: http://localhost:3000/appointment/
+            name: post_appointment
+            meta:
+              id: req_e544cde6e2f34c1f835c78323754305d
+              created: 1753366632111
+              modified: 1753466260228
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	
+                		"date": "2025-07-22T14:37:03.272Z",
+                		"status": "SCHEDULED",
+                		"petId": "cmcxcxwtu0003kft1sunmzmqh",
+                		"serviceId": "cmdhi1hnb0001czq0dzofdsab",
+                		"businessId": "cmcxcux150001kft1mo2kejhk",
+                		"notes": "Consulta geral para o pet"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/appointment/
+            name: get_appointment
+            meta:
+              id: req_aca408836b424ad9b4a081358e371d38
+              created: 1753366632115
+              modified: 1753374266353
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/appointment/cmdhltxvo0004cziph4uuk0rw
+            name: getId_appointment
+            meta:
+              id: req_0d02f4375d744d23b82b7070b41c81c0
+              created: 1753366632122
+              modified: 1753374536829
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/appointment/cmdhltxvo0004cziph4uuk0rw
+            name: patch_appointment
+            meta:
+              id: req_dc8297f721144c7593d1b90c0d792237
+              created: 1753366632126
+              modified: 1753374484024
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	
+                		"date": "2025-07-22T14:37:03.272Z",
+                		"status": "SCHEDULED",
+                		"petId": "cmcxcxwtu0003kft1sunmzmqh",
+                		"serviceId": null,
+                		"businessId": "cmcxcux150001kft1mo2kejhk",
+                		"notes": "Consulta geral para o pet"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/appointment/cmdhltxvo0004cziph4uuk0rw
+            name: delete_appointment
+            meta:
+              id: req_fcd984126e764f8290bd19da53956b10
+              created: 1753366632129
+              modified: 1753374547077
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: affiliate-referral
+        meta:
+          id: fld_02ce56585aa1425fbe3e09d11f9719e0
+          created: 1753366675882
+          modified: 1753379084913
+          sortKey: -1753379028304
+          description: ""
+        children:
+          - url: http://localhost:3000/affiliate-referral/
+            name: post_affiliate-referral
+            meta:
+              id: req_d575db12ac0a4151852e418ca80ac74e
+              created: 1753366675883
+              modified: 1753378075876
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		
+                		"affiliated": "cmdhn0cxc0000czvvc78k6lkp",
+                		"referredUserId": null,
+                		"type": "USER_SIGNUP",
+                		"value": 2000,
+                		"status": "PENDING"
+                		
+                	
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate-referral/
+            name: get_affiliate-referral
+            meta:
+              id: req_e068bc75dc4d4604aea18ecdfd0754c8
+              created: 1753366675884
+              modified: 1753374662050
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate-referral/cmdho1jfs0007czclu0u4i64v
+            name: getId_affiliate-referral
+            meta:
+              id: req_ae37a16233b34d6183c553e8f52632be
+              created: 1753366675888
+              modified: 1753378137646
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate-referral/cmdho1jfs0007czclu0u4i64v
+            name: patch_affiliate-referral
+            meta:
+              id: req_696ff507cf444fae807634c5d67ca1d7
+              created: 1753366675891
+              modified: 1753378175790
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		
+                		"affiliated": "cmdhn0cxc0000czvvc78k6lkp",
+                		"referredUserId": null,
+                		"type": "USER_SIGNUP",
+                		"value": 2000,
+                		"status": "PENDING"
+                		
+                	
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate-referral/cmdho1jfs0007czclu0u4i64v
+            name: delete_affiliate-referral
+            meta:
+              id: req_0b793b8c56a14c66b1f47c758b33f8e8
+              created: 1753366675892
+              modified: 1753378163543
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: affiliate
+        meta:
+          id: fld_3ae60283759843c1ba3b50faf04f6cca
+          created: 1753366707204
+          modified: 1753379078644
+          sortKey: -1753379028204
+          description: ""
+        children:
+          - url: http://localhost:3000/affiliate/
+            name: post_affiliate
+            meta:
+              id: req_e0f9e660ab864cc886775f91f296ea33
+              created: 1753366707204
+              modified: 1753378415214
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+
+                		"userId": "cmcxcu2t10000kft1v5n4oirs",
+                		"code": "fy",
+                		"earning": 443,
+                		"AffiliateReferral": []
+                		
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate/
+            name: get_affiliate
+            meta:
+              id: req_e3d36e275d6a4a7ba14760c9e9d83c23
+              created: 1753366707205
+              modified: 1753374913376
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate/cmdhoemxw0001cz39rf8u4niq
+            name: getId_affiliate
+            meta:
+              id: req_93214e25e1e24b15a440eca3f1627df2
+              created: 1753366707207
+              modified: 1753378839161
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate/cmdhoemxw0001cz39rf8u4niq
+            name: patch_affiliate
+            meta:
+              id: req_6a06f15450c74ac9801280bb8f1a04fd
+              created: 1753366707208
+              modified: 1753378805377
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+
+                	"userId": "cmcxcu2t10000kft1v5n4oirs",
+                	"code": "fy",
+                	"earnings": 443,
+                	"createAt": "2025-07-24T17:38:19.171Z",
+                	"updateAt": "2025-07-24T17:38:19.171Z"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/affiliate/cmdhoemxw0001cz39rf8u4niq
+            name: delete_affiliate
+            meta:
+              id: req_1b1f02604f514a8b8b03381524ffa65f
+              created: 1753366707209
+              modified: 1753378830654
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: user
+        meta:
+          id: fld_57d74d1b535043adad8e6e583b938966
+          created: 1753366752694
+          modified: 1753379036219
+          sortKey: -1753379027304
+          description: ""
+        children:
+          - url: http://localhost:3000/pet/
+            name: get_pet
+            meta:
+              id: req_57dc62afcae4473fbc1eeabd0bfccba1
+              created: 1753366752695
+              modified: 1753366752695
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/
+            name: post_pet
+            meta:
+              id: req_a9a7ed27270648389420e264db45bb1a
+              created: 1753366752697
+              modified: 1753366752697
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmcxcxwtu0003kft1sunmzmqh
+            name: getId_pet
+            meta:
+              id: req_511b8440a56d49e59749122a0d19b252
+              created: 1753366752698
+              modified: 1753366752698
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/client/cmd3ahu3n0000kfdzru9g5pc2
+            name: getIdClient_pet
+            meta:
+              id: req_e01bcad395ee48d8a60aa7c3e19bdfd9
+              created: 1753366752699
+              modified: 1753366752699
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139804
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmcxcxwtu0003kft1sunmzmqh
+            name: patch_pet
+            meta:
+              id: req_d39693836933436aac8ab90a119b1a65
+              created: 1753366752700
+              modified: 1753366752700
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "big pan",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmdhgzbz70003cz4a4rmp0khf
+            name: delete_pet
+            meta:
+              id: req_71a0570abbc54ae5b270cfea545e04c9
+              created: 1753366752702
+              modified: 1753366752702
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: custom
+        meta:
+          id: fld_3e88004adce84b5680ae349d4edc2024
+          created: 1753366795738
+          modified: 1753379027182
+          sortKey: -1753379027104
+          description: ""
+        children:
+          - url: http://localhost:3000/pet/
+            name: get_pet
+            meta:
+              id: req_10e1508ac26c45a5ab06b38943847061
+              created: 1753366795739
+              modified: 1753366795739
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139954
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/
+            name: post_pet
+            meta:
+              id: req_096a1422752141078662fc856b5648b9
+              created: 1753366795740
+              modified: 1753366795740
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139904
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmcxcxwtu0003kft1sunmzmqh
+            name: getId_pet
+            meta:
+              id: req_d9448e993ca34f7182e4fdfc5f657840
+              created: 1753366795741
+              modified: 1753366795741
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139854
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/client/cmd3ahu3n0000kfdzru9g5pc2
+            name: getIdClient_pet
+            meta:
+              id: req_aca61f41f2434dad8285b7e104849dcf
+              created: 1753366795742
+              modified: 1753366795742
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139804
+            method: GET
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmcxcxwtu0003kft1sunmzmqh
+            name: patch_pet
+            meta:
+              id: req_b133d81a8fff47208ff23aa9c25bb8a2
+              created: 1753366795743
+              modified: 1753366795743
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139829
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "big pan",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pet/cmdhgzbz70003cz4a4rmp0khf
+            name: delete_pet
+            meta:
+              id: req_074c6f52c44a4de8956dccb7fd9bb79b
+              created: 1753366795744
+              modified: 1753366795744
+              isPrivate: false
+              description: ""
+              sortKey: -1753364139879
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |
+                	{
+                		"name": "Rexx",
+                		"species": "Cães",
+                		"breed": "Labrador",
+                		"birthDate": "2026-06-15T00:00:00.000Z",
+                		"clienteId": "cmd3ahu3n0000kfdzru9g5pc2"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1753364042788
+    modified: 1753364042788
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1753364042786
+    modified: 1753364042786
+    isPrivate: false

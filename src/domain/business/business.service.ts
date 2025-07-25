@@ -54,7 +54,7 @@ export class BusinessService {
         address: updateBusinessDto. address,
        phone: updateBusinessDto.phone,
         email: updateBusinessDto.email,
-        clients
+        
       }
     });
   }
