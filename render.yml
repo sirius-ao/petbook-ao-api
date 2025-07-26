@@ -3,7 +3,7 @@ services:
     name: petbook-ao-api
     runtime: node
     repo: https://github.com/Petbook-ao/petbook-ao-api
-    branch: adilson/production  # Foco específico na branch adilson/production
+    branch: master
     plan: free
     region: oregon
     buildCommand: |
@@ -13,19 +13,15 @@ services:
       npm run build
     startCommand: npm run start:prod
     autoDeployTrigger:
-      branch: adilson/production  # Só dispara deploy quando houver push na adilson/production
+      branch: master
     envVariables:
       NODE_ENV: production
       PORT: 3000
-      DATABASE_URL: $DATABASE_URL
+      DATABASE_URL: $SUPABASE_DB_URL  # Usando variável do Supabase
       JWT_SECRET: $JWT_SECRET
+      #SUPABASE_URL: $SUPABASE_URL     # URL do projeto Supabase
+      #SUPABASE_KEY: $SUPABASE_KEY     # Chave secreta do Supabase
     healthCheckPath: /api/health
     httpPort: 3000
 
-  - type: postgres  # Serviço de banco de dados
-    name: petbook-db
-    plan: free
-    region: oregon
-    version: '14'
-    
 version: "1"
