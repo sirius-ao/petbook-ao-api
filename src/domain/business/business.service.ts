@@ -26,7 +26,7 @@ export class BusinessService {
     });
   }
 
-  async findOne(id: string) {
+  async findOne(id: number) {
     const business = await this.prisma.business.findUnique({
       where: { id },
       include: {
@@ -44,7 +44,7 @@ export class BusinessService {
     return business;
   }
 
-  async update(id: string, updateBusinessDto: UpdateBusinessDto) {
+  async update(id: number, updateBusinessDto: UpdateBusinessDto) {
     return this.prisma.business.update({
       where: { id },
       data: {
@@ -59,7 +59,7 @@ export class BusinessService {
     });
   }
 
-  async remove(id: string) {
+  async remove(id: number) {
     return this.prisma.business.delete({
       where: { id },
     });

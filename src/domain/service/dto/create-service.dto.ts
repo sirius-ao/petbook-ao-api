@@ -20,8 +20,8 @@ export class CreateServiceDto {
     duration: number;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    businessId: string;
+    @IsNumber()
+    businessId: number;
     
     appointment: Appointment[];
 

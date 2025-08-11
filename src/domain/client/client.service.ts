@@ -29,7 +29,7 @@ export class ClientService {
     });
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     return this.prisma.client.findUnique({
       where: { id },
       include: {
@@ -43,7 +43,7 @@ export class ClientService {
     return Client;
   }
 
-  update(id: string, updateClientDto: UpdateClientDto) {
+  update(id: number, updateClientDto: UpdateClientDto) {
     return this.prisma.client.update({
       where: { id },
       data: updateClientDto,

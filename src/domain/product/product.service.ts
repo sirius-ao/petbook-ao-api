@@ -33,7 +33,7 @@ export class ProductService {
     });
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     return this.prisma.product.findUnique({
       where: { id },
       include: {
@@ -46,14 +46,14 @@ export class ProductService {
     return Product;
   }
 
-  update(id: string, updateProductDto: UpdateProductDto) {
+  update(id: number, updateProductDto: UpdateProductDto) {
     return this.prisma.product.update({
       where: { id },
       data: updateProductDto, // Update the product with the provided data
     });
   }
 
-  remove(id: string) {
+  remove(id: number) {
     return this.prisma.product.delete({
       where: { id },
     });
@@ -93,7 +93,7 @@ async importFromExcel(filePath: string){
             stock: getNumericValue(3),
             category: row.getCell(4)?.text ,
             description: row.getCell(5)?.text,
-            businessId: row.getCell(6)?.text,
+            businessId: getNumericValue(3),
           };
 
       if(product.name && !isNaN(product.price) && !isNaN(product.stock)){

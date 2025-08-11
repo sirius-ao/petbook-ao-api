@@ -1,75 +1,40 @@
+// src/domain/pet/pet.service.ts
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { PrismaService } from '../../database/prisma/prisma.service';
+import { PetRepository } from './Pet.Repository';
 import { CreatePetDto } from './dto/create-pet.dto';
 import { UpdatePetDto } from './dto/update-pet.dto';
 
 @Injectable()
 export class PetService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly petRepository: PetRepository) {}
 
-  async create(createPetDto: CreatePetDto) {
-    return this.prisma.pet.create({
-      data: {
-        name: createPetDto.name,
-        species: createPetDto.species,
-        breed: createPetDto.breed,
-        birthDate: createPetDto.birthDate ? new Date(createPetDto.birthDate) : undefined,
-        clienteId: createPetDto.clienteId,
-      },
-    });
+  async create(dto: CreatePetDto) {
+    return this.petRepository.create(dto);
   }
 
   async findAll() {
-    return this.prisma.pet.findMany({
-      include: { client: true, appointments: true, records: true },
-    });
+    return this.petRepository.findAll();
   }
 
-  /** 🔎 Buscar pets de um cliente específico */
-  async findPetsByClientId(clienteId: string) {
-    const pets = await this.prisma.pet.findMany({
-      where: { clienteId },
-      select: {
-        id: true,
-        name: true,
-        species: true,
-        breed: true,
-        client: {
-          select: { id: true, name: true, email: true },
-        },
-      },
-    });
-
+  async findPetsByClientId(clienteId: number) {
+    const pets = await this.petRepository.findPetsByClientId(clienteId);
     if (!pets || pets.length === 0) {
       throw new NotFoundException(`Nenhum pet encontrado para o cliente ${clienteId}`);
     }
     return pets;
   }
 
-  async findOne(id: string) {
-    const pet = await this.prisma.pet.findUnique({
-      where: { id },
-      include: { client: true, appointments: true, records: true },
-    });
-
+  async findOne(id: number) {
+    const pet = await this.petRepository.findOne(id);
     if (!pet) throw new NotFoundException(`Pet com id ${id} não encontrado`);
     return pet;
   }
 
-  async update(id: string, updatePetDto: UpdatePetDto) {
-    return this.prisma.pet.update({
-      where: { id },
-      data: {
-        name: updatePetDto.name,
-        species: updatePetDto.species,
-        breed: updatePetDto.breed,
-        birthDate: updatePetDto.birthDate ? new Date(updatePetDto.birthDate) : undefined,
-        clienteId: updatePetDto.clienteId,
-      },
-    });
+  async update(id: number, dto: UpdatePetDto) {
+    return this.petRepository.update(id, dto);
   }
 
-  async remove(id: string) {
-    return this.prisma.pet.delete({ where: { id } });
+  async remove(id: number) {
+    return this.petRepository.remove(id);
   }
 }

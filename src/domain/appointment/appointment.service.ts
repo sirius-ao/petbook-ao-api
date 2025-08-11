@@ -16,20 +16,20 @@ export class AppointmentService {
     return this.prisma.appointment.findMany();
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     return this.prisma.appointment.findUnique({ where: { id } });
   }
 
-  update(id: string, dto: UpdateAppointmentDto) {
+  update(id: number, dto: UpdateAppointmentDto) {
     return this.prisma.appointment.update({ where: { id }, data: dto });
   }
 
-  remove(id: string) {
+  remove(id: number) {
     return this.prisma.appointment.delete({ where: { id } });
   }
 
   // 👇 NOVO: agendamentos de um pet
-  listByPetId(petId: string) {
+  listByPetId(petId: number) {
     return this.prisma.appointment.findMany({
       where: { petId },
       orderBy: { date: 'asc' },
@@ -41,7 +41,7 @@ export class AppointmentService {
   }
 
   // 👇 NOVO: agenda do dia
-  dailyAgendaByBusiness(businessId: string, day = new Date()) {
+  dailyAgendaByBusiness(businessId: number, day = new Date()) {
     const start = new Date(day);
     start.setHours(0, 0, 0, 0);
     const end = new Date(start);
