@@ -28,7 +28,7 @@ export class ServiceService {
     });
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     return this.prisma.service.findUnique({
       where: { id },
       include: {
@@ -41,13 +41,13 @@ export class ServiceService {
     // return service;
   }
 
-  update(id: string, updateServiceDto: UpdateServiceDto) {
+  update(id: number, updateServiceDto: UpdateServiceDto) {
     return this.prisma.service.update({
       where: { id },
       data: updateServiceDto,     });
   }
 
-  remove(id: string) {
+  remove(id: number) {
     return this.prisma.service.delete({
       where: { id },
     });

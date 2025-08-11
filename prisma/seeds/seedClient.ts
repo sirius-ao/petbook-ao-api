@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-export async function seedClient(business?: { id: string }) {
+export async function seedClient(business?: { id: number }) {
   console.log('🌱 Criando clientes...')
 
   // se não vier um business como argumento, pega o primeiro do banco

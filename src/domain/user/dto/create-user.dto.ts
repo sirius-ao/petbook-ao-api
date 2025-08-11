@@ -1,13 +1,13 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsEnum, IsOptional, IsString } from "class-validator";
+import { IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
 // import { MedicalRecord , Affiliate, Role} from "generated/prisma";
 import { MedicalRecord, Affiliate, Role } from "@prisma/client";
 
 export class CreateUserDto {
 
 @ApiProperty({example:'01010e0w'})
-@IsString()
-id: string;
+@IsNumber()
+id: number;
 
 @ApiProperty({example:'Pedro Pessoa'})
 @IsString()
@@ -26,9 +26,9 @@ password: string;
 role: Role;
 
 @ApiProperty({example:'01010e0w'})
-@IsString()
+@IsNumber()
 @IsOptional()
-businessId?:string;
+businessId?:number;
 
 
 medicalRecord: MedicalRecord[];

@@ -67,7 +67,7 @@ export class UserService {
     });
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     return this.prisma.user.findUnique({
       where: { id },
       select: {
@@ -83,7 +83,7 @@ export class UserService {
     });
   }
 
-  async update(id: string, dto: UpdateUserDto) {
+  async update(id: number, dto: UpdateUserDto) {
     // Se quiser também atualizar a senha, hash aqui
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const data = { ...dto } as any;
@@ -100,7 +100,7 @@ export class UserService {
     });
   }
 
-  remove(id: string) {
+  remove(id: number) {
     return this.prisma.user.delete({ where: { id } });
   }
 }
