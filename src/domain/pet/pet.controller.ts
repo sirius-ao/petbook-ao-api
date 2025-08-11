@@ -1,72 +1,56 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-} from '@nestjs/common';
+// src/domain/pet/pet.controller.ts
+import { Controller, Post, Get, Param, Body, Patch, Delete } from '@nestjs/common';
 import { PetService } from './pet.service';
 import { CreatePetDto } from './dto/create-pet.dto';
 import { UpdatePetDto } from './dto/update-pet.dto';
-import { ApiTags, ApiOperation, ApiBadRequestResponse, ApiResponse, ApiOkResponse, ApiNotFoundResponse } from '@nestjs/swagger';
+import axios from 'axios';
 
-@ApiTags('pet')
 @Controller('pet')
 export class PetController {
   constructor(private readonly petService: PetService) {}
 
-  @ApiOperation({ summary: 'Registrar pet' })
-  @ApiResponse({ status: 201, description: 'Registrar pet' })
-  @ApiBadRequestResponse({ description: 'Bad Payload send' })
-  @ApiResponse({ status: 403, description: 'Forbiden' })
   @Post()
-  create(@Body() createPetDto: CreatePetDto) {
-    return this.petService.create(createPetDto);
+  async create(@Body() dto: CreatePetDto) {
+    const pet = await this.petService.create(dto);
+
+    // 🔹 Dispara evento para o n8n
+    try {
+      await axios.post('http://localhost:5678/webhook/new-pet', pet);
+    } catch (err) {
+      console.error('Erro ao notificar n8n:', err.message);
+    }
+
+    return pet;
   }
 
-  @ApiOperation({ summary: 'Listar pets' })
-  @ApiOkResponse({ description: 'Listar pets', type: CreatePetDto })
-  @ApiNotFoundResponse({ description: 'Not Found' })
   @Get()
   findAll() {
     return this.petService.findAll();
   }
 
-  @ApiOperation({ summary: 'Detalhes do pet' })
-  @ApiOkResponse({ description: 'Detalhes do pet', type: CreatePetDto })
-  @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.petService.findOne(id); // ✅ ID é string
+  findOne(@Param('id') id: number) {
+    return this.petService.findOne(id);
   }
 
-  @ApiOperation({ summary: 'Atualizar pets' })
-  @ApiOkResponse({ description: 'Atualizar pet', type: CreatePetDto })
-  @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updatePetDto: UpdatePetDto) {
-    return this.petService.update(id, updatePetDto); // ✅ ID é string
+  update(@Param('id') id: number, @Body() dto: UpdatePetDto) {
+    return this.petService.update(id, dto);
   }
 
-  @ApiOperation({ summary: 'Excluir pet' })
-  @ApiOkResponse({ description: 'Excluir pet', type: CreatePetDto })
-  @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.petService.remove(id); // ✅ ID é string
+  remove(@Param('id') id: number) {
+    return this.petService.remove(id);
   }
 
-  // GET	/clients/:id/pets	Listar pets de um dono específico
-  // falta criar esse request
-
- @Get('client/:id')
-  findByClientId(@Param('id') clienteId: string) {
+  @Get('client/:id')
+  findByClientId(@Param('id') clienteId: number) {
     return this.petService.findPetsByClientId(clienteId);
   }
-  // falta criar esse request 
 
-
-  
+  // Endpoint para o n8n puxar pets
+  @Get('n8n/all')
+  getPetsForN8n() {
+    return this.petService.findAll();
+  }
 }

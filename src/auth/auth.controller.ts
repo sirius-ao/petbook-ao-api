@@ -44,7 +44,7 @@ export class AuthController {
   @Post('refresh')
   refresh(@Req() req: Request) {
     const user = req.user as any;
-    const token = req.headers['x-refresh-token'] as string;
+    const token = req.headers['x-refresh-token'] as  string;
     return this.authService.refresh(user.id, token);
   }
 

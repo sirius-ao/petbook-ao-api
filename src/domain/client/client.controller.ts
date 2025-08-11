@@ -32,6 +32,7 @@ export class ClientController {
   create(@Body() createClientDto: CreateClientDto) {
     return this.clientService.create(createClientDto);
   }
+  
 
   @ApiOperation({ summary: 'Listar clientes' })
   @ApiOkResponse({ description: 'Listar clientes', type: CreateClientDto })
@@ -45,7 +46,7 @@ export class ClientController {
   @ApiOkResponse({ description: 'Detalhes do cliente', type: CreateClientDto })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.clientService.findOne(id);
   }
 
@@ -56,7 +57,7 @@ export class ClientController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateClientDto: UpdateClientDto) {
+  update(@Param('id') id: number, @Body() updateClientDto: UpdateClientDto) {
     return this.clientService.update(id, updateClientDto);
   }
 
@@ -64,7 +65,7 @@ export class ClientController {
   @ApiOkResponse({ description: '	Remover cliente', type: CreateClientDto })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.clientService.remove(+id);
   }
 }

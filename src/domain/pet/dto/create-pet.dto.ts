@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { IsDate, IsString } from 'class-validator';
+import { IsDate, IsNumber, IsString } from 'class-validator';
 import { Appointment, MedicalRecord } from 'generated/prisma';
 
 export class CreatePetDto {
@@ -31,8 +31,8 @@ export class CreatePetDto {
   birthDate?: Date;
 
   @ApiProperty({example:'01010e0w'})
-  @IsString()
-  clienteId: string;
+  @IsNumber()
+  clienteId: number;
 
   appointments: Appointment[];
   records: MedicalRecord[];
