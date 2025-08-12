@@ -9,12 +9,14 @@ datasource db {
 }
 
 model User {
-  id            String            @id @default(cuid())
+
+  id            Int          @id @default(autoincrement())
   name          String
   email         String            @unique
   password      String
+  role          Role            @default(ATTENDANT)
+  businessId    Int?
   role          Role              @default(ATTENDANT)
-  businessId    String?
   Affiliate     Affiliate[]
   MedicalRecord MedicalRecord[]
   business      Business?         @relation(fields: [businessId], references: [id], onDelete: Cascade, map: "user_business_relation")
@@ -25,7 +27,7 @@ model User {
 }
 
 model Business {
-  id           String        @id @default(cuid())
+  id           Int        @id  @default(autoincrement())
   name         String
   address      String
   phone        String
@@ -42,11 +44,11 @@ model Business {
 }
 
 model Client {
-  id         String   @id @default(cuid())
+  id         Int   @id @default(autoincrement())
   name       String
   email      String?
   phone      String?
-  businessId String
+  businessId Int
   business   Business @relation(fields: [businessId], references: [id], map: "client_business_relation")
   pets       Pet[]
   Sale       Sale[]
@@ -57,12 +59,12 @@ model Client {
 }
 
 model Pet {
-  id           String          @id @default(cuid())
+  id           Int          @id @default(autoincrement())
   name         String
   species      String
   breed        String
   birthDate    DateTime?
-  clienteId    String
+  clienteId    Int
   appointments Appointment[]
   records      MedicalRecord[]
   client       Client          @relation(fields: [clienteId], references: [id], onDelete: Cascade, map: "pet_client_relation")
@@ -73,12 +75,12 @@ model Pet {
 }
 
 model Appointment {
-  id         String            @id @default(cuid())
+  id         Int            @id @default(autoincrement())
   date       DateTime
   status     AppointmentStatus @default(SCHEDULED)
-  petId      String
-  serviceId  String?
-  businessId String
+  petId      Int
+  serviceId  Int?
+  businessId Int
   notes      String?
   
   business   Business          @relation(fields: [businessId], references: [id], map: "appointment_business_relation")
@@ -93,11 +95,11 @@ model Appointment {
 }
 
 model Service {
-  id          String        @id @default(cuid())
+  id          Int        @id @default(autoincrement())
   name        String
   price       Float
   duration    Int
-  businessId  String
+  businessId  Int
   Appointment Appointment[]
   business    Business      @relation(fields: [businessId], references: [id], map: "service_business_relation")
   createAt    DateTime      @default(now())
@@ -107,11 +109,11 @@ model Service {
 }
 
 model Product {
-  id         String     @id @default(cuid())
+  id         Int     @id @default(autoincrement())
   name       String
   price      Float
   stock      Int
-  businessId String
+  businessId Int
   business   Business   @relation(fields: [businessId], references: [id], map: "product_business_relation")
   SaleItem   SaleItem[]
   createAt   DateTime   @default(now())
@@ -121,9 +123,9 @@ model Product {
 }
 
 model Sale {
-  id         String     @id @default(cuid())
-  clientId   String?
-  businessId String
+  id         Int     @id @default(autoincrement())
+  clientId   Int?
+  businessId Int
   total      Float
   dateSale   DateTime   @default(now())
   business   Business   @relation(fields: [businessId], references: [id], map: "sale_business_relation")
@@ -137,9 +139,9 @@ model Sale {
 }
 
 model SaleItem {
-  id        String  @id @default(cuid())
-  saleId    String
-  productId String
+  id        Int  @id @default(autoincrement())
+  saleId    Int
+  productId Int
   quantity  Int
   price     Float
   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade, map: "saleitem_product_relation")
@@ -152,9 +154,9 @@ model SaleItem {
 }
 
 model MedicalRecord {
-  id          String   @id @default(cuid())
-  petId       String
-  vetId       String?
+  id          Int   @id @default(autoincrement())
+  petId       Int
+  vetId       Int?
   date        DateTime @default(now())
   description String
   pet         Pet      @relation(fields: [petId], references: [id], onDelete: Cascade, map: "medicalrecord_pet_relation")
@@ -167,8 +169,8 @@ model MedicalRecord {
 }
 
 model Affiliate {
-  id                String              @id @default(cuid())
-  userId            String
+  id                Int              @id @default(autoincrement())
+  userId            Int
   code              String              @unique
   earnings          Float               @default(0)
   user              User                @relation(fields: [userId], references: [id], map: "affiliate_user_relation")
@@ -180,9 +182,9 @@ model Affiliate {
 }
 
 model AffiliateReferral {
-  id             String         @id @default(cuid())
-  affiliateId    String
-  referredUserId String?
+  id             Int         @id @default(autoincrement())
+  affiliateId    Int
+  referredUserId Int?
   type           ReferralType
   value          Float
   status         ReferralStatus

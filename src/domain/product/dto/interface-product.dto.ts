@@ -9,5 +9,5 @@ export interface ProductImport  {
 
   description: string;
 
-  businessId: string; // Agora é obrigatório
+  businessId: number; // Agora é obrigatório
 }
