@@ -27,20 +27,20 @@ export class SaleItemService {
     });
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     return this.prisma.saleItem.findUnique({
       where: { id },
     });
   }
 
-  update(id: string, updateSaleItemDto: UpdateSaleItemDto) {
+  update(id: number, updateSaleItemDto: UpdateSaleItemDto) {
     return this.prisma.saleItem.update({
       where: { id },
       data: updateSaleItemDto, // Update the sale item with the provided data
     });
   }
 
-  remove(id: string) {
+  remove(id: number) {
     return this.prisma.saleItem.delete({
       where: { id },
     });

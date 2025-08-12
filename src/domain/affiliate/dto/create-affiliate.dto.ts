@@ -9,8 +9,8 @@ export class CreateAffiliateDto {
     // id: string;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    userId: string;
+    @IsNumber()
+    userId: number;
 
     @ApiProperty({example:'01010e0w'})
     @IsString()

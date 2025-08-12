@@ -27,7 +27,7 @@ export class AffiliateReferralService {
     })
   }
 
-  async findOne(id: string) {
+  async findOne(id: number) {
     const referral = await this.prisma.affiliateReferral.findUnique({
       where: { id },
       include: {
@@ -40,7 +40,7 @@ export class AffiliateReferralService {
     return referral
   }
 
-  async update(id: string, dto: UpdateAffiliateReferralDto) {
+  async update(id: number, dto: UpdateAffiliateReferralDto) {
     // garante que existe
     await this.findOne(id)
     return this.prisma.affiliateReferral.update({
@@ -55,7 +55,7 @@ export class AffiliateReferralService {
     })
   }
 
-  async remove(id: string) {
+  async remove(id: number) {
     // garante que existe
     await this.findOne(id)
     return this.prisma.affiliateReferral.delete({ where: { id } })

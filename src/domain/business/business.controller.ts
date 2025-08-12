@@ -41,7 +41,7 @@ export class BusinessController {
   @ApiOkResponse({description:'Ver detalhes negocios', type: CreateBusinessDto})
   @ApiNotFoundResponse({description:'Not Found'})
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.businessService.findOne(id);
   }
 
@@ -50,7 +50,7 @@ export class BusinessController {
     @ApiNotFoundResponse({description:'Not Found'})
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id') id: number,
     @Body() updateBusinessDto: UpdateBusinessDto,
   ) {
     return this.businessService.update(id, updateBusinessDto);
@@ -61,7 +61,7 @@ export class BusinessController {
   @ApiOkResponse({ description: 'Agenda do dia' })
   @Get(':id/agenda')
   dailyAgenda(
-    @Param('id') businessId: string,
+    @Param('id') businessId: number,
     @Query('date') date?: string,
   ) {
     const ref = date ? new Date(date) : new Date(); // default: hoje
@@ -73,7 +73,7 @@ export class BusinessController {
     @ApiOkResponse({description:'Deletar negócios ', type: CreateBusinessDto})
     @ApiNotFoundResponse({description:'Not Found'})
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.businessService.remove(id);
   }
 }
