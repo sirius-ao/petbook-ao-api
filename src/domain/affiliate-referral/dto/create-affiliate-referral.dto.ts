@@ -10,13 +10,13 @@ export class CreateAffiliateReferralDto {
     // id: string;
     
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    affiliated: string;
+    @IsNumber()
+    affiliated: number;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
+    @IsNumber()
     @IsOptional()
-    referredUserId?: string;
+    referredUserId?: number;
 
     @ApiProperty({example:'01010e0w'})
     @IsEnum(ReferralType)

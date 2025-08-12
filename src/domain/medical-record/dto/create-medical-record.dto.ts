@@ -1,20 +1,20 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsDate, IsOptional, IsString } from "class-validator";
+import { IsDate, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class CreateMedicalRecordDto {
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    @IsNumber()
+    id: number;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    petId: string;
+    @IsNumber()
+    petId: number;
 
     @ApiProperty({example:'01010e0w'})
     @IsOptional()
-    @IsString()
-    verId?: string;
+    @IsNumber()
+    verId?: number;
 
     @ApiProperty({example:'01010e0w'})
     @IsDate()

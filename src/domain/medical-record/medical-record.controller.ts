@@ -37,7 +37,7 @@ export class MedicalRecordController {
     })
     @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.medicalRecordService.findOne(+id);
   }
 
@@ -48,7 +48,7 @@ export class MedicalRecordController {
     })
     @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateMedicalRecordDto: UpdateMedicalRecordDto) {
+  update(@Param('id') id: number, @Body() updateMedicalRecordDto: UpdateMedicalRecordDto) {
     return this.medicalRecordService.update(+id, updateMedicalRecordDto);
   }
 
@@ -59,7 +59,7 @@ export class MedicalRecordController {
     })
     @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.medicalRecordService.remove(+id);
   }
 

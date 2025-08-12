@@ -51,7 +51,7 @@ export class SaleController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.saleService.findOne(id);
   }
 
@@ -63,7 +63,7 @@ export class SaleController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSaleDto: UpdateSaleDto) {
+  update(@Param('id') id: number, @Body() updateSaleDto: UpdateSaleDto) {
     return this.saleService.update(id, updateSaleDto);
   }
 
@@ -74,7 +74,7 @@ export class SaleController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.saleService.remove(id);
   }
 

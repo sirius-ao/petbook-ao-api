@@ -46,7 +46,7 @@ export class AppointmentController {
   @ApiOkResponse({ description: 'Detalhes agendamentos' })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.appointmentService.findOne(id);
   }
 
@@ -55,7 +55,7 @@ export class AppointmentController {
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id') id: number,
     @Body() updateAppointmentDto: UpdateAppointmentDto,
   ) {
     return this.appointmentService.update(id, updateAppointmentDto);
@@ -65,7 +65,7 @@ export class AppointmentController {
   @ApiOkResponse({ description: 'Cancelar agendamentos' })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.appointmentService.remove(id);
   }
 
@@ -74,7 +74,7 @@ export class AppointmentController {
   @ApiOkResponse({ description: 'Lista de agendamentos do Pet' })
   @ApiNotFoundResponse({ description: 'Pet não encontrado ou sem agendamentos' })
   @Get('/pet/:petId')
-  listByPet(@Param('petId') petId: string) {
+  listByPet(@Param('petId') petId: number) {
     return this.appointmentService.listByPetId(petId);
   }
 
@@ -84,7 +84,7 @@ export class AppointmentController {
   @ApiNotFoundResponse({ description: 'Nenhum agendamento encontrado' })
   @Get('/business/:businessId/agenda')
   dailyAgenda(
-    @Param('businessId') businessId: string,
+    @Param('businessId') businessId: number,
     @Query('day') day?: string, // opcionalmente pode receber data via query
   ) {
     const date = day ? new Date(day) : new Date();

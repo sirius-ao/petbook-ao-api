@@ -53,7 +53,7 @@ export class AffiliateReferralController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.affiliateReferralService.findOne(id);
   }
 
@@ -65,7 +65,7 @@ export class AffiliateReferralController {
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id') id: number,
     @Body() updateAffiliateReferralDto: UpdateAffiliateReferralDto,
   ) {
     return this.affiliateReferralService.update(
@@ -81,7 +81,7 @@ export class AffiliateReferralController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.affiliateReferralService.remove(id);
   }
 

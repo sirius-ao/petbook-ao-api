@@ -21,8 +21,8 @@ export class CreateProductDto {
     stock: number;
 
     @ApiProperty({example:'EU3U3892'})
-    @IsString()
-    businessId: string; // Assuming businessId is part of the DTO
+    @IsNumber()
+    businessId: number; // Assuming businessId is part of the DTO
     
     salemItem: SaleItem[];
 
