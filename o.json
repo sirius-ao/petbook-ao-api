@@ -1,0 +1,65 @@
+{
+  "name": "Novo Pet - Receber do NestJS e salvar no Google Sheets",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "new-pet",
+        "method": "POST"
+      },
+      "name": "Webhook - Novo Pet",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300],
+      "webhookDescription": "Recebe um novo pet do sistema NestJS"
+    },
+    {
+      "parameters": {
+        "functionCode": "return [{ json: {\n  id: $json[\"id\"],\n  nome: $json[\"name\"],\n  especie: $json[\"species\"],\n  raca: $json[\"breed\"],\n  dataNascimento: $json[\"birthDate\"],\n  clienteId: $json[\"clienteId\"]\n} }];"
+      },
+      "name": "Formatar Dados Pet",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "COLOQUE_AQUI_O_ID_DA_SUA_PLANILHA",
+        "range": "Pets!A:F",
+        "options": {}
+      },
+      "name": "Salvar no Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [760, 300],
+      "credentials": {
+        "googleApi": "dntepro@gmail.com"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook - Novo Pet": {
+      "main": [
+        [
+          {
+            "node": "Formatar Dados Pet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatar Dados Pet": {
+      "main": [
+        [
+          {
+            "node": "Salvar no Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false
+}

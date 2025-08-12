@@ -14,8 +14,8 @@ async function main() {
   // const business = await seedBusiness()
   // const client = await seedClient(business)
   // await seedPet(client)
+  await seedBusiness()      // 👉 cria negócios
   await seedAppointment() // 👈 chama o seed de appointment depois que pet, business e service já existem
- await seedBusiness()      // 👉 cria negócios
   await seedPet()        // 👈 chama o seedPet aqui
   console.log('✅ Seed completo!')
 }

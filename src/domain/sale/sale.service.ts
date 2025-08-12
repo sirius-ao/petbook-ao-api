@@ -26,7 +26,7 @@ export class SaleService {
     });
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     return this.prisma.sale.findUnique({
       where: { id },
       include: {
@@ -39,14 +39,14 @@ export class SaleService {
     return Sale;
   }
 
-  update(id: string, updateSaleDto: UpdateSaleDto) {
+  update(id: number, updateSaleDto: UpdateSaleDto) {
     return this.prisma.sale.update({
       where: { id },
       data: updateSaleDto, // Update the sale with the provided data
     });
   }
 
-  remove(id: string) {
+  remove(id: number) {
     return this.prisma.sale.delete({
       where: { id },
     });
