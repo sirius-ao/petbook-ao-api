@@ -48,6 +48,7 @@ export class PetRepository {
     });
   }
 
+
   update(id: number, updatePetDto: UpdatePetDto) {
     return this.prisma.pet.update({
       where: { id },
