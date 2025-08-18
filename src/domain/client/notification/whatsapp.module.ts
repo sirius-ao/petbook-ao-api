@@ -1,6 +1,6 @@
 // src/whatsapp/whatsapp.module.ts
-import { Module } from '@nestjs/common';
-import { WhatsappService } from './whatsapp.service';
+import { Module } from "@nestjs/common";
+import { WhatsappService } from "./whatsapp.service";
 
 @Module({
   providers: [WhatsappService],

@@ -1,14 +1,26 @@
+// src/client/client.service.ts
 import { Injectable } from '@nestjs/common';
-import { CreateClientDto } from './dto/create-client.dto';
-import { UpdateClientDto } from './dto/update-client.dto';
 import { ClientRepository } from './client.repository';
+import { CreateClientDto } from './dto/create-client.dto';
+import { WhatsappService } from './notification/whatsapp.service';
 
 @Injectable()
 export class ClientService {
-  constructor(private readonly clientRepository: ClientRepository) {}
+  constructor(
+    private readonly clientRepository: ClientRepository,
+    private readonly whatsappService: WhatsappService,
+  ) {}
 
-  create(createClientDto: CreateClientDto) {
-    return this.clientRepository.create(createClientDto);
+  async create(createClientDto: CreateClientDto) {
+    const client = await this.clientRepository.create(createClientDto);
+
+    // Enviar WhatsApp
+    if (client.phone) {
+      const message = `Olá ${client.name}, bem-vindo(a)! 🐾`;
+      await this.whatsappService.sendMessage(client.phone, message);
+    }
+
+    return client;
   }
 
   findAll() {
@@ -19,7 +31,7 @@ export class ClientService {
     return this.clientRepository.findById(id);
   }
 
-  update(id: number, updateClientDto: UpdateClientDto) {
+  update(id: number, updateClientDto: any) {
     return this.clientRepository.update(id, updateClientDto);
   }
 

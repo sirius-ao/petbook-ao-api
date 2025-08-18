@@ -1,12 +1,18 @@
 // src/domain/pet/pet.service.ts
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, Logger } from '@nestjs/common';
 import { PetRepository } from './Pet.Repository';
 import { CreatePetDto } from './dto/create-pet.dto';
 import { UpdatePetDto } from './dto/update-pet.dto';
+import { WhatsappService } from '../client/notification/whatsapp.service';
 
 @Injectable()
 export class PetService {
-  constructor(private readonly petRepository: PetRepository) {}
+  private readonly logger = new Logger(PetService.name);
+
+  constructor(
+    private readonly petRepository: PetRepository,
+    private readonly whatsappService: WhatsappService,
+  ) {}
 
   async create(dto: CreatePetDto) {
     return this.petRepository.create(dto);
@@ -36,5 +42,30 @@ export class PetService {
 
   async remove(id: number) {
     return this.petRepository.remove(id);
+  }
+
+  async checkFeedingAlerts() {
+    const pets = await this.petRepository.findAllWithClient();
+    const now = new Date();
+
+    for (const pet of pets) {
+      if (!pet.lastFedAt) continue;
+
+      const hoursSinceFed = (now.getTime() - new Date(pet.lastFedAt).getTime()) / 1000 / 3600;
+
+      if (hoursSinceFed >= 6 && pet.client.phone) {
+        const message = `🐾 Alerta: ${pet.name} não foi alimentado nas últimas ${Math.floor(hoursSinceFed)}h!`;
+        try {
+          await this.whatsappService.sendMessage(pet.client.phone, message);
+          this.logger.log(`Mensagem enviada para ${pet.client.name}`);
+        } catch (err) {
+          this.logger.error(`Erro ao enviar mensagem: ${err.message}`);
+        }
+      }
+    }
+  }
+
+  async updateLastFed(petId: number) {
+    return this.petRepository.updateLastFed(petId, new Date());
   }
 }

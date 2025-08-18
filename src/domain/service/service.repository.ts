@@ -8,13 +8,24 @@ export class ServiceRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(data: CreateServiceDto) {
-    return this.prisma.service.create({ data });
+    return this.prisma.service.create({
+      data,
+      include: {
+        business: true,
+        Appointment: {
+          orderBy: { date: 'asc' }, // agendamentos ordenados pela data
+        },
+      },
+    });
   }
 
   async findAll() {
     return this.prisma.service.findMany({
       include: {
         business: true,
+        Appointment: {
+          orderBy: { date: 'asc' },
+        },
       },
     });
   }
@@ -24,6 +35,9 @@ export class ServiceRepository {
       where: { id },
       include: {
         business: true,
+        Appointment: {
+          orderBy: { date: 'asc' },
+        },
       },
     });
 
@@ -38,6 +52,12 @@ export class ServiceRepository {
     return this.prisma.service.update({
       where: { id },
       data,
+      include: {
+        business: true,
+        Appointment: {
+          orderBy: { date: 'asc' },
+        },
+      },
     });
   }
 

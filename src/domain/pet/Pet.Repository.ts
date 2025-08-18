@@ -6,6 +6,7 @@ import { UpdatePetDto } from './dto/update-pet.dto';
 
 @Injectable()
 export class PetRepository {
+  [x: string]: any;
   constructor(private readonly prisma: PrismaService) {}
 
   create(createPetDto: CreatePetDto) {
