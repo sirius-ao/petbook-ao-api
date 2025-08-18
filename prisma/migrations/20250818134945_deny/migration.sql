@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Pet` ADD COLUMN `lastFedAt` DATETIME(3) NULL;

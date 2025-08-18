@@ -15,7 +15,14 @@ export class PetService {
   ) {}
 
   async create(dto: CreatePetDto) {
-    return this.petRepository.create(dto);
+    const pet = await this.petRepository.create(dto);
+
+    if (pet.client?.phone) {
+      const message = `🐾 Novo pet cadastrado: ${pet.name}, ${pet.species} - ${pet.breed}`;
+      await this.whatsappService.sendMessage(pet.client.phone, message);
+    }
+
+    return pet;
   }
 
   async findAll() {
@@ -24,9 +31,8 @@ export class PetService {
 
   async findPetsByClientId(clienteId: number) {
     const pets = await this.petRepository.findPetsByClientId(clienteId);
-    if (!pets || pets.length === 0) {
+    if (!pets || pets.length === 0)
       throw new NotFoundException(`Nenhum pet encontrado para o cliente ${clienteId}`);
-    }
     return pets;
   }
 
@@ -44,17 +50,23 @@ export class PetService {
     return this.petRepository.remove(id);
   }
 
+  async updateLastFed(petId: number) {
+    return this.petRepository.updateLastFed(petId, new Date());
+  }
+
   async checkFeedingAlerts() {
     const pets = await this.petRepository.findAllWithClient();
     const now = new Date();
 
     for (const pet of pets) {
-      if (!pet.lastFedAt) continue;
+      if (!pet.lastFedAt || !pet.client?.phone) continue;
 
-      const hoursSinceFed = (now.getTime() - new Date(pet.lastFedAt).getTime()) / 1000 / 3600;
+      const hoursSinceFed = (now.getTime() - pet.lastFedAt.getTime()) / 1000 / 3600;
 
-      if (hoursSinceFed >= 6 && pet.client.phone) {
-        const message = `🐾 Alerta: ${pet.name} não foi alimentado nas últimas ${Math.floor(hoursSinceFed)}h!`;
+      if (hoursSinceFed >= 6) {
+        const message = `🐾 Alerta: ${pet.name} não foi alimentado nas últimas ${Math.floor(
+          hoursSinceFed,
+        )}h!`;
         try {
           await this.whatsappService.sendMessage(pet.client.phone, message);
           this.logger.log(`Mensagem enviada para ${pet.client.name}`);
@@ -63,9 +75,5 @@ export class PetService {
         }
       }
     }
-  }
-
-  async updateLastFed(petId: number) {
-    return this.petRepository.updateLastFed(petId, new Date());
   }
 }

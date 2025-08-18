@@ -6,7 +6,6 @@ import { UpdatePetDto } from './dto/update-pet.dto';
 
 @Injectable()
 export class PetRepository {
-  [x: string]: any;
   constructor(private readonly prisma: PrismaService) {}
 
   create(createPetDto: CreatePetDto) {
@@ -17,7 +16,9 @@ export class PetRepository {
         breed: createPetDto.breed,
         birthDate: createPetDto.birthDate ? new Date(createPetDto.birthDate) : undefined,
         clienteId: createPetDto.clienteId,
+        lastFedAt: new Date(), // inicializa alimentação
       },
+      include: { client: true }, // garante que client venha junto
     });
   }
 
@@ -30,15 +31,7 @@ export class PetRepository {
   findPetsByClientId(clienteId: number) {
     return this.prisma.pet.findMany({
       where: { clienteId },
-      select: {
-        id: true,
-        name: true,
-        species: true,
-        breed: true,
-        client: {
-          select: { id: true, name: true, email: true },
-        },
-      },
+      include: { client: true },
     });
   }
 
@@ -48,7 +41,6 @@ export class PetRepository {
       include: { client: true, appointments: true, records: true },
     });
   }
-
 
   update(id: number, updatePetDto: UpdatePetDto) {
     return this.prisma.pet.update({
@@ -60,10 +52,26 @@ export class PetRepository {
         birthDate: updatePetDto.birthDate ? new Date(updatePetDto.birthDate) : undefined,
         clienteId: updatePetDto.clienteId,
       },
+      include: { client: true },
     });
   }
 
   remove(id: number) {
-    return this.prisma.pet.delete({ where: { id } });
+    return this.prisma.pet.delete({
+      where: { id },
+      include: { client: true },
+    });
+  }
+
+  async updateLastFed(id: number, date: Date) {
+    return this.prisma.pet.update({
+      where: { id },
+      data: { lastFedAt: date },
+      include: { client: true },
+    });
+  }
+
+  async findAllWithClient() {
+    return this.prisma.pet.findMany({ include: { client: true } });
   }
 }

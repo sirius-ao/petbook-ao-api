@@ -1,13 +1,13 @@
-// src/pet/pet.scheduler.ts
+// src/domain/pet/feeding-alert.scheduler.ts
 import { Injectable } from '@nestjs/common';
-import { Interval } from '@nestjs/schedule';
+import { Cron, CronExpression } from '@nestjs/schedule';
 import { PetService } from './pet.service';
 
 @Injectable()
-export class PetScheduler {
+export class FeedingAlertScheduler {
   constructor(private readonly petService: PetService) {}
 
-  @Interval(1000 * 60 * 60) // rodar a cada hora
+  @Cron(CronExpression.EVERY_HOUR)
   async handleFeedingAlerts() {
     await this.petService.checkFeedingAlerts();
   }
