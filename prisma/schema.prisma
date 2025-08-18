@@ -60,6 +60,7 @@ model Pet {
   breed        String
   birthDate    DateTime?
   clienteId    Int
+   lastFedAt    DateTime?    // Novo campo
   appointments Appointment[]
   records      MedicalRecord[]
   client       Client          @relation(fields: [clienteId], references: [id], onDelete: Cascade)
