@@ -1,48 +1,29 @@
 import { Injectable } from '@nestjs/common';
 import { CreateSaleItemDto } from './dto/create-sale-item.dto';
 import { UpdateSaleItemDto } from './dto/update-sale-item.dto';
-import { PrismaService } from '../../database/prisma/prisma.service';
+import { SaleItemRepository } from './sale-item.repository';
 
 @Injectable()
 export class SaleItemService {
-  // Assuming you have a PrismaService or similar to interact with the database
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(private readonly saleItemRepository: SaleItemRepository) {}
+
   create(createSaleItemDto: CreateSaleItemDto) {
-    return this.prisma.saleItem.create({
-      data: {
-        saleId: createSaleItemDto.saleId, // Assuming saleId is part of the DTO
-        productId: createSaleItemDto.productId, // Assuming productId is part of the DTO
-        quantity: createSaleItemDto.quantity, // Quantity of the product in the sale
-        price: createSaleItemDto.price, // Price of the product in the sale
-      },
-    });
+    return this.saleItemRepository.create(createSaleItemDto);
   }
 
   findAll() {
-    return this.prisma.saleItem.findMany({
-      include: {
-        sale: true, // Include related sale information
-        product: true, // Include related product information
-      },
-    });
+    return this.saleItemRepository.findAll();
   }
 
   findOne(id: number) {
-    return this.prisma.saleItem.findUnique({
-      where: { id },
-    });
+    return this.saleItemRepository.findById(id);
   }
 
   update(id: number, updateSaleItemDto: UpdateSaleItemDto) {
-    return this.prisma.saleItem.update({
-      where: { id },
-      data: updateSaleItemDto, // Update the sale item with the provided data
-    });
+    return this.saleItemRepository.update(id, updateSaleItemDto);
   }
 
   remove(id: number) {
-    return this.prisma.saleItem.delete({
-      where: { id },
-    });
+    return this.saleItemRepository.remove(id);
   }
 }

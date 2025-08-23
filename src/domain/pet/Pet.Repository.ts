@@ -8,7 +8,10 @@ import { UpdatePetDto } from './dto/update-pet.dto';
 export class PetRepository {
   constructor(private readonly prisma: PrismaService) {}
 
+
   create(createPetDto: CreatePetDto) {
+    const now = new Date();
+
     return this.prisma.pet.create({
       data: {
         name: createPetDto.name,
@@ -16,7 +19,10 @@ export class PetRepository {
         breed: createPetDto.breed,
         birthDate: createPetDto.birthDate ? new Date(createPetDto.birthDate) : undefined,
         clienteId: createPetDto.clienteId,
+        lastFedAt: now, // inicializa a alimentação com a hora atual
+        nextVaccineDate: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000), // inicializa vacina daqui 30 dias
       },
+      include: { client: true },
     });
   }
 
@@ -29,15 +35,7 @@ export class PetRepository {
   findPetsByClientId(clienteId: number) {
     return this.prisma.pet.findMany({
       where: { clienteId },
-      select: {
-        id: true,
-        name: true,
-        species: true,
-        breed: true,
-        client: {
-          select: { id: true, name: true, email: true },
-        },
-      },
+      include: { client: true },
     });
   }
 
@@ -58,10 +56,33 @@ export class PetRepository {
         birthDate: updatePetDto.birthDate ? new Date(updatePetDto.birthDate) : undefined,
         clienteId: updatePetDto.clienteId,
       },
+      include: { client: true },
+    });
+  }
+    async updateLastFed(petId: number, date: Date) {
+    return this.prisma.pet.update({
+      where: { id: petId },
+      data: { lastFedAt: date },
+    });
+  }
+
+  async updateNextVaccine(petId: number, date: Date) {
+    return this.prisma.pet.update({
+      where: { id: petId },
+      data: { nextVaccineDate: date },
     });
   }
 
   remove(id: number) {
-    return this.prisma.pet.delete({ where: { id } });
+    return this.prisma.pet.delete({
+      where: { id },
+      include: { client: true },
+    });
+  }
+
+
+
+  async findAllWithClient() {
+    return this.prisma.pet.findMany({ include: { client: true } });
   }
 }

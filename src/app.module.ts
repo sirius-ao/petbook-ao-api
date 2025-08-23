@@ -8,19 +8,20 @@ import { CommonModule } from './common/common.module';
 import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from './config/config.module';
 import { DomainModule } from './domain/domain.module';
+import { WhatsappModule } from './domain/client/notification/whatsapp.module'; // 👈 novo
 
 @Module({
   imports: [
-   // PrismaModule,
+    // PrismaModule,
     CustomModule,
     AuthModule,
     CommonModule,
     DatabaseModule,
     ConfigModule,
-    DomainModule
+    DomainModule,
+    WhatsappModule // 👈 adiciona aqui
   ],
   controllers: [AppController],
   providers: [AppService],
-  exports:[]
 })
 export class AppModule {}

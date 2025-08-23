@@ -4,6 +4,7 @@ import { IsDate, IsNumber, IsString } from 'class-validator';
 import { Appointment, MedicalRecord } from 'generated/prisma';
 
 export class CreatePetDto {
+  [x: string]: any;
 
   // @ApiProperty({example:'01010e0w'})
   // @IsString()

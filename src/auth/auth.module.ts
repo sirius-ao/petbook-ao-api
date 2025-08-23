@@ -5,16 +5,18 @@ import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from './jwt.strategy';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { PassportModule } from '@nestjs/passport';
-import { JwtAuthGuard } from './ jwt-auth.guard';
-import { RolesGuard } from './ roles.guard';
+import { JwtAuthGuard } from '../common/guards/ jwt-auth.guard';
+import { RolesGuard } from '../common/guards/ roles.guard';
 import { DatabaseModule } from '../database/database.module';
 import { UserModule } from '../domain/user/user.module';
+import { CommonModule } from 'src/common/common.module';
 
 //import { UserModule } from '../user/user.module';
 //import { PrismaModule } from '../database/prisma/prisma.module';
 //import { CommonModule } from 'src/common/common.module';
 @Module({
   imports: [
+    CommonModule,
     ConfigModule, // ou ConfigModule.forRoot() no AppModule
     UserModule,
     DatabaseModule,
