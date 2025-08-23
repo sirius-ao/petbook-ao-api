@@ -20,12 +20,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.11.1
- * Query Engine version: f40f79ec31188888a2e33acda0ecc8fd10a853a9
+ * Prisma Client JS version: 6.12.0
+ * Query Engine version: 8047c96bbd92db98a2abc7c9323ce77c02c89dbc
  */
 Prisma.prismaVersion = {
-  client: "6.11.1",
-  engine: "f40f79ec31188888a2e33acda0ecc8fd10a853a9"
+  client: "6.12.0",
+  engine: "8047c96bbd92db98a2abc7c9323ce77c02c89dbc"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -157,7 +157,9 @@ exports.Prisma.PetScalarFieldEnum = {
   species: 'species',
   breed: 'breed',
   birthDate: 'birthDate',
-  clienteId: 'clienteId',
+  clientId: 'clientId',
+  nextVaccineDate: 'nextVaccineDate',
+  lastFedAt: 'lastFedAt',
   createAt: 'createAt',
   updateAt: 'updateAt'
 };
@@ -169,7 +171,9 @@ exports.Prisma.AppointmentScalarFieldEnum = {
   petId: 'petId',
   serviceId: 'serviceId',
   businessId: 'businessId',
-  notes: 'notes'
+  notes: 'notes',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
 };
 
 exports.Prisma.ServiceScalarFieldEnum = {
@@ -177,7 +181,9 @@ exports.Prisma.ServiceScalarFieldEnum = {
   name: 'name',
   price: 'price',
   duration: 'duration',
-  businessId: 'businessId'
+  businessId: 'businessId',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
 };
 
 exports.Prisma.ProductScalarFieldEnum = {
@@ -185,7 +191,9 @@ exports.Prisma.ProductScalarFieldEnum = {
   name: 'name',
   price: 'price',
   stock: 'stock',
-  businessId: 'businessId'
+  businessId: 'businessId',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
 };
 
 exports.Prisma.SaleScalarFieldEnum = {
@@ -193,7 +201,9 @@ exports.Prisma.SaleScalarFieldEnum = {
   clientId: 'clientId',
   businessId: 'businessId',
   total: 'total',
-  dateSale: 'dateSale'
+  dateSale: 'dateSale',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
 };
 
 exports.Prisma.SaleItemScalarFieldEnum = {
@@ -201,7 +211,9 @@ exports.Prisma.SaleItemScalarFieldEnum = {
   saleId: 'saleId',
   productId: 'productId',
   quantity: 'quantity',
-  price: 'price'
+  price: 'price',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
 };
 
 exports.Prisma.MedicalRecordScalarFieldEnum = {
@@ -209,7 +221,9 @@ exports.Prisma.MedicalRecordScalarFieldEnum = {
   petId: 'petId',
   vetId: 'vetId',
   date: 'date',
-  description: 'description'
+  description: 'description',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
 };
 
 exports.Prisma.AffiliateScalarFieldEnum = {
@@ -237,92 +251,14 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
+exports.Prisma.QueryMode = {
+  default: 'default',
+  insensitive: 'insensitive'
+};
+
 exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
-};
-
-exports.Prisma.UserOrderByRelevanceFieldEnum = {
-  id: 'id',
-  name: 'name',
-  email: 'email',
-  password: 'password',
-  businessId: 'businessId'
-};
-
-exports.Prisma.BusinessOrderByRelevanceFieldEnum = {
-  id: 'id',
-  name: 'name',
-  address: 'address',
-  phone: 'phone',
-  email: 'email'
-};
-
-exports.Prisma.ClientOrderByRelevanceFieldEnum = {
-  id: 'id',
-  name: 'name',
-  email: 'email',
-  phone: 'phone',
-  businessId: 'businessId'
-};
-
-exports.Prisma.PetOrderByRelevanceFieldEnum = {
-  id: 'id',
-  name: 'name',
-  species: 'species',
-  breed: 'breed',
-  clienteId: 'clienteId'
-};
-
-exports.Prisma.AppointmentOrderByRelevanceFieldEnum = {
-  id: 'id',
-  petId: 'petId',
-  serviceId: 'serviceId',
-  businessId: 'businessId',
-  notes: 'notes'
-};
-
-exports.Prisma.ServiceOrderByRelevanceFieldEnum = {
-  id: 'id',
-  name: 'name',
-  businessId: 'businessId'
-};
-
-exports.Prisma.ProductOrderByRelevanceFieldEnum = {
-  id: 'id',
-  name: 'name',
-  businessId: 'businessId'
-};
-
-exports.Prisma.SaleOrderByRelevanceFieldEnum = {
-  id: 'id',
-  clientId: 'clientId',
-  businessId: 'businessId'
-};
-
-exports.Prisma.SaleItemOrderByRelevanceFieldEnum = {
-  id: 'id',
-  saleId: 'saleId',
-  productId: 'productId'
-};
-
-exports.Prisma.MedicalRecordOrderByRelevanceFieldEnum = {
-  id: 'id',
-  petId: 'petId',
-  vetId: 'vetId',
-  description: 'description'
-};
-
-exports.Prisma.AffiliateOrderByRelevanceFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  code: 'code'
-};
-
-exports.Prisma.AffiliateReferralOrderByRelevanceFieldEnum = {
-  id: 'id',
-  affiliateId: 'affiliateId',
-  referredUserId: 'referredUserId'
 };
 exports.Role = exports.$Enums.Role = {
   ADMIN: 'ADMIN',

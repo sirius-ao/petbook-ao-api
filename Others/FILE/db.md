@@ -1,0 +1,215 @@
+
+```js
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String          @id @default(cuid())
+  name          String
+  email         String          @unique
+  password      String
+  role          Role            @default(ATTENDANT)
+  businessId    String?
+  Affiliate     Affiliate[]
+  MedicalRecord MedicalRecord[]
+  business      Business?       @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  createAt      DateTime        @default(now())
+  updateAt      DateTime         @updatedAt
+  @@index([businessId], map: "User_businessId_fkey")
+}
+
+model Business {
+  id           String        @unique @default(cuid())
+  name         String
+  address      String
+  phone        String
+  email        String
+
+  appointments Appointment[]
+  clients      Client[]
+  products     Product[]
+  sales        Sale[]
+  services     Service[]
+  users        User[]
+  createAt     DateTime      @default(now())
+  updateAt     DateTime       @updatedAt
+}
+
+model Client {
+  id         String   @id @default(cuid())
+  name       String
+  email      String?
+  phone      String?
+  businessId String
+  business   Business @relation(fields: [businessId], references: [id])
+  pets       Pet[]
+  Sale       Sale[]
+  createAt   DateTime @default(now())
+  updateAt   DateTime @updatedAt
+  @@index([businessId], map: "Client_businessId_fkey")
+}
+
+model Pet {
+  id           String          @id @default(cuid())
+  name         String
+  species      String
+  breed        String
+  birthDate    DateTime?
+  clienteId    String
+  appointments Appointment[]
+  records      MedicalRecord[]
+  client       Client          @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([clienteId], map: "Pet_clienteId_fkey")
+}
+
+model Appointment {
+  id         String            @id @default(cuid())
+  date       DateTime
+  status     AppointmentStatus @default(SCHEDULED)
+  petId      String
+  serviceId  String?
+  businessId String
+  notes      String?
+  
+  business   Business          @relation(fields: [businessId], references: [id])
+  pet        Pet               @relation(fields: [petId], references: [id], onDelete: Cascade)
+  service    Service?          @relation(fields: [serviceId], references: [id])
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([businessId], map: "Appointment_businessId_fkey")
+  @@index([petId], map: "Appointment_petId_fkey")
+  @@index([serviceId], map: "Appointment_serviceId_fkey")
+}
+
+model Service {
+  id          String        @id @default(cuid())
+  name        String
+  price       Float
+  duration    Int
+  businessId  String
+  Appointment Appointment[]
+  business    Business      @relation(fields: [businessId], references: [id])
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([businessId], map: "Service_businessId_fkey")
+}
+
+model Product {
+  id         String     @id @default(cuid())
+  name       String
+  price      Float
+  stock      Int
+  businessId String
+  business   Business   @relation(fields: [businessId], references: [id])
+  SaleItem   SaleItem[]
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([businessId], map: "Product_businessId_fkey")
+}
+
+model Sale {
+  id         String     @id @default(cuid())
+  clientId   String?
+  businessId String
+  total      Float
+  dateSale   DateTime   @default(now())
+  business   Business   @relation(fields: [businessId], references: [id])
+  client     Client?    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  items      SaleItem[]
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([businessId], map: "Sale_businessId_fkey")
+  @@index([clientId], map: "Sale_clientId_fkey")
+}
+
+model SaleItem {
+  id        String  @id @default(cuid())
+  saleId    String
+  productId String
+  quantity  Int
+  price     Float
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sale      Sale    @relation(fields: [saleId], references: [id], onDelete: Cascade)
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([productId], map: "SaleItem_productId_fkey")
+  @@index([saleId], map: "SaleItem_saleId_fkey")
+}
+
+model MedicalRecord {
+  id          String   @id @default(cuid())
+  petId       String
+  vetId       String?
+  date        DateTime @default(now())
+  description String
+  pet         Pet      @relation(fields: [petId], references: [id], onDelete: Cascade)
+  vet         User?    @relation(fields: [vetId], references: [id], onDelete: SetNull)
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([petId], map: "MedicalRecord_petId_fkey")
+  @@index([vetId], map: "MedicalRecord_vetId_fkey")
+}
+
+model Affiliate {
+  id                String              @id @default(cuid())
+  userId            String
+  code              String              @unique
+  earnings          Float               @default(0)
+  user              User                @relation(fields: [userId], references: [id])
+  AffiliateReferral AffiliateReferral[]
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([userId], map: "Affiliate_userId_fkey")
+}
+
+model AffiliateReferral {
+  id             String         @id @default(cuid())
+  affiliateId    String
+  referredUserId String?
+  type           ReferralType
+  value          Float
+  status         ReferralStatus
+  affiliate      Affiliate      @relation(fields: [affiliateId], references: [id], onDelete: Cascade)
+  createAt     DateTime        @default(now())
+  updateAt     DateTime         @updatedAt
+  @@index([affiliateId], map: "AffiliateReferral_affiliateId_fkey")
+}
+
+// sequencia de enum do MER
+
+enum Role {
+  ADMIN
+  VET
+  ATTENDANT
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+}
+
+enum ReferralType {
+  USER_SIGNUP
+  BUSINESS_SIGNUP
+  ORDER
+}
+
+enum ReferralStatus {
+  PENDING
+  APPROVED
+  PAID
+}
+
+
+
+```
