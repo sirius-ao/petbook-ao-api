@@ -49,11 +49,11 @@ export class WhatsappService implements OnModuleInit {
   }
 
   // Enviar mensagem simples
-  async sendMessage(to: string, message: string) {
-    if (!this.sock) throw new Error('WhatsApp não conectado');
-    const jid = to.includes('@s.whatsapp.net') ? to : `${to}@s.whatsapp.net`;
-    await this.sock.sendMessage(jid, { text: message });
-  }
+  // async sendMessage(to: string, message: string) {
+  //   if (!this.sock) throw new Error('WhatsApp não conectado');
+  //   const jid = to.includes('@s.whatsapp.net') ? to : `${to}@s.whatsapp.net`;
+  //   await this.sock.sendMessage(jid, { text: message });
+  // }
 
   // Mensagem de cadastro de cliente
   async sendClientRegistration(clientName: string, phone: string) {
@@ -71,5 +71,19 @@ export class WhatsappService implements OnModuleInit {
   async sendFeedingAlert(petName: string, ownerName: string, ownerPhone: string, hoursSinceFed: number) {
     const message = `🐾 Alerta: ${petName} não foi alimentado nas últimas ${Math.floor(hoursSinceFed)}h, ${ownerName}!`;
     await this.sendMessage(ownerPhone, message);
+  }
+
+   async sendMessage(to: string, message: string) {
+    if (!this.sock) throw new Error('WhatsApp não conectado');
+
+    // Normaliza o número para Angola
+    let phoneNormalized = to.replace(/\D/g, ''); // remove tudo que não é número
+    if (!phoneNormalized.startsWith('244')) {
+      phoneNormalized = `244${phoneNormalized.replace(/^0/, '')}`;
+    }
+    const jid = `${phoneNormalized}@s.whatsapp.net`;
+
+    await this.sock.sendMessage(jid, { text: message });
+    this.logger.log(`Mensagem enviada para ${jid}`);
   }
 }
