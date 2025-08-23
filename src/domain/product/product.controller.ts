@@ -56,7 +56,7 @@ export class ProductController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.productService.findOne(id);
   }
 
@@ -67,7 +67,7 @@ export class ProductController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProductDto: UpdateProductDto) {
+  update(@Param('id') id: number, @Body() updateProductDto: UpdateProductDto) {
     return this.productService.update(id, updateProductDto);
   }
 
@@ -78,7 +78,7 @@ export class ProductController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.productService.remove(id);
   }
 

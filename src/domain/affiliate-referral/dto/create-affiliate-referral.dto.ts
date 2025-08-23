@@ -1,21 +1,22 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
-import { ReferralStatus, ReferralType } from "generated/prisma";
+// import { } from "generated/prisma";
+import { ReferralStatus, ReferralType } from '@prisma/client';
 
 export class CreateAffiliateReferralDto {
 
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
     
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    affiliated: string;
+    @IsNumber()
+    affiliated: number;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
+    @IsNumber()
     @IsOptional()
-    referredUserId?: string;
+    referredUserId?: number;
 
     @ApiProperty({example:'01010e0w'})
     @IsEnum(ReferralType)

@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { BusinessService } from './business.service';
 import { CreateBusinessDto } from './dto/create-business.dto';
@@ -15,6 +16,7 @@ import { ApiOkResponse, ApiNotFoundResponse, ApiBadRequestResponse, ApiOperation
 @ApiTags('business')
 @Controller('business')
 export class BusinessController {
+  appointmentService: any;
   constructor(private readonly businessService: BusinessService) {}
 
   @ApiOperation({summary: 'Cadastro e gestão de clínicas/petshops'})
@@ -39,7 +41,7 @@ export class BusinessController {
   @ApiOkResponse({description:'Ver detalhes negocios', type: CreateBusinessDto})
   @ApiNotFoundResponse({description:'Not Found'})
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.businessService.findOne(id);
   }
 
@@ -48,17 +50,30 @@ export class BusinessController {
     @ApiNotFoundResponse({description:'Not Found'})
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id') id: number,
     @Body() updateBusinessDto: UpdateBusinessDto,
   ) {
     return this.businessService.update(id, updateBusinessDto);
   }
+  
+
+  @ApiOperation({ summary: 'Agenda diária da clínica' })
+  @ApiOkResponse({ description: 'Agenda do dia' })
+  @Get(':id/agenda')
+  dailyAgenda(
+    @Param('id') businessId: number,
+    @Query('date') date?: string,
+  ) {
+    const ref = date ? new Date(date) : new Date(); // default: hoje
+    return this.appointmentService.dailyAgendaByBusiness(businessId, ref);
+  }
+
 
    @ApiOperation({summary: 'Deletar negócios'})
     @ApiOkResponse({description:'Deletar negócios ', type: CreateBusinessDto})
     @ApiNotFoundResponse({description:'Not Found'})
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.businessService.remove(id);
   }
 }

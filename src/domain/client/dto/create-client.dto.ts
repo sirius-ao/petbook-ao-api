@@ -1,12 +1,12 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsOptional, IsString } from "class-validator";
+import { IsNumber, IsOptional, IsString } from "class-validator";
 import { Pet, Sale } from "generated/prisma";
 
 export class CreateClientDto {
 
-@ApiProperty({example:'01010e0w'})
-@IsString()
-id: string;
+// @ApiProperty({example:'01010e0w'})
+// @IsString()
+// id: string;
 
 @ApiProperty({example:'01010e0w'})
 @IsString()
@@ -23,8 +23,9 @@ email?: string;
 phone?: string;
 
 @ApiProperty({example:'01010e0w'})
-@IsString()
-businessId:string;
+@IsNumber()
+businessId:number;
+
 
 pet: Pet[];
 sale: Sale[];

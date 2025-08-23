@@ -3,9 +3,9 @@ import { IsNumber, IsString } from "class-validator";
 import { Appointment } from "generated/prisma";
 
 export class CreateServiceDto {
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
 
     @ApiProperty({example:'01010e0w'})
     @IsString()
@@ -20,8 +20,8 @@ export class CreateServiceDto {
     duration: number;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    businessId: string;
+    @IsNumber()
+    businessId: number;
     
     appointment: Appointment[];
 

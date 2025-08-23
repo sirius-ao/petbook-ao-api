@@ -4,9 +4,9 @@ import { SaleItem } from "generated/prisma";
 
 export class CreateProductDto {
 
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
 
     @ApiProperty({example:'01010e0w'})
     @IsString()
@@ -21,8 +21,8 @@ export class CreateProductDto {
     stock: number;
 
     @ApiProperty({example:'EU3U3892'})
-    @IsString()
-    businessId: string; // Assuming businessId is part of the DTO
+    @IsNumber()
+    businessId: number; // Assuming businessId is part of the DTO
     
     salemItem: SaleItem[];
 

@@ -51,8 +51,8 @@ export class AffiliateController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.affiliateService.findOne(+id);
+  findOne(@Param('id') id: number) {
+    return this.affiliateService.findOne(id);
   }
 
   @ApiOperation({ summary: 'Atualizar dados afiliados ' })
@@ -63,10 +63,10 @@ export class AffiliateController {
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id') id: number,
     @Body() updateAffiliateDto: UpdateAffiliateDto,
   ) {
-    return this.affiliateService.update(+id, updateAffiliateDto);
+    return this.affiliateService.update(id, updateAffiliateDto);
   }
 
   @ApiOperation({ summary: 'Desativar dados afiliados ' })
@@ -76,8 +76,8 @@ export class AffiliateController {
   })
   @ApiNotFoundResponse({ description: 'Not Found' })
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.affiliateService.remove(+id);
+  remove(@Param('id') id: number) {
+    return this.affiliateService.remove(id);
   }
 
   // PATCH	/affiliates/point/:id	     Atualizar ganhos

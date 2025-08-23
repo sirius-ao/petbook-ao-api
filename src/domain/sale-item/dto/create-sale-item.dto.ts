@@ -3,17 +3,17 @@ import { IsNumber, IsString } from "class-validator";
 
 export class CreateSaleItemDto {
 
-    @ApiProperty({example:'01010e0w'})
-    @IsString()
-    id: string;
+    // @ApiProperty({example:'01010e0w'})
+    // @IsString()
+    // id: string;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    saleId: string;
+    @IsNumber()
+    saleId: number;
 
     @ApiProperty({example:'01010e0w'})
-    @IsString()
-    productId: string;
+    @IsNumber()
+    productId: number;
 
     @ApiProperty({example:24})
     @IsNumber()

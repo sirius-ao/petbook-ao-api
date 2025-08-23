@@ -31,23 +31,23 @@ export class UserController {
   @ApiOkResponse({description:'Detalhes de um usuário', type: CreateUserDto})
   @ApiNotFoundResponse({description:'Not Found'})
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
+  findOne(@Param('id') id: number) {
+    return this.userService.findOne(id);
   }
 
   @ApiOperation({summary: '	Atualizar dados'})
   @ApiOkResponse({description:'	Atualizar dados', type: CreateUserDto})
   @ApiNotFoundResponse({description:'Not Found'})
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.userService.update(+id, updateUserDto);
+  update(@Param('id') id: number, @Body() updateUserDto: UpdateUserDto) {
+    return this.userService.update(id, updateUserDto);
   }
 
   @ApiOperation({summary: 'Remover usuário'})
   @ApiOkResponse({description:'Remover usuário', type: CreateUserDto})
   @ApiNotFoundResponse({description:'Not Found'})
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
+  remove(@Param('id') id: number) {
+    return this.userService.remove(id);
   }
 }

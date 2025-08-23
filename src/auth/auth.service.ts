@@ -7,7 +7,7 @@ import { LoginDto } from './dto/login.dto';
 import * as bcrypt from 'bcryptjs';
 import { AuthResponseDto } from './dto/auth-response.dto';
 
-const refreshTokens = new Map<string, string>();
+const refreshTokens = new Map<number, string>();
 
 @Injectable()
 export class AuthService {
@@ -44,7 +44,7 @@ export class AuthService {
     return this.generateTokens(user);
   }
 
-  async profile(userId: string) {
+  async profile(userId: number) {
     const user = await this.prisma.user.findUnique({ where: { id: userId } });
     if (!user) throw new UnauthorizedException('Usuário não encontrado');
 
@@ -52,12 +52,12 @@ export class AuthService {
     return result;
   }
 
-  async logout(userId: string) {
+  async logout(userId: number) {
     refreshTokens.delete(userId);
     return { message: 'Logout efetuado com sucesso' };
   }
 
-  async refresh(userId: string, token: string): Promise<AuthResponseDto> {
+  async refresh(userId: number, token: string): Promise<AuthResponseDto> {
     const storedToken = refreshTokens.get(userId);
     if (!storedToken || storedToken !== token) {
       throw new UnauthorizedException('Refresh token inválido');

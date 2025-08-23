@@ -1,0 +1,88 @@
+// src/domain/pet/pet.repository.ts
+import { Injectable } from '@nestjs/common';
+import { PrismaService } from '../../database/prisma/prisma.service';
+import { CreatePetDto } from './dto/create-pet.dto';
+import { UpdatePetDto } from './dto/update-pet.dto';
+
+@Injectable()
+export class PetRepository {
+  constructor(private readonly prisma: PrismaService) {}
+
+
+  create(createPetDto: CreatePetDto) {
+    const now = new Date();
+
+    return this.prisma.pet.create({
+      data: {
+        name: createPetDto.name,
+        species: createPetDto.species,
+        breed: createPetDto.breed,
+        birthDate: createPetDto.birthDate ? new Date(createPetDto.birthDate) : undefined,
+        clienteId: createPetDto.clienteId,
+        lastFedAt: now, // inicializa a alimentação com a hora atual
+        nextVaccineDate: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000), // inicializa vacina daqui 30 dias
+      },
+      include: { client: true },
+    });
+  }
+
+  findAll() {
+    return this.prisma.pet.findMany({
+      include: { client: true, appointments: true, records: true },
+    });
+  }
+
+  findPetsByClientId(clienteId: number) {
+    return this.prisma.pet.findMany({
+      where: { clienteId },
+      include: { client: true },
+    });
+  }
+
+  findOne(id: number) {
+    return this.prisma.pet.findUnique({
+      where: { id },
+      include: { client: true, appointments: true, records: true },
+    });
+  }
+
+  update(id: number, updatePetDto: UpdatePetDto) {
+    return this.prisma.pet.update({
+      where: { id },
+      data: {
+        name: updatePetDto.name,
+        species: updatePetDto.species,
+        breed: updatePetDto.breed,
+        birthDate: updatePetDto.birthDate ? new Date(updatePetDto.birthDate) : undefined,
+        clienteId: updatePetDto.clienteId,
+      },
+      include: { client: true },
+    });
+  }
+    async updateLastFed(petId: number, date: Date) {
+    return this.prisma.pet.update({
+      where: { id: petId },
+      data: { lastFedAt: date },
+    });
+  }
+
+  async updateNextVaccine(petId: number, date: Date) {
+    return this.prisma.pet.update({
+      where: { id: petId },
+      data: { nextVaccineDate: date },
+    });
+  }
+
+  remove(id: number) {
+    return this.prisma.pet.delete({
+      where: { id },
+      include: { client: true },
+    });
+  }
+
+
+
+  async findAllWithClient() {
+    return this.prisma.pet.findMany({ include: { client: true } });
+  }
+}

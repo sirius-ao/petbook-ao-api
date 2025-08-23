@@ -1,8 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateBusinessDto } from './dto/create-business.dto';
 import { UpdateBusinessDto } from './dto/update-business.dto';
-import { PrismaService } from 'src/database/prisma/prisma.service';
-
+import { PrismaService } from '../../database/prisma/prisma.service';
 
 @Injectable()
 export class BusinessService {
@@ -12,9 +11,9 @@ export class BusinessService {
     return this.prisma.business.create({
       data: {
         name: createBusinessDto.name,
-        address: createBusinessDto.adress, // Corrigido para 'address'
+        address: createBusinessDto.address, // Corrigido para 'address'
         phone: createBusinessDto.phone,
-        email: createBusinessDto.email,
+        email: createBusinessDto.email, 
       }
     });
   }
@@ -22,12 +21,15 @@ export class BusinessService {
   async findAll() {
     return this.prisma.business.findMany({
       include: {
-        users: true, // nome correto da relação
+        users: true,
+        clients: true,
+        products: true,
+        services: true,
       },
     });
   }
 
-  async findOne(id: string) {
+  async findOne(id: number) {
     const business = await this.prisma.business.findUnique({
       where: { id },
       include: {
@@ -45,21 +47,22 @@ export class BusinessService {
     return business;
   }
 
-  async update(id: string, updateBusinessDto: UpdateBusinessDto) {
+  async update(id: number, updateBusinessDto: UpdateBusinessDto) {
     return this.prisma.business.update({
       where: { id },
       data: {
         // ...updateBusinessDto,
         // Se você quiser atualizar apenas alguns campos específicos, pode fazer assim:
          name: updateBusinessDto.name,
-        // address: updateBusinessDto.address,
+        address: updateBusinessDto. address,
        phone: updateBusinessDto.phone,
         email: updateBusinessDto.email,
+        
       }
     });
   }
 
-  async remove(id: string) {
+  async remove(id: number) {
     return this.prisma.business.delete({
       where: { id },
     });
