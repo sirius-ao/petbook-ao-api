@@ -49,11 +49,23 @@ function GestaoCors(app) {
   });
 }
 
+function UsePipe(app){
+  app.useGlobalPipes(new ValidationPipe({
+    whitelist: true, // Automatically remove non-whitelisted properties
+    forbidNonWhitelisted: true, // Throw an error if non-whitelisted properties are present
+    transform: true,            // Enable automatic transformation of input data
+    transformOptions: {
+      enableImplicitConversion: true, // // Allow implicit type conversion
+    }
+  }));
+}
+
 async function main() {
   await connectToWhatsApp(); // 👈 conecta ao WhatsApp antes do Nest
 
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
+ // UsePipe(app);
   GestaoCors(app);
   apiDoc(app);
   await app.listen(process.env.PORT ?? 3000);

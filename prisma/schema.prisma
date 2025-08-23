@@ -1,36 +1,37 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  //directUrl = env("DIRECT_URL")
 }
 
 model User {
-  id            Int            @id @default(autoincrement())
+
+  id            Int          @id @default(autoincrement())
   name          String
-  email         String         @unique
+  email         String            @unique
   password      String
-  role          Role           @default(ATTENDANT)
   businessId    Int?
+  role          Role              @default(ATTENDANT)
   Affiliate     Affiliate[]
   MedicalRecord MedicalRecord[]
-  business      Business?      @relation(fields: [businessId], references: [id], onDelete: Cascade)
-  createAt      DateTime       @default(now())
-  updateAt      DateTime       @updatedAt
-
-  @@index([businessId])
-  AffiliateReferral AffiliateReferral[]
+  business      Business?         @relation(fields: [businessId], references: [id], onDelete: Cascade, map: "user_business_relation")
+  createAt      DateTime          @default(now())
+  updateAt      DateTime          @updatedAt
+  
+  @@index([businessId], map: "user_business_index")
 }
 
 model Business {
-  id           Int           @id  @default(autoincrement())
+  id           Int        @id  @default(autoincrement())
   name         String
   address      String
   phone        String
   email        String
+
   appointments Appointment[]
   clients      Client[]
   products     Product[]
@@ -42,161 +43,156 @@ model Business {
 }
 
 model Client {
-  id         Int      @id @default(autoincrement())
+  id         Int   @id @default(autoincrement())
   name       String
   email      String?
   phone      String?
   businessId Int
-  business   Business @relation(fields: [businessId], references: [id])
+  business   Business @relation(fields: [businessId], references: [id], map: "client_business_relation")
   pets       Pet[]
   Sale       Sale[]
   createAt   DateTime @default(now())
   updateAt   DateTime @updatedAt
-
-  @@index([businessId])
+  
+  @@index([businessId], map: "client_business_index")
 }
 
 model Pet {
-  id             Int            @id @default(autoincrement())
-  name           String
-  species        String
-  breed          String
-  birthDate      DateTime?
-  clientId       Int
-  nextVaccineDate DateTime?
-  lastFedAt      DateTime?    
-  appointments   Appointment[]
-  records        MedicalRecord[]
-  client         Client         @relation(fields: [clientId], references: [id], onDelete: Cascade)
-  createAt       DateTime       @default(now())
-  updateAt       DateTime       @updatedAt
-
-  @@index([clientId])
+  id           Int          @id @default(autoincrement())
+  name         String
+  species      String
+  breed        String
+  birthDate    DateTime?
+  clienteId    Int
+  appointments Appointment[]
+  records      MedicalRecord[]
+  client       Client          @relation(fields: [clienteId], references: [id], onDelete: Cascade, map: "pet_client_relation")
+  createAt     DateTime        @default(now())
+  updateAt     DateTime        @updatedAt
+  
+  @@index([clienteId], map: "pet_client_index")
 }
 
 model Appointment {
-  id         Int               @id @default(autoincrement())
+  id         Int            @id @default(autoincrement())
   date       DateTime
   status     AppointmentStatus @default(SCHEDULED)
   petId      Int
   serviceId  Int?
-  businessId Int
+  businessId Int // nao ser obrigatorio ?
   notes      String?
-  business   Business          @relation(fields: [businessId], references: [id])
-  pet        Pet               @relation(fields: [petId], references: [id], onDelete: Cascade)
-  service    Service?          @relation(fields: [serviceId], references: [id])
+  
+  business   Business          @relation(fields: [businessId], references: [id], map: "appointment_business_relation")
+  pet        Pet               @relation(fields: [petId], references: [id], onDelete: Cascade, map: "appointment_pet_relation")
+  service    Service?          @relation(fields: [serviceId], references: [id], map: "appointment_service_relation")
   createAt   DateTime          @default(now())
   updateAt   DateTime          @updatedAt
-
-  @@index([businessId])
-  @@index([petId])
-  @@index([serviceId])
+  
+  @@index([businessId], map: "appointment_business_index")
+  @@index([petId], map: "appointment_pet_index")
+  @@index([serviceId], map: "appointment_service_index")
 }
 
 model Service {
-  id          Int           @id @default(autoincrement())
+  id          Int        @id @default(autoincrement())
   name        String
   price       Float
   duration    Int
   businessId  Int
   Appointment Appointment[]
-  business    Business      @relation(fields: [businessId], references: [id])
+  business    Business      @relation(fields: [businessId], references: [id], map: "service_business_relation")
   createAt    DateTime      @default(now())
   updateAt    DateTime      @updatedAt
-
-  @@index([businessId])
+  
+  @@index([businessId], map: "service_business_index")
 }
 
 model Product {
-  id         Int       @id @default(autoincrement())
+  id         Int     @id @default(autoincrement())
   name       String
   price      Float
   stock      Int
   businessId Int
-  business   Business   @relation(fields: [businessId], references: [id])
+  business   Business   @relation(fields: [businessId], references: [id], map: "product_business_relation")
   SaleItem   SaleItem[]
   createAt   DateTime   @default(now())
   updateAt   DateTime   @updatedAt
-
-  @@index([businessId])
+  
+  @@index([businessId], map: "product_business_index")
 }
 
 model Sale {
-  id         Int       @id @default(autoincrement())
+  id         Int     @id @default(autoincrement())
   clientId   Int?
   businessId Int
   total      Float
   dateSale   DateTime   @default(now())
-  business   Business   @relation(fields: [businessId], references: [id])
-  client     Client?    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  business   Business   @relation(fields: [businessId], references: [id], map: "sale_business_relation")
+  client     Client?    @relation(fields: [clientId], references: [id], onDelete: Cascade, map: "sale_client_relation")
   items      SaleItem[]
   createAt   DateTime   @default(now())
   updateAt   DateTime   @updatedAt
-
-  @@index([businessId])
-  @@index([clientId])
+  
+  @@index([businessId], map: "sale_business_index")
+  @@index([clientId], map: "sale_client_index")
 }
 
 model SaleItem {
-  id        Int      @id @default(autoincrement())
+  id        Int  @id @default(autoincrement())
   saleId    Int
   productId Int
   quantity  Int
   price     Float
-  product   Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
-  sale      Sale      @relation(fields: [saleId], references: [id], onDelete: Cascade)
-  createAt  DateTime  @default(now())
-  updateAt  DateTime  @updatedAt
-
-  @@index([productId])
-  @@index([saleId])
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade, map: "saleitem_product_relation")
+  sale      Sale    @relation(fields: [saleId], references: [id], onDelete: Cascade, map: "saleitem_sale_relation")
+  createAt  DateTime @default(now())
+  updateAt  DateTime @updatedAt
+  
+  @@index([productId], map: "saleitem_product_index")
+  @@index([saleId], map: "saleitem_sale_index")
 }
 
 model MedicalRecord {
-  id          Int      @id @default(autoincrement())
+  id          Int   @id @default(autoincrement())
   petId       Int
   vetId       Int?
   date        DateTime @default(now())
   description String
-  pet         Pet      @relation(fields: [petId], references: [id], onDelete: Cascade)
-  vet         User?    @relation(fields: [vetId], references: [id], onDelete: SetNull)
+  pet         Pet      @relation(fields: [petId], references: [id], onDelete: Cascade, map: "medicalrecord_pet_relation")
+  vet         User?    @relation(fields: [vetId], references: [id], onDelete: SetNull, map: "medicalrecord_vet_relation")
   createAt    DateTime @default(now())
   updateAt    DateTime @updatedAt
-
-  @@index([petId])
-  @@index([vetId])
+  
+  @@index([petId], map: "medicalrecord_pet_index")
+  @@index([vetId], map: "medicalrecord_vet_index")
 }
 
 model Affiliate {
-  id                Int                @id @default(autoincrement())
+  id                Int              @id @default(autoincrement())
   userId            Int
-  code              String             @unique
-  earnings          Float              @default(0)
-  user              User               @relation(fields: [userId], references: [id])
+  code              String              @unique
+  earnings          Float               @default(0)
+  user              User                @relation(fields: [userId], references: [id], map: "affiliate_user_relation")
   AffiliateReferral AffiliateReferral[]
-  createAt          DateTime           @default(now())
-  updateAt          DateTime           @updatedAt
-
-  @@index([userId])
+  createAt          DateTime            @default(now())
+  updateAt          DateTime            @updatedAt
+  
+  @@index([userId], map: "affiliate_user_index")
 }
 
 model AffiliateReferral {
-  id             Int      @id @default(autoincrement())
+  id             Int         @id @default(autoincrement())
   affiliateId    Int
   referredUserId Int?
   type           ReferralType
   value          Float
   status         ReferralStatus
-  affiliate      Affiliate @relation(fields: [affiliateId], references: [id], onDelete: Cascade)
-  referredUser   User?     @relation(fields: [referredUserId], references: [id], onDelete: SetNull)
-  createAt       DateTime  @default(now())
-  updateAt       DateTime  @updatedAt
-
-  @@index([affiliateId])
-  @@index([referredUserId])
+  affiliate      Affiliate      @relation(fields: [affiliateId], references: [id], onDelete: Cascade, map: "affiliatereferral_affiliate_relation")
+  createAt       DateTime       @default(now())
+  updateAt       DateTime       @updatedAt
+  
+  @@index([affiliateId], map: "affiliatereferral_affiliate_index")
 }
-
-// Enums
 
 enum Role {
   ADMIN
