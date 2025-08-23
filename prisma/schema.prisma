@@ -14,7 +14,6 @@ model User {
   name          String
   email         String            @unique
   password      String
-  role          Role            @default(ATTENDANT)
   businessId    Int?
   role          Role              @default(ATTENDANT)
   Affiliate     Affiliate[]
@@ -80,7 +79,7 @@ model Appointment {
   status     AppointmentStatus @default(SCHEDULED)
   petId      Int
   serviceId  Int?
-  businessId Int
+  businessId Int // nao ser obrigatorio ?
   notes      String?
   
   business   Business          @relation(fields: [businessId], references: [id], map: "appointment_business_relation")

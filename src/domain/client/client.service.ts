@@ -1,56 +1,41 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-import { Injectable, NotFoundException } from '@nestjs/common';
+// src/client/client.service.ts
+import { Injectable } from '@nestjs/common';
+import { ClientRepository } from './client.repository';
 import { CreateClientDto } from './dto/create-client.dto';
-import { UpdateClientDto } from './dto/update-client.dto';
-import { Client } from './entities/client.entity';
-import { PrismaService } from '../../database/prisma/prisma.service';
+import { WhatsappService } from './notification/whatsapp.service';
 
 @Injectable()
 export class ClientService {
-  constructor(private prisma: PrismaService) {}
-  create(createClientDto: CreateClientDto) {
-    return this.prisma.client.create({
-      data: {
-        name: createClientDto.name,
-        email: createClientDto.email,
-        phone: createClientDto.phone,
-        businessId: createClientDto.businessId,
-      },
-    });
+  constructor(
+    private readonly clientRepository: ClientRepository,
+    private readonly whatsappService: WhatsappService,
+  ) {}
+
+  async create(createClientDto: CreateClientDto) {
+    const client = await this.clientRepository.create(createClientDto);
+
+    // Enviar WhatsApp
+    if (client.phone) {
+      const message = `Olá ${client.name}, bem-vindo(a)! 🐾`;
+      await this.whatsappService.sendMessage(client.phone, message);
+    }
+
+    return client;
   }
 
   findAll() {
-    return this.prisma.client.findMany({
-      include: {
-        business: true,
-        pets: true,
-        Sale: true,
-      },
-    });
+    return this.clientRepository.findAll();
   }
 
   findOne(id: number) {
-    return this.prisma.client.findUnique({
-      where: { id },
-      include: {
-        business: true,
-        pets: true,
-        Sale: true,
-      },
-    });
-    if (!Client)
-      throw new NotFoundException(`Client com id ${id} não encontrado`);
-    return Client;
+    return this.clientRepository.findById(id);
   }
 
-  update(id: number, updateClientDto: UpdateClientDto) {
-    return this.prisma.client.update({
-      where: { id },
-      data: updateClientDto,
-    });
+  update(id: number, updateClientDto: any) {
+    return this.clientRepository.update(id, updateClientDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} client`;
+    return this.clientRepository.remove(id);
   }
 }

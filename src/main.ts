@@ -2,8 +2,9 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { connectToWhatsApp } from './whatsapp/baileys.connection'; // 👈 import
 
-// documentacao base do swagguer api
+// documentação base do swagger api
 function apiDoc(app) {
   const urlApiDoc = 'api';
   const titleApi = 'PetBook API - OpenAPI 3.0';
@@ -18,9 +19,8 @@ function apiDoc(app) {
     .setDescription(descriptionApi)
     .setVersion('1.0.0')
     .addBearerAuth(
-      // Add Bearer token authentication
       { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
-      'access-token', // Name of the security scheme
+      'access-token',
     )
     .addGlobalResponse({ status: 500, description: ' Internal Server Error' })
     .addTag('user', 'Gestão de usuários internos do sistema')
@@ -33,18 +33,16 @@ function apiDoc(app) {
     .addTag('sale', 'Vendas e faturações')
     .addTag('affiliate', 'Gestão de afiliados')
     .addTag('affiliate-referral', 'Indicações e conversões')
-    .addTag(
-      'service',
-      'Serviços oferecidos pela empresa (ex: consulta, banho, tosa)',
-    )
+    .addTag('service', 'Serviços oferecidos pela empresa')
     .addTag('sale-item', 'Item de Venda: cada produto vendido em uma venda.')
     .addTag('auth', 'Gestao de autenticacoes de usuarios')
     .build();
+
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup(urlApiDoc, app, documentFactory);
 }
 
-//habilitando cors para o front - no futuro mudar para api gateway
+// habilitando cors para o front
 function GestaoCors(app) {
   app.enableCors({
     origin: [process.env.CORS_URL],
@@ -63,12 +61,15 @@ function UsePipe(app){
 }
 
 async function main() {
+  await connectToWhatsApp(); // 👈 conecta ao WhatsApp antes do Nest
+
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
  // UsePipe(app);
   GestaoCors(app);
   apiDoc(app);
   await app.listen(process.env.PORT ?? 3000);
-  console.log('✅ conectado com sucesso!');
+  console.log('✅ API e WhatsApp iniciados com sucesso!');
 }
+
 main();
