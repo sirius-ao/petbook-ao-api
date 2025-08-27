@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { connectToWhatsApp } from './whatsapp/baileys.connection'; // 👈 import
+import { connectToWhatsApp } from './config/whatsapp/baileys.connection'; // 👈 import
 
 // documentação base do swagger api
 function apiDoc(app) {
