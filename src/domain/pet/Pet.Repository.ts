@@ -15,7 +15,7 @@ export class PetRepository {
         species: createPetDto.species,
         breed: createPetDto.breed,
         birthDate: createPetDto.birthDate ? new Date(createPetDto.birthDate) : undefined,
-        clienteId: createPetDto.clienteId,
+        clientId  : createPetDto.clienteId,
         lastFedAt: new Date(), // inicializa alimentação
       },
       include: { client: true }, // garante que client venha junto
@@ -28,9 +28,9 @@ export class PetRepository {
     });
   }
 
-  findPetsByClientId(clienteId: number) {
+  findPetsByClientId(clientId  : number) {
     return this.prisma.pet.findMany({
-      where: { clienteId },
+      where: { clientId   },
       include: { client: true },
     });
   }
@@ -50,7 +50,7 @@ export class PetRepository {
         species: updatePetDto.species,
         breed: updatePetDto.breed,
         birthDate: updatePetDto.birthDate ? new Date(updatePetDto.birthDate) : undefined,
-        clienteId: updatePetDto.clienteId,
+        clientId  : updatePetDto.clienteId,
       },
       include: { client: true },
     });

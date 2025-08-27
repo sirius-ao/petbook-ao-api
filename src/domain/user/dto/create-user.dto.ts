@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
 // import { MedicalRecord , Affiliate, Role} from "generated/prisma";
-import { MedicalRecord, Affiliate, Role } from "@prisma/client";
+import { MedicalRecord, Affiliate, Role } from "generated/prisma";
 
 export class CreateUserDto {
 

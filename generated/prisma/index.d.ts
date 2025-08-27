@@ -433,8 +433,8 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 6.11.1
-   * Query Engine version: f40f79ec31188888a2e33acda0ecc8fd10a853a9
+   * Prisma Client JS version: 6.12.0
+   * Query Engine version: 8047c96bbd92db98a2abc7c9323ce77c02c89dbc
    */
   export type PrismaVersion = {
     client: string
@@ -881,6 +881,10 @@ export namespace Prisma {
             args: Prisma.UserCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+          }
           delete: {
             args: Prisma.UserDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$UserPayload>
@@ -896,6 +900,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.UserUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           upsert: {
             args: Prisma.UserUpsertArgs<ExtArgs>
@@ -947,6 +955,10 @@ export namespace Prisma {
             args: Prisma.BusinessCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.BusinessCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BusinessPayload>[]
+          }
           delete: {
             args: Prisma.BusinessDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$BusinessPayload>
@@ -962,6 +974,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.BusinessUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.BusinessUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BusinessPayload>[]
           }
           upsert: {
             args: Prisma.BusinessUpsertArgs<ExtArgs>
@@ -1013,6 +1029,10 @@ export namespace Prisma {
             args: Prisma.ClientCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.ClientCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClientPayload>[]
+          }
           delete: {
             args: Prisma.ClientDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$ClientPayload>
@@ -1028,6 +1048,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.ClientUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ClientUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClientPayload>[]
           }
           upsert: {
             args: Prisma.ClientUpsertArgs<ExtArgs>
@@ -1079,6 +1103,10 @@ export namespace Prisma {
             args: Prisma.PetCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.PetCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPayload>[]
+          }
           delete: {
             args: Prisma.PetDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$PetPayload>
@@ -1094,6 +1122,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.PetUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.PetUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPayload>[]
           }
           upsert: {
             args: Prisma.PetUpsertArgs<ExtArgs>
@@ -1145,6 +1177,10 @@ export namespace Prisma {
             args: Prisma.AppointmentCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.AppointmentCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPayload>[]
+          }
           delete: {
             args: Prisma.AppointmentDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$AppointmentPayload>
@@ -1160,6 +1196,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.AppointmentUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.AppointmentUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPayload>[]
           }
           upsert: {
             args: Prisma.AppointmentUpsertArgs<ExtArgs>
@@ -1211,6 +1251,10 @@ export namespace Prisma {
             args: Prisma.ServiceCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.ServiceCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ServicePayload>[]
+          }
           delete: {
             args: Prisma.ServiceDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$ServicePayload>
@@ -1226,6 +1270,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.ServiceUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ServiceUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ServicePayload>[]
           }
           upsert: {
             args: Prisma.ServiceUpsertArgs<ExtArgs>
@@ -1277,6 +1325,10 @@ export namespace Prisma {
             args: Prisma.ProductCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.ProductCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProductPayload>[]
+          }
           delete: {
             args: Prisma.ProductDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$ProductPayload>
@@ -1292,6 +1344,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.ProductUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ProductUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProductPayload>[]
           }
           upsert: {
             args: Prisma.ProductUpsertArgs<ExtArgs>
@@ -1343,6 +1399,10 @@ export namespace Prisma {
             args: Prisma.SaleCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.SaleCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SalePayload>[]
+          }
           delete: {
             args: Prisma.SaleDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$SalePayload>
@@ -1358,6 +1418,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.SaleUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.SaleUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SalePayload>[]
           }
           upsert: {
             args: Prisma.SaleUpsertArgs<ExtArgs>
@@ -1409,6 +1473,10 @@ export namespace Prisma {
             args: Prisma.SaleItemCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.SaleItemCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SaleItemPayload>[]
+          }
           delete: {
             args: Prisma.SaleItemDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$SaleItemPayload>
@@ -1424,6 +1492,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.SaleItemUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.SaleItemUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SaleItemPayload>[]
           }
           upsert: {
             args: Prisma.SaleItemUpsertArgs<ExtArgs>
@@ -1475,6 +1547,10 @@ export namespace Prisma {
             args: Prisma.MedicalRecordCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.MedicalRecordCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MedicalRecordPayload>[]
+          }
           delete: {
             args: Prisma.MedicalRecordDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$MedicalRecordPayload>
@@ -1490,6 +1566,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.MedicalRecordUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.MedicalRecordUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MedicalRecordPayload>[]
           }
           upsert: {
             args: Prisma.MedicalRecordUpsertArgs<ExtArgs>
@@ -1541,6 +1621,10 @@ export namespace Prisma {
             args: Prisma.AffiliateCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.AffiliateCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AffiliatePayload>[]
+          }
           delete: {
             args: Prisma.AffiliateDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$AffiliatePayload>
@@ -1556,6 +1640,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.AffiliateUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.AffiliateUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AffiliatePayload>[]
           }
           upsert: {
             args: Prisma.AffiliateUpsertArgs<ExtArgs>
@@ -1607,6 +1695,10 @@ export namespace Prisma {
             args: Prisma.AffiliateReferralCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.AffiliateReferralCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AffiliateReferralPayload>[]
+          }
           delete: {
             args: Prisma.AffiliateReferralDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$AffiliateReferralPayload>
@@ -1622,6 +1714,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.AffiliateReferralUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.AffiliateReferralUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AffiliateReferralPayload>[]
           }
           upsert: {
             args: Prisma.AffiliateReferralUpsertArgs<ExtArgs>
@@ -1833,11 +1929,13 @@ export namespace Prisma {
   export type UserCountOutputType = {
     Affiliate: number
     MedicalRecord: number
+    AffiliateReferral: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Affiliate?: boolean | UserCountOutputTypeCountAffiliateArgs
     MedicalRecord?: boolean | UserCountOutputTypeCountMedicalRecordArgs
+    AffiliateReferral?: boolean | UserCountOutputTypeCountAffiliateReferralArgs
   }
 
   // Custom InputTypes
@@ -1863,6 +1961,13 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountMedicalRecordArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: MedicalRecordWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountAffiliateReferralArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AffiliateReferralWhereInput
   }
 
 
@@ -2156,28 +2261,40 @@ export namespace Prisma {
 
   export type AggregateUser = {
     _count: UserCountAggregateOutputType | null
+    _avg: UserAvgAggregateOutputType | null
+    _sum: UserSumAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
   }
 
+  export type UserAvgAggregateOutputType = {
+    id: number | null
+    businessId: number | null
+  }
+
+  export type UserSumAggregateOutputType = {
+    id: number | null
+    businessId: number | null
+  }
+
   export type UserMinAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     email: string | null
     password: string | null
     role: $Enums.Role | null
-    businessId: string | null
+    businessId: number | null
     createAt: Date | null
     updateAt: Date | null
   }
 
   export type UserMaxAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     email: string | null
     password: string | null
     role: $Enums.Role | null
-    businessId: string | null
+    businessId: number | null
     createAt: Date | null
     updateAt: Date | null
   }
@@ -2194,6 +2311,16 @@ export namespace Prisma {
     _all: number
   }
 
+
+  export type UserAvgAggregateInputType = {
+    id?: true
+    businessId?: true
+  }
+
+  export type UserSumAggregateInputType = {
+    id?: true
+    businessId?: true
+  }
 
   export type UserMinAggregateInputType = {
     id?: true
@@ -2267,6 +2394,18 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
+     * Select which fields to average
+    **/
+    _avg?: UserAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: UserSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
      * Select which fields to find the minimum value
     **/
     _min?: UserMinAggregateInputType
@@ -2297,20 +2436,24 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: UserCountAggregateInputType | true
+    _avg?: UserAvgAggregateInputType
+    _sum?: UserSumAggregateInputType
     _min?: UserMinAggregateInputType
     _max?: UserMaxAggregateInputType
   }
 
   export type UserGroupByOutputType = {
-    id: string
+    id: number
     name: string
     email: string
     password: string
     role: $Enums.Role
-    businessId: string | null
+    businessId: number | null
     createAt: Date
     updateAt: Date
     _count: UserCountAggregateOutputType | null
+    _avg: UserAvgAggregateOutputType | null
+    _sum: UserSumAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
   }
@@ -2341,10 +2484,33 @@ export namespace Prisma {
     Affiliate?: boolean | User$AffiliateArgs<ExtArgs>
     MedicalRecord?: boolean | User$MedicalRecordArgs<ExtArgs>
     business?: boolean | User$businessArgs<ExtArgs>
+    AffiliateReferral?: boolean | User$AffiliateReferralArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
+  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    email?: boolean
+    password?: boolean
+    role?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | User$businessArgs<ExtArgs>
+  }, ExtArgs["result"]["user"]>
 
+  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    email?: boolean
+    password?: boolean
+    role?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | User$businessArgs<ExtArgs>
+  }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
     id?: boolean
@@ -2362,7 +2528,14 @@ export namespace Prisma {
     Affiliate?: boolean | User$AffiliateArgs<ExtArgs>
     MedicalRecord?: boolean | User$MedicalRecordArgs<ExtArgs>
     business?: boolean | User$businessArgs<ExtArgs>
+    AffiliateReferral?: boolean | User$AffiliateReferralArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | User$businessArgs<ExtArgs>
+  }
+  export type UserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | User$businessArgs<ExtArgs>
   }
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2371,14 +2544,15 @@ export namespace Prisma {
       Affiliate: Prisma.$AffiliatePayload<ExtArgs>[]
       MedicalRecord: Prisma.$MedicalRecordPayload<ExtArgs>[]
       business: Prisma.$BusinessPayload<ExtArgs> | null
+      AffiliateReferral: Prisma.$AffiliateReferralPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       name: string
       email: string
       password: string
       role: $Enums.Role
-      businessId: string | null
+      businessId: number | null
       createAt: Date
       updateAt: Date
     }, ExtArgs["result"]["user"]>
@@ -2499,6 +2673,30 @@ export namespace Prisma {
     createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Users and returns the data saved in the database.
+     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
+     * @example
+     * // Create many Users
+     * const user = await prisma.user.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a User.
      * @param {UserDeleteArgs} args - Arguments to delete one User.
      * @example
@@ -2561,6 +2759,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Users and returns the data updated in the database.
+     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
+     * @example
+     * // Update many Users
+     * const user = await prisma.user.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one User.
@@ -2724,6 +2952,7 @@ export namespace Prisma {
     Affiliate<T extends User$AffiliateArgs<ExtArgs> = {}>(args?: Subset<T, User$AffiliateArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AffiliatePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     MedicalRecord<T extends User$MedicalRecordArgs<ExtArgs> = {}>(args?: Subset<T, User$MedicalRecordArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MedicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     business<T extends User$businessArgs<ExtArgs> = {}>(args?: Subset<T, User$businessArgs<ExtArgs>>): Prisma__BusinessClient<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    AffiliateReferral<T extends User$AffiliateReferralArgs<ExtArgs> = {}>(args?: Subset<T, User$AffiliateReferralArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AffiliateReferralPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2753,12 +2982,12 @@ export namespace Prisma {
    * Fields of the User model
    */
   interface UserFieldRefs {
-    readonly id: FieldRef<"User", 'String'>
+    readonly id: FieldRef<"User", 'Int'>
     readonly name: FieldRef<"User", 'String'>
     readonly email: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
     readonly role: FieldRef<"User", 'Role'>
-    readonly businessId: FieldRef<"User", 'String'>
+    readonly businessId: FieldRef<"User", 'Int'>
     readonly createAt: FieldRef<"User", 'DateTime'>
     readonly updateAt: FieldRef<"User", 'DateTime'>
   }
@@ -2994,6 +3223,29 @@ export namespace Prisma {
   }
 
   /**
+   * User createManyAndReturn
+   */
+  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
+    /**
+     * The data used to create many Users.
+     */
+    data: UserCreateManyInput | UserCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * User update
    */
   export type UserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -3035,6 +3287,36 @@ export namespace Prisma {
      * Limit how many Users to update.
      */
     limit?: number
+  }
+
+  /**
+   * User updateManyAndReturn
+   */
+  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
+    /**
+     * The data used to update Users.
+     */
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
+    /**
+     * Filter which Users to update
+     */
+    where?: UserWhereInput
+    /**
+     * Limit how many Users to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -3171,6 +3453,30 @@ export namespace Prisma {
   }
 
   /**
+   * User.AffiliateReferral
+   */
+  export type User$AffiliateReferralArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AffiliateReferral
+     */
+    select?: AffiliateReferralSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AffiliateReferral
+     */
+    omit?: AffiliateReferralOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AffiliateReferralInclude<ExtArgs> | null
+    where?: AffiliateReferralWhereInput
+    orderBy?: AffiliateReferralOrderByWithRelationInput | AffiliateReferralOrderByWithRelationInput[]
+    cursor?: AffiliateReferralWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: AffiliateReferralScalarFieldEnum | AffiliateReferralScalarFieldEnum[]
+  }
+
+  /**
    * User without action
    */
   export type UserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -3195,12 +3501,22 @@ export namespace Prisma {
 
   export type AggregateBusiness = {
     _count: BusinessCountAggregateOutputType | null
+    _avg: BusinessAvgAggregateOutputType | null
+    _sum: BusinessSumAggregateOutputType | null
     _min: BusinessMinAggregateOutputType | null
     _max: BusinessMaxAggregateOutputType | null
   }
 
+  export type BusinessAvgAggregateOutputType = {
+    id: number | null
+  }
+
+  export type BusinessSumAggregateOutputType = {
+    id: number | null
+  }
+
   export type BusinessMinAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     address: string | null
     phone: string | null
@@ -3210,7 +3526,7 @@ export namespace Prisma {
   }
 
   export type BusinessMaxAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     address: string | null
     phone: string | null
@@ -3230,6 +3546,14 @@ export namespace Prisma {
     _all: number
   }
 
+
+  export type BusinessAvgAggregateInputType = {
+    id?: true
+  }
+
+  export type BusinessSumAggregateInputType = {
+    id?: true
+  }
 
   export type BusinessMinAggregateInputType = {
     id?: true
@@ -3300,6 +3624,18 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
+     * Select which fields to average
+    **/
+    _avg?: BusinessAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: BusinessSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
      * Select which fields to find the minimum value
     **/
     _min?: BusinessMinAggregateInputType
@@ -3330,12 +3666,14 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: BusinessCountAggregateInputType | true
+    _avg?: BusinessAvgAggregateInputType
+    _sum?: BusinessSumAggregateInputType
     _min?: BusinessMinAggregateInputType
     _max?: BusinessMaxAggregateInputType
   }
 
   export type BusinessGroupByOutputType = {
-    id: string
+    id: number
     name: string
     address: string
     phone: string
@@ -3343,6 +3681,8 @@ export namespace Prisma {
     createAt: Date
     updateAt: Date
     _count: BusinessCountAggregateOutputType | null
+    _avg: BusinessAvgAggregateOutputType | null
+    _sum: BusinessSumAggregateOutputType | null
     _min: BusinessMinAggregateOutputType | null
     _max: BusinessMaxAggregateOutputType | null
   }
@@ -3378,7 +3718,25 @@ export namespace Prisma {
     _count?: boolean | BusinessCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["business"]>
 
+  export type BusinessSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    email?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+  }, ExtArgs["result"]["business"]>
 
+  export type BusinessSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    email?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+  }, ExtArgs["result"]["business"]>
 
   export type BusinessSelectScalar = {
     id?: boolean
@@ -3400,6 +3758,8 @@ export namespace Prisma {
     users?: boolean | Business$usersArgs<ExtArgs>
     _count?: boolean | BusinessCountOutputTypeDefaultArgs<ExtArgs>
   }
+  export type BusinessIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type BusinessIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $BusinessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Business"
@@ -3412,7 +3772,7 @@ export namespace Prisma {
       users: Prisma.$UserPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       name: string
       address: string
       phone: string
@@ -3537,6 +3897,30 @@ export namespace Prisma {
     createMany<T extends BusinessCreateManyArgs>(args?: SelectSubset<T, BusinessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Businesses and returns the data saved in the database.
+     * @param {BusinessCreateManyAndReturnArgs} args - Arguments to create many Businesses.
+     * @example
+     * // Create many Businesses
+     * const business = await prisma.business.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Businesses and only return the `id`
+     * const businessWithIdOnly = await prisma.business.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends BusinessCreateManyAndReturnArgs>(args?: SelectSubset<T, BusinessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Business.
      * @param {BusinessDeleteArgs} args - Arguments to delete one Business.
      * @example
@@ -3599,6 +3983,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends BusinessUpdateManyArgs>(args: SelectSubset<T, BusinessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Businesses and returns the data updated in the database.
+     * @param {BusinessUpdateManyAndReturnArgs} args - Arguments to update many Businesses.
+     * @example
+     * // Update many Businesses
+     * const business = await prisma.business.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Businesses and only return the `id`
+     * const businessWithIdOnly = await prisma.business.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends BusinessUpdateManyAndReturnArgs>(args: SelectSubset<T, BusinessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Business.
@@ -3794,7 +4208,7 @@ export namespace Prisma {
    * Fields of the Business model
    */
   interface BusinessFieldRefs {
-    readonly id: FieldRef<"Business", 'String'>
+    readonly id: FieldRef<"Business", 'Int'>
     readonly name: FieldRef<"Business", 'String'>
     readonly address: FieldRef<"Business", 'String'>
     readonly phone: FieldRef<"Business", 'String'>
@@ -4034,6 +4448,25 @@ export namespace Prisma {
   }
 
   /**
+   * Business createManyAndReturn
+   */
+  export type BusinessCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Business
+     */
+    select?: BusinessSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Business
+     */
+    omit?: BusinessOmit<ExtArgs> | null
+    /**
+     * The data used to create many Businesses.
+     */
+    data: BusinessCreateManyInput | BusinessCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
    * Business update
    */
   export type BusinessUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -4063,6 +4496,32 @@ export namespace Prisma {
    * Business updateMany
    */
   export type BusinessUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Businesses.
+     */
+    data: XOR<BusinessUpdateManyMutationInput, BusinessUncheckedUpdateManyInput>
+    /**
+     * Filter which Businesses to update
+     */
+    where?: BusinessWhereInput
+    /**
+     * Limit how many Businesses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Business updateManyAndReturn
+   */
+  export type BusinessUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Business
+     */
+    select?: BusinessSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Business
+     */
+    omit?: BusinessOmit<ExtArgs> | null
     /**
      * The data used to update Businesses.
      */
@@ -4312,26 +4771,38 @@ export namespace Prisma {
 
   export type AggregateClient = {
     _count: ClientCountAggregateOutputType | null
+    _avg: ClientAvgAggregateOutputType | null
+    _sum: ClientSumAggregateOutputType | null
     _min: ClientMinAggregateOutputType | null
     _max: ClientMaxAggregateOutputType | null
   }
 
+  export type ClientAvgAggregateOutputType = {
+    id: number | null
+    businessId: number | null
+  }
+
+  export type ClientSumAggregateOutputType = {
+    id: number | null
+    businessId: number | null
+  }
+
   export type ClientMinAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     email: string | null
     phone: string | null
-    businessId: string | null
+    businessId: number | null
     createAt: Date | null
     updateAt: Date | null
   }
 
   export type ClientMaxAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     email: string | null
     phone: string | null
-    businessId: string | null
+    businessId: number | null
     createAt: Date | null
     updateAt: Date | null
   }
@@ -4347,6 +4818,16 @@ export namespace Prisma {
     _all: number
   }
 
+
+  export type ClientAvgAggregateInputType = {
+    id?: true
+    businessId?: true
+  }
+
+  export type ClientSumAggregateInputType = {
+    id?: true
+    businessId?: true
+  }
 
   export type ClientMinAggregateInputType = {
     id?: true
@@ -4417,6 +4898,18 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
+     * Select which fields to average
+    **/
+    _avg?: ClientAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ClientSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
      * Select which fields to find the minimum value
     **/
     _min?: ClientMinAggregateInputType
@@ -4447,19 +4940,23 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: ClientCountAggregateInputType | true
+    _avg?: ClientAvgAggregateInputType
+    _sum?: ClientSumAggregateInputType
     _min?: ClientMinAggregateInputType
     _max?: ClientMaxAggregateInputType
   }
 
   export type ClientGroupByOutputType = {
-    id: string
+    id: number
     name: string
     email: string | null
     phone: string | null
-    businessId: string
+    businessId: number
     createAt: Date
     updateAt: Date
     _count: ClientCountAggregateOutputType | null
+    _avg: ClientAvgAggregateOutputType | null
+    _sum: ClientSumAggregateOutputType | null
     _min: ClientMinAggregateOutputType | null
     _max: ClientMaxAggregateOutputType | null
   }
@@ -4492,7 +4989,27 @@ export namespace Prisma {
     _count?: boolean | ClientCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["client"]>
 
+  export type ClientSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    email?: boolean
+    phone?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["client"]>
 
+  export type ClientSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    email?: boolean
+    phone?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["client"]>
 
   export type ClientSelectScalar = {
     id?: boolean
@@ -4511,6 +5028,12 @@ export namespace Prisma {
     Sale?: boolean | Client$SaleArgs<ExtArgs>
     _count?: boolean | ClientCountOutputTypeDefaultArgs<ExtArgs>
   }
+  export type ClientIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }
+  export type ClientIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }
 
   export type $ClientPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Client"
@@ -4520,11 +5043,11 @@ export namespace Prisma {
       Sale: Prisma.$SalePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       name: string
       email: string | null
       phone: string | null
-      businessId: string
+      businessId: number
       createAt: Date
       updateAt: Date
     }, ExtArgs["result"]["client"]>
@@ -4645,6 +5168,30 @@ export namespace Prisma {
     createMany<T extends ClientCreateManyArgs>(args?: SelectSubset<T, ClientCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Clients and returns the data saved in the database.
+     * @param {ClientCreateManyAndReturnArgs} args - Arguments to create many Clients.
+     * @example
+     * // Create many Clients
+     * const client = await prisma.client.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Clients and only return the `id`
+     * const clientWithIdOnly = await prisma.client.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ClientCreateManyAndReturnArgs>(args?: SelectSubset<T, ClientCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Client.
      * @param {ClientDeleteArgs} args - Arguments to delete one Client.
      * @example
@@ -4707,6 +5254,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends ClientUpdateManyArgs>(args: SelectSubset<T, ClientUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Clients and returns the data updated in the database.
+     * @param {ClientUpdateManyAndReturnArgs} args - Arguments to update many Clients.
+     * @example
+     * // Update many Clients
+     * const client = await prisma.client.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Clients and only return the `id`
+     * const clientWithIdOnly = await prisma.client.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ClientUpdateManyAndReturnArgs>(args: SelectSubset<T, ClientUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClientPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Client.
@@ -4899,11 +5476,11 @@ export namespace Prisma {
    * Fields of the Client model
    */
   interface ClientFieldRefs {
-    readonly id: FieldRef<"Client", 'String'>
+    readonly id: FieldRef<"Client", 'Int'>
     readonly name: FieldRef<"Client", 'String'>
     readonly email: FieldRef<"Client", 'String'>
     readonly phone: FieldRef<"Client", 'String'>
-    readonly businessId: FieldRef<"Client", 'String'>
+    readonly businessId: FieldRef<"Client", 'Int'>
     readonly createAt: FieldRef<"Client", 'DateTime'>
     readonly updateAt: FieldRef<"Client", 'DateTime'>
   }
@@ -5139,6 +5716,29 @@ export namespace Prisma {
   }
 
   /**
+   * Client createManyAndReturn
+   */
+  export type ClientCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Client
+     */
+    select?: ClientSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Client
+     */
+    omit?: ClientOmit<ExtArgs> | null
+    /**
+     * The data used to create many Clients.
+     */
+    data: ClientCreateManyInput | ClientCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ClientIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * Client update
    */
   export type ClientUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -5180,6 +5780,36 @@ export namespace Prisma {
      * Limit how many Clients to update.
      */
     limit?: number
+  }
+
+  /**
+   * Client updateManyAndReturn
+   */
+  export type ClientUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Client
+     */
+    select?: ClientSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Client
+     */
+    omit?: ClientOmit<ExtArgs> | null
+    /**
+     * The data used to update Clients.
+     */
+    data: XOR<ClientUpdateManyMutationInput, ClientUncheckedUpdateManyInput>
+    /**
+     * Filter which Clients to update
+     */
+    where?: ClientWhereInput
+    /**
+     * Limit how many Clients to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ClientIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -5321,28 +5951,44 @@ export namespace Prisma {
 
   export type AggregatePet = {
     _count: PetCountAggregateOutputType | null
+    _avg: PetAvgAggregateOutputType | null
+    _sum: PetSumAggregateOutputType | null
     _min: PetMinAggregateOutputType | null
     _max: PetMaxAggregateOutputType | null
   }
 
+  export type PetAvgAggregateOutputType = {
+    id: number | null
+    clientId: number | null
+  }
+
+  export type PetSumAggregateOutputType = {
+    id: number | null
+    clientId: number | null
+  }
+
   export type PetMinAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     species: string | null
     breed: string | null
     birthDate: Date | null
-    clienteId: string | null
+    clientId: number | null
+    nextVaccineDate: Date | null
+    lastFedAt: Date | null
     createAt: Date | null
     updateAt: Date | null
   }
 
   export type PetMaxAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     species: string | null
     breed: string | null
     birthDate: Date | null
-    clienteId: string | null
+    clientId: number | null
+    nextVaccineDate: Date | null
+    lastFedAt: Date | null
     createAt: Date | null
     updateAt: Date | null
   }
@@ -5353,12 +5999,24 @@ export namespace Prisma {
     species: number
     breed: number
     birthDate: number
-    clienteId: number
+    clientId: number
+    nextVaccineDate: number
+    lastFedAt: number
     createAt: number
     updateAt: number
     _all: number
   }
 
+
+  export type PetAvgAggregateInputType = {
+    id?: true
+    clientId?: true
+  }
+
+  export type PetSumAggregateInputType = {
+    id?: true
+    clientId?: true
+  }
 
   export type PetMinAggregateInputType = {
     id?: true
@@ -5366,7 +6024,9 @@ export namespace Prisma {
     species?: true
     breed?: true
     birthDate?: true
-    clienteId?: true
+    clientId?: true
+    nextVaccineDate?: true
+    lastFedAt?: true
     createAt?: true
     updateAt?: true
   }
@@ -5377,7 +6037,9 @@ export namespace Prisma {
     species?: true
     breed?: true
     birthDate?: true
-    clienteId?: true
+    clientId?: true
+    nextVaccineDate?: true
+    lastFedAt?: true
     createAt?: true
     updateAt?: true
   }
@@ -5388,7 +6050,9 @@ export namespace Prisma {
     species?: true
     breed?: true
     birthDate?: true
-    clienteId?: true
+    clientId?: true
+    nextVaccineDate?: true
+    lastFedAt?: true
     createAt?: true
     updateAt?: true
     _all?: true
@@ -5432,6 +6096,18 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
+     * Select which fields to average
+    **/
+    _avg?: PetAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: PetSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
      * Select which fields to find the minimum value
     **/
     _min?: PetMinAggregateInputType
@@ -5462,20 +6138,26 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: PetCountAggregateInputType | true
+    _avg?: PetAvgAggregateInputType
+    _sum?: PetSumAggregateInputType
     _min?: PetMinAggregateInputType
     _max?: PetMaxAggregateInputType
   }
 
   export type PetGroupByOutputType = {
-    id: string
+    id: number
     name: string
     species: string
     breed: string
     birthDate: Date | null
-    clienteId: string
+    clientId: number
+    nextVaccineDate: Date | null
+    lastFedAt: Date | null
     createAt: Date
     updateAt: Date
     _count: PetCountAggregateOutputType | null
+    _avg: PetAvgAggregateOutputType | null
+    _sum: PetSumAggregateOutputType | null
     _min: PetMinAggregateOutputType | null
     _max: PetMaxAggregateOutputType | null
   }
@@ -5500,7 +6182,9 @@ export namespace Prisma {
     species?: boolean
     breed?: boolean
     birthDate?: boolean
-    clienteId?: boolean
+    clientId?: boolean
+    nextVaccineDate?: boolean
+    lastFedAt?: boolean
     createAt?: boolean
     updateAt?: boolean
     appointments?: boolean | Pet$appointmentsArgs<ExtArgs>
@@ -5509,7 +6193,33 @@ export namespace Prisma {
     _count?: boolean | PetCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["pet"]>
 
+  export type PetSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    species?: boolean
+    breed?: boolean
+    birthDate?: boolean
+    clientId?: boolean
+    nextVaccineDate?: boolean
+    lastFedAt?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    client?: boolean | ClientDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["pet"]>
 
+  export type PetSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    species?: boolean
+    breed?: boolean
+    birthDate?: boolean
+    clientId?: boolean
+    nextVaccineDate?: boolean
+    lastFedAt?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    client?: boolean | ClientDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["pet"]>
 
   export type PetSelectScalar = {
     id?: boolean
@@ -5517,17 +6227,25 @@ export namespace Prisma {
     species?: boolean
     breed?: boolean
     birthDate?: boolean
-    clienteId?: boolean
+    clientId?: boolean
+    nextVaccineDate?: boolean
+    lastFedAt?: boolean
     createAt?: boolean
     updateAt?: boolean
   }
 
-  export type PetOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "species" | "breed" | "birthDate" | "clienteId" | "createAt" | "updateAt", ExtArgs["result"]["pet"]>
+  export type PetOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "species" | "breed" | "birthDate" | "clientId" | "nextVaccineDate" | "lastFedAt" | "createAt" | "updateAt", ExtArgs["result"]["pet"]>
   export type PetInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     appointments?: boolean | Pet$appointmentsArgs<ExtArgs>
     records?: boolean | Pet$recordsArgs<ExtArgs>
     client?: boolean | ClientDefaultArgs<ExtArgs>
     _count?: boolean | PetCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type PetIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    client?: boolean | ClientDefaultArgs<ExtArgs>
+  }
+  export type PetIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    client?: boolean | ClientDefaultArgs<ExtArgs>
   }
 
   export type $PetPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -5538,12 +6256,14 @@ export namespace Prisma {
       client: Prisma.$ClientPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       name: string
       species: string
       breed: string
       birthDate: Date | null
-      clienteId: string
+      clientId: number
+      nextVaccineDate: Date | null
+      lastFedAt: Date | null
       createAt: Date
       updateAt: Date
     }, ExtArgs["result"]["pet"]>
@@ -5664,6 +6384,30 @@ export namespace Prisma {
     createMany<T extends PetCreateManyArgs>(args?: SelectSubset<T, PetCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Pets and returns the data saved in the database.
+     * @param {PetCreateManyAndReturnArgs} args - Arguments to create many Pets.
+     * @example
+     * // Create many Pets
+     * const pet = await prisma.pet.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Pets and only return the `id`
+     * const petWithIdOnly = await prisma.pet.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends PetCreateManyAndReturnArgs>(args?: SelectSubset<T, PetCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PetPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Pet.
      * @param {PetDeleteArgs} args - Arguments to delete one Pet.
      * @example
@@ -5726,6 +6470,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends PetUpdateManyArgs>(args: SelectSubset<T, PetUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Pets and returns the data updated in the database.
+     * @param {PetUpdateManyAndReturnArgs} args - Arguments to update many Pets.
+     * @example
+     * // Update many Pets
+     * const pet = await prisma.pet.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Pets and only return the `id`
+     * const petWithIdOnly = await prisma.pet.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends PetUpdateManyAndReturnArgs>(args: SelectSubset<T, PetUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PetPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Pet.
@@ -5918,12 +6692,14 @@ export namespace Prisma {
    * Fields of the Pet model
    */
   interface PetFieldRefs {
-    readonly id: FieldRef<"Pet", 'String'>
+    readonly id: FieldRef<"Pet", 'Int'>
     readonly name: FieldRef<"Pet", 'String'>
     readonly species: FieldRef<"Pet", 'String'>
     readonly breed: FieldRef<"Pet", 'String'>
     readonly birthDate: FieldRef<"Pet", 'DateTime'>
-    readonly clienteId: FieldRef<"Pet", 'String'>
+    readonly clientId: FieldRef<"Pet", 'Int'>
+    readonly nextVaccineDate: FieldRef<"Pet", 'DateTime'>
+    readonly lastFedAt: FieldRef<"Pet", 'DateTime'>
     readonly createAt: FieldRef<"Pet", 'DateTime'>
     readonly updateAt: FieldRef<"Pet", 'DateTime'>
   }
@@ -6159,6 +6935,29 @@ export namespace Prisma {
   }
 
   /**
+   * Pet createManyAndReturn
+   */
+  export type PetCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Pet
+     */
+    select?: PetSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Pet
+     */
+    omit?: PetOmit<ExtArgs> | null
+    /**
+     * The data used to create many Pets.
+     */
+    data: PetCreateManyInput | PetCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * Pet update
    */
   export type PetUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -6200,6 +6999,36 @@ export namespace Prisma {
      * Limit how many Pets to update.
      */
     limit?: number
+  }
+
+  /**
+   * Pet updateManyAndReturn
+   */
+  export type PetUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Pet
+     */
+    select?: PetSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Pet
+     */
+    omit?: PetOmit<ExtArgs> | null
+    /**
+     * The data used to update Pets.
+     */
+    data: XOR<PetUpdateManyMutationInput, PetUncheckedUpdateManyInput>
+    /**
+     * Filter which Pets to update
+     */
+    where?: PetWhereInput
+    /**
+     * Limit how many Pets to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -6341,28 +7170,50 @@ export namespace Prisma {
 
   export type AggregateAppointment = {
     _count: AppointmentCountAggregateOutputType | null
+    _avg: AppointmentAvgAggregateOutputType | null
+    _sum: AppointmentSumAggregateOutputType | null
     _min: AppointmentMinAggregateOutputType | null
     _max: AppointmentMaxAggregateOutputType | null
   }
 
+  export type AppointmentAvgAggregateOutputType = {
+    id: number | null
+    petId: number | null
+    serviceId: number | null
+    businessId: number | null
+  }
+
+  export type AppointmentSumAggregateOutputType = {
+    id: number | null
+    petId: number | null
+    serviceId: number | null
+    businessId: number | null
+  }
+
   export type AppointmentMinAggregateOutputType = {
-    id: string | null
+    id: number | null
     date: Date | null
     status: $Enums.AppointmentStatus | null
-    petId: string | null
-    serviceId: string | null
-    businessId: string | null
+    petId: number | null
+    serviceId: number | null
+    businessId: number | null
     notes: string | null
+    remindAt: Date | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type AppointmentMaxAggregateOutputType = {
-    id: string | null
+    id: number | null
     date: Date | null
     status: $Enums.AppointmentStatus | null
-    petId: string | null
-    serviceId: string | null
-    businessId: string | null
+    petId: number | null
+    serviceId: number | null
+    businessId: number | null
     notes: string | null
+    remindAt: Date | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type AppointmentCountAggregateOutputType = {
@@ -6373,9 +7224,26 @@ export namespace Prisma {
     serviceId: number
     businessId: number
     notes: number
+    remindAt: number
+    createAt: number
+    updateAt: number
     _all: number
   }
 
+
+  export type AppointmentAvgAggregateInputType = {
+    id?: true
+    petId?: true
+    serviceId?: true
+    businessId?: true
+  }
+
+  export type AppointmentSumAggregateInputType = {
+    id?: true
+    petId?: true
+    serviceId?: true
+    businessId?: true
+  }
 
   export type AppointmentMinAggregateInputType = {
     id?: true
@@ -6385,6 +7253,9 @@ export namespace Prisma {
     serviceId?: true
     businessId?: true
     notes?: true
+    remindAt?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type AppointmentMaxAggregateInputType = {
@@ -6395,6 +7266,9 @@ export namespace Prisma {
     serviceId?: true
     businessId?: true
     notes?: true
+    remindAt?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type AppointmentCountAggregateInputType = {
@@ -6405,6 +7279,9 @@ export namespace Prisma {
     serviceId?: true
     businessId?: true
     notes?: true
+    remindAt?: true
+    createAt?: true
+    updateAt?: true
     _all?: true
   }
 
@@ -6446,6 +7323,18 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
+     * Select which fields to average
+    **/
+    _avg?: AppointmentAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: AppointmentSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
      * Select which fields to find the minimum value
     **/
     _min?: AppointmentMinAggregateInputType
@@ -6476,19 +7365,26 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: AppointmentCountAggregateInputType | true
+    _avg?: AppointmentAvgAggregateInputType
+    _sum?: AppointmentSumAggregateInputType
     _min?: AppointmentMinAggregateInputType
     _max?: AppointmentMaxAggregateInputType
   }
 
   export type AppointmentGroupByOutputType = {
-    id: string
+    id: number
     date: Date
     status: $Enums.AppointmentStatus
-    petId: string
-    serviceId: string | null
-    businessId: string
+    petId: number
+    serviceId: number | null
+    businessId: number
     notes: string | null
+    remindAt: Date | null
+    createAt: Date
+    updateAt: Date
     _count: AppointmentCountAggregateOutputType | null
+    _avg: AppointmentAvgAggregateOutputType | null
+    _sum: AppointmentSumAggregateOutputType | null
     _min: AppointmentMinAggregateOutputType | null
     _max: AppointmentMaxAggregateOutputType | null
   }
@@ -6515,12 +7411,45 @@ export namespace Prisma {
     serviceId?: boolean
     businessId?: boolean
     notes?: boolean
+    remindAt?: boolean
+    createAt?: boolean
+    updateAt?: boolean
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     pet?: boolean | PetDefaultArgs<ExtArgs>
     service?: boolean | Appointment$serviceArgs<ExtArgs>
   }, ExtArgs["result"]["appointment"]>
 
+  export type AppointmentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    date?: boolean
+    status?: boolean
+    petId?: boolean
+    serviceId?: boolean
+    businessId?: boolean
+    notes?: boolean
+    remindAt?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    service?: boolean | Appointment$serviceArgs<ExtArgs>
+  }, ExtArgs["result"]["appointment"]>
 
+  export type AppointmentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    date?: boolean
+    status?: boolean
+    petId?: boolean
+    serviceId?: boolean
+    businessId?: boolean
+    notes?: boolean
+    remindAt?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    service?: boolean | Appointment$serviceArgs<ExtArgs>
+  }, ExtArgs["result"]["appointment"]>
 
   export type AppointmentSelectScalar = {
     id?: boolean
@@ -6530,10 +7459,23 @@ export namespace Prisma {
     serviceId?: boolean
     businessId?: boolean
     notes?: boolean
+    remindAt?: boolean
+    createAt?: boolean
+    updateAt?: boolean
   }
 
-  export type AppointmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "date" | "status" | "petId" | "serviceId" | "businessId" | "notes", ExtArgs["result"]["appointment"]>
+  export type AppointmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "date" | "status" | "petId" | "serviceId" | "businessId" | "notes" | "remindAt" | "createAt" | "updateAt", ExtArgs["result"]["appointment"]>
   export type AppointmentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    service?: boolean | Appointment$serviceArgs<ExtArgs>
+  }
+  export type AppointmentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    service?: boolean | Appointment$serviceArgs<ExtArgs>
+  }
+  export type AppointmentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     pet?: boolean | PetDefaultArgs<ExtArgs>
     service?: boolean | Appointment$serviceArgs<ExtArgs>
@@ -6547,13 +7489,16 @@ export namespace Prisma {
       service: Prisma.$ServicePayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       date: Date
       status: $Enums.AppointmentStatus
-      petId: string
-      serviceId: string | null
-      businessId: string
+      petId: number
+      serviceId: number | null
+      businessId: number
       notes: string | null
+      remindAt: Date | null
+      createAt: Date
+      updateAt: Date
     }, ExtArgs["result"]["appointment"]>
     composites: {}
   }
@@ -6672,6 +7617,30 @@ export namespace Prisma {
     createMany<T extends AppointmentCreateManyArgs>(args?: SelectSubset<T, AppointmentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Appointments and returns the data saved in the database.
+     * @param {AppointmentCreateManyAndReturnArgs} args - Arguments to create many Appointments.
+     * @example
+     * // Create many Appointments
+     * const appointment = await prisma.appointment.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Appointments and only return the `id`
+     * const appointmentWithIdOnly = await prisma.appointment.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends AppointmentCreateManyAndReturnArgs>(args?: SelectSubset<T, AppointmentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Appointment.
      * @param {AppointmentDeleteArgs} args - Arguments to delete one Appointment.
      * @example
@@ -6734,6 +7703,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends AppointmentUpdateManyArgs>(args: SelectSubset<T, AppointmentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Appointments and returns the data updated in the database.
+     * @param {AppointmentUpdateManyAndReturnArgs} args - Arguments to update many Appointments.
+     * @example
+     * // Update many Appointments
+     * const appointment = await prisma.appointment.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Appointments and only return the `id`
+     * const appointmentWithIdOnly = await prisma.appointment.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends AppointmentUpdateManyAndReturnArgs>(args: SelectSubset<T, AppointmentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Appointment.
@@ -6926,13 +7925,16 @@ export namespace Prisma {
    * Fields of the Appointment model
    */
   interface AppointmentFieldRefs {
-    readonly id: FieldRef<"Appointment", 'String'>
+    readonly id: FieldRef<"Appointment", 'Int'>
     readonly date: FieldRef<"Appointment", 'DateTime'>
     readonly status: FieldRef<"Appointment", 'AppointmentStatus'>
-    readonly petId: FieldRef<"Appointment", 'String'>
-    readonly serviceId: FieldRef<"Appointment", 'String'>
-    readonly businessId: FieldRef<"Appointment", 'String'>
+    readonly petId: FieldRef<"Appointment", 'Int'>
+    readonly serviceId: FieldRef<"Appointment", 'Int'>
+    readonly businessId: FieldRef<"Appointment", 'Int'>
     readonly notes: FieldRef<"Appointment", 'String'>
+    readonly remindAt: FieldRef<"Appointment", 'DateTime'>
+    readonly createAt: FieldRef<"Appointment", 'DateTime'>
+    readonly updateAt: FieldRef<"Appointment", 'DateTime'>
   }
     
 
@@ -7166,6 +8168,29 @@ export namespace Prisma {
   }
 
   /**
+   * Appointment createManyAndReturn
+   */
+  export type AppointmentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Appointment
+     */
+    select?: AppointmentSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Appointment
+     */
+    omit?: AppointmentOmit<ExtArgs> | null
+    /**
+     * The data used to create many Appointments.
+     */
+    data: AppointmentCreateManyInput | AppointmentCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * Appointment update
    */
   export type AppointmentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -7207,6 +8232,36 @@ export namespace Prisma {
      * Limit how many Appointments to update.
      */
     limit?: number
+  }
+
+  /**
+   * Appointment updateManyAndReturn
+   */
+  export type AppointmentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Appointment
+     */
+    select?: AppointmentSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Appointment
+     */
+    omit?: AppointmentOmit<ExtArgs> | null
+    /**
+     * The data used to update Appointments.
+     */
+    data: XOR<AppointmentUpdateManyMutationInput, AppointmentUncheckedUpdateManyInput>
+    /**
+     * Filter which Appointments to update
+     */
+    where?: AppointmentWhereInput
+    /**
+     * Limit how many Appointments to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -7326,29 +8381,37 @@ export namespace Prisma {
   }
 
   export type ServiceAvgAggregateOutputType = {
+    id: number | null
     price: number | null
     duration: number | null
+    businessId: number | null
   }
 
   export type ServiceSumAggregateOutputType = {
+    id: number | null
     price: number | null
     duration: number | null
+    businessId: number | null
   }
 
   export type ServiceMinAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     price: number | null
     duration: number | null
-    businessId: string | null
+    businessId: number | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type ServiceMaxAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     price: number | null
     duration: number | null
-    businessId: string | null
+    businessId: number | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type ServiceCountAggregateOutputType = {
@@ -7357,18 +8420,24 @@ export namespace Prisma {
     price: number
     duration: number
     businessId: number
+    createAt: number
+    updateAt: number
     _all: number
   }
 
 
   export type ServiceAvgAggregateInputType = {
+    id?: true
     price?: true
     duration?: true
+    businessId?: true
   }
 
   export type ServiceSumAggregateInputType = {
+    id?: true
     price?: true
     duration?: true
+    businessId?: true
   }
 
   export type ServiceMinAggregateInputType = {
@@ -7377,6 +8446,8 @@ export namespace Prisma {
     price?: true
     duration?: true
     businessId?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type ServiceMaxAggregateInputType = {
@@ -7385,6 +8456,8 @@ export namespace Prisma {
     price?: true
     duration?: true
     businessId?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type ServiceCountAggregateInputType = {
@@ -7393,6 +8466,8 @@ export namespace Prisma {
     price?: true
     duration?: true
     businessId?: true
+    createAt?: true
+    updateAt?: true
     _all?: true
   }
 
@@ -7483,11 +8558,13 @@ export namespace Prisma {
   }
 
   export type ServiceGroupByOutputType = {
-    id: string
+    id: number
     name: string
     price: number
     duration: number
-    businessId: string
+    businessId: number
+    createAt: Date
+    updateAt: Date
     _count: ServiceCountAggregateOutputType | null
     _avg: ServiceAvgAggregateOutputType | null
     _sum: ServiceSumAggregateOutputType | null
@@ -7515,12 +8592,34 @@ export namespace Prisma {
     price?: boolean
     duration?: boolean
     businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
     Appointment?: boolean | Service$AppointmentArgs<ExtArgs>
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     _count?: boolean | ServiceCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["service"]>
 
+  export type ServiceSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    price?: boolean
+    duration?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["service"]>
 
+  export type ServiceSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    price?: boolean
+    duration?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectScalar = {
     id?: boolean
@@ -7528,13 +8627,21 @@ export namespace Prisma {
     price?: boolean
     duration?: boolean
     businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
   }
 
-  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "price" | "duration" | "businessId", ExtArgs["result"]["service"]>
+  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "price" | "duration" | "businessId" | "createAt" | "updateAt", ExtArgs["result"]["service"]>
   export type ServiceInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Appointment?: boolean | Service$AppointmentArgs<ExtArgs>
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     _count?: boolean | ServiceCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ServiceIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }
+  export type ServiceIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
   }
 
   export type $ServicePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -7544,11 +8651,13 @@ export namespace Prisma {
       business: Prisma.$BusinessPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       name: string
       price: number
       duration: number
-      businessId: string
+      businessId: number
+      createAt: Date
+      updateAt: Date
     }, ExtArgs["result"]["service"]>
     composites: {}
   }
@@ -7667,6 +8776,30 @@ export namespace Prisma {
     createMany<T extends ServiceCreateManyArgs>(args?: SelectSubset<T, ServiceCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Services and returns the data saved in the database.
+     * @param {ServiceCreateManyAndReturnArgs} args - Arguments to create many Services.
+     * @example
+     * // Create many Services
+     * const service = await prisma.service.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Services and only return the `id`
+     * const serviceWithIdOnly = await prisma.service.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ServiceCreateManyAndReturnArgs>(args?: SelectSubset<T, ServiceCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ServicePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Service.
      * @param {ServiceDeleteArgs} args - Arguments to delete one Service.
      * @example
@@ -7729,6 +8862,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends ServiceUpdateManyArgs>(args: SelectSubset<T, ServiceUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Services and returns the data updated in the database.
+     * @param {ServiceUpdateManyAndReturnArgs} args - Arguments to update many Services.
+     * @example
+     * // Update many Services
+     * const service = await prisma.service.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Services and only return the `id`
+     * const serviceWithIdOnly = await prisma.service.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ServiceUpdateManyAndReturnArgs>(args: SelectSubset<T, ServiceUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ServicePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Service.
@@ -7920,11 +9083,13 @@ export namespace Prisma {
    * Fields of the Service model
    */
   interface ServiceFieldRefs {
-    readonly id: FieldRef<"Service", 'String'>
+    readonly id: FieldRef<"Service", 'Int'>
     readonly name: FieldRef<"Service", 'String'>
     readonly price: FieldRef<"Service", 'Float'>
     readonly duration: FieldRef<"Service", 'Int'>
-    readonly businessId: FieldRef<"Service", 'String'>
+    readonly businessId: FieldRef<"Service", 'Int'>
+    readonly createAt: FieldRef<"Service", 'DateTime'>
+    readonly updateAt: FieldRef<"Service", 'DateTime'>
   }
     
 
@@ -8158,6 +9323,29 @@ export namespace Prisma {
   }
 
   /**
+   * Service createManyAndReturn
+   */
+  export type ServiceCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Service
+     */
+    select?: ServiceSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Service
+     */
+    omit?: ServiceOmit<ExtArgs> | null
+    /**
+     * The data used to create many Services.
+     */
+    data: ServiceCreateManyInput | ServiceCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ServiceIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * Service update
    */
   export type ServiceUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -8199,6 +9387,36 @@ export namespace Prisma {
      * Limit how many Services to update.
      */
     limit?: number
+  }
+
+  /**
+   * Service updateManyAndReturn
+   */
+  export type ServiceUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Service
+     */
+    select?: ServiceSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Service
+     */
+    omit?: ServiceOmit<ExtArgs> | null
+    /**
+     * The data used to update Services.
+     */
+    data: XOR<ServiceUpdateManyMutationInput, ServiceUncheckedUpdateManyInput>
+    /**
+     * Filter which Services to update
+     */
+    where?: ServiceWhereInput
+    /**
+     * Limit how many Services to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ServiceIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -8323,29 +9541,37 @@ export namespace Prisma {
   }
 
   export type ProductAvgAggregateOutputType = {
+    id: number | null
     price: number | null
     stock: number | null
+    businessId: number | null
   }
 
   export type ProductSumAggregateOutputType = {
+    id: number | null
     price: number | null
     stock: number | null
+    businessId: number | null
   }
 
   export type ProductMinAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     price: number | null
     stock: number | null
-    businessId: string | null
+    businessId: number | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type ProductMaxAggregateOutputType = {
-    id: string | null
+    id: number | null
     name: string | null
     price: number | null
     stock: number | null
-    businessId: string | null
+    businessId: number | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type ProductCountAggregateOutputType = {
@@ -8354,18 +9580,24 @@ export namespace Prisma {
     price: number
     stock: number
     businessId: number
+    createAt: number
+    updateAt: number
     _all: number
   }
 
 
   export type ProductAvgAggregateInputType = {
+    id?: true
     price?: true
     stock?: true
+    businessId?: true
   }
 
   export type ProductSumAggregateInputType = {
+    id?: true
     price?: true
     stock?: true
+    businessId?: true
   }
 
   export type ProductMinAggregateInputType = {
@@ -8374,6 +9606,8 @@ export namespace Prisma {
     price?: true
     stock?: true
     businessId?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type ProductMaxAggregateInputType = {
@@ -8382,6 +9616,8 @@ export namespace Prisma {
     price?: true
     stock?: true
     businessId?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type ProductCountAggregateInputType = {
@@ -8390,6 +9626,8 @@ export namespace Prisma {
     price?: true
     stock?: true
     businessId?: true
+    createAt?: true
+    updateAt?: true
     _all?: true
   }
 
@@ -8480,11 +9718,13 @@ export namespace Prisma {
   }
 
   export type ProductGroupByOutputType = {
-    id: string
+    id: number
     name: string
     price: number
     stock: number
-    businessId: string
+    businessId: number
+    createAt: Date
+    updateAt: Date
     _count: ProductCountAggregateOutputType | null
     _avg: ProductAvgAggregateOutputType | null
     _sum: ProductSumAggregateOutputType | null
@@ -8512,12 +9752,34 @@ export namespace Prisma {
     price?: boolean
     stock?: boolean
     businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     SaleItem?: boolean | Product$SaleItemArgs<ExtArgs>
     _count?: boolean | ProductCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["product"]>
 
+  export type ProductSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    price?: boolean
+    stock?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["product"]>
 
+  export type ProductSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    price?: boolean
+    stock?: boolean
+    businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["product"]>
 
   export type ProductSelectScalar = {
     id?: boolean
@@ -8525,13 +9787,21 @@ export namespace Prisma {
     price?: boolean
     stock?: boolean
     businessId?: boolean
+    createAt?: boolean
+    updateAt?: boolean
   }
 
-  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "price" | "stock" | "businessId", ExtArgs["result"]["product"]>
+  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "price" | "stock" | "businessId" | "createAt" | "updateAt", ExtArgs["result"]["product"]>
   export type ProductInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     SaleItem?: boolean | Product$SaleItemArgs<ExtArgs>
     _count?: boolean | ProductCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ProductIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+  }
+  export type ProductIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
   }
 
   export type $ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -8541,11 +9811,13 @@ export namespace Prisma {
       SaleItem: Prisma.$SaleItemPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       name: string
       price: number
       stock: number
-      businessId: string
+      businessId: number
+      createAt: Date
+      updateAt: Date
     }, ExtArgs["result"]["product"]>
     composites: {}
   }
@@ -8664,6 +9936,30 @@ export namespace Prisma {
     createMany<T extends ProductCreateManyArgs>(args?: SelectSubset<T, ProductCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Products and returns the data saved in the database.
+     * @param {ProductCreateManyAndReturnArgs} args - Arguments to create many Products.
+     * @example
+     * // Create many Products
+     * const product = await prisma.product.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Products and only return the `id`
+     * const productWithIdOnly = await prisma.product.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ProductCreateManyAndReturnArgs>(args?: SelectSubset<T, ProductCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Product.
      * @param {ProductDeleteArgs} args - Arguments to delete one Product.
      * @example
@@ -8726,6 +10022,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends ProductUpdateManyArgs>(args: SelectSubset<T, ProductUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Products and returns the data updated in the database.
+     * @param {ProductUpdateManyAndReturnArgs} args - Arguments to update many Products.
+     * @example
+     * // Update many Products
+     * const product = await prisma.product.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Products and only return the `id`
+     * const productWithIdOnly = await prisma.product.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ProductUpdateManyAndReturnArgs>(args: SelectSubset<T, ProductUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Product.
@@ -8917,11 +10243,13 @@ export namespace Prisma {
    * Fields of the Product model
    */
   interface ProductFieldRefs {
-    readonly id: FieldRef<"Product", 'String'>
+    readonly id: FieldRef<"Product", 'Int'>
     readonly name: FieldRef<"Product", 'String'>
     readonly price: FieldRef<"Product", 'Float'>
     readonly stock: FieldRef<"Product", 'Int'>
-    readonly businessId: FieldRef<"Product", 'String'>
+    readonly businessId: FieldRef<"Product", 'Int'>
+    readonly createAt: FieldRef<"Product", 'DateTime'>
+    readonly updateAt: FieldRef<"Product", 'DateTime'>
   }
     
 
@@ -9155,6 +10483,29 @@ export namespace Prisma {
   }
 
   /**
+   * Product createManyAndReturn
+   */
+  export type ProductCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Product
+     */
+    select?: ProductSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Product
+     */
+    omit?: ProductOmit<ExtArgs> | null
+    /**
+     * The data used to create many Products.
+     */
+    data: ProductCreateManyInput | ProductCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProductIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * Product update
    */
   export type ProductUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -9196,6 +10547,36 @@ export namespace Prisma {
      * Limit how many Products to update.
      */
     limit?: number
+  }
+
+  /**
+   * Product updateManyAndReturn
+   */
+  export type ProductUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Product
+     */
+    select?: ProductSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Product
+     */
+    omit?: ProductOmit<ExtArgs> | null
+    /**
+     * The data used to update Products.
+     */
+    data: XOR<ProductUpdateManyMutationInput, ProductUncheckedUpdateManyInput>
+    /**
+     * Filter which Products to update
+     */
+    where?: ProductWhereInput
+    /**
+     * Limit how many Products to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProductIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -9320,27 +10701,37 @@ export namespace Prisma {
   }
 
   export type SaleAvgAggregateOutputType = {
+    id: number | null
+    clientId: number | null
+    businessId: number | null
     total: number | null
   }
 
   export type SaleSumAggregateOutputType = {
+    id: number | null
+    clientId: number | null
+    businessId: number | null
     total: number | null
   }
 
   export type SaleMinAggregateOutputType = {
-    id: string | null
-    clientId: string | null
-    businessId: string | null
+    id: number | null
+    clientId: number | null
+    businessId: number | null
     total: number | null
     dateSale: Date | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type SaleMaxAggregateOutputType = {
-    id: string | null
-    clientId: string | null
-    businessId: string | null
+    id: number | null
+    clientId: number | null
+    businessId: number | null
     total: number | null
     dateSale: Date | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type SaleCountAggregateOutputType = {
@@ -9349,15 +10740,23 @@ export namespace Prisma {
     businessId: number
     total: number
     dateSale: number
+    createAt: number
+    updateAt: number
     _all: number
   }
 
 
   export type SaleAvgAggregateInputType = {
+    id?: true
+    clientId?: true
+    businessId?: true
     total?: true
   }
 
   export type SaleSumAggregateInputType = {
+    id?: true
+    clientId?: true
+    businessId?: true
     total?: true
   }
 
@@ -9367,6 +10766,8 @@ export namespace Prisma {
     businessId?: true
     total?: true
     dateSale?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type SaleMaxAggregateInputType = {
@@ -9375,6 +10776,8 @@ export namespace Prisma {
     businessId?: true
     total?: true
     dateSale?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type SaleCountAggregateInputType = {
@@ -9383,6 +10786,8 @@ export namespace Prisma {
     businessId?: true
     total?: true
     dateSale?: true
+    createAt?: true
+    updateAt?: true
     _all?: true
   }
 
@@ -9473,11 +10878,13 @@ export namespace Prisma {
   }
 
   export type SaleGroupByOutputType = {
-    id: string
-    clientId: string | null
-    businessId: string
+    id: number
+    clientId: number | null
+    businessId: number
     total: number
     dateSale: Date
+    createAt: Date
+    updateAt: Date
     _count: SaleCountAggregateOutputType | null
     _avg: SaleAvgAggregateOutputType | null
     _sum: SaleSumAggregateOutputType | null
@@ -9505,13 +10912,37 @@ export namespace Prisma {
     businessId?: boolean
     total?: boolean
     dateSale?: boolean
+    createAt?: boolean
+    updateAt?: boolean
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     client?: boolean | Sale$clientArgs<ExtArgs>
     items?: boolean | Sale$itemsArgs<ExtArgs>
     _count?: boolean | SaleCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["sale"]>
 
+  export type SaleSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    clientId?: boolean
+    businessId?: boolean
+    total?: boolean
+    dateSale?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    client?: boolean | Sale$clientArgs<ExtArgs>
+  }, ExtArgs["result"]["sale"]>
 
+  export type SaleSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    clientId?: boolean
+    businessId?: boolean
+    total?: boolean
+    dateSale?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    client?: boolean | Sale$clientArgs<ExtArgs>
+  }, ExtArgs["result"]["sale"]>
 
   export type SaleSelectScalar = {
     id?: boolean
@@ -9519,14 +10950,24 @@ export namespace Prisma {
     businessId?: boolean
     total?: boolean
     dateSale?: boolean
+    createAt?: boolean
+    updateAt?: boolean
   }
 
-  export type SaleOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clientId" | "businessId" | "total" | "dateSale", ExtArgs["result"]["sale"]>
+  export type SaleOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clientId" | "businessId" | "total" | "dateSale" | "createAt" | "updateAt", ExtArgs["result"]["sale"]>
   export type SaleInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     business?: boolean | BusinessDefaultArgs<ExtArgs>
     client?: boolean | Sale$clientArgs<ExtArgs>
     items?: boolean | Sale$itemsArgs<ExtArgs>
     _count?: boolean | SaleCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type SaleIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    client?: boolean | Sale$clientArgs<ExtArgs>
+  }
+  export type SaleIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    business?: boolean | BusinessDefaultArgs<ExtArgs>
+    client?: boolean | Sale$clientArgs<ExtArgs>
   }
 
   export type $SalePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -9537,11 +10978,13 @@ export namespace Prisma {
       items: Prisma.$SaleItemPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
-      clientId: string | null
-      businessId: string
+      id: number
+      clientId: number | null
+      businessId: number
       total: number
       dateSale: Date
+      createAt: Date
+      updateAt: Date
     }, ExtArgs["result"]["sale"]>
     composites: {}
   }
@@ -9660,6 +11103,30 @@ export namespace Prisma {
     createMany<T extends SaleCreateManyArgs>(args?: SelectSubset<T, SaleCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Sales and returns the data saved in the database.
+     * @param {SaleCreateManyAndReturnArgs} args - Arguments to create many Sales.
+     * @example
+     * // Create many Sales
+     * const sale = await prisma.sale.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Sales and only return the `id`
+     * const saleWithIdOnly = await prisma.sale.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends SaleCreateManyAndReturnArgs>(args?: SelectSubset<T, SaleCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SalePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Sale.
      * @param {SaleDeleteArgs} args - Arguments to delete one Sale.
      * @example
@@ -9722,6 +11189,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends SaleUpdateManyArgs>(args: SelectSubset<T, SaleUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Sales and returns the data updated in the database.
+     * @param {SaleUpdateManyAndReturnArgs} args - Arguments to update many Sales.
+     * @example
+     * // Update many Sales
+     * const sale = await prisma.sale.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Sales and only return the `id`
+     * const saleWithIdOnly = await prisma.sale.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends SaleUpdateManyAndReturnArgs>(args: SelectSubset<T, SaleUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SalePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Sale.
@@ -9914,11 +11411,13 @@ export namespace Prisma {
    * Fields of the Sale model
    */
   interface SaleFieldRefs {
-    readonly id: FieldRef<"Sale", 'String'>
-    readonly clientId: FieldRef<"Sale", 'String'>
-    readonly businessId: FieldRef<"Sale", 'String'>
+    readonly id: FieldRef<"Sale", 'Int'>
+    readonly clientId: FieldRef<"Sale", 'Int'>
+    readonly businessId: FieldRef<"Sale", 'Int'>
     readonly total: FieldRef<"Sale", 'Float'>
     readonly dateSale: FieldRef<"Sale", 'DateTime'>
+    readonly createAt: FieldRef<"Sale", 'DateTime'>
+    readonly updateAt: FieldRef<"Sale", 'DateTime'>
   }
     
 
@@ -10152,6 +11651,29 @@ export namespace Prisma {
   }
 
   /**
+   * Sale createManyAndReturn
+   */
+  export type SaleCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Sale
+     */
+    select?: SaleSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Sale
+     */
+    omit?: SaleOmit<ExtArgs> | null
+    /**
+     * The data used to create many Sales.
+     */
+    data: SaleCreateManyInput | SaleCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SaleIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * Sale update
    */
   export type SaleUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -10193,6 +11715,36 @@ export namespace Prisma {
      * Limit how many Sales to update.
      */
     limit?: number
+  }
+
+  /**
+   * Sale updateManyAndReturn
+   */
+  export type SaleUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Sale
+     */
+    select?: SaleSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Sale
+     */
+    omit?: SaleOmit<ExtArgs> | null
+    /**
+     * The data used to update Sales.
+     */
+    data: XOR<SaleUpdateManyMutationInput, SaleUncheckedUpdateManyInput>
+    /**
+     * Filter which Sales to update
+     */
+    where?: SaleWhereInput
+    /**
+     * Limit how many Sales to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SaleIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -10336,29 +11888,39 @@ export namespace Prisma {
   }
 
   export type SaleItemAvgAggregateOutputType = {
+    id: number | null
+    saleId: number | null
+    productId: number | null
     quantity: number | null
     price: number | null
   }
 
   export type SaleItemSumAggregateOutputType = {
+    id: number | null
+    saleId: number | null
+    productId: number | null
     quantity: number | null
     price: number | null
   }
 
   export type SaleItemMinAggregateOutputType = {
-    id: string | null
-    saleId: string | null
-    productId: string | null
+    id: number | null
+    saleId: number | null
+    productId: number | null
     quantity: number | null
     price: number | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type SaleItemMaxAggregateOutputType = {
-    id: string | null
-    saleId: string | null
-    productId: string | null
+    id: number | null
+    saleId: number | null
+    productId: number | null
     quantity: number | null
     price: number | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type SaleItemCountAggregateOutputType = {
@@ -10367,16 +11929,24 @@ export namespace Prisma {
     productId: number
     quantity: number
     price: number
+    createAt: number
+    updateAt: number
     _all: number
   }
 
 
   export type SaleItemAvgAggregateInputType = {
+    id?: true
+    saleId?: true
+    productId?: true
     quantity?: true
     price?: true
   }
 
   export type SaleItemSumAggregateInputType = {
+    id?: true
+    saleId?: true
+    productId?: true
     quantity?: true
     price?: true
   }
@@ -10387,6 +11957,8 @@ export namespace Prisma {
     productId?: true
     quantity?: true
     price?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type SaleItemMaxAggregateInputType = {
@@ -10395,6 +11967,8 @@ export namespace Prisma {
     productId?: true
     quantity?: true
     price?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type SaleItemCountAggregateInputType = {
@@ -10403,6 +11977,8 @@ export namespace Prisma {
     productId?: true
     quantity?: true
     price?: true
+    createAt?: true
+    updateAt?: true
     _all?: true
   }
 
@@ -10493,11 +12069,13 @@ export namespace Prisma {
   }
 
   export type SaleItemGroupByOutputType = {
-    id: string
-    saleId: string
-    productId: string
+    id: number
+    saleId: number
+    productId: number
     quantity: number
     price: number
+    createAt: Date
+    updateAt: Date
     _count: SaleItemCountAggregateOutputType | null
     _avg: SaleItemAvgAggregateOutputType | null
     _sum: SaleItemSumAggregateOutputType | null
@@ -10525,11 +12103,35 @@ export namespace Prisma {
     productId?: boolean
     quantity?: boolean
     price?: boolean
+    createAt?: boolean
+    updateAt?: boolean
     product?: boolean | ProductDefaultArgs<ExtArgs>
     sale?: boolean | SaleDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["saleItem"]>
 
+  export type SaleItemSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    saleId?: boolean
+    productId?: boolean
+    quantity?: boolean
+    price?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    product?: boolean | ProductDefaultArgs<ExtArgs>
+    sale?: boolean | SaleDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["saleItem"]>
 
+  export type SaleItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    saleId?: boolean
+    productId?: boolean
+    quantity?: boolean
+    price?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    product?: boolean | ProductDefaultArgs<ExtArgs>
+    sale?: boolean | SaleDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["saleItem"]>
 
   export type SaleItemSelectScalar = {
     id?: boolean
@@ -10537,10 +12139,20 @@ export namespace Prisma {
     productId?: boolean
     quantity?: boolean
     price?: boolean
+    createAt?: boolean
+    updateAt?: boolean
   }
 
-  export type SaleItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "saleId" | "productId" | "quantity" | "price", ExtArgs["result"]["saleItem"]>
+  export type SaleItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "saleId" | "productId" | "quantity" | "price" | "createAt" | "updateAt", ExtArgs["result"]["saleItem"]>
   export type SaleItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    product?: boolean | ProductDefaultArgs<ExtArgs>
+    sale?: boolean | SaleDefaultArgs<ExtArgs>
+  }
+  export type SaleItemIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    product?: boolean | ProductDefaultArgs<ExtArgs>
+    sale?: boolean | SaleDefaultArgs<ExtArgs>
+  }
+  export type SaleItemIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     product?: boolean | ProductDefaultArgs<ExtArgs>
     sale?: boolean | SaleDefaultArgs<ExtArgs>
   }
@@ -10552,11 +12164,13 @@ export namespace Prisma {
       sale: Prisma.$SalePayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
-      saleId: string
-      productId: string
+      id: number
+      saleId: number
+      productId: number
       quantity: number
       price: number
+      createAt: Date
+      updateAt: Date
     }, ExtArgs["result"]["saleItem"]>
     composites: {}
   }
@@ -10675,6 +12289,30 @@ export namespace Prisma {
     createMany<T extends SaleItemCreateManyArgs>(args?: SelectSubset<T, SaleItemCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many SaleItems and returns the data saved in the database.
+     * @param {SaleItemCreateManyAndReturnArgs} args - Arguments to create many SaleItems.
+     * @example
+     * // Create many SaleItems
+     * const saleItem = await prisma.saleItem.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many SaleItems and only return the `id`
+     * const saleItemWithIdOnly = await prisma.saleItem.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends SaleItemCreateManyAndReturnArgs>(args?: SelectSubset<T, SaleItemCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SaleItemPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a SaleItem.
      * @param {SaleItemDeleteArgs} args - Arguments to delete one SaleItem.
      * @example
@@ -10737,6 +12375,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends SaleItemUpdateManyArgs>(args: SelectSubset<T, SaleItemUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more SaleItems and returns the data updated in the database.
+     * @param {SaleItemUpdateManyAndReturnArgs} args - Arguments to update many SaleItems.
+     * @example
+     * // Update many SaleItems
+     * const saleItem = await prisma.saleItem.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more SaleItems and only return the `id`
+     * const saleItemWithIdOnly = await prisma.saleItem.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends SaleItemUpdateManyAndReturnArgs>(args: SelectSubset<T, SaleItemUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SaleItemPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one SaleItem.
@@ -10928,11 +12596,13 @@ export namespace Prisma {
    * Fields of the SaleItem model
    */
   interface SaleItemFieldRefs {
-    readonly id: FieldRef<"SaleItem", 'String'>
-    readonly saleId: FieldRef<"SaleItem", 'String'>
-    readonly productId: FieldRef<"SaleItem", 'String'>
+    readonly id: FieldRef<"SaleItem", 'Int'>
+    readonly saleId: FieldRef<"SaleItem", 'Int'>
+    readonly productId: FieldRef<"SaleItem", 'Int'>
     readonly quantity: FieldRef<"SaleItem", 'Int'>
     readonly price: FieldRef<"SaleItem", 'Float'>
+    readonly createAt: FieldRef<"SaleItem", 'DateTime'>
+    readonly updateAt: FieldRef<"SaleItem", 'DateTime'>
   }
     
 
@@ -11166,6 +12836,29 @@ export namespace Prisma {
   }
 
   /**
+   * SaleItem createManyAndReturn
+   */
+  export type SaleItemCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SaleItem
+     */
+    select?: SaleItemSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the SaleItem
+     */
+    omit?: SaleItemOmit<ExtArgs> | null
+    /**
+     * The data used to create many SaleItems.
+     */
+    data: SaleItemCreateManyInput | SaleItemCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SaleItemIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * SaleItem update
    */
   export type SaleItemUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -11207,6 +12900,36 @@ export namespace Prisma {
      * Limit how many SaleItems to update.
      */
     limit?: number
+  }
+
+  /**
+   * SaleItem updateManyAndReturn
+   */
+  export type SaleItemUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SaleItem
+     */
+    select?: SaleItemSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the SaleItem
+     */
+    omit?: SaleItemOmit<ExtArgs> | null
+    /**
+     * The data used to update SaleItems.
+     */
+    data: XOR<SaleItemUpdateManyMutationInput, SaleItemUncheckedUpdateManyInput>
+    /**
+     * Filter which SaleItems to update
+     */
+    where?: SaleItemWhereInput
+    /**
+     * Limit how many SaleItems to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SaleItemIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -11300,24 +13023,42 @@ export namespace Prisma {
 
   export type AggregateMedicalRecord = {
     _count: MedicalRecordCountAggregateOutputType | null
+    _avg: MedicalRecordAvgAggregateOutputType | null
+    _sum: MedicalRecordSumAggregateOutputType | null
     _min: MedicalRecordMinAggregateOutputType | null
     _max: MedicalRecordMaxAggregateOutputType | null
   }
 
+  export type MedicalRecordAvgAggregateOutputType = {
+    id: number | null
+    petId: number | null
+    vetId: number | null
+  }
+
+  export type MedicalRecordSumAggregateOutputType = {
+    id: number | null
+    petId: number | null
+    vetId: number | null
+  }
+
   export type MedicalRecordMinAggregateOutputType = {
-    id: string | null
-    petId: string | null
-    vetId: string | null
+    id: number | null
+    petId: number | null
+    vetId: number | null
     date: Date | null
     description: string | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type MedicalRecordMaxAggregateOutputType = {
-    id: string | null
-    petId: string | null
-    vetId: string | null
+    id: number | null
+    petId: number | null
+    vetId: number | null
     date: Date | null
     description: string | null
+    createAt: Date | null
+    updateAt: Date | null
   }
 
   export type MedicalRecordCountAggregateOutputType = {
@@ -11326,9 +13067,23 @@ export namespace Prisma {
     vetId: number
     date: number
     description: number
+    createAt: number
+    updateAt: number
     _all: number
   }
 
+
+  export type MedicalRecordAvgAggregateInputType = {
+    id?: true
+    petId?: true
+    vetId?: true
+  }
+
+  export type MedicalRecordSumAggregateInputType = {
+    id?: true
+    petId?: true
+    vetId?: true
+  }
 
   export type MedicalRecordMinAggregateInputType = {
     id?: true
@@ -11336,6 +13091,8 @@ export namespace Prisma {
     vetId?: true
     date?: true
     description?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type MedicalRecordMaxAggregateInputType = {
@@ -11344,6 +13101,8 @@ export namespace Prisma {
     vetId?: true
     date?: true
     description?: true
+    createAt?: true
+    updateAt?: true
   }
 
   export type MedicalRecordCountAggregateInputType = {
@@ -11352,6 +13111,8 @@ export namespace Prisma {
     vetId?: true
     date?: true
     description?: true
+    createAt?: true
+    updateAt?: true
     _all?: true
   }
 
@@ -11393,6 +13154,18 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
+     * Select which fields to average
+    **/
+    _avg?: MedicalRecordAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: MedicalRecordSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
      * Select which fields to find the minimum value
     **/
     _min?: MedicalRecordMinAggregateInputType
@@ -11423,17 +13196,23 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: MedicalRecordCountAggregateInputType | true
+    _avg?: MedicalRecordAvgAggregateInputType
+    _sum?: MedicalRecordSumAggregateInputType
     _min?: MedicalRecordMinAggregateInputType
     _max?: MedicalRecordMaxAggregateInputType
   }
 
   export type MedicalRecordGroupByOutputType = {
-    id: string
-    petId: string
-    vetId: string | null
+    id: number
+    petId: number
+    vetId: number | null
     date: Date
     description: string
+    createAt: Date
+    updateAt: Date
     _count: MedicalRecordCountAggregateOutputType | null
+    _avg: MedicalRecordAvgAggregateOutputType | null
+    _sum: MedicalRecordSumAggregateOutputType | null
     _min: MedicalRecordMinAggregateOutputType | null
     _max: MedicalRecordMaxAggregateOutputType | null
   }
@@ -11458,11 +13237,35 @@ export namespace Prisma {
     vetId?: boolean
     date?: boolean
     description?: boolean
+    createAt?: boolean
+    updateAt?: boolean
     pet?: boolean | PetDefaultArgs<ExtArgs>
     vet?: boolean | MedicalRecord$vetArgs<ExtArgs>
   }, ExtArgs["result"]["medicalRecord"]>
 
+  export type MedicalRecordSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    petId?: boolean
+    vetId?: boolean
+    date?: boolean
+    description?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    vet?: boolean | MedicalRecord$vetArgs<ExtArgs>
+  }, ExtArgs["result"]["medicalRecord"]>
 
+  export type MedicalRecordSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    petId?: boolean
+    vetId?: boolean
+    date?: boolean
+    description?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    vet?: boolean | MedicalRecord$vetArgs<ExtArgs>
+  }, ExtArgs["result"]["medicalRecord"]>
 
   export type MedicalRecordSelectScalar = {
     id?: boolean
@@ -11470,10 +13273,20 @@ export namespace Prisma {
     vetId?: boolean
     date?: boolean
     description?: boolean
+    createAt?: boolean
+    updateAt?: boolean
   }
 
-  export type MedicalRecordOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "petId" | "vetId" | "date" | "description", ExtArgs["result"]["medicalRecord"]>
+  export type MedicalRecordOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "petId" | "vetId" | "date" | "description" | "createAt" | "updateAt", ExtArgs["result"]["medicalRecord"]>
   export type MedicalRecordInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    vet?: boolean | MedicalRecord$vetArgs<ExtArgs>
+  }
+  export type MedicalRecordIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    pet?: boolean | PetDefaultArgs<ExtArgs>
+    vet?: boolean | MedicalRecord$vetArgs<ExtArgs>
+  }
+  export type MedicalRecordIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     pet?: boolean | PetDefaultArgs<ExtArgs>
     vet?: boolean | MedicalRecord$vetArgs<ExtArgs>
   }
@@ -11485,11 +13298,13 @@ export namespace Prisma {
       vet: Prisma.$UserPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
-      petId: string
-      vetId: string | null
+      id: number
+      petId: number
+      vetId: number | null
       date: Date
       description: string
+      createAt: Date
+      updateAt: Date
     }, ExtArgs["result"]["medicalRecord"]>
     composites: {}
   }
@@ -11608,6 +13423,30 @@ export namespace Prisma {
     createMany<T extends MedicalRecordCreateManyArgs>(args?: SelectSubset<T, MedicalRecordCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many MedicalRecords and returns the data saved in the database.
+     * @param {MedicalRecordCreateManyAndReturnArgs} args - Arguments to create many MedicalRecords.
+     * @example
+     * // Create many MedicalRecords
+     * const medicalRecord = await prisma.medicalRecord.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many MedicalRecords and only return the `id`
+     * const medicalRecordWithIdOnly = await prisma.medicalRecord.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends MedicalRecordCreateManyAndReturnArgs>(args?: SelectSubset<T, MedicalRecordCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MedicalRecordPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a MedicalRecord.
      * @param {MedicalRecordDeleteArgs} args - Arguments to delete one MedicalRecord.
      * @example
@@ -11670,6 +13509,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends MedicalRecordUpdateManyArgs>(args: SelectSubset<T, MedicalRecordUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more MedicalRecords and returns the data updated in the database.
+     * @param {MedicalRecordUpdateManyAndReturnArgs} args - Arguments to update many MedicalRecords.
+     * @example
+     * // Update many MedicalRecords
+     * const medicalRecord = await prisma.medicalRecord.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more MedicalRecords and only return the `id`
+     * const medicalRecordWithIdOnly = await prisma.medicalRecord.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends MedicalRecordUpdateManyAndReturnArgs>(args: SelectSubset<T, MedicalRecordUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MedicalRecordPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one MedicalRecord.
@@ -11861,11 +13730,13 @@ export namespace Prisma {
    * Fields of the MedicalRecord model
    */
   interface MedicalRecordFieldRefs {
-    readonly id: FieldRef<"MedicalRecord", 'String'>
-    readonly petId: FieldRef<"MedicalRecord", 'String'>
-    readonly vetId: FieldRef<"MedicalRecord", 'String'>
+    readonly id: FieldRef<"MedicalRecord", 'Int'>
+    readonly petId: FieldRef<"MedicalRecord", 'Int'>
+    readonly vetId: FieldRef<"MedicalRecord", 'Int'>
     readonly date: FieldRef<"MedicalRecord", 'DateTime'>
     readonly description: FieldRef<"MedicalRecord", 'String'>
+    readonly createAt: FieldRef<"MedicalRecord", 'DateTime'>
+    readonly updateAt: FieldRef<"MedicalRecord", 'DateTime'>
   }
     
 
@@ -12099,6 +13970,29 @@ export namespace Prisma {
   }
 
   /**
+   * MedicalRecord createManyAndReturn
+   */
+  export type MedicalRecordCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MedicalRecord
+     */
+    select?: MedicalRecordSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the MedicalRecord
+     */
+    omit?: MedicalRecordOmit<ExtArgs> | null
+    /**
+     * The data used to create many MedicalRecords.
+     */
+    data: MedicalRecordCreateManyInput | MedicalRecordCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MedicalRecordIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * MedicalRecord update
    */
   export type MedicalRecordUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -12140,6 +14034,36 @@ export namespace Prisma {
      * Limit how many MedicalRecords to update.
      */
     limit?: number
+  }
+
+  /**
+   * MedicalRecord updateManyAndReturn
+   */
+  export type MedicalRecordUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MedicalRecord
+     */
+    select?: MedicalRecordSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the MedicalRecord
+     */
+    omit?: MedicalRecordOmit<ExtArgs> | null
+    /**
+     * The data used to update MedicalRecords.
+     */
+    data: XOR<MedicalRecordUpdateManyMutationInput, MedicalRecordUncheckedUpdateManyInput>
+    /**
+     * Filter which MedicalRecords to update
+     */
+    where?: MedicalRecordWhereInput
+    /**
+     * Limit how many MedicalRecords to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MedicalRecordIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -12259,16 +14183,20 @@ export namespace Prisma {
   }
 
   export type AffiliateAvgAggregateOutputType = {
+    id: number | null
+    userId: number | null
     earnings: number | null
   }
 
   export type AffiliateSumAggregateOutputType = {
+    id: number | null
+    userId: number | null
     earnings: number | null
   }
 
   export type AffiliateMinAggregateOutputType = {
-    id: string | null
-    userId: string | null
+    id: number | null
+    userId: number | null
     code: string | null
     earnings: number | null
     createAt: Date | null
@@ -12276,8 +14204,8 @@ export namespace Prisma {
   }
 
   export type AffiliateMaxAggregateOutputType = {
-    id: string | null
-    userId: string | null
+    id: number | null
+    userId: number | null
     code: string | null
     earnings: number | null
     createAt: Date | null
@@ -12296,10 +14224,14 @@ export namespace Prisma {
 
 
   export type AffiliateAvgAggregateInputType = {
+    id?: true
+    userId?: true
     earnings?: true
   }
 
   export type AffiliateSumAggregateInputType = {
+    id?: true
+    userId?: true
     earnings?: true
   }
 
@@ -12418,8 +14350,8 @@ export namespace Prisma {
   }
 
   export type AffiliateGroupByOutputType = {
-    id: string
-    userId: string
+    id: number
+    userId: number
     code: string
     earnings: number
     createAt: Date
@@ -12457,7 +14389,25 @@ export namespace Prisma {
     _count?: boolean | AffiliateCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["affiliate"]>
 
+  export type AffiliateSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    code?: boolean
+    earnings?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["affiliate"]>
 
+  export type AffiliateSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    code?: boolean
+    earnings?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["affiliate"]>
 
   export type AffiliateSelectScalar = {
     id?: boolean
@@ -12474,6 +14424,12 @@ export namespace Prisma {
     AffiliateReferral?: boolean | Affiliate$AffiliateReferralArgs<ExtArgs>
     _count?: boolean | AffiliateCountOutputTypeDefaultArgs<ExtArgs>
   }
+  export type AffiliateIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type AffiliateIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
 
   export type $AffiliatePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Affiliate"
@@ -12482,8 +14438,8 @@ export namespace Prisma {
       AffiliateReferral: Prisma.$AffiliateReferralPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
-      userId: string
+      id: number
+      userId: number
       code: string
       earnings: number
       createAt: Date
@@ -12606,6 +14562,30 @@ export namespace Prisma {
     createMany<T extends AffiliateCreateManyArgs>(args?: SelectSubset<T, AffiliateCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Affiliates and returns the data saved in the database.
+     * @param {AffiliateCreateManyAndReturnArgs} args - Arguments to create many Affiliates.
+     * @example
+     * // Create many Affiliates
+     * const affiliate = await prisma.affiliate.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Affiliates and only return the `id`
+     * const affiliateWithIdOnly = await prisma.affiliate.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends AffiliateCreateManyAndReturnArgs>(args?: SelectSubset<T, AffiliateCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AffiliatePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Affiliate.
      * @param {AffiliateDeleteArgs} args - Arguments to delete one Affiliate.
      * @example
@@ -12668,6 +14648,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends AffiliateUpdateManyArgs>(args: SelectSubset<T, AffiliateUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Affiliates and returns the data updated in the database.
+     * @param {AffiliateUpdateManyAndReturnArgs} args - Arguments to update many Affiliates.
+     * @example
+     * // Update many Affiliates
+     * const affiliate = await prisma.affiliate.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Affiliates and only return the `id`
+     * const affiliateWithIdOnly = await prisma.affiliate.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends AffiliateUpdateManyAndReturnArgs>(args: SelectSubset<T, AffiliateUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AffiliatePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Affiliate.
@@ -12859,8 +14869,8 @@ export namespace Prisma {
    * Fields of the Affiliate model
    */
   interface AffiliateFieldRefs {
-    readonly id: FieldRef<"Affiliate", 'String'>
-    readonly userId: FieldRef<"Affiliate", 'String'>
+    readonly id: FieldRef<"Affiliate", 'Int'>
+    readonly userId: FieldRef<"Affiliate", 'Int'>
     readonly code: FieldRef<"Affiliate", 'String'>
     readonly earnings: FieldRef<"Affiliate", 'Float'>
     readonly createAt: FieldRef<"Affiliate", 'DateTime'>
@@ -13098,6 +15108,29 @@ export namespace Prisma {
   }
 
   /**
+   * Affiliate createManyAndReturn
+   */
+  export type AffiliateCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Affiliate
+     */
+    select?: AffiliateSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Affiliate
+     */
+    omit?: AffiliateOmit<ExtArgs> | null
+    /**
+     * The data used to create many Affiliates.
+     */
+    data: AffiliateCreateManyInput | AffiliateCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AffiliateIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * Affiliate update
    */
   export type AffiliateUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -13139,6 +15172,36 @@ export namespace Prisma {
      * Limit how many Affiliates to update.
      */
     limit?: number
+  }
+
+  /**
+   * Affiliate updateManyAndReturn
+   */
+  export type AffiliateUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Affiliate
+     */
+    select?: AffiliateSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Affiliate
+     */
+    omit?: AffiliateOmit<ExtArgs> | null
+    /**
+     * The data used to update Affiliates.
+     */
+    data: XOR<AffiliateUpdateManyMutationInput, AffiliateUncheckedUpdateManyInput>
+    /**
+     * Filter which Affiliates to update
+     */
+    where?: AffiliateWhereInput
+    /**
+     * Limit how many Affiliates to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AffiliateIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -13263,17 +15326,23 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralAvgAggregateOutputType = {
+    id: number | null
+    affiliateId: number | null
+    referredUserId: number | null
     value: number | null
   }
 
   export type AffiliateReferralSumAggregateOutputType = {
+    id: number | null
+    affiliateId: number | null
+    referredUserId: number | null
     value: number | null
   }
 
   export type AffiliateReferralMinAggregateOutputType = {
-    id: string | null
-    affiliateId: string | null
-    referredUserId: string | null
+    id: number | null
+    affiliateId: number | null
+    referredUserId: number | null
     type: $Enums.ReferralType | null
     value: number | null
     status: $Enums.ReferralStatus | null
@@ -13282,9 +15351,9 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralMaxAggregateOutputType = {
-    id: string | null
-    affiliateId: string | null
-    referredUserId: string | null
+    id: number | null
+    affiliateId: number | null
+    referredUserId: number | null
     type: $Enums.ReferralType | null
     value: number | null
     status: $Enums.ReferralStatus | null
@@ -13306,10 +15375,16 @@ export namespace Prisma {
 
 
   export type AffiliateReferralAvgAggregateInputType = {
+    id?: true
+    affiliateId?: true
+    referredUserId?: true
     value?: true
   }
 
   export type AffiliateReferralSumAggregateInputType = {
+    id?: true
+    affiliateId?: true
+    referredUserId?: true
     value?: true
   }
 
@@ -13434,9 +15509,9 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralGroupByOutputType = {
-    id: string
-    affiliateId: string
-    referredUserId: string | null
+    id: number
+    affiliateId: number
+    referredUserId: number | null
     type: $Enums.ReferralType
     value: number
     status: $Enums.ReferralStatus
@@ -13473,9 +15548,34 @@ export namespace Prisma {
     createAt?: boolean
     updateAt?: boolean
     affiliate?: boolean | AffiliateDefaultArgs<ExtArgs>
+    referredUser?: boolean | AffiliateReferral$referredUserArgs<ExtArgs>
   }, ExtArgs["result"]["affiliateReferral"]>
 
+  export type AffiliateReferralSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    affiliateId?: boolean
+    referredUserId?: boolean
+    type?: boolean
+    value?: boolean
+    status?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    affiliate?: boolean | AffiliateDefaultArgs<ExtArgs>
+    referredUser?: boolean | AffiliateReferral$referredUserArgs<ExtArgs>
+  }, ExtArgs["result"]["affiliateReferral"]>
 
+  export type AffiliateReferralSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    affiliateId?: boolean
+    referredUserId?: boolean
+    type?: boolean
+    value?: boolean
+    status?: boolean
+    createAt?: boolean
+    updateAt?: boolean
+    affiliate?: boolean | AffiliateDefaultArgs<ExtArgs>
+    referredUser?: boolean | AffiliateReferral$referredUserArgs<ExtArgs>
+  }, ExtArgs["result"]["affiliateReferral"]>
 
   export type AffiliateReferralSelectScalar = {
     id?: boolean
@@ -13491,17 +15591,27 @@ export namespace Prisma {
   export type AffiliateReferralOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "affiliateId" | "referredUserId" | "type" | "value" | "status" | "createAt" | "updateAt", ExtArgs["result"]["affiliateReferral"]>
   export type AffiliateReferralInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     affiliate?: boolean | AffiliateDefaultArgs<ExtArgs>
+    referredUser?: boolean | AffiliateReferral$referredUserArgs<ExtArgs>
+  }
+  export type AffiliateReferralIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    affiliate?: boolean | AffiliateDefaultArgs<ExtArgs>
+    referredUser?: boolean | AffiliateReferral$referredUserArgs<ExtArgs>
+  }
+  export type AffiliateReferralIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    affiliate?: boolean | AffiliateDefaultArgs<ExtArgs>
+    referredUser?: boolean | AffiliateReferral$referredUserArgs<ExtArgs>
   }
 
   export type $AffiliateReferralPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "AffiliateReferral"
     objects: {
       affiliate: Prisma.$AffiliatePayload<ExtArgs>
+      referredUser: Prisma.$UserPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
-      affiliateId: string
-      referredUserId: string | null
+      id: number
+      affiliateId: number
+      referredUserId: number | null
       type: $Enums.ReferralType
       value: number
       status: $Enums.ReferralStatus
@@ -13625,6 +15735,30 @@ export namespace Prisma {
     createMany<T extends AffiliateReferralCreateManyArgs>(args?: SelectSubset<T, AffiliateReferralCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many AffiliateReferrals and returns the data saved in the database.
+     * @param {AffiliateReferralCreateManyAndReturnArgs} args - Arguments to create many AffiliateReferrals.
+     * @example
+     * // Create many AffiliateReferrals
+     * const affiliateReferral = await prisma.affiliateReferral.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many AffiliateReferrals and only return the `id`
+     * const affiliateReferralWithIdOnly = await prisma.affiliateReferral.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends AffiliateReferralCreateManyAndReturnArgs>(args?: SelectSubset<T, AffiliateReferralCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AffiliateReferralPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a AffiliateReferral.
      * @param {AffiliateReferralDeleteArgs} args - Arguments to delete one AffiliateReferral.
      * @example
@@ -13687,6 +15821,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends AffiliateReferralUpdateManyArgs>(args: SelectSubset<T, AffiliateReferralUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more AffiliateReferrals and returns the data updated in the database.
+     * @param {AffiliateReferralUpdateManyAndReturnArgs} args - Arguments to update many AffiliateReferrals.
+     * @example
+     * // Update many AffiliateReferrals
+     * const affiliateReferral = await prisma.affiliateReferral.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more AffiliateReferrals and only return the `id`
+     * const affiliateReferralWithIdOnly = await prisma.affiliateReferral.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends AffiliateReferralUpdateManyAndReturnArgs>(args: SelectSubset<T, AffiliateReferralUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AffiliateReferralPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one AffiliateReferral.
@@ -13848,6 +16012,7 @@ export namespace Prisma {
   export interface Prisma__AffiliateReferralClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     affiliate<T extends AffiliateDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AffiliateDefaultArgs<ExtArgs>>): Prisma__AffiliateClient<$Result.GetResult<Prisma.$AffiliatePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    referredUser<T extends AffiliateReferral$referredUserArgs<ExtArgs> = {}>(args?: Subset<T, AffiliateReferral$referredUserArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -13877,9 +16042,9 @@ export namespace Prisma {
    * Fields of the AffiliateReferral model
    */
   interface AffiliateReferralFieldRefs {
-    readonly id: FieldRef<"AffiliateReferral", 'String'>
-    readonly affiliateId: FieldRef<"AffiliateReferral", 'String'>
-    readonly referredUserId: FieldRef<"AffiliateReferral", 'String'>
+    readonly id: FieldRef<"AffiliateReferral", 'Int'>
+    readonly affiliateId: FieldRef<"AffiliateReferral", 'Int'>
+    readonly referredUserId: FieldRef<"AffiliateReferral", 'Int'>
     readonly type: FieldRef<"AffiliateReferral", 'ReferralType'>
     readonly value: FieldRef<"AffiliateReferral", 'Float'>
     readonly status: FieldRef<"AffiliateReferral", 'ReferralStatus'>
@@ -14118,6 +16283,29 @@ export namespace Prisma {
   }
 
   /**
+   * AffiliateReferral createManyAndReturn
+   */
+  export type AffiliateReferralCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AffiliateReferral
+     */
+    select?: AffiliateReferralSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AffiliateReferral
+     */
+    omit?: AffiliateReferralOmit<ExtArgs> | null
+    /**
+     * The data used to create many AffiliateReferrals.
+     */
+    data: AffiliateReferralCreateManyInput | AffiliateReferralCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AffiliateReferralIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
    * AffiliateReferral update
    */
   export type AffiliateReferralUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -14159,6 +16347,36 @@ export namespace Prisma {
      * Limit how many AffiliateReferrals to update.
      */
     limit?: number
+  }
+
+  /**
+   * AffiliateReferral updateManyAndReturn
+   */
+  export type AffiliateReferralUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AffiliateReferral
+     */
+    select?: AffiliateReferralSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AffiliateReferral
+     */
+    omit?: AffiliateReferralOmit<ExtArgs> | null
+    /**
+     * The data used to update AffiliateReferrals.
+     */
+    data: XOR<AffiliateReferralUpdateManyMutationInput, AffiliateReferralUncheckedUpdateManyInput>
+    /**
+     * Filter which AffiliateReferrals to update
+     */
+    where?: AffiliateReferralWhereInput
+    /**
+     * Limit how many AffiliateReferrals to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AffiliateReferralIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -14225,6 +16443,25 @@ export namespace Prisma {
      * Limit how many AffiliateReferrals to delete.
      */
     limit?: number
+  }
+
+  /**
+   * AffiliateReferral.referredUser
+   */
+  export type AffiliateReferral$referredUserArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    where?: UserWhereInput
   }
 
   /**
@@ -14306,7 +16543,9 @@ export namespace Prisma {
     species: 'species',
     breed: 'breed',
     birthDate: 'birthDate',
-    clienteId: 'clienteId',
+    clientId: 'clientId',
+    nextVaccineDate: 'nextVaccineDate',
+    lastFedAt: 'lastFedAt',
     createAt: 'createAt',
     updateAt: 'updateAt'
   };
@@ -14321,7 +16560,10 @@ export namespace Prisma {
     petId: 'petId',
     serviceId: 'serviceId',
     businessId: 'businessId',
-    notes: 'notes'
+    notes: 'notes',
+    remindAt: 'remindAt',
+    createAt: 'createAt',
+    updateAt: 'updateAt'
   };
 
   export type AppointmentScalarFieldEnum = (typeof AppointmentScalarFieldEnum)[keyof typeof AppointmentScalarFieldEnum]
@@ -14332,7 +16574,9 @@ export namespace Prisma {
     name: 'name',
     price: 'price',
     duration: 'duration',
-    businessId: 'businessId'
+    businessId: 'businessId',
+    createAt: 'createAt',
+    updateAt: 'updateAt'
   };
 
   export type ServiceScalarFieldEnum = (typeof ServiceScalarFieldEnum)[keyof typeof ServiceScalarFieldEnum]
@@ -14343,7 +16587,9 @@ export namespace Prisma {
     name: 'name',
     price: 'price',
     stock: 'stock',
-    businessId: 'businessId'
+    businessId: 'businessId',
+    createAt: 'createAt',
+    updateAt: 'updateAt'
   };
 
   export type ProductScalarFieldEnum = (typeof ProductScalarFieldEnum)[keyof typeof ProductScalarFieldEnum]
@@ -14354,7 +16600,9 @@ export namespace Prisma {
     clientId: 'clientId',
     businessId: 'businessId',
     total: 'total',
-    dateSale: 'dateSale'
+    dateSale: 'dateSale',
+    createAt: 'createAt',
+    updateAt: 'updateAt'
   };
 
   export type SaleScalarFieldEnum = (typeof SaleScalarFieldEnum)[keyof typeof SaleScalarFieldEnum]
@@ -14365,7 +16613,9 @@ export namespace Prisma {
     saleId: 'saleId',
     productId: 'productId',
     quantity: 'quantity',
-    price: 'price'
+    price: 'price',
+    createAt: 'createAt',
+    updateAt: 'updateAt'
   };
 
   export type SaleItemScalarFieldEnum = (typeof SaleItemScalarFieldEnum)[keyof typeof SaleItemScalarFieldEnum]
@@ -14376,7 +16626,9 @@ export namespace Prisma {
     petId: 'petId',
     vetId: 'vetId',
     date: 'date',
-    description: 'description'
+    description: 'description',
+    createAt: 'createAt',
+    updateAt: 'updateAt'
   };
 
   export type MedicalRecordScalarFieldEnum = (typeof MedicalRecordScalarFieldEnum)[keyof typeof MedicalRecordScalarFieldEnum]
@@ -14416,6 +16668,14 @@ export namespace Prisma {
   export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 
+  export const QueryMode: {
+    default: 'default',
+    insensitive: 'insensitive'
+  };
+
+  export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
   export const NullsOrder: {
     first: 'first',
     last: 'last'
@@ -14424,134 +16684,36 @@ export namespace Prisma {
   export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
-  export const UserOrderByRelevanceFieldEnum: {
-    id: 'id',
-    name: 'name',
-    email: 'email',
-    password: 'password',
-    businessId: 'businessId'
-  };
-
-  export type UserOrderByRelevanceFieldEnum = (typeof UserOrderByRelevanceFieldEnum)[keyof typeof UserOrderByRelevanceFieldEnum]
-
-
-  export const BusinessOrderByRelevanceFieldEnum: {
-    id: 'id',
-    name: 'name',
-    address: 'address',
-    phone: 'phone',
-    email: 'email'
-  };
-
-  export type BusinessOrderByRelevanceFieldEnum = (typeof BusinessOrderByRelevanceFieldEnum)[keyof typeof BusinessOrderByRelevanceFieldEnum]
-
-
-  export const ClientOrderByRelevanceFieldEnum: {
-    id: 'id',
-    name: 'name',
-    email: 'email',
-    phone: 'phone',
-    businessId: 'businessId'
-  };
-
-  export type ClientOrderByRelevanceFieldEnum = (typeof ClientOrderByRelevanceFieldEnum)[keyof typeof ClientOrderByRelevanceFieldEnum]
-
-
-  export const PetOrderByRelevanceFieldEnum: {
-    id: 'id',
-    name: 'name',
-    species: 'species',
-    breed: 'breed',
-    clienteId: 'clienteId'
-  };
-
-  export type PetOrderByRelevanceFieldEnum = (typeof PetOrderByRelevanceFieldEnum)[keyof typeof PetOrderByRelevanceFieldEnum]
-
-
-  export const AppointmentOrderByRelevanceFieldEnum: {
-    id: 'id',
-    petId: 'petId',
-    serviceId: 'serviceId',
-    businessId: 'businessId',
-    notes: 'notes'
-  };
-
-  export type AppointmentOrderByRelevanceFieldEnum = (typeof AppointmentOrderByRelevanceFieldEnum)[keyof typeof AppointmentOrderByRelevanceFieldEnum]
-
-
-  export const ServiceOrderByRelevanceFieldEnum: {
-    id: 'id',
-    name: 'name',
-    businessId: 'businessId'
-  };
-
-  export type ServiceOrderByRelevanceFieldEnum = (typeof ServiceOrderByRelevanceFieldEnum)[keyof typeof ServiceOrderByRelevanceFieldEnum]
-
-
-  export const ProductOrderByRelevanceFieldEnum: {
-    id: 'id',
-    name: 'name',
-    businessId: 'businessId'
-  };
-
-  export type ProductOrderByRelevanceFieldEnum = (typeof ProductOrderByRelevanceFieldEnum)[keyof typeof ProductOrderByRelevanceFieldEnum]
-
-
-  export const SaleOrderByRelevanceFieldEnum: {
-    id: 'id',
-    clientId: 'clientId',
-    businessId: 'businessId'
-  };
-
-  export type SaleOrderByRelevanceFieldEnum = (typeof SaleOrderByRelevanceFieldEnum)[keyof typeof SaleOrderByRelevanceFieldEnum]
-
-
-  export const SaleItemOrderByRelevanceFieldEnum: {
-    id: 'id',
-    saleId: 'saleId',
-    productId: 'productId'
-  };
-
-  export type SaleItemOrderByRelevanceFieldEnum = (typeof SaleItemOrderByRelevanceFieldEnum)[keyof typeof SaleItemOrderByRelevanceFieldEnum]
-
-
-  export const MedicalRecordOrderByRelevanceFieldEnum: {
-    id: 'id',
-    petId: 'petId',
-    vetId: 'vetId',
-    description: 'description'
-  };
-
-  export type MedicalRecordOrderByRelevanceFieldEnum = (typeof MedicalRecordOrderByRelevanceFieldEnum)[keyof typeof MedicalRecordOrderByRelevanceFieldEnum]
-
-
-  export const AffiliateOrderByRelevanceFieldEnum: {
-    id: 'id',
-    userId: 'userId',
-    code: 'code'
-  };
-
-  export type AffiliateOrderByRelevanceFieldEnum = (typeof AffiliateOrderByRelevanceFieldEnum)[keyof typeof AffiliateOrderByRelevanceFieldEnum]
-
-
-  export const AffiliateReferralOrderByRelevanceFieldEnum: {
-    id: 'id',
-    affiliateId: 'affiliateId',
-    referredUserId: 'referredUserId'
-  };
-
-  export type AffiliateReferralOrderByRelevanceFieldEnum = (typeof AffiliateReferralOrderByRelevanceFieldEnum)[keyof typeof AffiliateReferralOrderByRelevanceFieldEnum]
-
-
   /**
    * Field references
    */
 
 
   /**
+   * Reference to a field of type 'Int'
+   */
+  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
+    
+
+
+  /**
+   * Reference to a field of type 'Int[]'
+   */
+  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+    
+
+
+  /**
    * Reference to a field of type 'String'
    */
   export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>
+    
+
+
+  /**
+   * Reference to a field of type 'String[]'
+   */
+  export type ListStringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String[]'>
     
 
 
@@ -14563,9 +16725,23 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Role[]'
+   */
+  export type ListEnumRoleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Role[]'>
+    
+
+
+  /**
    * Reference to a field of type 'DateTime'
    */
   export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
+    
+
+
+  /**
+   * Reference to a field of type 'DateTime[]'
+   */
+  export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
     
 
 
@@ -14577,6 +16753,13 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'AppointmentStatus[]'
+   */
+  export type ListEnumAppointmentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'AppointmentStatus[]'>
+    
+
+
+  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
@@ -14584,9 +16767,9 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Int'
+   * Reference to a field of type 'Float[]'
    */
-  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
+  export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
     
 
 
@@ -14598,9 +16781,23 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'ReferralType[]'
+   */
+  export type ListEnumReferralTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReferralType[]'>
+    
+
+
+  /**
    * Reference to a field of type 'ReferralStatus'
    */
   export type EnumReferralStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReferralStatus'>
+    
+
+
+  /**
+   * Reference to a field of type 'ReferralStatus[]'
+   */
+  export type ListEnumReferralStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReferralStatus[]'>
     
   /**
    * Deep Input Types
@@ -14611,17 +16808,18 @@ export namespace Prisma {
     AND?: UserWhereInput | UserWhereInput[]
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
-    id?: StringFilter<"User"> | string
+    id?: IntFilter<"User"> | number
     name?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
-    businessId?: StringNullableFilter<"User"> | string | null
+    businessId?: IntNullableFilter<"User"> | number | null
     createAt?: DateTimeFilter<"User"> | Date | string
     updateAt?: DateTimeFilter<"User"> | Date | string
     Affiliate?: AffiliateListRelationFilter
     MedicalRecord?: MedicalRecordListRelationFilter
     business?: XOR<BusinessNullableScalarRelationFilter, BusinessWhereInput> | null
+    AffiliateReferral?: AffiliateReferralListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -14636,11 +16834,11 @@ export namespace Prisma {
     Affiliate?: AffiliateOrderByRelationAggregateInput
     MedicalRecord?: MedicalRecordOrderByRelationAggregateInput
     business?: BusinessOrderByWithRelationInput
-    _relevance?: UserOrderByRelevanceInput
+    AffiliateReferral?: AffiliateReferralOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     email?: string
     AND?: UserWhereInput | UserWhereInput[]
     OR?: UserWhereInput[]
@@ -14648,12 +16846,13 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
-    businessId?: StringNullableFilter<"User"> | string | null
+    businessId?: IntNullableFilter<"User"> | number | null
     createAt?: DateTimeFilter<"User"> | Date | string
     updateAt?: DateTimeFilter<"User"> | Date | string
     Affiliate?: AffiliateListRelationFilter
     MedicalRecord?: MedicalRecordListRelationFilter
     business?: XOR<BusinessNullableScalarRelationFilter, BusinessWhereInput> | null
+    AffiliateReferral?: AffiliateReferralListRelationFilter
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -14666,20 +16865,22 @@ export namespace Prisma {
     createAt?: SortOrder
     updateAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
+    _avg?: UserAvgOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
+    _sum?: UserSumOrderByAggregateInput
   }
 
   export type UserScalarWhereWithAggregatesInput = {
     AND?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
     OR?: UserScalarWhereWithAggregatesInput[]
     NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"User"> | string
+    id?: IntWithAggregatesFilter<"User"> | number
     name?: StringWithAggregatesFilter<"User"> | string
     email?: StringWithAggregatesFilter<"User"> | string
     password?: StringWithAggregatesFilter<"User"> | string
     role?: EnumRoleWithAggregatesFilter<"User"> | $Enums.Role
-    businessId?: StringNullableWithAggregatesFilter<"User"> | string | null
+    businessId?: IntNullableWithAggregatesFilter<"User"> | number | null
     createAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updateAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
@@ -14688,7 +16889,7 @@ export namespace Prisma {
     AND?: BusinessWhereInput | BusinessWhereInput[]
     OR?: BusinessWhereInput[]
     NOT?: BusinessWhereInput | BusinessWhereInput[]
-    id?: StringFilter<"Business"> | string
+    id?: IntFilter<"Business"> | number
     name?: StringFilter<"Business"> | string
     address?: StringFilter<"Business"> | string
     phone?: StringFilter<"Business"> | string
@@ -14717,11 +16918,10 @@ export namespace Prisma {
     sales?: SaleOrderByRelationAggregateInput
     services?: ServiceOrderByRelationAggregateInput
     users?: UserOrderByRelationAggregateInput
-    _relevance?: BusinessOrderByRelevanceInput
   }
 
   export type BusinessWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: BusinessWhereInput | BusinessWhereInput[]
     OR?: BusinessWhereInput[]
     NOT?: BusinessWhereInput | BusinessWhereInput[]
@@ -14748,15 +16948,17 @@ export namespace Prisma {
     createAt?: SortOrder
     updateAt?: SortOrder
     _count?: BusinessCountOrderByAggregateInput
+    _avg?: BusinessAvgOrderByAggregateInput
     _max?: BusinessMaxOrderByAggregateInput
     _min?: BusinessMinOrderByAggregateInput
+    _sum?: BusinessSumOrderByAggregateInput
   }
 
   export type BusinessScalarWhereWithAggregatesInput = {
     AND?: BusinessScalarWhereWithAggregatesInput | BusinessScalarWhereWithAggregatesInput[]
     OR?: BusinessScalarWhereWithAggregatesInput[]
     NOT?: BusinessScalarWhereWithAggregatesInput | BusinessScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Business"> | string
+    id?: IntWithAggregatesFilter<"Business"> | number
     name?: StringWithAggregatesFilter<"Business"> | string
     address?: StringWithAggregatesFilter<"Business"> | string
     phone?: StringWithAggregatesFilter<"Business"> | string
@@ -14769,11 +16971,11 @@ export namespace Prisma {
     AND?: ClientWhereInput | ClientWhereInput[]
     OR?: ClientWhereInput[]
     NOT?: ClientWhereInput | ClientWhereInput[]
-    id?: StringFilter<"Client"> | string
+    id?: IntFilter<"Client"> | number
     name?: StringFilter<"Client"> | string
     email?: StringNullableFilter<"Client"> | string | null
     phone?: StringNullableFilter<"Client"> | string | null
-    businessId?: StringFilter<"Client"> | string
+    businessId?: IntFilter<"Client"> | number
     createAt?: DateTimeFilter<"Client"> | Date | string
     updateAt?: DateTimeFilter<"Client"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
@@ -14792,18 +16994,17 @@ export namespace Prisma {
     business?: BusinessOrderByWithRelationInput
     pets?: PetOrderByRelationAggregateInput
     Sale?: SaleOrderByRelationAggregateInput
-    _relevance?: ClientOrderByRelevanceInput
   }
 
   export type ClientWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: ClientWhereInput | ClientWhereInput[]
     OR?: ClientWhereInput[]
     NOT?: ClientWhereInput | ClientWhereInput[]
     name?: StringFilter<"Client"> | string
     email?: StringNullableFilter<"Client"> | string | null
     phone?: StringNullableFilter<"Client"> | string | null
-    businessId?: StringFilter<"Client"> | string
+    businessId?: IntFilter<"Client"> | number
     createAt?: DateTimeFilter<"Client"> | Date | string
     updateAt?: DateTimeFilter<"Client"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
@@ -14820,19 +17021,21 @@ export namespace Prisma {
     createAt?: SortOrder
     updateAt?: SortOrder
     _count?: ClientCountOrderByAggregateInput
+    _avg?: ClientAvgOrderByAggregateInput
     _max?: ClientMaxOrderByAggregateInput
     _min?: ClientMinOrderByAggregateInput
+    _sum?: ClientSumOrderByAggregateInput
   }
 
   export type ClientScalarWhereWithAggregatesInput = {
     AND?: ClientScalarWhereWithAggregatesInput | ClientScalarWhereWithAggregatesInput[]
     OR?: ClientScalarWhereWithAggregatesInput[]
     NOT?: ClientScalarWhereWithAggregatesInput | ClientScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Client"> | string
+    id?: IntWithAggregatesFilter<"Client"> | number
     name?: StringWithAggregatesFilter<"Client"> | string
     email?: StringNullableWithAggregatesFilter<"Client"> | string | null
     phone?: StringNullableWithAggregatesFilter<"Client"> | string | null
-    businessId?: StringWithAggregatesFilter<"Client"> | string
+    businessId?: IntWithAggregatesFilter<"Client"> | number
     createAt?: DateTimeWithAggregatesFilter<"Client"> | Date | string
     updateAt?: DateTimeWithAggregatesFilter<"Client"> | Date | string
   }
@@ -14841,12 +17044,14 @@ export namespace Prisma {
     AND?: PetWhereInput | PetWhereInput[]
     OR?: PetWhereInput[]
     NOT?: PetWhereInput | PetWhereInput[]
-    id?: StringFilter<"Pet"> | string
+    id?: IntFilter<"Pet"> | number
     name?: StringFilter<"Pet"> | string
     species?: StringFilter<"Pet"> | string
     breed?: StringFilter<"Pet"> | string
     birthDate?: DateTimeNullableFilter<"Pet"> | Date | string | null
-    clienteId?: StringFilter<"Pet"> | string
+    clientId?: IntFilter<"Pet"> | number
+    nextVaccineDate?: DateTimeNullableFilter<"Pet"> | Date | string | null
+    lastFedAt?: DateTimeNullableFilter<"Pet"> | Date | string | null
     createAt?: DateTimeFilter<"Pet"> | Date | string
     updateAt?: DateTimeFilter<"Pet"> | Date | string
     appointments?: AppointmentListRelationFilter
@@ -14860,17 +17065,18 @@ export namespace Prisma {
     species?: SortOrder
     breed?: SortOrder
     birthDate?: SortOrderInput | SortOrder
-    clienteId?: SortOrder
+    clientId?: SortOrder
+    nextVaccineDate?: SortOrderInput | SortOrder
+    lastFedAt?: SortOrderInput | SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
     appointments?: AppointmentOrderByRelationAggregateInput
     records?: MedicalRecordOrderByRelationAggregateInput
     client?: ClientOrderByWithRelationInput
-    _relevance?: PetOrderByRelevanceInput
   }
 
   export type PetWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: PetWhereInput | PetWhereInput[]
     OR?: PetWhereInput[]
     NOT?: PetWhereInput | PetWhereInput[]
@@ -14878,7 +17084,9 @@ export namespace Prisma {
     species?: StringFilter<"Pet"> | string
     breed?: StringFilter<"Pet"> | string
     birthDate?: DateTimeNullableFilter<"Pet"> | Date | string | null
-    clienteId?: StringFilter<"Pet"> | string
+    clientId?: IntFilter<"Pet"> | number
+    nextVaccineDate?: DateTimeNullableFilter<"Pet"> | Date | string | null
+    lastFedAt?: DateTimeNullableFilter<"Pet"> | Date | string | null
     createAt?: DateTimeFilter<"Pet"> | Date | string
     updateAt?: DateTimeFilter<"Pet"> | Date | string
     appointments?: AppointmentListRelationFilter
@@ -14892,24 +17100,30 @@ export namespace Prisma {
     species?: SortOrder
     breed?: SortOrder
     birthDate?: SortOrderInput | SortOrder
-    clienteId?: SortOrder
+    clientId?: SortOrder
+    nextVaccineDate?: SortOrderInput | SortOrder
+    lastFedAt?: SortOrderInput | SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
     _count?: PetCountOrderByAggregateInput
+    _avg?: PetAvgOrderByAggregateInput
     _max?: PetMaxOrderByAggregateInput
     _min?: PetMinOrderByAggregateInput
+    _sum?: PetSumOrderByAggregateInput
   }
 
   export type PetScalarWhereWithAggregatesInput = {
     AND?: PetScalarWhereWithAggregatesInput | PetScalarWhereWithAggregatesInput[]
     OR?: PetScalarWhereWithAggregatesInput[]
     NOT?: PetScalarWhereWithAggregatesInput | PetScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Pet"> | string
+    id?: IntWithAggregatesFilter<"Pet"> | number
     name?: StringWithAggregatesFilter<"Pet"> | string
     species?: StringWithAggregatesFilter<"Pet"> | string
     breed?: StringWithAggregatesFilter<"Pet"> | string
     birthDate?: DateTimeNullableWithAggregatesFilter<"Pet"> | Date | string | null
-    clienteId?: StringWithAggregatesFilter<"Pet"> | string
+    clientId?: IntWithAggregatesFilter<"Pet"> | number
+    nextVaccineDate?: DateTimeNullableWithAggregatesFilter<"Pet"> | Date | string | null
+    lastFedAt?: DateTimeNullableWithAggregatesFilter<"Pet"> | Date | string | null
     createAt?: DateTimeWithAggregatesFilter<"Pet"> | Date | string
     updateAt?: DateTimeWithAggregatesFilter<"Pet"> | Date | string
   }
@@ -14918,13 +17132,16 @@ export namespace Prisma {
     AND?: AppointmentWhereInput | AppointmentWhereInput[]
     OR?: AppointmentWhereInput[]
     NOT?: AppointmentWhereInput | AppointmentWhereInput[]
-    id?: StringFilter<"Appointment"> | string
+    id?: IntFilter<"Appointment"> | number
     date?: DateTimeFilter<"Appointment"> | Date | string
     status?: EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
-    petId?: StringFilter<"Appointment"> | string
-    serviceId?: StringNullableFilter<"Appointment"> | string | null
-    businessId?: StringFilter<"Appointment"> | string
+    petId?: IntFilter<"Appointment"> | number
+    serviceId?: IntNullableFilter<"Appointment"> | number | null
+    businessId?: IntFilter<"Appointment"> | number
     notes?: StringNullableFilter<"Appointment"> | string | null
+    remindAt?: DateTimeNullableFilter<"Appointment"> | Date | string | null
+    createAt?: DateTimeFilter<"Appointment"> | Date | string
+    updateAt?: DateTimeFilter<"Appointment"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     pet?: XOR<PetScalarRelationFilter, PetWhereInput>
     service?: XOR<ServiceNullableScalarRelationFilter, ServiceWhereInput> | null
@@ -14938,23 +17155,28 @@ export namespace Prisma {
     serviceId?: SortOrderInput | SortOrder
     businessId?: SortOrder
     notes?: SortOrderInput | SortOrder
+    remindAt?: SortOrderInput | SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     business?: BusinessOrderByWithRelationInput
     pet?: PetOrderByWithRelationInput
     service?: ServiceOrderByWithRelationInput
-    _relevance?: AppointmentOrderByRelevanceInput
   }
 
   export type AppointmentWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: AppointmentWhereInput | AppointmentWhereInput[]
     OR?: AppointmentWhereInput[]
     NOT?: AppointmentWhereInput | AppointmentWhereInput[]
     date?: DateTimeFilter<"Appointment"> | Date | string
     status?: EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
-    petId?: StringFilter<"Appointment"> | string
-    serviceId?: StringNullableFilter<"Appointment"> | string | null
-    businessId?: StringFilter<"Appointment"> | string
+    petId?: IntFilter<"Appointment"> | number
+    serviceId?: IntNullableFilter<"Appointment"> | number | null
+    businessId?: IntFilter<"Appointment"> | number
     notes?: StringNullableFilter<"Appointment"> | string | null
+    remindAt?: DateTimeNullableFilter<"Appointment"> | Date | string | null
+    createAt?: DateTimeFilter<"Appointment"> | Date | string
+    updateAt?: DateTimeFilter<"Appointment"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     pet?: XOR<PetScalarRelationFilter, PetWhereInput>
     service?: XOR<ServiceNullableScalarRelationFilter, ServiceWhereInput> | null
@@ -14968,33 +17190,43 @@ export namespace Prisma {
     serviceId?: SortOrderInput | SortOrder
     businessId?: SortOrder
     notes?: SortOrderInput | SortOrder
+    remindAt?: SortOrderInput | SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     _count?: AppointmentCountOrderByAggregateInput
+    _avg?: AppointmentAvgOrderByAggregateInput
     _max?: AppointmentMaxOrderByAggregateInput
     _min?: AppointmentMinOrderByAggregateInput
+    _sum?: AppointmentSumOrderByAggregateInput
   }
 
   export type AppointmentScalarWhereWithAggregatesInput = {
     AND?: AppointmentScalarWhereWithAggregatesInput | AppointmentScalarWhereWithAggregatesInput[]
     OR?: AppointmentScalarWhereWithAggregatesInput[]
     NOT?: AppointmentScalarWhereWithAggregatesInput | AppointmentScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Appointment"> | string
+    id?: IntWithAggregatesFilter<"Appointment"> | number
     date?: DateTimeWithAggregatesFilter<"Appointment"> | Date | string
     status?: EnumAppointmentStatusWithAggregatesFilter<"Appointment"> | $Enums.AppointmentStatus
-    petId?: StringWithAggregatesFilter<"Appointment"> | string
-    serviceId?: StringNullableWithAggregatesFilter<"Appointment"> | string | null
-    businessId?: StringWithAggregatesFilter<"Appointment"> | string
+    petId?: IntWithAggregatesFilter<"Appointment"> | number
+    serviceId?: IntNullableWithAggregatesFilter<"Appointment"> | number | null
+    businessId?: IntWithAggregatesFilter<"Appointment"> | number
     notes?: StringNullableWithAggregatesFilter<"Appointment"> | string | null
+    remindAt?: DateTimeNullableWithAggregatesFilter<"Appointment"> | Date | string | null
+    createAt?: DateTimeWithAggregatesFilter<"Appointment"> | Date | string
+    updateAt?: DateTimeWithAggregatesFilter<"Appointment"> | Date | string
   }
 
   export type ServiceWhereInput = {
     AND?: ServiceWhereInput | ServiceWhereInput[]
     OR?: ServiceWhereInput[]
     NOT?: ServiceWhereInput | ServiceWhereInput[]
-    id?: StringFilter<"Service"> | string
+    id?: IntFilter<"Service"> | number
     name?: StringFilter<"Service"> | string
     price?: FloatFilter<"Service"> | number
     duration?: IntFilter<"Service"> | number
-    businessId?: StringFilter<"Service"> | string
+    businessId?: IntFilter<"Service"> | number
+    createAt?: DateTimeFilter<"Service"> | Date | string
+    updateAt?: DateTimeFilter<"Service"> | Date | string
     Appointment?: AppointmentListRelationFilter
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
   }
@@ -15005,20 +17237,23 @@ export namespace Prisma {
     price?: SortOrder
     duration?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     Appointment?: AppointmentOrderByRelationAggregateInput
     business?: BusinessOrderByWithRelationInput
-    _relevance?: ServiceOrderByRelevanceInput
   }
 
   export type ServiceWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: ServiceWhereInput | ServiceWhereInput[]
     OR?: ServiceWhereInput[]
     NOT?: ServiceWhereInput | ServiceWhereInput[]
     name?: StringFilter<"Service"> | string
     price?: FloatFilter<"Service"> | number
     duration?: IntFilter<"Service"> | number
-    businessId?: StringFilter<"Service"> | string
+    businessId?: IntFilter<"Service"> | number
+    createAt?: DateTimeFilter<"Service"> | Date | string
+    updateAt?: DateTimeFilter<"Service"> | Date | string
     Appointment?: AppointmentListRelationFilter
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
   }, "id">
@@ -15029,6 +17264,8 @@ export namespace Prisma {
     price?: SortOrder
     duration?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     _count?: ServiceCountOrderByAggregateInput
     _avg?: ServiceAvgOrderByAggregateInput
     _max?: ServiceMaxOrderByAggregateInput
@@ -15040,22 +17277,26 @@ export namespace Prisma {
     AND?: ServiceScalarWhereWithAggregatesInput | ServiceScalarWhereWithAggregatesInput[]
     OR?: ServiceScalarWhereWithAggregatesInput[]
     NOT?: ServiceScalarWhereWithAggregatesInput | ServiceScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Service"> | string
+    id?: IntWithAggregatesFilter<"Service"> | number
     name?: StringWithAggregatesFilter<"Service"> | string
     price?: FloatWithAggregatesFilter<"Service"> | number
     duration?: IntWithAggregatesFilter<"Service"> | number
-    businessId?: StringWithAggregatesFilter<"Service"> | string
+    businessId?: IntWithAggregatesFilter<"Service"> | number
+    createAt?: DateTimeWithAggregatesFilter<"Service"> | Date | string
+    updateAt?: DateTimeWithAggregatesFilter<"Service"> | Date | string
   }
 
   export type ProductWhereInput = {
     AND?: ProductWhereInput | ProductWhereInput[]
     OR?: ProductWhereInput[]
     NOT?: ProductWhereInput | ProductWhereInput[]
-    id?: StringFilter<"Product"> | string
+    id?: IntFilter<"Product"> | number
     name?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
     stock?: IntFilter<"Product"> | number
-    businessId?: StringFilter<"Product"> | string
+    businessId?: IntFilter<"Product"> | number
+    createAt?: DateTimeFilter<"Product"> | Date | string
+    updateAt?: DateTimeFilter<"Product"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     SaleItem?: SaleItemListRelationFilter
   }
@@ -15066,20 +17307,23 @@ export namespace Prisma {
     price?: SortOrder
     stock?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     business?: BusinessOrderByWithRelationInput
     SaleItem?: SaleItemOrderByRelationAggregateInput
-    _relevance?: ProductOrderByRelevanceInput
   }
 
   export type ProductWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: ProductWhereInput | ProductWhereInput[]
     OR?: ProductWhereInput[]
     NOT?: ProductWhereInput | ProductWhereInput[]
     name?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
     stock?: IntFilter<"Product"> | number
-    businessId?: StringFilter<"Product"> | string
+    businessId?: IntFilter<"Product"> | number
+    createAt?: DateTimeFilter<"Product"> | Date | string
+    updateAt?: DateTimeFilter<"Product"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     SaleItem?: SaleItemListRelationFilter
   }, "id">
@@ -15090,6 +17334,8 @@ export namespace Prisma {
     price?: SortOrder
     stock?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     _count?: ProductCountOrderByAggregateInput
     _avg?: ProductAvgOrderByAggregateInput
     _max?: ProductMaxOrderByAggregateInput
@@ -15101,22 +17347,26 @@ export namespace Prisma {
     AND?: ProductScalarWhereWithAggregatesInput | ProductScalarWhereWithAggregatesInput[]
     OR?: ProductScalarWhereWithAggregatesInput[]
     NOT?: ProductScalarWhereWithAggregatesInput | ProductScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Product"> | string
+    id?: IntWithAggregatesFilter<"Product"> | number
     name?: StringWithAggregatesFilter<"Product"> | string
     price?: FloatWithAggregatesFilter<"Product"> | number
     stock?: IntWithAggregatesFilter<"Product"> | number
-    businessId?: StringWithAggregatesFilter<"Product"> | string
+    businessId?: IntWithAggregatesFilter<"Product"> | number
+    createAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
+    updateAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
   }
 
   export type SaleWhereInput = {
     AND?: SaleWhereInput | SaleWhereInput[]
     OR?: SaleWhereInput[]
     NOT?: SaleWhereInput | SaleWhereInput[]
-    id?: StringFilter<"Sale"> | string
-    clientId?: StringNullableFilter<"Sale"> | string | null
-    businessId?: StringFilter<"Sale"> | string
+    id?: IntFilter<"Sale"> | number
+    clientId?: IntNullableFilter<"Sale"> | number | null
+    businessId?: IntFilter<"Sale"> | number
     total?: FloatFilter<"Sale"> | number
     dateSale?: DateTimeFilter<"Sale"> | Date | string
+    createAt?: DateTimeFilter<"Sale"> | Date | string
+    updateAt?: DateTimeFilter<"Sale"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     client?: XOR<ClientNullableScalarRelationFilter, ClientWhereInput> | null
     items?: SaleItemListRelationFilter
@@ -15128,21 +17378,24 @@ export namespace Prisma {
     businessId?: SortOrder
     total?: SortOrder
     dateSale?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     business?: BusinessOrderByWithRelationInput
     client?: ClientOrderByWithRelationInput
     items?: SaleItemOrderByRelationAggregateInput
-    _relevance?: SaleOrderByRelevanceInput
   }
 
   export type SaleWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: SaleWhereInput | SaleWhereInput[]
     OR?: SaleWhereInput[]
     NOT?: SaleWhereInput | SaleWhereInput[]
-    clientId?: StringNullableFilter<"Sale"> | string | null
-    businessId?: StringFilter<"Sale"> | string
+    clientId?: IntNullableFilter<"Sale"> | number | null
+    businessId?: IntFilter<"Sale"> | number
     total?: FloatFilter<"Sale"> | number
     dateSale?: DateTimeFilter<"Sale"> | Date | string
+    createAt?: DateTimeFilter<"Sale"> | Date | string
+    updateAt?: DateTimeFilter<"Sale"> | Date | string
     business?: XOR<BusinessScalarRelationFilter, BusinessWhereInput>
     client?: XOR<ClientNullableScalarRelationFilter, ClientWhereInput> | null
     items?: SaleItemListRelationFilter
@@ -15154,6 +17407,8 @@ export namespace Prisma {
     businessId?: SortOrder
     total?: SortOrder
     dateSale?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     _count?: SaleCountOrderByAggregateInput
     _avg?: SaleAvgOrderByAggregateInput
     _max?: SaleMaxOrderByAggregateInput
@@ -15165,22 +17420,26 @@ export namespace Prisma {
     AND?: SaleScalarWhereWithAggregatesInput | SaleScalarWhereWithAggregatesInput[]
     OR?: SaleScalarWhereWithAggregatesInput[]
     NOT?: SaleScalarWhereWithAggregatesInput | SaleScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Sale"> | string
-    clientId?: StringNullableWithAggregatesFilter<"Sale"> | string | null
-    businessId?: StringWithAggregatesFilter<"Sale"> | string
+    id?: IntWithAggregatesFilter<"Sale"> | number
+    clientId?: IntNullableWithAggregatesFilter<"Sale"> | number | null
+    businessId?: IntWithAggregatesFilter<"Sale"> | number
     total?: FloatWithAggregatesFilter<"Sale"> | number
     dateSale?: DateTimeWithAggregatesFilter<"Sale"> | Date | string
+    createAt?: DateTimeWithAggregatesFilter<"Sale"> | Date | string
+    updateAt?: DateTimeWithAggregatesFilter<"Sale"> | Date | string
   }
 
   export type SaleItemWhereInput = {
     AND?: SaleItemWhereInput | SaleItemWhereInput[]
     OR?: SaleItemWhereInput[]
     NOT?: SaleItemWhereInput | SaleItemWhereInput[]
-    id?: StringFilter<"SaleItem"> | string
-    saleId?: StringFilter<"SaleItem"> | string
-    productId?: StringFilter<"SaleItem"> | string
+    id?: IntFilter<"SaleItem"> | number
+    saleId?: IntFilter<"SaleItem"> | number
+    productId?: IntFilter<"SaleItem"> | number
     quantity?: IntFilter<"SaleItem"> | number
     price?: FloatFilter<"SaleItem"> | number
+    createAt?: DateTimeFilter<"SaleItem"> | Date | string
+    updateAt?: DateTimeFilter<"SaleItem"> | Date | string
     product?: XOR<ProductScalarRelationFilter, ProductWhereInput>
     sale?: XOR<SaleScalarRelationFilter, SaleWhereInput>
   }
@@ -15191,20 +17450,23 @@ export namespace Prisma {
     productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     product?: ProductOrderByWithRelationInput
     sale?: SaleOrderByWithRelationInput
-    _relevance?: SaleItemOrderByRelevanceInput
   }
 
   export type SaleItemWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: SaleItemWhereInput | SaleItemWhereInput[]
     OR?: SaleItemWhereInput[]
     NOT?: SaleItemWhereInput | SaleItemWhereInput[]
-    saleId?: StringFilter<"SaleItem"> | string
-    productId?: StringFilter<"SaleItem"> | string
+    saleId?: IntFilter<"SaleItem"> | number
+    productId?: IntFilter<"SaleItem"> | number
     quantity?: IntFilter<"SaleItem"> | number
     price?: FloatFilter<"SaleItem"> | number
+    createAt?: DateTimeFilter<"SaleItem"> | Date | string
+    updateAt?: DateTimeFilter<"SaleItem"> | Date | string
     product?: XOR<ProductScalarRelationFilter, ProductWhereInput>
     sale?: XOR<SaleScalarRelationFilter, SaleWhereInput>
   }, "id">
@@ -15215,6 +17477,8 @@ export namespace Prisma {
     productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     _count?: SaleItemCountOrderByAggregateInput
     _avg?: SaleItemAvgOrderByAggregateInput
     _max?: SaleItemMaxOrderByAggregateInput
@@ -15226,22 +17490,26 @@ export namespace Prisma {
     AND?: SaleItemScalarWhereWithAggregatesInput | SaleItemScalarWhereWithAggregatesInput[]
     OR?: SaleItemScalarWhereWithAggregatesInput[]
     NOT?: SaleItemScalarWhereWithAggregatesInput | SaleItemScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"SaleItem"> | string
-    saleId?: StringWithAggregatesFilter<"SaleItem"> | string
-    productId?: StringWithAggregatesFilter<"SaleItem"> | string
+    id?: IntWithAggregatesFilter<"SaleItem"> | number
+    saleId?: IntWithAggregatesFilter<"SaleItem"> | number
+    productId?: IntWithAggregatesFilter<"SaleItem"> | number
     quantity?: IntWithAggregatesFilter<"SaleItem"> | number
     price?: FloatWithAggregatesFilter<"SaleItem"> | number
+    createAt?: DateTimeWithAggregatesFilter<"SaleItem"> | Date | string
+    updateAt?: DateTimeWithAggregatesFilter<"SaleItem"> | Date | string
   }
 
   export type MedicalRecordWhereInput = {
     AND?: MedicalRecordWhereInput | MedicalRecordWhereInput[]
     OR?: MedicalRecordWhereInput[]
     NOT?: MedicalRecordWhereInput | MedicalRecordWhereInput[]
-    id?: StringFilter<"MedicalRecord"> | string
-    petId?: StringFilter<"MedicalRecord"> | string
-    vetId?: StringNullableFilter<"MedicalRecord"> | string | null
+    id?: IntFilter<"MedicalRecord"> | number
+    petId?: IntFilter<"MedicalRecord"> | number
+    vetId?: IntNullableFilter<"MedicalRecord"> | number | null
     date?: DateTimeFilter<"MedicalRecord"> | Date | string
     description?: StringFilter<"MedicalRecord"> | string
+    createAt?: DateTimeFilter<"MedicalRecord"> | Date | string
+    updateAt?: DateTimeFilter<"MedicalRecord"> | Date | string
     pet?: XOR<PetScalarRelationFilter, PetWhereInput>
     vet?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }
@@ -15252,20 +17520,23 @@ export namespace Prisma {
     vetId?: SortOrderInput | SortOrder
     date?: SortOrder
     description?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     pet?: PetOrderByWithRelationInput
     vet?: UserOrderByWithRelationInput
-    _relevance?: MedicalRecordOrderByRelevanceInput
   }
 
   export type MedicalRecordWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: MedicalRecordWhereInput | MedicalRecordWhereInput[]
     OR?: MedicalRecordWhereInput[]
     NOT?: MedicalRecordWhereInput | MedicalRecordWhereInput[]
-    petId?: StringFilter<"MedicalRecord"> | string
-    vetId?: StringNullableFilter<"MedicalRecord"> | string | null
+    petId?: IntFilter<"MedicalRecord"> | number
+    vetId?: IntNullableFilter<"MedicalRecord"> | number | null
     date?: DateTimeFilter<"MedicalRecord"> | Date | string
     description?: StringFilter<"MedicalRecord"> | string
+    createAt?: DateTimeFilter<"MedicalRecord"> | Date | string
+    updateAt?: DateTimeFilter<"MedicalRecord"> | Date | string
     pet?: XOR<PetScalarRelationFilter, PetWhereInput>
     vet?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }, "id">
@@ -15276,28 +17547,34 @@ export namespace Prisma {
     vetId?: SortOrderInput | SortOrder
     date?: SortOrder
     description?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
     _count?: MedicalRecordCountOrderByAggregateInput
+    _avg?: MedicalRecordAvgOrderByAggregateInput
     _max?: MedicalRecordMaxOrderByAggregateInput
     _min?: MedicalRecordMinOrderByAggregateInput
+    _sum?: MedicalRecordSumOrderByAggregateInput
   }
 
   export type MedicalRecordScalarWhereWithAggregatesInput = {
     AND?: MedicalRecordScalarWhereWithAggregatesInput | MedicalRecordScalarWhereWithAggregatesInput[]
     OR?: MedicalRecordScalarWhereWithAggregatesInput[]
     NOT?: MedicalRecordScalarWhereWithAggregatesInput | MedicalRecordScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"MedicalRecord"> | string
-    petId?: StringWithAggregatesFilter<"MedicalRecord"> | string
-    vetId?: StringNullableWithAggregatesFilter<"MedicalRecord"> | string | null
+    id?: IntWithAggregatesFilter<"MedicalRecord"> | number
+    petId?: IntWithAggregatesFilter<"MedicalRecord"> | number
+    vetId?: IntNullableWithAggregatesFilter<"MedicalRecord"> | number | null
     date?: DateTimeWithAggregatesFilter<"MedicalRecord"> | Date | string
     description?: StringWithAggregatesFilter<"MedicalRecord"> | string
+    createAt?: DateTimeWithAggregatesFilter<"MedicalRecord"> | Date | string
+    updateAt?: DateTimeWithAggregatesFilter<"MedicalRecord"> | Date | string
   }
 
   export type AffiliateWhereInput = {
     AND?: AffiliateWhereInput | AffiliateWhereInput[]
     OR?: AffiliateWhereInput[]
     NOT?: AffiliateWhereInput | AffiliateWhereInput[]
-    id?: StringFilter<"Affiliate"> | string
-    userId?: StringFilter<"Affiliate"> | string
+    id?: IntFilter<"Affiliate"> | number
+    userId?: IntFilter<"Affiliate"> | number
     code?: StringFilter<"Affiliate"> | string
     earnings?: FloatFilter<"Affiliate"> | number
     createAt?: DateTimeFilter<"Affiliate"> | Date | string
@@ -15315,16 +17592,15 @@ export namespace Prisma {
     updateAt?: SortOrder
     user?: UserOrderByWithRelationInput
     AffiliateReferral?: AffiliateReferralOrderByRelationAggregateInput
-    _relevance?: AffiliateOrderByRelevanceInput
   }
 
   export type AffiliateWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     code?: string
     AND?: AffiliateWhereInput | AffiliateWhereInput[]
     OR?: AffiliateWhereInput[]
     NOT?: AffiliateWhereInput | AffiliateWhereInput[]
-    userId?: StringFilter<"Affiliate"> | string
+    userId?: IntFilter<"Affiliate"> | number
     earnings?: FloatFilter<"Affiliate"> | number
     createAt?: DateTimeFilter<"Affiliate"> | Date | string
     updateAt?: DateTimeFilter<"Affiliate"> | Date | string
@@ -15350,8 +17626,8 @@ export namespace Prisma {
     AND?: AffiliateScalarWhereWithAggregatesInput | AffiliateScalarWhereWithAggregatesInput[]
     OR?: AffiliateScalarWhereWithAggregatesInput[]
     NOT?: AffiliateScalarWhereWithAggregatesInput | AffiliateScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Affiliate"> | string
-    userId?: StringWithAggregatesFilter<"Affiliate"> | string
+    id?: IntWithAggregatesFilter<"Affiliate"> | number
+    userId?: IntWithAggregatesFilter<"Affiliate"> | number
     code?: StringWithAggregatesFilter<"Affiliate"> | string
     earnings?: FloatWithAggregatesFilter<"Affiliate"> | number
     createAt?: DateTimeWithAggregatesFilter<"Affiliate"> | Date | string
@@ -15362,15 +17638,16 @@ export namespace Prisma {
     AND?: AffiliateReferralWhereInput | AffiliateReferralWhereInput[]
     OR?: AffiliateReferralWhereInput[]
     NOT?: AffiliateReferralWhereInput | AffiliateReferralWhereInput[]
-    id?: StringFilter<"AffiliateReferral"> | string
-    affiliateId?: StringFilter<"AffiliateReferral"> | string
-    referredUserId?: StringNullableFilter<"AffiliateReferral"> | string | null
+    id?: IntFilter<"AffiliateReferral"> | number
+    affiliateId?: IntFilter<"AffiliateReferral"> | number
+    referredUserId?: IntNullableFilter<"AffiliateReferral"> | number | null
     type?: EnumReferralTypeFilter<"AffiliateReferral"> | $Enums.ReferralType
     value?: FloatFilter<"AffiliateReferral"> | number
     status?: EnumReferralStatusFilter<"AffiliateReferral"> | $Enums.ReferralStatus
     createAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
     updateAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
     affiliate?: XOR<AffiliateScalarRelationFilter, AffiliateWhereInput>
+    referredUser?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }
 
   export type AffiliateReferralOrderByWithRelationInput = {
@@ -15383,22 +17660,23 @@ export namespace Prisma {
     createAt?: SortOrder
     updateAt?: SortOrder
     affiliate?: AffiliateOrderByWithRelationInput
-    _relevance?: AffiliateReferralOrderByRelevanceInput
+    referredUser?: UserOrderByWithRelationInput
   }
 
   export type AffiliateReferralWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    id?: number
     AND?: AffiliateReferralWhereInput | AffiliateReferralWhereInput[]
     OR?: AffiliateReferralWhereInput[]
     NOT?: AffiliateReferralWhereInput | AffiliateReferralWhereInput[]
-    affiliateId?: StringFilter<"AffiliateReferral"> | string
-    referredUserId?: StringNullableFilter<"AffiliateReferral"> | string | null
+    affiliateId?: IntFilter<"AffiliateReferral"> | number
+    referredUserId?: IntNullableFilter<"AffiliateReferral"> | number | null
     type?: EnumReferralTypeFilter<"AffiliateReferral"> | $Enums.ReferralType
     value?: FloatFilter<"AffiliateReferral"> | number
     status?: EnumReferralStatusFilter<"AffiliateReferral"> | $Enums.ReferralStatus
     createAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
     updateAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
     affiliate?: XOR<AffiliateScalarRelationFilter, AffiliateWhereInput>
+    referredUser?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }, "id">
 
   export type AffiliateReferralOrderByWithAggregationInput = {
@@ -15421,9 +17699,9 @@ export namespace Prisma {
     AND?: AffiliateReferralScalarWhereWithAggregatesInput | AffiliateReferralScalarWhereWithAggregatesInput[]
     OR?: AffiliateReferralScalarWhereWithAggregatesInput[]
     NOT?: AffiliateReferralScalarWhereWithAggregatesInput | AffiliateReferralScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"AffiliateReferral"> | string
-    affiliateId?: StringWithAggregatesFilter<"AffiliateReferral"> | string
-    referredUserId?: StringNullableWithAggregatesFilter<"AffiliateReferral"> | string | null
+    id?: IntWithAggregatesFilter<"AffiliateReferral"> | number
+    affiliateId?: IntWithAggregatesFilter<"AffiliateReferral"> | number
+    referredUserId?: IntNullableWithAggregatesFilter<"AffiliateReferral"> | number | null
     type?: EnumReferralTypeWithAggregatesFilter<"AffiliateReferral"> | $Enums.ReferralType
     value?: FloatWithAggregatesFilter<"AffiliateReferral"> | number
     status?: EnumReferralStatusWithAggregatesFilter<"AffiliateReferral"> | $Enums.ReferralStatus
@@ -15432,7 +17710,6 @@ export namespace Prisma {
   }
 
   export type UserCreateInput = {
-    id?: string
     name: string
     email: string
     password: string
@@ -15442,23 +17719,24 @@ export namespace Prisma {
     Affiliate?: AffiliateCreateNestedManyWithoutUserInput
     MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
     business?: BusinessCreateNestedOneWithoutUsersInput
+    AffiliateReferral?: AffiliateReferralCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserUncheckedCreateInput = {
-    id?: string
+    id?: number
     name: string
     email: string
     password: string
     role?: $Enums.Role
-    businessId?: string | null
+    businessId?: number | null
     createAt?: Date | string
     updateAt?: Date | string
     Affiliate?: AffiliateUncheckedCreateNestedManyWithoutUserInput
     MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
+    AffiliateReferral?: AffiliateReferralUncheckedCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
@@ -15468,34 +17746,35 @@ export namespace Prisma {
     Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
     MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
     business?: BusinessUpdateOneWithoutUsersNestedInput
+    AffiliateReferral?: AffiliateReferralUpdateManyWithoutReferredUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    businessId?: NullableStringFieldUpdateOperationsInput | string | null
+    businessId?: NullableIntFieldUpdateOperationsInput | number | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Affiliate?: AffiliateUncheckedUpdateManyWithoutUserNestedInput
     MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
+    AffiliateReferral?: AffiliateReferralUncheckedUpdateManyWithoutReferredUserNestedInput
   }
 
   export type UserCreateManyInput = {
-    id?: string
+    id?: number
     name: string
     email: string
     password: string
     role?: $Enums.Role
-    businessId?: string | null
+    businessId?: number | null
     createAt?: Date | string
     updateAt?: Date | string
   }
 
   export type UserUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
@@ -15505,18 +17784,17 @@ export namespace Prisma {
   }
 
   export type UserUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    businessId?: NullableStringFieldUpdateOperationsInput | string | null
+    businessId?: NullableIntFieldUpdateOperationsInput | number | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type BusinessCreateInput = {
-    id?: string
     name: string
     address: string
     phone: string
@@ -15532,7 +17810,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedCreateInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -15548,7 +17826,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -15564,7 +17841,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -15580,7 +17857,7 @@ export namespace Prisma {
   }
 
   export type BusinessCreateManyInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -15590,7 +17867,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -15600,7 +17876,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -15610,7 +17886,6 @@ export namespace Prisma {
   }
 
   export type ClientCreateInput = {
-    id?: string
     name: string
     email?: string | null
     phone?: string | null
@@ -15622,11 +17897,11 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedCreateInput = {
-    id?: string
+    id?: number
     name: string
     email?: string | null
     phone?: string | null
-    businessId: string
+    businessId: number
     createAt?: Date | string
     updateAt?: Date | string
     pets?: PetUncheckedCreateNestedManyWithoutClientInput
@@ -15634,7 +17909,6 @@ export namespace Prisma {
   }
 
   export type ClientUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
@@ -15646,11 +17920,11 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     pets?: PetUncheckedUpdateManyWithoutClientNestedInput
@@ -15658,17 +17932,16 @@ export namespace Prisma {
   }
 
   export type ClientCreateManyInput = {
-    id?: string
+    id?: number
     name: string
     email?: string | null
     phone?: string | null
-    businessId: string
+    businessId: number
     createAt?: Date | string
     updateAt?: Date | string
   }
 
   export type ClientUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
@@ -15677,21 +17950,22 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PetCreateInput = {
-    id?: string
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutPetInput
@@ -15700,12 +17974,14 @@ export namespace Prisma {
   }
 
   export type PetUncheckedCreateInput = {
-    id?: string
+    id?: number
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
-    clienteId: string
+    clientId: number
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutPetInput
@@ -15713,11 +17989,12 @@ export namespace Prisma {
   }
 
   export type PetUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutPetNestedInput
@@ -15726,12 +18003,14 @@ export namespace Prisma {
   }
 
   export type PetUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    clienteId?: StringFieldUpdateOperationsInput | string
+    clientId?: IntFieldUpdateOperationsInput | number
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutPetNestedInput
@@ -15739,390 +18018,467 @@ export namespace Prisma {
   }
 
   export type PetCreateManyInput = {
-    id?: string
+    id?: number
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
-    clienteId: string
+    clientId: number
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
   }
 
   export type PetUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PetUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    clienteId?: StringFieldUpdateOperationsInput | string
+    clientId?: IntFieldUpdateOperationsInput | number
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentCreateInput = {
-    id?: string
     date: Date | string
     status?: $Enums.AppointmentStatus
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutAppointmentsInput
     pet: PetCreateNestedOneWithoutAppointmentsInput
     service?: ServiceCreateNestedOneWithoutAppointmentInput
   }
 
   export type AppointmentUncheckedCreateInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    petId: string
-    serviceId?: string | null
-    businessId: string
+    petId: number
+    serviceId?: number | null
+    businessId: number
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AppointmentUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutAppointmentsNestedInput
     pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
     service?: ServiceUpdateOneWithoutAppointmentNestedInput
   }
 
   export type AppointmentUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    petId?: IntFieldUpdateOperationsInput | number
+    serviceId?: NullableIntFieldUpdateOperationsInput | number | null
+    businessId?: IntFieldUpdateOperationsInput | number
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentCreateManyInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    petId: string
-    serviceId?: string | null
-    businessId: string
+    petId: number
+    serviceId?: number | null
+    businessId: number
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AppointmentUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    petId?: IntFieldUpdateOperationsInput | number
+    serviceId?: NullableIntFieldUpdateOperationsInput | number | null
+    businessId?: IntFieldUpdateOperationsInput | number
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ServiceCreateInput = {
-    id?: string
     name: string
     price: number
     duration: number
+    createAt?: Date | string
+    updateAt?: Date | string
     Appointment?: AppointmentCreateNestedManyWithoutServiceInput
     business: BusinessCreateNestedOneWithoutServicesInput
   }
 
   export type ServiceUncheckedCreateInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     duration: number
-    businessId: string
+    businessId: number
+    createAt?: Date | string
+    updateAt?: Date | string
     Appointment?: AppointmentUncheckedCreateNestedManyWithoutServiceInput
   }
 
   export type ServiceUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Appointment?: AppointmentUpdateManyWithoutServiceNestedInput
     business?: BusinessUpdateOneRequiredWithoutServicesNestedInput
   }
 
   export type ServiceUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Appointment?: AppointmentUncheckedUpdateManyWithoutServiceNestedInput
   }
 
   export type ServiceCreateManyInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     duration: number
-    businessId: string
+    businessId: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type ServiceUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ServiceUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ProductCreateInput = {
-    id?: string
     name: string
     price: number
     stock: number
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutProductsInput
     SaleItem?: SaleItemCreateNestedManyWithoutProductInput
   }
 
   export type ProductUncheckedCreateInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     stock: number
-    businessId: string
+    businessId: number
+    createAt?: Date | string
+    updateAt?: Date | string
     SaleItem?: SaleItemUncheckedCreateNestedManyWithoutProductInput
   }
 
   export type ProductUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutProductsNestedInput
     SaleItem?: SaleItemUpdateManyWithoutProductNestedInput
   }
 
   export type ProductUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     SaleItem?: SaleItemUncheckedUpdateManyWithoutProductNestedInput
   }
 
   export type ProductCreateManyInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     stock: number
-    businessId: string
+    businessId: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type ProductUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ProductUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleCreateInput = {
-    id?: string
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutSalesInput
     client?: ClientCreateNestedOneWithoutSaleInput
     items?: SaleItemCreateNestedManyWithoutSaleInput
   }
 
   export type SaleUncheckedCreateInput = {
-    id?: string
-    clientId?: string | null
-    businessId: string
+    id?: number
+    clientId?: number | null
+    businessId: number
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
     items?: SaleItemUncheckedCreateNestedManyWithoutSaleInput
   }
 
   export type SaleUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutSalesNestedInput
     client?: ClientUpdateOneWithoutSaleNestedInput
     items?: SaleItemUpdateManyWithoutSaleNestedInput
   }
 
   export type SaleUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    clientId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    clientId?: NullableIntFieldUpdateOperationsInput | number | null
+    businessId?: IntFieldUpdateOperationsInput | number
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: SaleItemUncheckedUpdateManyWithoutSaleNestedInput
   }
 
   export type SaleCreateManyInput = {
-    id?: string
-    clientId?: string | null
-    businessId: string
+    id?: number
+    clientId?: number | null
+    businessId: number
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    clientId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    clientId?: NullableIntFieldUpdateOperationsInput | number | null
+    businessId?: IntFieldUpdateOperationsInput | number
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleItemCreateInput = {
-    id?: string
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
     product: ProductCreateNestedOneWithoutSaleItemInput
     sale: SaleCreateNestedOneWithoutItemsInput
   }
 
   export type SaleItemUncheckedCreateInput = {
-    id?: string
-    saleId: string
-    productId: string
+    id?: number
+    saleId: number
+    productId: number
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleItemUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     product?: ProductUpdateOneRequiredWithoutSaleItemNestedInput
     sale?: SaleUpdateOneRequiredWithoutItemsNestedInput
   }
 
   export type SaleItemUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    saleId?: StringFieldUpdateOperationsInput | string
-    productId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    saleId?: IntFieldUpdateOperationsInput | number
+    productId?: IntFieldUpdateOperationsInput | number
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleItemCreateManyInput = {
-    id?: string
-    saleId: string
-    productId: string
+    id?: number
+    saleId: number
+    productId: number
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleItemUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleItemUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    saleId?: StringFieldUpdateOperationsInput | string
-    productId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    saleId?: IntFieldUpdateOperationsInput | number
+    productId?: IntFieldUpdateOperationsInput | number
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MedicalRecordCreateInput = {
-    id?: string
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
     pet: PetCreateNestedOneWithoutRecordsInput
     vet?: UserCreateNestedOneWithoutMedicalRecordInput
   }
 
   export type MedicalRecordUncheckedCreateInput = {
-    id?: string
-    petId: string
-    vetId?: string | null
+    id?: number
+    petId: number
+    vetId?: number | null
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type MedicalRecordUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     pet?: PetUpdateOneRequiredWithoutRecordsNestedInput
     vet?: UserUpdateOneWithoutMedicalRecordNestedInput
   }
 
   export type MedicalRecordUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    petId?: StringFieldUpdateOperationsInput | string
-    vetId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    petId?: IntFieldUpdateOperationsInput | number
+    vetId?: NullableIntFieldUpdateOperationsInput | number | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MedicalRecordCreateManyInput = {
-    id?: string
-    petId: string
-    vetId?: string | null
+    id?: number
+    petId: number
+    vetId?: number | null
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type MedicalRecordUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MedicalRecordUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    petId?: StringFieldUpdateOperationsInput | string
-    vetId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    petId?: IntFieldUpdateOperationsInput | number
+    vetId?: NullableIntFieldUpdateOperationsInput | number | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AffiliateCreateInput = {
-    id?: string
     code: string
     earnings?: number
     createAt?: Date | string
@@ -16132,8 +18488,8 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedCreateInput = {
-    id?: string
-    userId: string
+    id?: number
+    userId: number
     code: string
     earnings?: number
     createAt?: Date | string
@@ -16142,7 +18498,6 @@ export namespace Prisma {
   }
 
   export type AffiliateUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -16152,8 +18507,8 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -16162,8 +18517,8 @@ export namespace Prisma {
   }
 
   export type AffiliateCreateManyInput = {
-    id?: string
-    userId: string
+    id?: number
+    userId: number
     code: string
     earnings?: number
     createAt?: Date | string
@@ -16171,7 +18526,6 @@ export namespace Prisma {
   }
 
   export type AffiliateUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -16179,8 +18533,8 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -16188,20 +18542,19 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralCreateInput = {
-    id?: string
-    referredUserId?: string | null
     type: $Enums.ReferralType
     value: number
     status: $Enums.ReferralStatus
     createAt?: Date | string
     updateAt?: Date | string
     affiliate: AffiliateCreateNestedOneWithoutAffiliateReferralInput
+    referredUser?: UserCreateNestedOneWithoutAffiliateReferralInput
   }
 
   export type AffiliateReferralUncheckedCreateInput = {
-    id?: string
-    affiliateId: string
-    referredUserId?: string | null
+    id?: number
+    affiliateId: number
+    referredUserId?: number | null
     type: $Enums.ReferralType
     value: number
     status: $Enums.ReferralStatus
@@ -16210,20 +18563,19 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    referredUserId?: NullableStringFieldUpdateOperationsInput | string | null
     type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
     value?: FloatFieldUpdateOperationsInput | number
     status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     affiliate?: AffiliateUpdateOneRequiredWithoutAffiliateReferralNestedInput
+    referredUser?: UserUpdateOneWithoutAffiliateReferralNestedInput
   }
 
   export type AffiliateReferralUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    affiliateId?: StringFieldUpdateOperationsInput | string
-    referredUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    affiliateId?: IntFieldUpdateOperationsInput | number
+    referredUserId?: NullableIntFieldUpdateOperationsInput | number | null
     type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
     value?: FloatFieldUpdateOperationsInput | number
     status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
@@ -16232,9 +18584,9 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralCreateManyInput = {
-    id?: string
-    affiliateId: string
-    referredUserId?: string | null
+    id?: number
+    affiliateId: number
+    referredUserId?: number | null
     type: $Enums.ReferralType
     value: number
     status: $Enums.ReferralStatus
@@ -16243,8 +18595,6 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    referredUserId?: NullableStringFieldUpdateOperationsInput | string | null
     type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
     value?: FloatFieldUpdateOperationsInput | number
     status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
@@ -16253,9 +18603,9 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    affiliateId?: StringFieldUpdateOperationsInput | string
-    referredUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    affiliateId?: IntFieldUpdateOperationsInput | number
+    referredUserId?: NullableIntFieldUpdateOperationsInput | number | null
     type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
     value?: FloatFieldUpdateOperationsInput | number
     status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
@@ -16263,10 +18613,21 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type IntFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
+    in?: string[] | ListStringFieldRefInput<$PrismaModel>
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel>
     lt?: string | StringFieldRefInput<$PrismaModel>
     lte?: string | StringFieldRefInput<$PrismaModel>
     gt?: string | StringFieldRefInput<$PrismaModel>
@@ -16274,36 +18635,32 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
+    mode?: QueryMode
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
   export type EnumRoleFilter<$PrismaModel = never> = {
     equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[]
-    notIn?: $Enums.Role[]
+    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
     not?: NestedEnumRoleFilter<$PrismaModel> | $Enums.Role
   }
 
-  export type StringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | null
-    notIn?: string[] | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  export type IntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
@@ -16328,6 +18685,12 @@ export namespace Prisma {
     isNot?: BusinessWhereInput | null
   }
 
+  export type AffiliateReferralListRelationFilter = {
+    every?: AffiliateReferralWhereInput
+    some?: AffiliateReferralWhereInput
+    none?: AffiliateReferralWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
@@ -16341,10 +18704,8 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
-  export type UserOrderByRelevanceInput = {
-    fields: UserOrderByRelevanceFieldEnum | UserOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
+  export type AffiliateReferralOrderByRelationAggregateInput = {
+    _count?: SortOrder
   }
 
   export type UserCountOrderByAggregateInput = {
@@ -16356,6 +18717,11 @@ export namespace Prisma {
     businessId?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
+  }
+
+  export type UserAvgOrderByAggregateInput = {
+    id?: SortOrder
+    businessId?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -16380,10 +18746,31 @@ export namespace Prisma {
     updateAt?: SortOrder
   }
 
+  export type UserSumOrderByAggregateInput = {
+    id?: SortOrder
+    businessId?: SortOrder
+  }
+
+  export type IntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
+  }
+
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
+    in?: string[] | ListStringFieldRefInput<$PrismaModel>
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel>
     lt?: string | StringFieldRefInput<$PrismaModel>
     lte?: string | StringFieldRefInput<$PrismaModel>
     gt?: string | StringFieldRefInput<$PrismaModel>
@@ -16391,7 +18778,7 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
+    mode?: QueryMode
     not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
@@ -16400,36 +18787,34 @@ export namespace Prisma {
 
   export type EnumRoleWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[]
-    notIn?: $Enums.Role[]
+    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
     not?: NestedEnumRoleWithAggregatesFilter<$PrismaModel> | $Enums.Role
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumRoleFilter<$PrismaModel>
     _max?: NestedEnumRoleFilter<$PrismaModel>
   }
 
-  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | null
-    notIn?: string[] | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
     _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
   }
 
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
@@ -16500,12 +18885,6 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
-  export type BusinessOrderByRelevanceInput = {
-    fields: BusinessOrderByRelevanceFieldEnum | BusinessOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type BusinessCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
@@ -16514,6 +18893,10 @@ export namespace Prisma {
     email?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
+  }
+
+  export type BusinessAvgOrderByAggregateInput = {
+    id?: SortOrder
   }
 
   export type BusinessMaxOrderByAggregateInput = {
@@ -16536,6 +18919,25 @@ export namespace Prisma {
     updateAt?: SortOrder
   }
 
+  export type BusinessSumOrderByAggregateInput = {
+    id?: SortOrder
+  }
+
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
   export type BusinessScalarRelationFilter = {
     is?: BusinessWhereInput
     isNot?: BusinessWhereInput
@@ -16551,12 +18953,6 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
-  export type ClientOrderByRelevanceInput = {
-    fields: ClientOrderByRelevanceFieldEnum | ClientOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type ClientCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
@@ -16565,6 +18961,11 @@ export namespace Prisma {
     businessId?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
+  }
+
+  export type ClientAvgOrderByAggregateInput = {
+    id?: SortOrder
+    businessId?: SortOrder
   }
 
   export type ClientMaxOrderByAggregateInput = {
@@ -16587,10 +18988,33 @@ export namespace Prisma {
     updateAt?: SortOrder
   }
 
+  export type ClientSumOrderByAggregateInput = {
+    id?: SortOrder
+    businessId?: SortOrder
+  }
+
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
   export type DateTimeNullableFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | null
-    notIn?: Date[] | string[] | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
@@ -16603,21 +19027,22 @@ export namespace Prisma {
     isNot?: ClientWhereInput
   }
 
-  export type PetOrderByRelevanceInput = {
-    fields: PetOrderByRelevanceFieldEnum | PetOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type PetCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     species?: SortOrder
     breed?: SortOrder
     birthDate?: SortOrder
-    clienteId?: SortOrder
+    clientId?: SortOrder
+    nextVaccineDate?: SortOrder
+    lastFedAt?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
+  }
+
+  export type PetAvgOrderByAggregateInput = {
+    id?: SortOrder
+    clientId?: SortOrder
   }
 
   export type PetMaxOrderByAggregateInput = {
@@ -16626,7 +19051,9 @@ export namespace Prisma {
     species?: SortOrder
     breed?: SortOrder
     birthDate?: SortOrder
-    clienteId?: SortOrder
+    clientId?: SortOrder
+    nextVaccineDate?: SortOrder
+    lastFedAt?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
   }
@@ -16637,15 +19064,22 @@ export namespace Prisma {
     species?: SortOrder
     breed?: SortOrder
     birthDate?: SortOrder
-    clienteId?: SortOrder
+    clientId?: SortOrder
+    nextVaccineDate?: SortOrder
+    lastFedAt?: SortOrder
     createAt?: SortOrder
     updateAt?: SortOrder
   }
 
+  export type PetSumOrderByAggregateInput = {
+    id?: SortOrder
+    clientId?: SortOrder
+  }
+
   export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | null
-    notIn?: Date[] | string[] | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
@@ -16658,8 +19092,8 @@ export namespace Prisma {
 
   export type EnumAppointmentStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.AppointmentStatus | EnumAppointmentStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.AppointmentStatus[]
-    notIn?: $Enums.AppointmentStatus[]
+    in?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
     not?: NestedEnumAppointmentStatusFilter<$PrismaModel> | $Enums.AppointmentStatus
   }
 
@@ -16673,12 +19107,6 @@ export namespace Prisma {
     isNot?: ServiceWhereInput | null
   }
 
-  export type AppointmentOrderByRelevanceInput = {
-    fields: AppointmentOrderByRelevanceFieldEnum | AppointmentOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type AppointmentCountOrderByAggregateInput = {
     id?: SortOrder
     date?: SortOrder
@@ -16687,6 +19115,16 @@ export namespace Prisma {
     serviceId?: SortOrder
     businessId?: SortOrder
     notes?: SortOrder
+    remindAt?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
+  }
+
+  export type AppointmentAvgOrderByAggregateInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    serviceId?: SortOrder
+    businessId?: SortOrder
   }
 
   export type AppointmentMaxOrderByAggregateInput = {
@@ -16697,6 +19135,9 @@ export namespace Prisma {
     serviceId?: SortOrder
     businessId?: SortOrder
     notes?: SortOrder
+    remindAt?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type AppointmentMinOrderByAggregateInput = {
@@ -16707,12 +19148,22 @@ export namespace Prisma {
     serviceId?: SortOrder
     businessId?: SortOrder
     notes?: SortOrder
+    remindAt?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
+  }
+
+  export type AppointmentSumOrderByAggregateInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    serviceId?: SortOrder
+    businessId?: SortOrder
   }
 
   export type EnumAppointmentStatusWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.AppointmentStatus | EnumAppointmentStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.AppointmentStatus[]
-    notIn?: $Enums.AppointmentStatus[]
+    in?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
     not?: NestedEnumAppointmentStatusWithAggregatesFilter<$PrismaModel> | $Enums.AppointmentStatus
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumAppointmentStatusFilter<$PrismaModel>
@@ -16721,30 +19172,13 @@ export namespace Prisma {
 
   export type FloatFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
     lt?: number | FloatFieldRefInput<$PrismaModel>
     lte?: number | FloatFieldRefInput<$PrismaModel>
     gt?: number | FloatFieldRefInput<$PrismaModel>
     gte?: number | FloatFieldRefInput<$PrismaModel>
     not?: NestedFloatFilter<$PrismaModel> | number
-  }
-
-  export type IntFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntFilter<$PrismaModel> | number
-  }
-
-  export type ServiceOrderByRelevanceInput = {
-    fields: ServiceOrderByRelevanceFieldEnum | ServiceOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type ServiceCountOrderByAggregateInput = {
@@ -16753,11 +19187,15 @@ export namespace Prisma {
     price?: SortOrder
     duration?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type ServiceAvgOrderByAggregateInput = {
+    id?: SortOrder
     price?: SortOrder
     duration?: SortOrder
+    businessId?: SortOrder
   }
 
   export type ServiceMaxOrderByAggregateInput = {
@@ -16766,6 +19204,8 @@ export namespace Prisma {
     price?: SortOrder
     duration?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type ServiceMinOrderByAggregateInput = {
@@ -16774,17 +19214,21 @@ export namespace Prisma {
     price?: SortOrder
     duration?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type ServiceSumOrderByAggregateInput = {
+    id?: SortOrder
     price?: SortOrder
     duration?: SortOrder
+    businessId?: SortOrder
   }
 
   export type FloatWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
     lt?: number | FloatFieldRefInput<$PrismaModel>
     lte?: number | FloatFieldRefInput<$PrismaModel>
     gt?: number | FloatFieldRefInput<$PrismaModel>
@@ -16797,22 +19241,6 @@ export namespace Prisma {
     _max?: NestedFloatFilter<$PrismaModel>
   }
 
-  export type IntWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedIntFilter<$PrismaModel>
-    _min?: NestedIntFilter<$PrismaModel>
-    _max?: NestedIntFilter<$PrismaModel>
-  }
-
   export type SaleItemListRelationFilter = {
     every?: SaleItemWhereInput
     some?: SaleItemWhereInput
@@ -16823,23 +19251,21 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
-  export type ProductOrderByRelevanceInput = {
-    fields: ProductOrderByRelevanceFieldEnum | ProductOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type ProductCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     price?: SortOrder
     stock?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type ProductAvgOrderByAggregateInput = {
+    id?: SortOrder
     price?: SortOrder
     stock?: SortOrder
+    businessId?: SortOrder
   }
 
   export type ProductMaxOrderByAggregateInput = {
@@ -16848,6 +19274,8 @@ export namespace Prisma {
     price?: SortOrder
     stock?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type ProductMinOrderByAggregateInput = {
@@ -16856,22 +19284,20 @@ export namespace Prisma {
     price?: SortOrder
     stock?: SortOrder
     businessId?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type ProductSumOrderByAggregateInput = {
+    id?: SortOrder
     price?: SortOrder
     stock?: SortOrder
+    businessId?: SortOrder
   }
 
   export type ClientNullableScalarRelationFilter = {
     is?: ClientWhereInput | null
     isNot?: ClientWhereInput | null
-  }
-
-  export type SaleOrderByRelevanceInput = {
-    fields: SaleOrderByRelevanceFieldEnum | SaleOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type SaleCountOrderByAggregateInput = {
@@ -16880,9 +19306,14 @@ export namespace Prisma {
     businessId?: SortOrder
     total?: SortOrder
     dateSale?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type SaleAvgOrderByAggregateInput = {
+    id?: SortOrder
+    clientId?: SortOrder
+    businessId?: SortOrder
     total?: SortOrder
   }
 
@@ -16892,6 +19323,8 @@ export namespace Prisma {
     businessId?: SortOrder
     total?: SortOrder
     dateSale?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type SaleMinOrderByAggregateInput = {
@@ -16900,9 +19333,14 @@ export namespace Prisma {
     businessId?: SortOrder
     total?: SortOrder
     dateSale?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type SaleSumOrderByAggregateInput = {
+    id?: SortOrder
+    clientId?: SortOrder
+    businessId?: SortOrder
     total?: SortOrder
   }
 
@@ -16916,21 +19354,20 @@ export namespace Prisma {
     isNot?: SaleWhereInput
   }
 
-  export type SaleItemOrderByRelevanceInput = {
-    fields: SaleItemOrderByRelevanceFieldEnum | SaleItemOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type SaleItemCountOrderByAggregateInput = {
     id?: SortOrder
     saleId?: SortOrder
     productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type SaleItemAvgOrderByAggregateInput = {
+    id?: SortOrder
+    saleId?: SortOrder
+    productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
   }
@@ -16941,6 +19378,8 @@ export namespace Prisma {
     productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type SaleItemMinOrderByAggregateInput = {
@@ -16949,9 +19388,14 @@ export namespace Prisma {
     productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type SaleItemSumOrderByAggregateInput = {
+    id?: SortOrder
+    saleId?: SortOrder
+    productId?: SortOrder
     quantity?: SortOrder
     price?: SortOrder
   }
@@ -16961,18 +19405,20 @@ export namespace Prisma {
     isNot?: UserWhereInput | null
   }
 
-  export type MedicalRecordOrderByRelevanceInput = {
-    fields: MedicalRecordOrderByRelevanceFieldEnum | MedicalRecordOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type MedicalRecordCountOrderByAggregateInput = {
     id?: SortOrder
     petId?: SortOrder
     vetId?: SortOrder
     date?: SortOrder
     description?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
+  }
+
+  export type MedicalRecordAvgOrderByAggregateInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    vetId?: SortOrder
   }
 
   export type MedicalRecordMaxOrderByAggregateInput = {
@@ -16981,6 +19427,8 @@ export namespace Prisma {
     vetId?: SortOrder
     date?: SortOrder
     description?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
   }
 
   export type MedicalRecordMinOrderByAggregateInput = {
@@ -16989,27 +19437,19 @@ export namespace Prisma {
     vetId?: SortOrder
     date?: SortOrder
     description?: SortOrder
+    createAt?: SortOrder
+    updateAt?: SortOrder
+  }
+
+  export type MedicalRecordSumOrderByAggregateInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    vetId?: SortOrder
   }
 
   export type UserScalarRelationFilter = {
     is?: UserWhereInput
     isNot?: UserWhereInput
-  }
-
-  export type AffiliateReferralListRelationFilter = {
-    every?: AffiliateReferralWhereInput
-    some?: AffiliateReferralWhereInput
-    none?: AffiliateReferralWhereInput
-  }
-
-  export type AffiliateReferralOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type AffiliateOrderByRelevanceInput = {
-    fields: AffiliateOrderByRelevanceFieldEnum | AffiliateOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type AffiliateCountOrderByAggregateInput = {
@@ -17022,6 +19462,8 @@ export namespace Prisma {
   }
 
   export type AffiliateAvgOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
     earnings?: SortOrder
   }
 
@@ -17044,32 +19486,28 @@ export namespace Prisma {
   }
 
   export type AffiliateSumOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
     earnings?: SortOrder
   }
 
   export type EnumReferralTypeFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralType | EnumReferralTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralType[]
-    notIn?: $Enums.ReferralType[]
+    in?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralTypeFilter<$PrismaModel> | $Enums.ReferralType
   }
 
   export type EnumReferralStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralStatus | EnumReferralStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralStatus[]
-    notIn?: $Enums.ReferralStatus[]
+    in?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralStatusFilter<$PrismaModel> | $Enums.ReferralStatus
   }
 
   export type AffiliateScalarRelationFilter = {
     is?: AffiliateWhereInput
     isNot?: AffiliateWhereInput
-  }
-
-  export type AffiliateReferralOrderByRelevanceInput = {
-    fields: AffiliateReferralOrderByRelevanceFieldEnum | AffiliateReferralOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type AffiliateReferralCountOrderByAggregateInput = {
@@ -17084,6 +19522,9 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralAvgOrderByAggregateInput = {
+    id?: SortOrder
+    affiliateId?: SortOrder
+    referredUserId?: SortOrder
     value?: SortOrder
   }
 
@@ -17110,13 +19551,16 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralSumOrderByAggregateInput = {
+    id?: SortOrder
+    affiliateId?: SortOrder
+    referredUserId?: SortOrder
     value?: SortOrder
   }
 
   export type EnumReferralTypeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralType | EnumReferralTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralType[]
-    notIn?: $Enums.ReferralType[]
+    in?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralTypeWithAggregatesFilter<$PrismaModel> | $Enums.ReferralType
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumReferralTypeFilter<$PrismaModel>
@@ -17125,8 +19569,8 @@ export namespace Prisma {
 
   export type EnumReferralStatusWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralStatus | EnumReferralStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralStatus[]
-    notIn?: $Enums.ReferralStatus[]
+    in?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralStatusWithAggregatesFilter<$PrismaModel> | $Enums.ReferralStatus
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumReferralStatusFilter<$PrismaModel>
@@ -17153,6 +19597,13 @@ export namespace Prisma {
     connect?: BusinessWhereUniqueInput
   }
 
+  export type AffiliateReferralCreateNestedManyWithoutReferredUserInput = {
+    create?: XOR<AffiliateReferralCreateWithoutReferredUserInput, AffiliateReferralUncheckedCreateWithoutReferredUserInput> | AffiliateReferralCreateWithoutReferredUserInput[] | AffiliateReferralUncheckedCreateWithoutReferredUserInput[]
+    connectOrCreate?: AffiliateReferralCreateOrConnectWithoutReferredUserInput | AffiliateReferralCreateOrConnectWithoutReferredUserInput[]
+    createMany?: AffiliateReferralCreateManyReferredUserInputEnvelope
+    connect?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+  }
+
   export type AffiliateUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<AffiliateCreateWithoutUserInput, AffiliateUncheckedCreateWithoutUserInput> | AffiliateCreateWithoutUserInput[] | AffiliateUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AffiliateCreateOrConnectWithoutUserInput | AffiliateCreateOrConnectWithoutUserInput[]
@@ -17165,6 +19616,13 @@ export namespace Prisma {
     connectOrCreate?: MedicalRecordCreateOrConnectWithoutVetInput | MedicalRecordCreateOrConnectWithoutVetInput[]
     createMany?: MedicalRecordCreateManyVetInputEnvelope
     connect?: MedicalRecordWhereUniqueInput | MedicalRecordWhereUniqueInput[]
+  }
+
+  export type AffiliateReferralUncheckedCreateNestedManyWithoutReferredUserInput = {
+    create?: XOR<AffiliateReferralCreateWithoutReferredUserInput, AffiliateReferralUncheckedCreateWithoutReferredUserInput> | AffiliateReferralCreateWithoutReferredUserInput[] | AffiliateReferralUncheckedCreateWithoutReferredUserInput[]
+    connectOrCreate?: AffiliateReferralCreateOrConnectWithoutReferredUserInput | AffiliateReferralCreateOrConnectWithoutReferredUserInput[]
+    createMany?: AffiliateReferralCreateManyReferredUserInputEnvelope
+    connect?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -17217,8 +19675,34 @@ export namespace Prisma {
     update?: XOR<XOR<BusinessUpdateToOneWithWhereWithoutUsersInput, BusinessUpdateWithoutUsersInput>, BusinessUncheckedUpdateWithoutUsersInput>
   }
 
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
+  export type AffiliateReferralUpdateManyWithoutReferredUserNestedInput = {
+    create?: XOR<AffiliateReferralCreateWithoutReferredUserInput, AffiliateReferralUncheckedCreateWithoutReferredUserInput> | AffiliateReferralCreateWithoutReferredUserInput[] | AffiliateReferralUncheckedCreateWithoutReferredUserInput[]
+    connectOrCreate?: AffiliateReferralCreateOrConnectWithoutReferredUserInput | AffiliateReferralCreateOrConnectWithoutReferredUserInput[]
+    upsert?: AffiliateReferralUpsertWithWhereUniqueWithoutReferredUserInput | AffiliateReferralUpsertWithWhereUniqueWithoutReferredUserInput[]
+    createMany?: AffiliateReferralCreateManyReferredUserInputEnvelope
+    set?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    disconnect?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    delete?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    connect?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    update?: AffiliateReferralUpdateWithWhereUniqueWithoutReferredUserInput | AffiliateReferralUpdateWithWhereUniqueWithoutReferredUserInput[]
+    updateMany?: AffiliateReferralUpdateManyWithWhereWithoutReferredUserInput | AffiliateReferralUpdateManyWithWhereWithoutReferredUserInput[]
+    deleteMany?: AffiliateReferralScalarWhereInput | AffiliateReferralScalarWhereInput[]
+  }
+
+  export type IntFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type NullableIntFieldUpdateOperationsInput = {
+    set?: number | null
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
   }
 
   export type AffiliateUncheckedUpdateManyWithoutUserNestedInput = {
@@ -17247,6 +19731,20 @@ export namespace Prisma {
     update?: MedicalRecordUpdateWithWhereUniqueWithoutVetInput | MedicalRecordUpdateWithWhereUniqueWithoutVetInput[]
     updateMany?: MedicalRecordUpdateManyWithWhereWithoutVetInput | MedicalRecordUpdateManyWithWhereWithoutVetInput[]
     deleteMany?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
+  }
+
+  export type AffiliateReferralUncheckedUpdateManyWithoutReferredUserNestedInput = {
+    create?: XOR<AffiliateReferralCreateWithoutReferredUserInput, AffiliateReferralUncheckedCreateWithoutReferredUserInput> | AffiliateReferralCreateWithoutReferredUserInput[] | AffiliateReferralUncheckedCreateWithoutReferredUserInput[]
+    connectOrCreate?: AffiliateReferralCreateOrConnectWithoutReferredUserInput | AffiliateReferralCreateOrConnectWithoutReferredUserInput[]
+    upsert?: AffiliateReferralUpsertWithWhereUniqueWithoutReferredUserInput | AffiliateReferralUpsertWithWhereUniqueWithoutReferredUserInput[]
+    createMany?: AffiliateReferralCreateManyReferredUserInputEnvelope
+    set?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    disconnect?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    delete?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    connect?: AffiliateReferralWhereUniqueInput | AffiliateReferralWhereUniqueInput[]
+    update?: AffiliateReferralUpdateWithWhereUniqueWithoutReferredUserInput | AffiliateReferralUpdateWithWhereUniqueWithoutReferredUserInput[]
+    updateMany?: AffiliateReferralUpdateManyWithWhereWithoutReferredUserInput | AffiliateReferralUpdateManyWithWhereWithoutReferredUserInput[]
+    deleteMany?: AffiliateReferralScalarWhereInput | AffiliateReferralScalarWhereInput[]
   }
 
   export type AppointmentCreateNestedManyWithoutBusinessInput = {
@@ -17535,6 +20033,10 @@ export namespace Prisma {
     connect?: SaleWhereUniqueInput | SaleWhereUniqueInput[]
   }
 
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
   export type BusinessUpdateOneRequiredWithoutClientsNestedInput = {
     create?: XOR<BusinessCreateWithoutClientsInput, BusinessUncheckedCreateWithoutClientsInput>
     connectOrCreate?: BusinessCreateOrConnectWithoutClientsInput
@@ -17770,14 +20272,6 @@ export namespace Prisma {
   }
 
   export type FloatFieldUpdateOperationsInput = {
-    set?: number
-    increment?: number
-    decrement?: number
-    multiply?: number
-    divide?: number
-  }
-
-  export type IntFieldUpdateOperationsInput = {
     set?: number
     increment?: number
     decrement?: number
@@ -18069,6 +20563,12 @@ export namespace Prisma {
     connect?: AffiliateWhereUniqueInput
   }
 
+  export type UserCreateNestedOneWithoutAffiliateReferralInput = {
+    create?: XOR<UserCreateWithoutAffiliateReferralInput, UserUncheckedCreateWithoutAffiliateReferralInput>
+    connectOrCreate?: UserCreateOrConnectWithoutAffiliateReferralInput
+    connect?: UserWhereUniqueInput
+  }
+
   export type EnumReferralTypeFieldUpdateOperationsInput = {
     set?: $Enums.ReferralType
   }
@@ -18085,76 +20585,20 @@ export namespace Prisma {
     update?: XOR<XOR<AffiliateUpdateToOneWithWhereWithoutAffiliateReferralInput, AffiliateUpdateWithoutAffiliateReferralInput>, AffiliateUncheckedUpdateWithoutAffiliateReferralInput>
   }
 
-  export type NestedStringFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
-    not?: NestedStringFilter<$PrismaModel> | string
-  }
-
-  export type NestedEnumRoleFilter<$PrismaModel = never> = {
-    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[]
-    notIn?: $Enums.Role[]
-    not?: NestedEnumRoleFilter<$PrismaModel> | $Enums.Role
-  }
-
-  export type NestedStringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | null
-    notIn?: string[] | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
-  }
-
-  export type NestedDateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
-  export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
-    not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedStringFilter<$PrismaModel>
-    _max?: NestedStringFilter<$PrismaModel>
+  export type UserUpdateOneWithoutAffiliateReferralNestedInput = {
+    create?: XOR<UserCreateWithoutAffiliateReferralInput, UserUncheckedCreateWithoutAffiliateReferralInput>
+    connectOrCreate?: UserCreateOrConnectWithoutAffiliateReferralInput
+    upsert?: UserUpsertWithoutAffiliateReferralInput
+    disconnect?: UserWhereInput | boolean
+    delete?: UserWhereInput | boolean
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutAffiliateReferralInput, UserUpdateWithoutAffiliateReferralInput>, UserUncheckedUpdateWithoutAffiliateReferralInput>
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
     lt?: number | IntFieldRefInput<$PrismaModel>
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
@@ -18162,20 +20606,10 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type NestedEnumRoleWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[]
-    notIn?: $Enums.Role[]
-    not?: NestedEnumRoleWithAggregatesFilter<$PrismaModel> | $Enums.Role
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumRoleFilter<$PrismaModel>
-    _max?: NestedEnumRoleFilter<$PrismaModel>
-  }
-
-  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | null
-    notIn?: string[] | null
+  export type NestedStringFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel>
+    in?: string[] | ListStringFieldRefInput<$PrismaModel>
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel>
     lt?: string | StringFieldRefInput<$PrismaModel>
     lte?: string | StringFieldRefInput<$PrismaModel>
     gt?: string | StringFieldRefInput<$PrismaModel>
@@ -18183,17 +20617,20 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
+    not?: NestedStringFilter<$PrismaModel> | string
+  }
+
+  export type NestedEnumRoleFilter<$PrismaModel = never> = {
+    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
+    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
+    not?: NestedEnumRoleFilter<$PrismaModel> | $Enums.Role
   }
 
   export type NestedIntNullableFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | null
-    notIn?: number[] | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
     lt?: number | IntFieldRefInput<$PrismaModel>
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
@@ -18201,93 +20638,21 @@ export namespace Prisma {
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
-  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
-  }
-
-  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | null
-    notIn?: Date[] | string[] | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
-  }
-
-  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | null
-    notIn?: Date[] | string[] | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type NestedEnumAppointmentStatusFilter<$PrismaModel = never> = {
-    equals?: $Enums.AppointmentStatus | EnumAppointmentStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.AppointmentStatus[]
-    notIn?: $Enums.AppointmentStatus[]
-    not?: NestedEnumAppointmentStatusFilter<$PrismaModel> | $Enums.AppointmentStatus
-  }
-
-  export type NestedEnumAppointmentStatusWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.AppointmentStatus | EnumAppointmentStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.AppointmentStatus[]
-    notIn?: $Enums.AppointmentStatus[]
-    not?: NestedEnumAppointmentStatusWithAggregatesFilter<$PrismaModel> | $Enums.AppointmentStatus
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumAppointmentStatusFilter<$PrismaModel>
-    _max?: NestedEnumAppointmentStatusFilter<$PrismaModel>
-  }
-
-  export type NestedFloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
-  }
-
-  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedFloatFilter<$PrismaModel>
-    _min?: NestedFloatFilter<$PrismaModel>
-    _max?: NestedFloatFilter<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[]
-    notIn?: number[]
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
     lt?: number | IntFieldRefInput<$PrismaModel>
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
@@ -18300,24 +20665,192 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel>
+    in?: string[] | ListStringFieldRefInput<$PrismaModel>
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel>
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedStringFilter<$PrismaModel>
+    _max?: NestedStringFilter<$PrismaModel>
+  }
+
+  export type NestedEnumRoleWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
+    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
+    not?: NestedEnumRoleWithAggregatesFilter<$PrismaModel> | $Enums.Role
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumRoleFilter<$PrismaModel>
+    _max?: NestedEnumRoleFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
+  export type NestedFloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
+  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
+  }
+
+  export type NestedEnumAppointmentStatusFilter<$PrismaModel = never> = {
+    equals?: $Enums.AppointmentStatus | EnumAppointmentStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumAppointmentStatusFilter<$PrismaModel> | $Enums.AppointmentStatus
+  }
+
+  export type NestedEnumAppointmentStatusWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.AppointmentStatus | EnumAppointmentStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AppointmentStatus[] | ListEnumAppointmentStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumAppointmentStatusWithAggregatesFilter<$PrismaModel> | $Enums.AppointmentStatus
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumAppointmentStatusFilter<$PrismaModel>
+    _max?: NestedEnumAppointmentStatusFilter<$PrismaModel>
+  }
+
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
   export type NestedEnumReferralTypeFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralType | EnumReferralTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralType[]
-    notIn?: $Enums.ReferralType[]
+    in?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralTypeFilter<$PrismaModel> | $Enums.ReferralType
   }
 
   export type NestedEnumReferralStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralStatus | EnumReferralStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralStatus[]
-    notIn?: $Enums.ReferralStatus[]
+    in?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralStatusFilter<$PrismaModel> | $Enums.ReferralStatus
   }
 
   export type NestedEnumReferralTypeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralType | EnumReferralTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralType[]
-    notIn?: $Enums.ReferralType[]
+    in?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralType[] | ListEnumReferralTypeFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralTypeWithAggregatesFilter<$PrismaModel> | $Enums.ReferralType
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumReferralTypeFilter<$PrismaModel>
@@ -18326,8 +20859,8 @@ export namespace Prisma {
 
   export type NestedEnumReferralStatusWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.ReferralStatus | EnumReferralStatusFieldRefInput<$PrismaModel>
-    in?: $Enums.ReferralStatus[]
-    notIn?: $Enums.ReferralStatus[]
+    in?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ReferralStatus[] | ListEnumReferralStatusFieldRefInput<$PrismaModel>
     not?: NestedEnumReferralStatusWithAggregatesFilter<$PrismaModel> | $Enums.ReferralStatus
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumReferralStatusFilter<$PrismaModel>
@@ -18335,7 +20868,6 @@ export namespace Prisma {
   }
 
   export type AffiliateCreateWithoutUserInput = {
-    id?: string
     code: string
     earnings?: number
     createAt?: Date | string
@@ -18344,7 +20876,7 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedCreateWithoutUserInput = {
-    id?: string
+    id?: number
     code: string
     earnings?: number
     createAt?: Date | string
@@ -18363,17 +20895,20 @@ export namespace Prisma {
   }
 
   export type MedicalRecordCreateWithoutVetInput = {
-    id?: string
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
     pet: PetCreateNestedOneWithoutRecordsInput
   }
 
   export type MedicalRecordUncheckedCreateWithoutVetInput = {
-    id?: string
-    petId: string
+    id?: number
+    petId: number
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type MedicalRecordCreateOrConnectWithoutVetInput = {
@@ -18387,7 +20922,6 @@ export namespace Prisma {
   }
 
   export type BusinessCreateWithoutUsersInput = {
-    id?: string
     name: string
     address: string
     phone: string
@@ -18402,7 +20936,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedCreateWithoutUsersInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -18419,6 +20953,35 @@ export namespace Prisma {
   export type BusinessCreateOrConnectWithoutUsersInput = {
     where: BusinessWhereUniqueInput
     create: XOR<BusinessCreateWithoutUsersInput, BusinessUncheckedCreateWithoutUsersInput>
+  }
+
+  export type AffiliateReferralCreateWithoutReferredUserInput = {
+    type: $Enums.ReferralType
+    value: number
+    status: $Enums.ReferralStatus
+    createAt?: Date | string
+    updateAt?: Date | string
+    affiliate: AffiliateCreateNestedOneWithoutAffiliateReferralInput
+  }
+
+  export type AffiliateReferralUncheckedCreateWithoutReferredUserInput = {
+    id?: number
+    affiliateId: number
+    type: $Enums.ReferralType
+    value: number
+    status: $Enums.ReferralStatus
+    createAt?: Date | string
+    updateAt?: Date | string
+  }
+
+  export type AffiliateReferralCreateOrConnectWithoutReferredUserInput = {
+    where: AffiliateReferralWhereUniqueInput
+    create: XOR<AffiliateReferralCreateWithoutReferredUserInput, AffiliateReferralUncheckedCreateWithoutReferredUserInput>
+  }
+
+  export type AffiliateReferralCreateManyReferredUserInputEnvelope = {
+    data: AffiliateReferralCreateManyReferredUserInput | AffiliateReferralCreateManyReferredUserInput[]
+    skipDuplicates?: boolean
   }
 
   export type AffiliateUpsertWithWhereUniqueWithoutUserInput = {
@@ -18441,8 +21004,8 @@ export namespace Prisma {
     AND?: AffiliateScalarWhereInput | AffiliateScalarWhereInput[]
     OR?: AffiliateScalarWhereInput[]
     NOT?: AffiliateScalarWhereInput | AffiliateScalarWhereInput[]
-    id?: StringFilter<"Affiliate"> | string
-    userId?: StringFilter<"Affiliate"> | string
+    id?: IntFilter<"Affiliate"> | number
+    userId?: IntFilter<"Affiliate"> | number
     code?: StringFilter<"Affiliate"> | string
     earnings?: FloatFilter<"Affiliate"> | number
     createAt?: DateTimeFilter<"Affiliate"> | Date | string
@@ -18469,11 +21032,13 @@ export namespace Prisma {
     AND?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
     OR?: MedicalRecordScalarWhereInput[]
     NOT?: MedicalRecordScalarWhereInput | MedicalRecordScalarWhereInput[]
-    id?: StringFilter<"MedicalRecord"> | string
-    petId?: StringFilter<"MedicalRecord"> | string
-    vetId?: StringNullableFilter<"MedicalRecord"> | string | null
+    id?: IntFilter<"MedicalRecord"> | number
+    petId?: IntFilter<"MedicalRecord"> | number
+    vetId?: IntNullableFilter<"MedicalRecord"> | number | null
     date?: DateTimeFilter<"MedicalRecord"> | Date | string
     description?: StringFilter<"MedicalRecord"> | string
+    createAt?: DateTimeFilter<"MedicalRecord"> | Date | string
+    updateAt?: DateTimeFilter<"MedicalRecord"> | Date | string
   }
 
   export type BusinessUpsertWithoutUsersInput = {
@@ -18488,7 +21053,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateWithoutUsersInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -18503,7 +21067,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateWithoutUsersInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -18517,22 +21081,57 @@ export namespace Prisma {
     services?: ServiceUncheckedUpdateManyWithoutBusinessNestedInput
   }
 
+  export type AffiliateReferralUpsertWithWhereUniqueWithoutReferredUserInput = {
+    where: AffiliateReferralWhereUniqueInput
+    update: XOR<AffiliateReferralUpdateWithoutReferredUserInput, AffiliateReferralUncheckedUpdateWithoutReferredUserInput>
+    create: XOR<AffiliateReferralCreateWithoutReferredUserInput, AffiliateReferralUncheckedCreateWithoutReferredUserInput>
+  }
+
+  export type AffiliateReferralUpdateWithWhereUniqueWithoutReferredUserInput = {
+    where: AffiliateReferralWhereUniqueInput
+    data: XOR<AffiliateReferralUpdateWithoutReferredUserInput, AffiliateReferralUncheckedUpdateWithoutReferredUserInput>
+  }
+
+  export type AffiliateReferralUpdateManyWithWhereWithoutReferredUserInput = {
+    where: AffiliateReferralScalarWhereInput
+    data: XOR<AffiliateReferralUpdateManyMutationInput, AffiliateReferralUncheckedUpdateManyWithoutReferredUserInput>
+  }
+
+  export type AffiliateReferralScalarWhereInput = {
+    AND?: AffiliateReferralScalarWhereInput | AffiliateReferralScalarWhereInput[]
+    OR?: AffiliateReferralScalarWhereInput[]
+    NOT?: AffiliateReferralScalarWhereInput | AffiliateReferralScalarWhereInput[]
+    id?: IntFilter<"AffiliateReferral"> | number
+    affiliateId?: IntFilter<"AffiliateReferral"> | number
+    referredUserId?: IntNullableFilter<"AffiliateReferral"> | number | null
+    type?: EnumReferralTypeFilter<"AffiliateReferral"> | $Enums.ReferralType
+    value?: FloatFilter<"AffiliateReferral"> | number
+    status?: EnumReferralStatusFilter<"AffiliateReferral"> | $Enums.ReferralStatus
+    createAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
+    updateAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
+  }
+
   export type AppointmentCreateWithoutBusinessInput = {
-    id?: string
     date: Date | string
     status?: $Enums.AppointmentStatus
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
     pet: PetCreateNestedOneWithoutAppointmentsInput
     service?: ServiceCreateNestedOneWithoutAppointmentInput
   }
 
   export type AppointmentUncheckedCreateWithoutBusinessInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    petId: string
-    serviceId?: string | null
+    petId: number
+    serviceId?: number | null
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AppointmentCreateOrConnectWithoutBusinessInput = {
@@ -18546,7 +21145,6 @@ export namespace Prisma {
   }
 
   export type ClientCreateWithoutBusinessInput = {
-    id?: string
     name: string
     email?: string | null
     phone?: string | null
@@ -18557,7 +21155,7 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedCreateWithoutBusinessInput = {
-    id?: string
+    id?: number
     name: string
     email?: string | null
     phone?: string | null
@@ -18578,18 +21176,21 @@ export namespace Prisma {
   }
 
   export type ProductCreateWithoutBusinessInput = {
-    id?: string
     name: string
     price: number
     stock: number
+    createAt?: Date | string
+    updateAt?: Date | string
     SaleItem?: SaleItemCreateNestedManyWithoutProductInput
   }
 
   export type ProductUncheckedCreateWithoutBusinessInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     stock: number
+    createAt?: Date | string
+    updateAt?: Date | string
     SaleItem?: SaleItemUncheckedCreateNestedManyWithoutProductInput
   }
 
@@ -18604,18 +21205,21 @@ export namespace Prisma {
   }
 
   export type SaleCreateWithoutBusinessInput = {
-    id?: string
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
     client?: ClientCreateNestedOneWithoutSaleInput
     items?: SaleItemCreateNestedManyWithoutSaleInput
   }
 
   export type SaleUncheckedCreateWithoutBusinessInput = {
-    id?: string
-    clientId?: string | null
+    id?: number
+    clientId?: number | null
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
     items?: SaleItemUncheckedCreateNestedManyWithoutSaleInput
   }
 
@@ -18630,18 +21234,21 @@ export namespace Prisma {
   }
 
   export type ServiceCreateWithoutBusinessInput = {
-    id?: string
     name: string
     price: number
     duration: number
+    createAt?: Date | string
+    updateAt?: Date | string
     Appointment?: AppointmentCreateNestedManyWithoutServiceInput
   }
 
   export type ServiceUncheckedCreateWithoutBusinessInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     duration: number
+    createAt?: Date | string
+    updateAt?: Date | string
     Appointment?: AppointmentUncheckedCreateNestedManyWithoutServiceInput
   }
 
@@ -18656,7 +21263,6 @@ export namespace Prisma {
   }
 
   export type UserCreateWithoutBusinessInput = {
-    id?: string
     name: string
     email: string
     password: string
@@ -18665,10 +21271,11 @@ export namespace Prisma {
     updateAt?: Date | string
     Affiliate?: AffiliateCreateNestedManyWithoutUserInput
     MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
+    AffiliateReferral?: AffiliateReferralCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserUncheckedCreateWithoutBusinessInput = {
-    id?: string
+    id?: number
     name: string
     email: string
     password: string
@@ -18677,6 +21284,7 @@ export namespace Prisma {
     updateAt?: Date | string
     Affiliate?: AffiliateUncheckedCreateNestedManyWithoutUserInput
     MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
+    AffiliateReferral?: AffiliateReferralUncheckedCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserCreateOrConnectWithoutBusinessInput = {
@@ -18709,13 +21317,16 @@ export namespace Prisma {
     AND?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
     OR?: AppointmentScalarWhereInput[]
     NOT?: AppointmentScalarWhereInput | AppointmentScalarWhereInput[]
-    id?: StringFilter<"Appointment"> | string
+    id?: IntFilter<"Appointment"> | number
     date?: DateTimeFilter<"Appointment"> | Date | string
     status?: EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
-    petId?: StringFilter<"Appointment"> | string
-    serviceId?: StringNullableFilter<"Appointment"> | string | null
-    businessId?: StringFilter<"Appointment"> | string
+    petId?: IntFilter<"Appointment"> | number
+    serviceId?: IntNullableFilter<"Appointment"> | number | null
+    businessId?: IntFilter<"Appointment"> | number
     notes?: StringNullableFilter<"Appointment"> | string | null
+    remindAt?: DateTimeNullableFilter<"Appointment"> | Date | string | null
+    createAt?: DateTimeFilter<"Appointment"> | Date | string
+    updateAt?: DateTimeFilter<"Appointment"> | Date | string
   }
 
   export type ClientUpsertWithWhereUniqueWithoutBusinessInput = {
@@ -18738,11 +21349,11 @@ export namespace Prisma {
     AND?: ClientScalarWhereInput | ClientScalarWhereInput[]
     OR?: ClientScalarWhereInput[]
     NOT?: ClientScalarWhereInput | ClientScalarWhereInput[]
-    id?: StringFilter<"Client"> | string
+    id?: IntFilter<"Client"> | number
     name?: StringFilter<"Client"> | string
     email?: StringNullableFilter<"Client"> | string | null
     phone?: StringNullableFilter<"Client"> | string | null
-    businessId?: StringFilter<"Client"> | string
+    businessId?: IntFilter<"Client"> | number
     createAt?: DateTimeFilter<"Client"> | Date | string
     updateAt?: DateTimeFilter<"Client"> | Date | string
   }
@@ -18767,11 +21378,13 @@ export namespace Prisma {
     AND?: ProductScalarWhereInput | ProductScalarWhereInput[]
     OR?: ProductScalarWhereInput[]
     NOT?: ProductScalarWhereInput | ProductScalarWhereInput[]
-    id?: StringFilter<"Product"> | string
+    id?: IntFilter<"Product"> | number
     name?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
     stock?: IntFilter<"Product"> | number
-    businessId?: StringFilter<"Product"> | string
+    businessId?: IntFilter<"Product"> | number
+    createAt?: DateTimeFilter<"Product"> | Date | string
+    updateAt?: DateTimeFilter<"Product"> | Date | string
   }
 
   export type SaleUpsertWithWhereUniqueWithoutBusinessInput = {
@@ -18794,11 +21407,13 @@ export namespace Prisma {
     AND?: SaleScalarWhereInput | SaleScalarWhereInput[]
     OR?: SaleScalarWhereInput[]
     NOT?: SaleScalarWhereInput | SaleScalarWhereInput[]
-    id?: StringFilter<"Sale"> | string
-    clientId?: StringNullableFilter<"Sale"> | string | null
-    businessId?: StringFilter<"Sale"> | string
+    id?: IntFilter<"Sale"> | number
+    clientId?: IntNullableFilter<"Sale"> | number | null
+    businessId?: IntFilter<"Sale"> | number
     total?: FloatFilter<"Sale"> | number
     dateSale?: DateTimeFilter<"Sale"> | Date | string
+    createAt?: DateTimeFilter<"Sale"> | Date | string
+    updateAt?: DateTimeFilter<"Sale"> | Date | string
   }
 
   export type ServiceUpsertWithWhereUniqueWithoutBusinessInput = {
@@ -18821,11 +21436,13 @@ export namespace Prisma {
     AND?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
     OR?: ServiceScalarWhereInput[]
     NOT?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
-    id?: StringFilter<"Service"> | string
+    id?: IntFilter<"Service"> | number
     name?: StringFilter<"Service"> | string
     price?: FloatFilter<"Service"> | number
     duration?: IntFilter<"Service"> | number
-    businessId?: StringFilter<"Service"> | string
+    businessId?: IntFilter<"Service"> | number
+    createAt?: DateTimeFilter<"Service"> | Date | string
+    updateAt?: DateTimeFilter<"Service"> | Date | string
   }
 
   export type UserUpsertWithWhereUniqueWithoutBusinessInput = {
@@ -18848,18 +21465,17 @@ export namespace Prisma {
     AND?: UserScalarWhereInput | UserScalarWhereInput[]
     OR?: UserScalarWhereInput[]
     NOT?: UserScalarWhereInput | UserScalarWhereInput[]
-    id?: StringFilter<"User"> | string
+    id?: IntFilter<"User"> | number
     name?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
-    businessId?: StringNullableFilter<"User"> | string | null
+    businessId?: IntNullableFilter<"User"> | number | null
     createAt?: DateTimeFilter<"User"> | Date | string
     updateAt?: DateTimeFilter<"User"> | Date | string
   }
 
   export type BusinessCreateWithoutClientsInput = {
-    id?: string
     name: string
     address: string
     phone: string
@@ -18874,7 +21490,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedCreateWithoutClientsInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -18894,11 +21510,12 @@ export namespace Prisma {
   }
 
   export type PetCreateWithoutClientInput = {
-    id?: string
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutPetInput
@@ -18906,11 +21523,13 @@ export namespace Prisma {
   }
 
   export type PetUncheckedCreateWithoutClientInput = {
-    id?: string
+    id?: number
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutPetInput
@@ -18928,18 +21547,21 @@ export namespace Prisma {
   }
 
   export type SaleCreateWithoutClientInput = {
-    id?: string
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutSalesInput
     items?: SaleItemCreateNestedManyWithoutSaleInput
   }
 
   export type SaleUncheckedCreateWithoutClientInput = {
-    id?: string
-    businessId: string
+    id?: number
+    businessId: number
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
     items?: SaleItemUncheckedCreateNestedManyWithoutSaleInput
   }
 
@@ -18965,7 +21587,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateWithoutClientsInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -18980,7 +21601,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateWithoutClientsInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19014,12 +21635,14 @@ export namespace Prisma {
     AND?: PetScalarWhereInput | PetScalarWhereInput[]
     OR?: PetScalarWhereInput[]
     NOT?: PetScalarWhereInput | PetScalarWhereInput[]
-    id?: StringFilter<"Pet"> | string
+    id?: IntFilter<"Pet"> | number
     name?: StringFilter<"Pet"> | string
     species?: StringFilter<"Pet"> | string
     breed?: StringFilter<"Pet"> | string
     birthDate?: DateTimeNullableFilter<"Pet"> | Date | string | null
-    clienteId?: StringFilter<"Pet"> | string
+    clientId?: IntFilter<"Pet"> | number
+    nextVaccineDate?: DateTimeNullableFilter<"Pet"> | Date | string | null
+    lastFedAt?: DateTimeNullableFilter<"Pet"> | Date | string | null
     createAt?: DateTimeFilter<"Pet"> | Date | string
     updateAt?: DateTimeFilter<"Pet"> | Date | string
   }
@@ -19041,21 +21664,26 @@ export namespace Prisma {
   }
 
   export type AppointmentCreateWithoutPetInput = {
-    id?: string
     date: Date | string
     status?: $Enums.AppointmentStatus
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutAppointmentsInput
     service?: ServiceCreateNestedOneWithoutAppointmentInput
   }
 
   export type AppointmentUncheckedCreateWithoutPetInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    serviceId?: string | null
-    businessId: string
+    serviceId?: number | null
+    businessId: number
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AppointmentCreateOrConnectWithoutPetInput = {
@@ -19069,17 +21697,20 @@ export namespace Prisma {
   }
 
   export type MedicalRecordCreateWithoutPetInput = {
-    id?: string
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
     vet?: UserCreateNestedOneWithoutMedicalRecordInput
   }
 
   export type MedicalRecordUncheckedCreateWithoutPetInput = {
-    id?: string
-    vetId?: string | null
+    id?: number
+    vetId?: number | null
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type MedicalRecordCreateOrConnectWithoutPetInput = {
@@ -19093,7 +21724,6 @@ export namespace Prisma {
   }
 
   export type ClientCreateWithoutPetsInput = {
-    id?: string
     name: string
     email?: string | null
     phone?: string | null
@@ -19104,11 +21734,11 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedCreateWithoutPetsInput = {
-    id?: string
+    id?: number
     name: string
     email?: string | null
     phone?: string | null
-    businessId: string
+    businessId: number
     createAt?: Date | string
     updateAt?: Date | string
     Sale?: SaleUncheckedCreateNestedManyWithoutClientInput
@@ -19163,7 +21793,6 @@ export namespace Prisma {
   }
 
   export type ClientUpdateWithoutPetsInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
@@ -19174,18 +21803,17 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateWithoutPetsInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Sale?: SaleUncheckedUpdateManyWithoutClientNestedInput
   }
 
   export type BusinessCreateWithoutAppointmentsInput = {
-    id?: string
     name: string
     address: string
     phone: string
@@ -19200,7 +21828,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedCreateWithoutAppointmentsInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -19220,11 +21848,12 @@ export namespace Prisma {
   }
 
   export type PetCreateWithoutAppointmentsInput = {
-    id?: string
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     records?: MedicalRecordCreateNestedManyWithoutPetInput
@@ -19232,12 +21861,14 @@ export namespace Prisma {
   }
 
   export type PetUncheckedCreateWithoutAppointmentsInput = {
-    id?: string
+    id?: number
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
-    clienteId: string
+    clientId: number
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     records?: MedicalRecordUncheckedCreateNestedManyWithoutPetInput
@@ -19249,19 +21880,22 @@ export namespace Prisma {
   }
 
   export type ServiceCreateWithoutAppointmentInput = {
-    id?: string
     name: string
     price: number
     duration: number
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutServicesInput
   }
 
   export type ServiceUncheckedCreateWithoutAppointmentInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     duration: number
-    businessId: string
+    businessId: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type ServiceCreateOrConnectWithoutAppointmentInput = {
@@ -19281,7 +21915,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateWithoutAppointmentsInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19296,7 +21929,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateWithoutAppointmentsInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19322,11 +21955,12 @@ export namespace Prisma {
   }
 
   export type PetUpdateWithoutAppointmentsInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     records?: MedicalRecordUpdateManyWithoutPetNestedInput
@@ -19334,12 +21968,14 @@ export namespace Prisma {
   }
 
   export type PetUncheckedUpdateWithoutAppointmentsInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    clienteId?: StringFieldUpdateOperationsInput | string
+    clientId?: IntFieldUpdateOperationsInput | number
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     records?: MedicalRecordUncheckedUpdateManyWithoutPetNestedInput
@@ -19357,37 +21993,45 @@ export namespace Prisma {
   }
 
   export type ServiceUpdateWithoutAppointmentInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutServicesNestedInput
   }
 
   export type ServiceUncheckedUpdateWithoutAppointmentInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentCreateWithoutServiceInput = {
-    id?: string
     date: Date | string
     status?: $Enums.AppointmentStatus
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutAppointmentsInput
     pet: PetCreateNestedOneWithoutAppointmentsInput
   }
 
   export type AppointmentUncheckedCreateWithoutServiceInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    petId: string
-    businessId: string
+    petId: number
+    businessId: number
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AppointmentCreateOrConnectWithoutServiceInput = {
@@ -19401,7 +22045,6 @@ export namespace Prisma {
   }
 
   export type BusinessCreateWithoutServicesInput = {
-    id?: string
     name: string
     address: string
     phone: string
@@ -19416,7 +22059,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedCreateWithoutServicesInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -19463,7 +22106,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateWithoutServicesInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19478,7 +22120,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateWithoutServicesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19493,7 +22135,6 @@ export namespace Prisma {
   }
 
   export type BusinessCreateWithoutProductsInput = {
-    id?: string
     name: string
     address: string
     phone: string
@@ -19508,7 +22149,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedCreateWithoutProductsInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -19528,17 +22169,20 @@ export namespace Prisma {
   }
 
   export type SaleItemCreateWithoutProductInput = {
-    id?: string
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
     sale: SaleCreateNestedOneWithoutItemsInput
   }
 
   export type SaleItemUncheckedCreateWithoutProductInput = {
-    id?: string
-    saleId: string
+    id?: number
+    saleId: number
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleItemCreateOrConnectWithoutProductInput = {
@@ -19563,7 +22207,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateWithoutProductsInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19578,7 +22221,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateWithoutProductsInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19612,15 +22255,16 @@ export namespace Prisma {
     AND?: SaleItemScalarWhereInput | SaleItemScalarWhereInput[]
     OR?: SaleItemScalarWhereInput[]
     NOT?: SaleItemScalarWhereInput | SaleItemScalarWhereInput[]
-    id?: StringFilter<"SaleItem"> | string
-    saleId?: StringFilter<"SaleItem"> | string
-    productId?: StringFilter<"SaleItem"> | string
+    id?: IntFilter<"SaleItem"> | number
+    saleId?: IntFilter<"SaleItem"> | number
+    productId?: IntFilter<"SaleItem"> | number
     quantity?: IntFilter<"SaleItem"> | number
     price?: FloatFilter<"SaleItem"> | number
+    createAt?: DateTimeFilter<"SaleItem"> | Date | string
+    updateAt?: DateTimeFilter<"SaleItem"> | Date | string
   }
 
   export type BusinessCreateWithoutSalesInput = {
-    id?: string
     name: string
     address: string
     phone: string
@@ -19635,7 +22279,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedCreateWithoutSalesInput = {
-    id?: string
+    id?: number
     name: string
     address: string
     phone: string
@@ -19655,7 +22299,6 @@ export namespace Prisma {
   }
 
   export type ClientCreateWithoutSaleInput = {
-    id?: string
     name: string
     email?: string | null
     phone?: string | null
@@ -19666,11 +22309,11 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedCreateWithoutSaleInput = {
-    id?: string
+    id?: number
     name: string
     email?: string | null
     phone?: string | null
-    businessId: string
+    businessId: number
     createAt?: Date | string
     updateAt?: Date | string
     pets?: PetUncheckedCreateNestedManyWithoutClientInput
@@ -19682,17 +22325,20 @@ export namespace Prisma {
   }
 
   export type SaleItemCreateWithoutSaleInput = {
-    id?: string
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
     product: ProductCreateNestedOneWithoutSaleItemInput
   }
 
   export type SaleItemUncheckedCreateWithoutSaleInput = {
-    id?: string
-    productId: string
+    id?: number
+    productId: number
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleItemCreateOrConnectWithoutSaleInput = {
@@ -19717,7 +22363,6 @@ export namespace Prisma {
   }
 
   export type BusinessUpdateWithoutSalesInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19732,7 +22377,7 @@ export namespace Prisma {
   }
 
   export type BusinessUncheckedUpdateWithoutSalesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -19758,7 +22403,6 @@ export namespace Prisma {
   }
 
   export type ClientUpdateWithoutSaleInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
@@ -19769,11 +22413,11 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateWithoutSaleInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     pets?: PetUncheckedUpdateManyWithoutClientNestedInput
@@ -19796,19 +22440,22 @@ export namespace Prisma {
   }
 
   export type ProductCreateWithoutSaleItemInput = {
-    id?: string
     name: string
     price: number
     stock: number
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutProductsInput
   }
 
   export type ProductUncheckedCreateWithoutSaleItemInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     stock: number
-    businessId: string
+    businessId: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type ProductCreateOrConnectWithoutSaleItemInput = {
@@ -19817,19 +22464,22 @@ export namespace Prisma {
   }
 
   export type SaleCreateWithoutItemsInput = {
-    id?: string
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
     business: BusinessCreateNestedOneWithoutSalesInput
     client?: ClientCreateNestedOneWithoutSaleInput
   }
 
   export type SaleUncheckedCreateWithoutItemsInput = {
-    id?: string
-    clientId?: string | null
-    businessId: string
+    id?: number
+    clientId?: number | null
+    businessId: number
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleCreateOrConnectWithoutItemsInput = {
@@ -19849,19 +22499,22 @@ export namespace Prisma {
   }
 
   export type ProductUpdateWithoutSaleItemInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutProductsNestedInput
   }
 
   export type ProductUncheckedUpdateWithoutSaleItemInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
-    businessId?: StringFieldUpdateOperationsInput | string
+    businessId?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleUpsertWithoutItemsInput = {
@@ -19876,27 +22529,31 @@ export namespace Prisma {
   }
 
   export type SaleUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutSalesNestedInput
     client?: ClientUpdateOneWithoutSaleNestedInput
   }
 
   export type SaleUncheckedUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    clientId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    clientId?: NullableIntFieldUpdateOperationsInput | number | null
+    businessId?: IntFieldUpdateOperationsInput | number
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PetCreateWithoutRecordsInput = {
-    id?: string
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutPetInput
@@ -19904,12 +22561,14 @@ export namespace Prisma {
   }
 
   export type PetUncheckedCreateWithoutRecordsInput = {
-    id?: string
+    id?: number
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
-    clienteId: string
+    clientId: number
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutPetInput
@@ -19921,7 +22580,6 @@ export namespace Prisma {
   }
 
   export type UserCreateWithoutMedicalRecordInput = {
-    id?: string
     name: string
     email: string
     password: string
@@ -19930,18 +22588,20 @@ export namespace Prisma {
     updateAt?: Date | string
     Affiliate?: AffiliateCreateNestedManyWithoutUserInput
     business?: BusinessCreateNestedOneWithoutUsersInput
+    AffiliateReferral?: AffiliateReferralCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserUncheckedCreateWithoutMedicalRecordInput = {
-    id?: string
+    id?: number
     name: string
     email: string
     password: string
     role?: $Enums.Role
-    businessId?: string | null
+    businessId?: number | null
     createAt?: Date | string
     updateAt?: Date | string
     Affiliate?: AffiliateUncheckedCreateNestedManyWithoutUserInput
+    AffiliateReferral?: AffiliateReferralUncheckedCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserCreateOrConnectWithoutMedicalRecordInput = {
@@ -19961,11 +22621,12 @@ export namespace Prisma {
   }
 
   export type PetUpdateWithoutRecordsInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutPetNestedInput
@@ -19973,12 +22634,14 @@ export namespace Prisma {
   }
 
   export type PetUncheckedUpdateWithoutRecordsInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    clienteId?: StringFieldUpdateOperationsInput | string
+    clientId?: IntFieldUpdateOperationsInput | number
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutPetNestedInput
@@ -19996,7 +22659,6 @@ export namespace Prisma {
   }
 
   export type UserUpdateWithoutMedicalRecordInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
@@ -20005,22 +22667,23 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
     business?: BusinessUpdateOneWithoutUsersNestedInput
+    AffiliateReferral?: AffiliateReferralUpdateManyWithoutReferredUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutMedicalRecordInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    businessId?: NullableStringFieldUpdateOperationsInput | string | null
+    businessId?: NullableIntFieldUpdateOperationsInput | number | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Affiliate?: AffiliateUncheckedUpdateManyWithoutUserNestedInput
+    AffiliateReferral?: AffiliateReferralUncheckedUpdateManyWithoutReferredUserNestedInput
   }
 
   export type UserCreateWithoutAffiliateInput = {
-    id?: string
     name: string
     email: string
     password: string
@@ -20029,18 +22692,20 @@ export namespace Prisma {
     updateAt?: Date | string
     MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
     business?: BusinessCreateNestedOneWithoutUsersInput
+    AffiliateReferral?: AffiliateReferralCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserUncheckedCreateWithoutAffiliateInput = {
-    id?: string
+    id?: number
     name: string
     email: string
     password: string
     role?: $Enums.Role
-    businessId?: string | null
+    businessId?: number | null
     createAt?: Date | string
     updateAt?: Date | string
     MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
+    AffiliateReferral?: AffiliateReferralUncheckedCreateNestedManyWithoutReferredUserInput
   }
 
   export type UserCreateOrConnectWithoutAffiliateInput = {
@@ -20049,18 +22714,17 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralCreateWithoutAffiliateInput = {
-    id?: string
-    referredUserId?: string | null
     type: $Enums.ReferralType
     value: number
     status: $Enums.ReferralStatus
     createAt?: Date | string
     updateAt?: Date | string
+    referredUser?: UserCreateNestedOneWithoutAffiliateReferralInput
   }
 
   export type AffiliateReferralUncheckedCreateWithoutAffiliateInput = {
-    id?: string
-    referredUserId?: string | null
+    id?: number
+    referredUserId?: number | null
     type: $Enums.ReferralType
     value: number
     status: $Enums.ReferralStatus
@@ -20090,7 +22754,6 @@ export namespace Prisma {
   }
 
   export type UserUpdateWithoutAffiliateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
@@ -20099,18 +22762,20 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
     business?: BusinessUpdateOneWithoutUsersNestedInput
+    AffiliateReferral?: AffiliateReferralUpdateManyWithoutReferredUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAffiliateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    businessId?: NullableStringFieldUpdateOperationsInput | string | null
+    businessId?: NullableIntFieldUpdateOperationsInput | number | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
+    AffiliateReferral?: AffiliateReferralUncheckedUpdateManyWithoutReferredUserNestedInput
   }
 
   export type AffiliateReferralUpsertWithWhereUniqueWithoutAffiliateInput = {
@@ -20129,22 +22794,7 @@ export namespace Prisma {
     data: XOR<AffiliateReferralUpdateManyMutationInput, AffiliateReferralUncheckedUpdateManyWithoutAffiliateInput>
   }
 
-  export type AffiliateReferralScalarWhereInput = {
-    AND?: AffiliateReferralScalarWhereInput | AffiliateReferralScalarWhereInput[]
-    OR?: AffiliateReferralScalarWhereInput[]
-    NOT?: AffiliateReferralScalarWhereInput | AffiliateReferralScalarWhereInput[]
-    id?: StringFilter<"AffiliateReferral"> | string
-    affiliateId?: StringFilter<"AffiliateReferral"> | string
-    referredUserId?: StringNullableFilter<"AffiliateReferral"> | string | null
-    type?: EnumReferralTypeFilter<"AffiliateReferral"> | $Enums.ReferralType
-    value?: FloatFilter<"AffiliateReferral"> | number
-    status?: EnumReferralStatusFilter<"AffiliateReferral"> | $Enums.ReferralStatus
-    createAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
-    updateAt?: DateTimeFilter<"AffiliateReferral"> | Date | string
-  }
-
   export type AffiliateCreateWithoutAffiliateReferralInput = {
-    id?: string
     code: string
     earnings?: number
     createAt?: Date | string
@@ -20153,8 +22803,8 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedCreateWithoutAffiliateReferralInput = {
-    id?: string
-    userId: string
+    id?: number
+    userId: number
     code: string
     earnings?: number
     createAt?: Date | string
@@ -20164,6 +22814,36 @@ export namespace Prisma {
   export type AffiliateCreateOrConnectWithoutAffiliateReferralInput = {
     where: AffiliateWhereUniqueInput
     create: XOR<AffiliateCreateWithoutAffiliateReferralInput, AffiliateUncheckedCreateWithoutAffiliateReferralInput>
+  }
+
+  export type UserCreateWithoutAffiliateReferralInput = {
+    name: string
+    email: string
+    password: string
+    role?: $Enums.Role
+    createAt?: Date | string
+    updateAt?: Date | string
+    Affiliate?: AffiliateCreateNestedManyWithoutUserInput
+    MedicalRecord?: MedicalRecordCreateNestedManyWithoutVetInput
+    business?: BusinessCreateNestedOneWithoutUsersInput
+  }
+
+  export type UserUncheckedCreateWithoutAffiliateReferralInput = {
+    id?: number
+    name: string
+    email: string
+    password: string
+    role?: $Enums.Role
+    businessId?: number | null
+    createAt?: Date | string
+    updateAt?: Date | string
+    Affiliate?: AffiliateUncheckedCreateNestedManyWithoutUserInput
+    MedicalRecord?: MedicalRecordUncheckedCreateNestedManyWithoutVetInput
+  }
+
+  export type UserCreateOrConnectWithoutAffiliateReferralInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutAffiliateReferralInput, UserUncheckedCreateWithoutAffiliateReferralInput>
   }
 
   export type AffiliateUpsertWithoutAffiliateReferralInput = {
@@ -20178,7 +22858,6 @@ export namespace Prisma {
   }
 
   export type AffiliateUpdateWithoutAffiliateReferralInput = {
-    id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -20187,16 +22866,52 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedUpdateWithoutAffiliateReferralInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserUpsertWithoutAffiliateReferralInput = {
+    update: XOR<UserUpdateWithoutAffiliateReferralInput, UserUncheckedUpdateWithoutAffiliateReferralInput>
+    create: XOR<UserCreateWithoutAffiliateReferralInput, UserUncheckedCreateWithoutAffiliateReferralInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutAffiliateReferralInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutAffiliateReferralInput, UserUncheckedUpdateWithoutAffiliateReferralInput>
+  }
+
+  export type UserUpdateWithoutAffiliateReferralInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
+    MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
+    business?: BusinessUpdateOneWithoutUsersNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutAffiliateReferralInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    businessId?: NullableIntFieldUpdateOperationsInput | number | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    Affiliate?: AffiliateUncheckedUpdateManyWithoutUserNestedInput
+    MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
+  }
+
   export type AffiliateCreateManyUserInput = {
-    id?: string
+    id?: number
     code: string
     earnings?: number
     createAt?: Date | string
@@ -20204,14 +22919,25 @@ export namespace Prisma {
   }
 
   export type MedicalRecordCreateManyVetInput = {
-    id?: string
-    petId: string
+    id?: number
+    petId: number
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
+  }
+
+  export type AffiliateReferralCreateManyReferredUserInput = {
+    id?: number
+    affiliateId: number
+    type: $Enums.ReferralType
+    value: number
+    status: $Enums.ReferralStatus
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AffiliateUpdateWithoutUserInput = {
-    id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -20220,7 +22946,7 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedUpdateWithoutUserInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -20229,7 +22955,7 @@ export namespace Prisma {
   }
 
   export type AffiliateUncheckedUpdateManyWithoutUserInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     code?: StringFieldUpdateOperationsInput | string
     earnings?: FloatFieldUpdateOperationsInput | number
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -20237,37 +22963,74 @@ export namespace Prisma {
   }
 
   export type MedicalRecordUpdateWithoutVetInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     pet?: PetUpdateOneRequiredWithoutRecordsNestedInput
   }
 
   export type MedicalRecordUncheckedUpdateWithoutVetInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    petId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    petId?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MedicalRecordUncheckedUpdateManyWithoutVetInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    petId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    petId?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AffiliateReferralUpdateWithoutReferredUserInput = {
+    type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
+    value?: FloatFieldUpdateOperationsInput | number
+    status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    affiliate?: AffiliateUpdateOneRequiredWithoutAffiliateReferralNestedInput
+  }
+
+  export type AffiliateReferralUncheckedUpdateWithoutReferredUserInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    affiliateId?: IntFieldUpdateOperationsInput | number
+    type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
+    value?: FloatFieldUpdateOperationsInput | number
+    status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AffiliateReferralUncheckedUpdateManyWithoutReferredUserInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    affiliateId?: IntFieldUpdateOperationsInput | number
+    type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
+    value?: FloatFieldUpdateOperationsInput | number
+    status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentCreateManyBusinessInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    petId: string
-    serviceId?: string | null
+    petId: number
+    serviceId?: number | null
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type ClientCreateManyBusinessInput = {
-    id?: string
+    id?: number
     name: string
     email?: string | null
     phone?: string | null
@@ -20276,28 +23039,34 @@ export namespace Prisma {
   }
 
   export type ProductCreateManyBusinessInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     stock: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleCreateManyBusinessInput = {
-    id?: string
-    clientId?: string | null
+    id?: number
+    clientId?: number | null
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type ServiceCreateManyBusinessInput = {
-    id?: string
+    id?: number
     name: string
     price: number
     duration: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type UserCreateManyBusinessInput = {
-    id?: string
+    id?: number
     name: string
     email: string
     password: string
@@ -20307,34 +23076,41 @@ export namespace Prisma {
   }
 
   export type AppointmentUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
     service?: ServiceUpdateOneWithoutAppointmentNestedInput
   }
 
   export type AppointmentUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
+    petId?: IntFieldUpdateOperationsInput | number
+    serviceId?: NullableIntFieldUpdateOperationsInput | number | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
+    petId?: IntFieldUpdateOperationsInput | number
+    serviceId?: NullableIntFieldUpdateOperationsInput | number | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ClientUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
@@ -20345,7 +23121,7 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
@@ -20356,7 +23132,7 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
@@ -20365,76 +23141,90 @@ export namespace Prisma {
   }
 
   export type ProductUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     SaleItem?: SaleItemUpdateManyWithoutProductNestedInput
   }
 
   export type ProductUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     SaleItem?: SaleItemUncheckedUpdateManyWithoutProductNestedInput
   }
 
   export type ProductUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     stock?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     client?: ClientUpdateOneWithoutSaleNestedInput
     items?: SaleItemUpdateManyWithoutSaleNestedInput
   }
 
   export type SaleUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    clientId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    clientId?: NullableIntFieldUpdateOperationsInput | number | null
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: SaleItemUncheckedUpdateManyWithoutSaleNestedInput
   }
 
   export type SaleUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    clientId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    clientId?: NullableIntFieldUpdateOperationsInput | number | null
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ServiceUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Appointment?: AppointmentUpdateManyWithoutServiceNestedInput
   }
 
   export type ServiceUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Appointment?: AppointmentUncheckedUpdateManyWithoutServiceNestedInput
   }
 
   export type ServiceUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
     duration?: IntFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
@@ -20443,10 +23233,11 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Affiliate?: AffiliateUpdateManyWithoutUserNestedInput
     MedicalRecord?: MedicalRecordUpdateManyWithoutVetNestedInput
+    AffiliateReferral?: AffiliateReferralUpdateManyWithoutReferredUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
@@ -20455,10 +23246,11 @@ export namespace Prisma {
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Affiliate?: AffiliateUncheckedUpdateManyWithoutUserNestedInput
     MedicalRecord?: MedicalRecordUncheckedUpdateManyWithoutVetNestedInput
+    AffiliateReferral?: AffiliateReferralUncheckedUpdateManyWithoutReferredUserNestedInput
   }
 
   export type UserUncheckedUpdateManyWithoutBusinessInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
@@ -20468,28 +23260,33 @@ export namespace Prisma {
   }
 
   export type PetCreateManyClientInput = {
-    id?: string
+    id?: number
     name: string
     species: string
     breed: string
     birthDate?: Date | string | null
+    nextVaccineDate?: Date | string | null
+    lastFedAt?: Date | string | null
     createAt?: Date | string
     updateAt?: Date | string
   }
 
   export type SaleCreateManyClientInput = {
-    id?: string
-    businessId: string
+    id?: number
+    businessId: number
     total: number
     dateSale?: Date | string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type PetUpdateWithoutClientInput = {
-    id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutPetNestedInput
@@ -20497,11 +23294,13 @@ export namespace Prisma {
   }
 
   export type PetUncheckedUpdateWithoutClientInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutPetNestedInput
@@ -20509,197 +23308,247 @@ export namespace Prisma {
   }
 
   export type PetUncheckedUpdateManyWithoutClientInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     species?: StringFieldUpdateOperationsInput | string
     breed?: StringFieldUpdateOperationsInput | string
     birthDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextVaccineDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastFedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleUpdateWithoutClientInput = {
-    id?: StringFieldUpdateOperationsInput | string
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutSalesNestedInput
     items?: SaleItemUpdateManyWithoutSaleNestedInput
   }
 
   export type SaleUncheckedUpdateWithoutClientInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    businessId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    businessId?: IntFieldUpdateOperationsInput | number
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: SaleItemUncheckedUpdateManyWithoutSaleNestedInput
   }
 
   export type SaleUncheckedUpdateManyWithoutClientInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    businessId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    businessId?: IntFieldUpdateOperationsInput | number
     total?: FloatFieldUpdateOperationsInput | number
     dateSale?: DateTimeFieldUpdateOperationsInput | Date | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentCreateManyPetInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    serviceId?: string | null
-    businessId: string
+    serviceId?: number | null
+    businessId: number
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type MedicalRecordCreateManyPetInput = {
-    id?: string
-    vetId?: string | null
+    id?: number
+    vetId?: number | null
     date?: Date | string
     description: string
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AppointmentUpdateWithoutPetInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutAppointmentsNestedInput
     service?: ServiceUpdateOneWithoutAppointmentNestedInput
   }
 
   export type AppointmentUncheckedUpdateWithoutPetInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    serviceId?: NullableIntFieldUpdateOperationsInput | number | null
+    businessId?: IntFieldUpdateOperationsInput | number
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentUncheckedUpdateManyWithoutPetInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    serviceId?: NullableStringFieldUpdateOperationsInput | string | null
-    businessId?: StringFieldUpdateOperationsInput | string
+    serviceId?: NullableIntFieldUpdateOperationsInput | number | null
+    businessId?: IntFieldUpdateOperationsInput | number
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MedicalRecordUpdateWithoutPetInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     vet?: UserUpdateOneWithoutMedicalRecordNestedInput
   }
 
   export type MedicalRecordUncheckedUpdateWithoutPetInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    vetId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    vetId?: NullableIntFieldUpdateOperationsInput | number | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MedicalRecordUncheckedUpdateManyWithoutPetInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    vetId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    vetId?: NullableIntFieldUpdateOperationsInput | number | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentCreateManyServiceInput = {
-    id?: string
+    id?: number
     date: Date | string
     status?: $Enums.AppointmentStatus
-    petId: string
-    businessId: string
+    petId: number
+    businessId: number
     notes?: string | null
+    remindAt?: Date | string | null
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type AppointmentUpdateWithoutServiceInput = {
-    id?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     business?: BusinessUpdateOneRequiredWithoutAppointmentsNestedInput
     pet?: PetUpdateOneRequiredWithoutAppointmentsNestedInput
   }
 
   export type AppointmentUncheckedUpdateWithoutServiceInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    businessId?: StringFieldUpdateOperationsInput | string
+    petId?: IntFieldUpdateOperationsInput | number
+    businessId?: IntFieldUpdateOperationsInput | number
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentUncheckedUpdateManyWithoutServiceInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-    petId?: StringFieldUpdateOperationsInput | string
-    businessId?: StringFieldUpdateOperationsInput | string
+    petId?: IntFieldUpdateOperationsInput | number
+    businessId?: IntFieldUpdateOperationsInput | number
     notes?: NullableStringFieldUpdateOperationsInput | string | null
+    remindAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleItemCreateManyProductInput = {
-    id?: string
-    saleId: string
+    id?: number
+    saleId: number
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleItemUpdateWithoutProductInput = {
-    id?: StringFieldUpdateOperationsInput | string
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     sale?: SaleUpdateOneRequiredWithoutItemsNestedInput
   }
 
   export type SaleItemUncheckedUpdateWithoutProductInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    saleId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    saleId?: IntFieldUpdateOperationsInput | number
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleItemUncheckedUpdateManyWithoutProductInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    saleId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    saleId?: IntFieldUpdateOperationsInput | number
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleItemCreateManySaleInput = {
-    id?: string
-    productId: string
+    id?: number
+    productId: number
     quantity: number
     price: number
+    createAt?: Date | string
+    updateAt?: Date | string
   }
 
   export type SaleItemUpdateWithoutSaleInput = {
-    id?: StringFieldUpdateOperationsInput | string
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
     product?: ProductUpdateOneRequiredWithoutSaleItemNestedInput
   }
 
   export type SaleItemUncheckedUpdateWithoutSaleInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    productId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    productId?: IntFieldUpdateOperationsInput | number
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type SaleItemUncheckedUpdateManyWithoutSaleInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    productId?: StringFieldUpdateOperationsInput | string
+    id?: IntFieldUpdateOperationsInput | number
+    productId?: IntFieldUpdateOperationsInput | number
     quantity?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
+    createAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AffiliateReferralCreateManyAffiliateInput = {
-    id?: string
-    referredUserId?: string | null
+    id?: number
+    referredUserId?: number | null
     type: $Enums.ReferralType
     value: number
     status: $Enums.ReferralStatus
@@ -20708,18 +23557,17 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralUpdateWithoutAffiliateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    referredUserId?: NullableStringFieldUpdateOperationsInput | string | null
     type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
     value?: FloatFieldUpdateOperationsInput | number
     status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
     createAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updateAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    referredUser?: UserUpdateOneWithoutAffiliateReferralNestedInput
   }
 
   export type AffiliateReferralUncheckedUpdateWithoutAffiliateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    referredUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    referredUserId?: NullableIntFieldUpdateOperationsInput | number | null
     type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
     value?: FloatFieldUpdateOperationsInput | number
     status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
@@ -20728,8 +23576,8 @@ export namespace Prisma {
   }
 
   export type AffiliateReferralUncheckedUpdateManyWithoutAffiliateInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    referredUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    id?: IntFieldUpdateOperationsInput | number
+    referredUserId?: NullableIntFieldUpdateOperationsInput | number | null
     type?: EnumReferralTypeFieldUpdateOperationsInput | $Enums.ReferralType
     value?: FloatFieldUpdateOperationsInput | number
     status?: EnumReferralStatusFieldUpdateOperationsInput | $Enums.ReferralStatus
