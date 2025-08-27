@@ -3,8 +3,8 @@ import {
   SubscribeMessage, WebSocketGateway, WebSocketServer, 
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
-import { UsePipes } from '@nestjs/common';
-import { WsJwtGuard } from './ws-jwt.guard';
+// import { UsePipes } from '@nestjs/common';
+// import { WsJwtGuard } from './ws-jwt.guard';
 
 /**
  * Notification Gateway - namespace /notifications
