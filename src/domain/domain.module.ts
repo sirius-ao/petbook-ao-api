@@ -12,23 +12,29 @@ import { ServiceModule } from './service/service.module';
 import { AffiliateModule } from './affiliate/affiliate.module';
 import { AffiliateReferralModule } from './affiliate-referral/affiliate-referral.module';
 import { DatabaseModule } from 'src/database/database.module';
+import { LembreteModule } from './lembretes/lembrete.module';
+import { NotificationModule } from './notification/notification.module';
 
 @Module({
-    imports:[ 
-        UserModule,
-        BusinessModule,
-        ClientModule,
-        PetModule,
-        AppointmentModule,
-        MedicalRecordModule,
-        ProductModule,
-        SaleModule,
-        SaleItemModule,
-        ServiceModule,
-        AffiliateModule,
-        AffiliateReferralModule,],
-    controllers:[],
-    providers:[DomainModule],
-    exports:[DomainModule]
+  imports: [
+    DatabaseModule,          // fornece Prisma/DB para os módulos
+    UserModule,
+    BusinessModule,
+    ClientModule,
+    PetModule,
+    AppointmentModule,
+    MedicalRecordModule,
+    ProductModule,
+    SaleModule,
+    SaleItemModule,
+    ServiceModule,
+    AffiliateModule,
+    AffiliateReferralModule,
+    NotificationModule,      // notificações (email/whatsapp/in-app)
+    LembreteModule,          // módulo de lembretes
+  ],
+  controllers: [],
+  providers: [],            // fornece serviços se necessário (ex: Domain-level services)
+  exports: [],              // exporta serviços se outro módulo precisar
 })
 export class DomainModule {}
